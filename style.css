@@ -598,8 +598,8 @@ ol, ul {
 
 .era {
   background-color: #fff;
-  background: -webkit-linear-gradient(top, white 33.333%, #f4f4f4 100%);
-  background: linear-gradient(to bottom, white 33.333%, #f4f4f4 100%);
+  background: -webkit-linear-gradient(top, white 0%, #f4f4f4 100%);
+  background: linear-gradient(to bottom, white 0%, #f4f4f4 100%);
   border-top: 2px solid #d0d0d0;
   box-shadow: 0 16px 16px 16px rgba(0, 0, 0, 0.125);
   overflow: hidden;
