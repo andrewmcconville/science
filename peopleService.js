@@ -127,16 +127,63 @@ angular
             {
                 name: "Ptolemy",
                 professions: ["astronomy", "mathematics", "geography"],
-                location: "Alexandria Egypt",
+                location: "Alexandria, Egypt",
                 birthDate: "000100-01-01",
                 deathDate: "000170-01-01"
             },
             {
-                name: "Galen",
+                name: "Galen of Pergamon",
                 professions: ["physiology",  "pathology", "pharmacology", "neurology", "anatomy"],
                 location: "Greek",
                 birthDate: "000129-01-01",
                 deathDate: "000216-01-01"
+            },
+            {
+                name: "Paul of Aegina",
+                professions: ["medicine"],
+                location: "Byzantine Empire",
+                birthDate: "000625-01-01",
+                deathDate: "000690-01-01"
+            },
+            {
+                name: "Muḥammad ibn Mūsā al-Khwārizmī",
+                displayName: "al-Khwārizmī",
+                professions: ["mathematics"],
+                location: "Khwarezm",
+                birthDate: "000780-01-01",
+                deathDate: "000650-01-01"
+            },
+            {
+                name: "Abu Yūsuf Yaʻqūb ibn ʼIsḥāq aṣ-Ṣabbāḥ al-Kindī",
+                displayName: "al-Kindī",
+                professions: ["cryptography ", "mathematics", "astronomy", "medicine"],
+                location: "Basra, Abbasid Caliphate",
+                birthDate: "000801-01-01",
+                deathDate: "00873-01-01"
+            },
+            {
+                name: "Al-Ṣābiʾ Thābit ibn Qurra al-Ḥarrānī",
+                displayName: "Thabit",
+                professions: ["mathematics", "astronomy"],
+                location: "Harran",
+                birthDate: "000826-01-01",
+                deathDate: "00901-02-18"
+            },
+            {
+                name: "Abu al-Qasim al-Zahrawi",
+                displayName: "al-Zahrawi",
+                professions: ["physiology", "surgery"],
+                location: "Medina Azahara, Al-Andalus",
+                birthDate: "000936-01-01",
+                deathDate: "1013-01-01"
+            },
+            {
+                name: "Abū ʿAlī al-Ḥasan ibn al-Ḥasan ibn al-Haytham",
+                displayName: "Alhazen",
+                professions: ["logic", "philosophy", "mathematics", "astronomy", "optics", "physics"],
+                location: "Basra, Buyid Emirate",
+                birthDate: "000965-01-01",
+                deathDate: "1040-01-01"
             },
             {
                 name: "Avicenna",
@@ -144,6 +191,14 @@ angular
                 location: "Iran",
                 birthDate: "000980-01-01",
                 deathDate: "1037-01-01"
+            },
+            {
+                name: "Leonardo Fibonacci",
+                displayName: "Fibonacci",
+                professions: ["mathematics"],
+                location: "Pisa",
+                birthDate: "1173-01-01",
+                deathDate: "1245-01-01"
             },
             {
                 name: "Roger Bacon",
@@ -299,6 +354,14 @@ angular
                 deathDate: "1695-07-08"
             },
             {
+                name: "Jacob Bernoulli",
+                displayName: "Bernoulli",
+                professions: ["mathematics"],
+                location: "Basel, Switzerland",
+                birthDate: "1654-12-27",
+                deathDate: "1705-08-16"
+            },
+            {
                 name: "Edmond Halley",
                 displayName: "Halley",
                 professions: ["astronomy", "geophysics", "mathematics", "physics"],
@@ -321,6 +384,14 @@ angular
                 location: "Boston, Massachusetts Bay, British America",
                 birthDate: "1706-01-17",
                 deathDate: "1790-04-14"
+            },
+            {
+                name: "Leonhard Euler",
+                displayName: "Euler",
+                professions: ["mathematics", "astronomy", "physics"],
+                location: "Basel, Switzerland",
+                birthDate: "1707-04-15",
+                deathDate: "1783-09-18"
             },
             {
                 name: "Carolus Linnaeus",
@@ -516,6 +587,14 @@ angular
                 deathDate: "1867-08-25"
             },
             {
+                name: "Charles Babbage",
+                displayName: "Babbage",
+                professions: ["computing", "mathematics"],
+                location: "London, England",
+                birthDate: "1791-12-26",
+                deathDate: "1871-10-18"
+            },
+            {
                 name: "Sir Charles Lyell",
                 displayName: "Lyell",
                 professions: ["geology"],
@@ -531,6 +610,14 @@ angular
                 location: "Shrewsbury, Shropshire, England",
                 birthDate: "1809-02-12",
                 deathDate: "1882-04-19"
+            },
+            {
+                name: "Augusta Ada King-Noel, Countess of Lovelace",
+                displayName: "Lovelace",
+                professions: ["computing", "mathematics", "writing"],
+                location: "London, England",
+                birthDate: "1815-12-10",
+                deathDate: "1852-11-27"
             },
             {
                 name: "Sir Francis Galton",
@@ -640,7 +727,7 @@ angular
             {
                 name: "Max Karl Ernst Ludwig Planck",
                 displayName: "Planck",
-                professions: ["quantum theory", "physics"],
+                professions: ["quantum physics", "physics"],
                 location: "Kiel, Duchy of Holstein",
                 birthDate: "1858-04-23",
                 deathDate: "1947-10-04"
@@ -737,7 +824,7 @@ angular
             {
                 name: "Max Born",
                 displayName: "Born",
-                professions: ["quantum theory", "mathematics", "physics"],
+                professions: ["quantum physics", "mathematics", "physics"],
                 location: "Breslau, German",
                 birthDate: "1882-12-11",
                 deathDate: "1970-01-05"
@@ -745,7 +832,7 @@ angular
             {
                 name: "Niels Bohr",
                 displayName: "Bohr",
-                professions: ["quantum theory", "physics"],
+                professions: ["quantum physics", "physics"],
                 location: "Copenhagen, Denmark",
                 birthDate: "1885-10-07",
                 deathDate: "1962-11-18"
@@ -753,7 +840,7 @@ angular
             {
                 name: "Erwin Schrödinger",
                 displayName: "Schrödinger",
-                professions: ["quantum theory", "physics", "thermodynamics"],
+                professions: ["quantum physics", "physics", "thermodynamics"],
                 location: "Vienna, Austria-Hungary",
                 birthDate: "1887-08-12",
                 deathDate: "1961-01-04"
@@ -793,10 +880,10 @@ angular
             {
                 name: "Enrico Fermi",
                 displayName: "Fermi",
-                professions: ["nuclear physics", "quantum theory"],
+                professions: ["nuclear physics", "quantum physics"],
                 location: "Rome, Italy",
                 birthDate: "1901-09-29",
-                deathDate: "1954-22-28"
+                deathDate: "1954-11-28"
             },
             {
                 name: "Margaret Mead",
@@ -839,6 +926,14 @@ angular
                 deathDate: "1967-02-18"
             },
             {
+                name: "Hans Bethe",
+                displayName: "Bethe",
+                professions: ["nuclear physics", "quantum physics"],
+                location: "Strasbourg, Germany",
+                birthDate: "1906-07-02",
+                deathDate: "2005-03-06"
+            },
+            {
                 name: "John Bardeen",
                 displayName: "Bardeen",
                 professions: ["electrical engineering", "physics"],
@@ -847,12 +942,100 @@ angular
                 deathDate: "1991-01-30"
             },
             {
+                name: "Maria Goeppert Mayer",
+                displayName: "Mayer",
+                professions: ["physics"],
+                location: "Kattowitz, German Empire",
+                birthDate: "1906-06-28",
+                deathDate: "1972-02-20"
+            },
+            {
+                name: "Rachel Carson",
+                displayName: "Carson",
+                professions: ["marine biology"],
+                location: "Springdale, Pennsylvania, USA",
+                birthDate: "1907-05-27",
+                deathDate: "1964-04-14"
+            },
+            {
+                name: "Jacques-Yves Cousteau",
+                displayName: "Cousteau",
+                professions: ["oceanography"],
+                location: "Saint-André-de-Cubzac Gironde, France",
+                birthDate: "1910-06-11",
+                deathDate: "1977-06-25"
+            },
+            {
+                name: "Luis Walter Alvarez",
+                displayName: "L. Alvarez",
+                professions: ["particle physics", "physics"],
+                location: "San Francisco, California, USA",
+                birthDate: "1911-06-13",
+                deathDate: "1988-09-01"
+            },
+            {
+                name: "Alan Mathison Turing",
+                displayName: "Turing",
+                professions: ["computing", "mathematics", "cryptography"],
+                location: "Maida Vale, London, England",
+                birthDate: "1912-06-23",
+                deathDate: "1954-06-07"
+            },
+            {
                 name: "Mary Leakey",
                 displayName: "M. Leakey",
                 professions: ["paleoanthropology"],
                 location: "London, England, UK",
                 birthDate: "1913-02-06",
                 deathDate: "1996-12-09"
+            },
+            {
+                name: "Norman Ernest Borlaug",
+                displayName: "Borlaug",
+                professions: ["agronomy", "biology", "genetics"],
+                location: "Cresco, Iowa",
+                birthDate: "1914-03-25",
+                deathDate: "2009-09-12"
+            },
+            {
+                name: "Jonas Edward Salk",
+                displayName: "Salk",
+                professions: ["virology", "epidemiology"],
+                location: "New York, New York, USA",
+                birthDate: "1914-10-28",
+                deathDate: "1995-06-23"
+            },
+            {
+                name: "Sir Fred Hoyle",
+                displayName: "Hoyle",
+                professions: ["astronomy", "cosmology"],
+                location: "Gilstead, Bingley, West Riding of Yorkshire, England, UK",
+                birthDate: "1915-06-24",
+                deathDate: "2001-08-20"
+            },
+            {
+                name: "Francis Harry Compton Crick",
+                displayName: "Crick",
+                professions: ["molecular biology", "biophysics", "genetics"],
+                location: "Weston Favell, Northamptonshire, England, UK",
+                birthDate: "1916-06-08",
+                deathDate: "2004-07-28"
+            },
+            {
+                name: "Richard Phillips Feynman",
+                displayName: "Feynman",
+                professions: ["quantum physics", "physics"],
+                location: "Queens, New York, USA",
+                birthDate: "1918-05-11",
+                deathDate: "1988-02-15"
+            },
+            {
+                name: "Rosalind Franklin",
+                displayName: "Franklin",
+                professions: ["chemistry", "crystallography"],
+                location: "Notting Hill, London, England, UK",
+                birthDate: "1920-07-25",
+                deathDate: "1958-04-16"
             },
             {
                 name: "nnn",
