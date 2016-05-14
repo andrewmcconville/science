@@ -429,6 +429,23 @@ angular
                 deathDate: "1875-02-22"
             },
             {
+                name: "Charles Darwin",
+                isHero: true,
+                displayName: "Darwin",
+                professions: ["evolution", "natural history", "geology"],
+                location: "Shrewsbury, Shropshire, England",
+                birthDate: "1809-02-12",
+                deathDate: "1882-04-19"
+            },
+            {
+                name: "Sir Francis Galton",
+                displayName: "xxx",
+                professions: [""],
+                location: "Birmingham, Warwickshire, England",
+                birthDate: "1822-02-16",
+                deathDate: "1911-01-17"
+            },
+            {
                 name: "xxx",
                 displayName: "xxx",
                 professions: [""],
