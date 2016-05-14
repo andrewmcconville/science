@@ -154,6 +154,14 @@ angular
                 deathDate: "1292-01-01"
             },
             {
+                name: "Johannes Gensfleisch zur Laden zum Gutenberg",
+                displayName: "Gutenberg",
+                professions: ["printing", "invention"],
+                location: "Mainz, Electorate of Mainz",
+                birthDate: "1398-01-01",
+                deathDate: "1468-02-03"
+            },
+            {
                 name: "Leonardo da Vinci",
                 displayName: "da Vinci",
                 professions: ["invention", "art", "engineering", "mathematics", "botany"],
@@ -226,6 +234,14 @@ angular
                 deathDate: "1657-06-03"
             },
             {
+                name: "René Descartes",
+                displayName: "Descartes",
+                professions: ["epistemology", "mathematics", "physics"],
+                location: "Kent, England",
+                birthDate: "1578-04-01",
+                deathDate: "1657-06-03"
+            },
+            {
                 name: "Blaise Pascal",
                 displayName: "Pascal",
                 professions: ["mathematics", "physics"],
@@ -267,13 +283,52 @@ angular
                 deathDate: "1727-03-31"
             },
             {
+                name: "Giovanni Domenico Cassini",
+                displayName: "Cassini",
+                professions: ["astronomy", "mathematics", "astrology", "engineering"],
+                location: "Perinaldo, Republic of Genova",
+                birthDate: "1625-06-08",
+                deathDate: "1712-09-14"
+            },
+            {
+                name: "Christiaan Huygens",
+                displayName: "Huygens",
+                professions: ["astronomy", "mathematics", "optics", "physics"],
+                location: "The Hague, Dutch Republic",
+                birthDate: "1629-04-14",
+                deathDate: "1695-07-08"
+            },
+            {
+                name: "Edmond Halley",
+                displayName: "Halley",
+                professions: ["astronomy", "geophysics", "mathematics", "physics"],
+                location: "Haggerston, Middlesex, England",
+                birthDate: "1656-11-08",
+                deathDate: "1742-01-14"
+            },
+            {
+                name: "Thomas Newcomen",
+                displayName: "Newcomen",
+                professions: ["engineering"],
+                location: "Dartmouth, Devon, England",
+                birthDate: "1664-02-28",
+                deathDate: "1729-08-05"
+            },
+            {
+                name: "Benjamin Franklin",
+                displayName: "Franklin",
+                professions: ["physics"],
+                location: "Boston, Massachusetts Bay, British America",
+                birthDate: "1706-01-17",
+                deathDate: "1790-04-14"
+            },
+            {
                 name: "Carolus Linnaeus",
                 displayName: "Linnaeus",
                 professions: ["botany", "zoology", "taxonomy"],
                 location: "Sweden",
                 birthDate: "1707-05-23",
-                deathDate: "1778-01-10",
-                left: 70
+                deathDate: "1778-01-10"
             },
             {
                 name: "Henry Cavendish",
@@ -290,6 +345,22 @@ angular
                 location: "Yorkshire, England",
                 birthDate: "1733-03-13",
                 deathDate: "1804-02-06"
+            },
+            {
+                name: "James Watt",
+                displayName: "Watt",
+                professions: ["mechanical engineering", "chemistry"],
+                location: "Greenock, Renfrewshire, Scotland",
+                birthDate: "1736-01-19",
+                deathDate: "1819-08-25"
+            },
+            {
+                name: "Charles-Augustin de Coulomb",
+                displayName: "Coulomb",
+                professions: ["physics"],
+                location: "Angoulême, Angoumois, France",
+                birthDate: "1736-06-14",
+                deathDate: "1806-08-23"
             },
             {
                 name: "Luigi Galvani",
@@ -311,9 +382,17 @@ angular
                 name: "Antoine-Laurent de Lavoisier",
                 displayName: "Lavoisier",
                 professions: ["chemistry", "biology"],
-                location: "xxx",
+                location: "Paris, France",
                 birthDate: "1743-09-26",
                 deathDate: "1794-05-08"
+            },
+            {
+                name: "Alessandro Giuseppe Antonio Anastasio Volta",
+                displayName: "Volta",
+                professions: ["physics", "chemistry"],
+                location: "Como, Duchy of Milan",
+                birthDate: "1745-02-18",
+                deathDate: "1827-03-05"
             },
             {
                 name: "Pierre-Simon Laplace",
@@ -381,6 +460,14 @@ angular
                 deathDate: "1856-07-09"
             },
             {
+                name: "Johann Carl Friedrich Gauss",
+                displayName: "Gauss",
+                professions: ["mathematics", "physics", "astronomy", "optics", "geophysics"],
+                location: "Brunswick, Duchy of Brunswick-Wolfenbüttel, Holy Roman Empire",
+                birthDate: "1777-04-30",
+                deathDate: "1855-02-23"
+            },
+            {
                 name: "Joseph-Louis Gay-Lussac",
                 displayName: "Gay-Lussac",
                 professions: ["chemistry", "physics"],
@@ -413,6 +500,14 @@ angular
                 deathDate: "1851-01-27"
             },
             {
+                name: "Georg Simon Ohm",
+                displayName: "Ohm",
+                professions: ["physics", "mathematics"],
+                location: "Erlangen, Brandenburg-Bayreuth",
+                birthDate: "1789-03-16",
+                deathDate: "1854-07-06"
+            },
+            {
                 name: "Michael Faraday",
                 displayName: "Faraday",
                 professions: ["physics", "chemistry"],
@@ -439,17 +534,331 @@ angular
             },
             {
                 name: "Sir Francis Galton",
-                displayName: "xxx",
-                professions: [""],
+                displayName: "Galton",
+                professions: ["anthropology", "sociology", "eugenics", "genetics", "statistics"],
                 location: "Birmingham, Warwickshire, England",
                 birthDate: "1822-02-16",
                 deathDate: "1911-01-17"
             },
             {
-                name: "xxx",
-                displayName: "xxx",
-                professions: [""],
-                location: "xxx",
+                name: "Gregor Mendel",
+                displayName: "Mendel",
+                professions: ["genetics"],
+                location: "Silesia, Austrian Empire",
+                birthDate: "1822-07-20",
+                deathDate: "1884-01-06"
+            },
+            {
+                name: "Louis Pasteur",
+                displayName: "Pasteur",
+                professions: ["microbiology", "chemistry"],
+                location: "Dole, France",
+                birthDate: "1822-12-27",
+                deathDate: "1895-09-28"
+            },
+            {
+                name: "Alfred Russel Wallace",
+                displayName: "Wallace",
+                professions: ["evolution", "biology", "zoology"],
+                location: "Llanbadoc, Monmouthshire, Wales",
+                birthDate: "1823-01-08",
+                deathDate: "1913-11-07"
+            },
+            {
+                name: "Sir William Thomson, 1st Baron Kelvin (Lord Kelvin)",
+                displayName: "Lord Kelvin",
+                professions: ["thermodynamics", "physics", "mathematics"],
+                location: "Belfast, Ireland, United Kingdom",
+                birthDate: "1824-06-26",
+                deathDate: "1907-12-17"
+            },
+            {
+                name: "Sir Joseph Lister",
+                displayName: "Lister",
+                professions: ["surgery", "medicine"],
+                location: "West Ham, England",
+                birthDate: "1827-04-05",
+                deathDate: "1912-02-10"
+            },
+            {
+                name: "James Clerk Maxwell",
+                isHero: true,
+                displayName: "Maxwell",
+                professions: ["physics", "mathematics"],
+                location: "Edinburgh, Scotland",
+                birthDate: "1831-06-13",
+                deathDate: "1879-11-05"
+            },
+            {
+                name: "Dmitry Ivanovich Mendeleyev",
+                displayName: "Mendeleyev",
+                professions: ["chemistry", "physics"],
+                location: "Verkhnie Aremzyani, Tobolsk Governorate, Russian Empire",
+                birthDate: "1834-02-08",
+                deathDate: "1907-02-02"
+            },
+            {
+                name: "Edward Williams Morley",
+                displayName: "Morley",
+                professions: ["physics", "optics"],
+                location: "Newark, New Jersey",
+                birthDate: "1838-01-29",
+                deathDate: "1923-02-24"
+            },
+            {
+                name: "Ivan Petrovich Pavlov",
+                displayName: "Pavlov",
+                professions: ["physiology"],
+                location: "Ryazan, Russian Empire",
+                birthDate: "1849-09-29",
+                deathDate: "1936-02-27"
+            },
+            {
+                name: "Albert Abraham Michelson",
+                displayName: "Michelson",
+                professions: ["physics"],
+                location: "Strzelno, Kingdom of Prussia",
+                birthDate: "1852-12-19",
+                deathDate: "1931-05-09"
+            },
+            {
+                name: "Robert Heinrich Herman Koch",
+                displayName: "Koch",
+                professions: ["microbiology"],
+                location: "Clausthal, Kingdom of Hanover",
+                birthDate: "1843-12-11",
+                deathDate: "1910-05-27"
+            },
+            {
+                name: "Heinrich Rudolf Hertz",
+                displayName: "Hertz",
+                professions: ["electrical engineering", "physics"],
+                location: "Hamburg, Germany",
+                birthDate: "1857-02-22",
+                deathDate: "1894-01-01"
+            },
+            {
+                name: "Max Karl Ernst Ludwig Planck",
+                displayName: "Planck",
+                professions: ["quantum theory", "physics"],
+                location: "Kiel, Duchy of Holstein",
+                birthDate: "1858-04-23",
+                deathDate: "1947-10-04"
+            },
+            {
+                name: "Nettie Maria Stevens",
+                displayName: "Stevens",
+                professions: ["genetics"],
+                location: "Cavendish, Vermont",
+                birthDate: "1861-07-07",
+                deathDate: "1912-05-04"
+            },
+            {
+                name: "William Bateson",
+                displayName: "Bateson",
+                professions: ["genetics"],
+                location: "Whitby, Yorkshire",
+                birthDate: "1861-08-08",
+                deathDate: "1926-02-08"
+            },
+            {
+                name: "Antoine Henri Becquerel",
+                displayName: "Becquerel",
+                professions: ["radioactivity", "physics", "chemistry"],
+                location: " Paris, France",
+                birthDate: "1852-12-15",
+                deathDate: "1908-08-25"
+            },
+            {
+                name: "Nikola Tesla",
+                displayName: "Tesla",
+                professions: ["electrical engineering", "physics"],
+                location: "Smiljan, Austrian Empire",
+                birthDate: "1856-07-10",
+                deathDate: "1943-01-07"
+            },
+            {
+                name: "Pierre Curie",
+                displayName: "P. Curie",
+                professions: ["crystallography", "radioactivity", "physics", "chemistry"],
+                location: " Paris, France",
+                birthDate: "1859-05-15",
+                deathDate: "1906-04-19"
+            },
+            {
+                name: "Marie Skłodowska Curie",
+                displayName: "M. Curie",
+                professions: ["radioactivity", "physics", "chemistry"],
+                location: "Warsaw, Poland",
+                birthDate: "1867-11-07",
+                deathDate: "1934-07-04"
+            },
+            {
+                name: "Henrietta Swan Leavitt",
+                displayName: "Leavitt",
+                professions: ["astronomy"],
+                location: "Lancaster, Massachusetts, USA",
+                birthDate: "1868-07-04",
+                deathDate: "1921-12-12"
+            },
+            {
+                name: "Ernest Rutherford",
+                displayName: "Rutherford",
+                professions: ["nuclear physics", "chemistry", "physics"],
+                location: "Brightwater, Tasman District, New Zealand",
+                birthDate: "1871-08-30",
+                deathDate: "1937-10-19"
+            },
+            {
+                name: "Albert Einstein",
+                isHero: true,
+                displayName: "Einstein",
+                professions: ["physics"],
+                location: "Ulm, Württemberg, Germany",
+                birthDate: "1879-03-14",
+                deathDate: "1955-04-18"
+            },
+            {
+                name: "Alfred Lothar Wegener",
+                displayName: "Wegener",
+                professions: ["geology", "meteorology", "astronomy"],
+                location: "Berlin, Germany",
+                birthDate: "1880-11-01",
+                deathDate: "1930-01-01"
+            },
+            {
+                name: "Sir Alexander Fleming",
+                displayName: "Fleming",
+                professions: ["bacteriology", "immunology"],
+                location: "Lochfield, East Ayrshire, Scotland",
+                birthDate: "1881-08-06",
+                deathDate: "1955-03-11"
+            },
+            {
+                name: "Max Born",
+                displayName: "Born",
+                professions: ["quantum theory", "mathematics", "physics"],
+                location: "Breslau, German",
+                birthDate: "1882-12-11",
+                deathDate: "1970-01-05"
+            },
+            {
+                name: "Niels Bohr",
+                displayName: "Bohr",
+                professions: ["quantum theory", "physics"],
+                location: "Copenhagen, Denmark",
+                birthDate: "1885-10-07",
+                deathDate: "1962-11-18"
+            },
+            {
+                name: "Erwin Schrödinger",
+                displayName: "Schrödinger",
+                professions: ["quantum theory", "physics", "thermodynamics"],
+                location: "Vienna, Austria-Hungary",
+                birthDate: "1887-08-12",
+                deathDate: "1961-01-04"
+            },
+            {
+                name: "Selman Abraham Waksman",
+                displayName: "Waksman",
+                professions: ["biochemistry", "microbiology"],
+                location: "Nova Pryluka, Kiev Governorate, Russian Empire",
+                birthDate: "1888-07-22",
+                deathDate: "1973-08-16"
+            },
+            {
+                name: "Edwin Powell Hubble",
+                displayName: "Hubble",
+                professions: ["astronomy"],
+                location: "Marshfield, Missouri, USA",
+                birthDate: "1889-11-30",
+                deathDate: "1953-09-28"
+            },
+            {
+                name: "Georges Henri Joseph Édouard Lemaître",
+                displayName: "Lemaître",
+                professions: ["cosmology", "astrophysics"],
+                location: "Charleroi, Belgium",
+                birthDate: "1894-07-17",
+                deathDate: "1966-06-20"
+            },
+            {
+                name: "Linus Pauling",
+                displayName: "Pauling",
+                professions: ["quantum chemistry", "biochemistry"],
+                location: "Portland, Oregon, USA",
+                birthDate: "1901-02-28",
+                deathDate: "1994-08-19"
+            },
+            {
+                name: "Enrico Fermi",
+                displayName: "Fermi",
+                professions: ["nuclear physics", "quantum theory"],
+                location: "Rome, Italy",
+                birthDate: "1901-09-29",
+                deathDate: "1954-22-28"
+            },
+            {
+                name: "Margaret Mead",
+                displayName: "Mead",
+                professions: ["anthropology"],
+                location: "Philadelphia, Pennsylvania, USA",
+                birthDate: "1901-12-16",
+                deathDate: "1978-11-15"
+            },
+            {
+                name: "Barbara McClintock",
+                displayName: "McClintock",
+                professions: ["Cytogenetics", "physiology"],
+                location: "Hartford, Connecticut, USA",
+                birthDate: "1902-06-16",
+                deathDate: "1992-09-02"
+            },
+            {
+                name: "Louis Seymour Bazett Leakey",
+                displayName: "L. Leakey",
+                professions: ["paleoanthropology", "archaeology"],
+                location: "Kabete, British East Africa",
+                birthDate: "1903-08-07",
+                deathDate: "1972-10-01"
+            },
+            {
+                name: "Georgiy Antonovich Gamov",
+                displayName: "Gamow",
+                professions: ["cosmology", "physics"],
+                location: "Odessa, Russia",
+                birthDate: "1904-03-04",
+                deathDate: "1968-08-19"
+            },
+            {
+                name: "Julius Robert Oppenheimer",
+                displayName: "Oppenheimer",
+                professions: ["physics"],
+                location: "New York City, New York",
+                birthDate: "1904-04-22",
+                deathDate: "1967-02-18"
+            },
+            {
+                name: "John Bardeen",
+                displayName: "Bardeen",
+                professions: ["electrical engineering", "physics"],
+                location: "Madison, Wisconsin, USA.",
+                birthDate: "1908-05-23",
+                deathDate: "1991-01-30"
+            },
+            {
+                name: "Mary Leakey",
+                displayName: "M. Leakey",
+                professions: ["paleoanthropology"],
+                location: "London, England, UK",
+                birthDate: "1913-02-06",
+                deathDate: "1996-12-09"
+            },
+            {
+                name: "nnn",
+                displayName: "ddd",
+                professions: ["ppp"],
+                location: "lll",
                 birthDate: "0000-01-01",
                 deathDate: "0000-01-01"
             }
