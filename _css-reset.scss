@@ -1,0 +1,35 @@
+* {
+	box-sizing: border-box;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+
+body {
+	line-height: 1;
+	margin:0;
+}
+
+a, button {
+	outline: 0;
+	padding:0;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, img, article, aside, figure, figcaption, footer, header, menu, nav, section, summary, time {
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	margin: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+	display: block
+}
+
+ol, ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}

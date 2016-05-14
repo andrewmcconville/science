@@ -1,0 +1,39 @@
+.zoom-controls {
+    bottom: 60px;
+	display: flex;
+	flex-direction: column;
+    position: absolute;
+    right: 24px;
+	width: 40px;
+}
+
+.zoom-controls__button {
+	appearance: none;
+	-webkit-appearance: none;
+	background-color: #f8f8f8;
+	border: 1px solid #e0e0e0;
+	cursor: pointer;
+	font-size: 14px;
+	height: 40px;
+	width: 40px;
+
+	&:hover {
+		background-color: #fff;
+	}
+
+	&[disabled] {
+		color: rgba(0, 0, 0, 0.125);
+	}
+
+	&:first-child {
+		border-bottom: none;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+	}
+
+	&:last-child {
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		border-top: none;
+	}
+}

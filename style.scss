@@ -1,0 +1,34 @@
+@import "css-reset";
+
+@import "typography";
+@import "view";
+@import "header";
+
+@import "time-scale";
+@import "people";
+@import "events";
+@import "detail";
+@import "zoom-controls";
+@import "era-nav";
+@import "eras";
+
+html {
+	height: 100%;
+}
+
+body {
+	color: rgba(0, 0, 0, .625);
+	//font-family: 'Dosis', sans-serif;
+	//font-family: 'Rubik', sans-serif;
+	//font-family: 'Rajdhani', sans-serif;
+	font-family: 'Signika Negative', sans-serif;
+	height: 100%;
+	overflow: hidden;
+}
+
+.content__placeholder {
+	background-color: #f0f0f0;
+	height: 200px;
+	margin-bottom: 8px;
+	padding: 16px;
+}

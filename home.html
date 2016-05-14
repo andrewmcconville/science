@@ -1,0 +1,108 @@
+<header class="view__header">
+	<nav class="header__nav">
+	    <a ui-sref="home" class="header__link" ui-sref-active="header__link--active">Home</a>
+	    <a ui-sref="about" class="header__link" ui-sref-active="header__link--active">About</a>
+	</nav>
+</header>
+
+<div class="view__content" id="js-home">
+	<h1 class="view__heading">
+		Home Page
+	</h1>
+
+	<div class="view__animate-load" ng-show="isLoaded">
+		<ul id="js-eras" class="eras">
+			<li ng-repeat="era in ::eras"
+				id="js-era-{{::era.name}}"
+				class="era"
+				style="flex: 1 1 {{::getHeightPercent(era.startDate, era.endDate)}}%">
+				<h2 class="era__name">{{::era.name}}</h2>
+			</li>
+		</ul>
+
+		<ol id="js-time-scale" class="time-scale"
+			ng-class="{'hide-quarter': pixelsPerYear <= .75, 'hide-half': pixelsPerYear <= .25}">
+		</ol>
+
+		<ul id="js-events" class="events">
+			<li ng-repeat="era in ::eras"
+				class="era__link"
+				style="top: {{::getTop(era.startDate)}}%"
+				ui-sref="home.era({eraURL: era.url})">
+				<div class="era__banner">
+					<div class="era__banner-animation"></div>
+					<div class="era__banner-tail--left"></div>
+					<div class="era__banner-tail--right"></div>
+				</div>
+			</li>
+
+			<li ng-repeat-start="person in ::people track by person.url"
+				ng-if="::!person.isHero"
+				class="person--md"
+				style="top: {{::getTop(person.birthDate, person.deathDate)}}%; left: {{::person.left}}%; max-width: {{::100 - person.left}}%">
+				<div class="person__avatar--md"></div>
+				<div class="person__meta">
+					<div class="person__name--md">{{::person.displayName || person.name}}</div>
+					<div class="person__professions--md">
+						<span class="person__birth-year">{{::person.birthDate | getYear}}, </span>
+						<span class="person__profession">{{::person.professions[0]}}</span>
+					</div>
+				</div>
+			</li>
+			<li ng-repeat-end
+				ng-if="::person.isHero"
+				class="person--lg"
+				style="top: {{::getTop(person.birthDate, person.deathDate)}}%; left: {{::person.left}}%; max-width: {{::100 - person.left}}%"
+				ui-sref="home.person({personURL: person.url})">
+				<div class="person__avatar--lg">
+					<div class="person__avatar-animation"></div></div>
+				<div class="person__meta">
+					<div class="person__name--lg">{{::person.displayName || person.name}}</div>
+					<div class="person__professions--lg">
+						<span class="person__birth-year">{{::person.birthDate | getYear}}, </span>
+						<span class="person__profession">{{::person.professions[0]}}</span>
+					</div>
+				</div>
+			</li>
+
+			<li ng-repeat-start="event in ::events track by event.url"
+				ng-if="::!event.isHero"
+				class="event--md"
+				style="top: {{::getTop(event.startDate)}}%;">
+				<div class="event__avatar"></div>
+				<div class="event__meta">
+					<div class="event__name">{{::event.name}}, {{::event.startDate | getYear}}</div>
+				</div>
+			</li>
+			<li ng-repeat-end
+				ng-if="::event.isHero"
+				class="event--md"
+				style="top: {{::getTop(event.startDate)}}%;"
+				ui-sref="home.event({eventURL: event.url})">
+				<div class="event__avatar">
+					<div class="event__avatar-animation"></div>
+				</div>
+				<div class="event__meta">
+					<div class="event__name">{{::event.name}}, {{::event.startDate | getYear}}</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<nav class="era-nav view__animate-load" ng-show="isLoaded">
+	<a ng-repeat="era in ::eras"
+		class="era-nav__link"
+		ng-click="scrollToEra(era.name)">
+		<span class="era-nav__era-initial">{{::era.name.charAt(0)}}</span>
+		<span class="era-nav__era-name" ng-hide="true">{{::era.name}}</span>
+	</a>
+</nav>
+
+<aside class="zoom-controls view__animate-load" ng-show="isLoaded">
+	<button class="zoom-controls__button" ng-click="zoom(+.25)" ng-disabled="pixelsPerYear >= 4">In</button>
+	<button class="zoom-controls__button" ng-click="setZoom(2)">1x</button>
+	<button class="zoom-controls__button" ng-click="zoom(-.25)" ng-disabled="pixelsPerYear <= .25">Out</button>
+</aside>
+
+<div ui-view="detail" class="view" ng-class="{'view--active': isActiveDetail}"></div>
