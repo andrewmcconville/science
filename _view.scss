@@ -46,10 +46,20 @@
 	flex: 1 1 auto;
 	flex-direction: column;
 	-webkit-overflow-scrolling: touch;
-	overflow-x: hidden;
-	overflow-y: scroll;
 	position: relative;
 	width: 100%;
+}
+
+.view__content--vertical {
+	@extend .view__content;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.view__content--horizontal {
+	@extend .view__content;
+	overflow-x: scroll;
+	overflow-y: hidden;
 }
 
 .view__heading {

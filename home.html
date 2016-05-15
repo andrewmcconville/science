@@ -5,7 +5,7 @@
 	</nav>
 </header>
 
-<div class="view__content" id="js-home">
+<div class="view__content--horizontal" id="js-home">
 	<h1 class="view__heading">
 		Home Page
 	</h1>
@@ -15,7 +15,7 @@
 			<li ng-repeat="era in ::eras"
 				id="js-era-{{::era.name}}"
 				class="era"
-				style="flex: 1 1 {{::getHeightPercent(era.startDate, era.endDate)}}%">
+				style="flex: 1 1 {{::getWidthPercent(era.startDate, era.endDate)}}%">
 				<h2 class="era__name">{{::era.name}}</h2>
 			</li>
 		</ul>
@@ -27,7 +27,7 @@
 		<ul id="js-events" class="events">
 			<li ng-repeat="era in ::eras"
 				class="era__link"
-				style="top: {{::getTop(era.startDate)}}%"
+				style="left: {{::getLeft(era.startDate)}}%"
 				ui-sref="home.era({eraURL: era.url})">
 				<div class="era__banner">
 					<div class="era__banner-animation"></div>
@@ -39,12 +39,12 @@
 			<li ng-repeat-start="person in ::people track by person.url"
 				ng-if="::!person.isHero"
 				class="person--md"
-				style="top: {{::getTop(person.birthDate, person.deathDate)}}%; left: {{::person.left}}%; max-width: {{::100 - person.left}}%">
+				style="left: {{::getLeftMidlife(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%">
 				<div class="person__avatar--md"></div>
 				<div class="person__meta">
 					<div class="person__name--md">{{::person.displayName || person.name}}</div>
 					<div class="person__professions--md">
-						<span class="person__birth-year">{{::person.birthDate | getYear}}, </span>
+						<!-- <span class="person__birth-year">{{::person.birthDate | getYear}}, </span> -->
 						<span class="person__profession">{{::person.professions[0]}}</span>
 					</div>
 				</div>
@@ -52,14 +52,14 @@
 			<li ng-repeat-end
 				ng-if="::person.isHero"
 				class="person--lg"
-				style="top: {{::getTop(person.birthDate, person.deathDate)}}%; left: {{::person.left}}%; max-width: {{::100 - person.left}}%"
+				style="left: {{::getLeftMidlife(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%"
 				ui-sref="home.person({personURL: person.url})">
 				<div class="person__avatar--lg">
 					<div class="person__avatar-animation"></div></div>
 				<div class="person__meta">
 					<div class="person__name--lg">{{::person.displayName || person.name}}</div>
 					<div class="person__professions--lg">
-						<span class="person__birth-year">{{::person.birthDate | getYear}}, </span>
+						<!-- <span class="person__birth-year">{{::person.birthDate | getYear}}, </span> -->
 						<span class="person__profession">{{::person.professions[0]}}</span>
 					</div>
 				</div>
@@ -68,7 +68,7 @@
 			<li ng-repeat-start="event in ::events track by event.url"
 				ng-if="::!event.isHero"
 				class="event--md"
-				style="top: {{::getTop(event.startDate)}}%;">
+				style="left: {{::getLeft(event.startDate)}}%;">
 				<div class="event__avatar"></div>
 				<div class="event__meta">
 					<div class="event__name">{{::event.name}}, {{::event.startDate | getYear}}</div>
@@ -77,7 +77,7 @@
 			<li ng-repeat-end
 				ng-if="::event.isHero"
 				class="event--md"
-				style="top: {{::getTop(event.startDate)}}%;"
+				style="left: {{::getLeft(event.startDate)}}%;"
 				ui-sref="home.event({eventURL: event.url})">
 				<div class="event__avatar">
 					<div class="event__avatar-animation"></div>

@@ -1,8 +1,8 @@
 .time-scale {
+	bottom: 0;
     display: flex;
-    flex-direction: column;
+    left: 0;
 	position: absolute;
-	top: 100px;
 	//transition: height 320ms;
 
 	// hide halves
@@ -17,7 +17,7 @@
 }
 
 .time-scale__marker {
-	flex: 1 0 auto;
+	flex: 1 1 0;
 	padding-left: 4px;
 	padding-top: 4px;
 

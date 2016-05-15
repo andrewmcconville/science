@@ -7,7 +7,8 @@ angular
                 location: "Miletus",
                 professions: ["astronomy", "mathematics", "philosophy"],
                 birthDate: "-000624-01-01",
-                deathDate: "-000546-01-01"
+                deathDate: "-000546-01-01",
+                offset: 50
             },
             {
                 name: "Anaximander",
@@ -38,7 +39,7 @@ angular
                 professions: ["philosophy", "epistemology"],
                 birthDate: "-000470-01-01",
                 deathDate: "-000399-01-01",
-                left: 70
+                offset: 70
             },
             {
                 name: "Hippocrates",
@@ -46,7 +47,7 @@ angular
                 professions: ["medicine"],
                 birthDate: "-000460-01-01",
                 deathDate: "-000375-01-01",
-                left: 35
+                offset: 35
             },
             {
                 name: "Democritus",
@@ -76,7 +77,7 @@ angular
                 professions: ["mathematics"],
                 birthDate: "-000323-01-01",
                 deathDate: "-000283-01-01",
-                left: 60
+                offset: 60
             },
             {
                 name: "Aristarchus",
@@ -84,7 +85,7 @@ angular
                 professions: ["astronomy", "mathematics"],
                 birthDate: "-000310-01-01",
                 deathDate: "-000230-01-01",
-                left: 30
+                offset: 30
             },
             {
                 name: "Archimedes",
@@ -92,7 +93,7 @@ angular
                 professions: ["engineering", "mathematics", "physics", "astronomy"],
                 birthDate: "-000287-01-01",
                 deathDate: "-000212-01-01",
-                left: 40
+                offset: 40
             },
             {
                 name: "Eratosthenes",
@@ -100,7 +101,7 @@ angular
                 professions: ["geography", "mathematics", "music"],
                 birthDate: "-000276-01-01",
                 deathDate: "-000194-01-01",
-                left: 60
+                offset: 60
             },
             {
                 name: "Seleucus",
@@ -115,7 +116,7 @@ angular
                 location: "Nicaea",
                 birthDate: "-000190-01-01",
                 deathDate: "-100020-01-01",
-                left: 10
+                offset: 10
             },
             {
                 name: "Pliny the Elder",
@@ -420,7 +421,7 @@ angular
             {
                 name: "James Watt",
                 displayName: "Watt",
-                professions: ["mechanical engineering", "chemistry"],
+                professions: ["engineering", "chemistry"],
                 location: "Greenock, Renfrewshire, Scotland",
                 birthDate: "1736-01-19",
                 deathDate: "1819-08-25"
@@ -1051,14 +1052,16 @@ angular
             return _elem.name.toLowerCase().replace(/\s/g, "-");
         };
 
-        var getLeft = function(_index){
-            if((_index + 3) % 3 == 0) {
-                return 0
-            } else if((_index + 3) % 3 == 1) {
-                return 55
-            }  else if((_index + 3) % 3 == 2) {
-                return 25
-            }
+        var getOffset = function(_index){
+            // if((_index + 3) % 3 == 0) {
+            //     return 0
+            // } else if((_index + 3) % 3 == 1) {
+            //     return 55
+            // }  else if((_index + 3) % 3 == 2) {
+            //     return 25
+            // }
+
+            return (parseInt(_index.toString()[_index.toString().length - 1]) + 1) * 9
         }
 
         var bootstrapArray = function(_array){
@@ -1067,8 +1070,8 @@ angular
             for(var i = 0; i < array.length; i++){
                 array[i].url = getURL(array[i]);
                 
-                if(array[i].left == null){
-                    array[i].left = getLeft(i);
+                if(array[i].offset == null){
+                    array[i].offset = getOffset(i);
                 }
             }
 

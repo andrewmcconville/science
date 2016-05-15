@@ -95,13 +95,13 @@ app.controller('homeCtrl', ['$scope', '$document', '$timeout', 'Eras', 'Events',
 		jsTimeScale.appendChild(year);
 	};
 
-	$scope.getTop = function(_date){
+	$scope.getLeft = function(_date){
 		var	year = new Date(_date).getUTCFullYear();
 
 		return 100 * (Math.abs(firstYear) + year) / (lastYear - firstYear)
 	};
 
-	$scope.getTopMidlife = function(_birthDate, _deathDate){
+	$scope.getLeftMidlife = function(_birthDate, _deathDate){
 		var age = new Date(_deathDate).getUTCFullYear() - new Date(_birthDate).getUTCFullYear();
 		var midlife = new Date(_birthDate).getUTCFullYear() + (age / 2);
 		var	year = new Date(age).getUTCFullYear();
@@ -109,7 +109,7 @@ app.controller('homeCtrl', ['$scope', '$document', '$timeout', 'Eras', 'Events',
 		return 100 * (Math.abs(firstYear) + midlife) / (lastYear - firstYear)
 	};
 
-	$scope.getHeightPercent = function(_startDate, _endDate){
+	$scope.getWidthPercent = function(_startDate, _endDate){
 		var startYear = new Date(_startDate).getUTCFullYear(),
 			endYear = new Date(_endDate).getUTCFullYear();
 
@@ -117,28 +117,29 @@ app.controller('homeCtrl', ['$scope', '$document', '$timeout', 'Eras', 'Events',
 	};
 
 	$scope.scrollToEra = function(_era){
-		jsHome.scrollTop = document.getElementById("js-era-" + _era).offsetTop;
+		console.log(_era);
+		jsHome.scrollLeft = document.getElementById("js-era-" + _era).offsetLeft;
 	};
 
 	$scope.zoom = function(_amount){
 		$scope.pixelsPerYear += _amount;
 		
 		var ratio = $scope.pixelsPerYear / ($scope.pixelsPerYear - _amount);
-		var height = (lastYear - firstYear) * $scope.pixelsPerYear;
+		var width = (lastYear - firstYear) * $scope.pixelsPerYear;
 
 		//when zooming in: resize first, then scroll
 		if(_amount > 0){
-			jsTimeScale.style.height = height + "px";
-			jsEras.style.height = height + "px";
-			jsEvents.style.height = height + "px";
-			jsHome.scrollTop = jsHome.scrollTop * ratio + 20;
+			jsTimeScale.style.width = width + "px";
+			jsEras.style.width = width + "px";
+			jsEvents.style.width = width + "px";
+			jsHome.scrollLeft = jsHome.scrollLeft * ratio + 20;
 
 		//when zooming out: scroll first, then resize
 		} else {
-			jsHome.scrollTop = jsHome.scrollTop * ratio - 20;
-			jsTimeScale.style.height = height + "px";
-			jsEras.style.height = height + "px";
-			jsEvents.style.height = height + "px";
+			jsHome.scrollLeft = jsHome.scrollLeft * ratio - 20;
+			jsTimeScale.style.width = width + "px";
+			jsEras.style.width = width + "px";
+			jsEvents.style.width = width + "px";
 		}
 	};
 
