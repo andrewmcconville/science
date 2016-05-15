@@ -84,16 +84,15 @@ ol, ul {
   -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative; }
+
+.view__content--vertical {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-overflow-scrolling: touch;
-  position: relative;
-  width: 100%; }
-
-.view__content--vertical {
   overflow-x: hidden;
   overflow-y: scroll; }
 
@@ -124,14 +123,16 @@ ol, ul {
       -ms-flex-pack: center;
           justify-content: center; }
 
-.view__animate-load.ng-hide-remove {
-  opacity: 0; }
-.view__animate-load.ng-hide-remove-active {
-  opacity: 1; }
-.view__animate-load.ng-hide-add {
-  opacity: 1; }
-.view__animate-load.ng-hide-add-active {
-  opacity: 0; }
+.view__animate-load {
+  position: relative; }
+  .view__animate-load.ng-hide-remove {
+    opacity: 0; }
+  .view__animate-load.ng-hide-remove-active {
+    opacity: 1; }
+  .view__animate-load.ng-hide-add {
+    opacity: 1; }
+  .view__animate-load.ng-hide-add-active {
+    opacity: 0; }
 
 .header__title {
   -webkit-box-align: center;
@@ -599,6 +600,10 @@ ol, ul {
   background: linear-gradient(to right, white 0%, #f4f4f4 100%);
   border-left: 2px solid #d0d0d0;
   box-shadow: 16px 0 16px 16px rgba(0, 0, 0, 0.125);
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   overflow: hidden;
   padding: 0 48px; }
 

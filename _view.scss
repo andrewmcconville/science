@@ -44,14 +44,13 @@
 	background-color: rgba(255, 255, 255, .875);
 	display: flex;
 	flex: 1 1 auto;
-	flex-direction: column;
 	-webkit-overflow-scrolling: touch;
 	position: relative;
-	width: 100%;
 }
 
 .view__content--vertical {
 	@extend .view__content;
+	flex-direction: column;
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
@@ -76,6 +75,7 @@
 }
 
 .view__animate-load {
+	position: relative;
 	//transition: opacity 640ms;
 
 	&.ng-hide-remove {

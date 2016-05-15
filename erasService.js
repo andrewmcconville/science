@@ -25,7 +25,7 @@ angular
             {
                 name: "Modern",
                 startDate: "001900",
-                endDate: "002100"
+                endDate: "002000"
             }
         ];
 

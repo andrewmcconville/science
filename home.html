@@ -15,7 +15,7 @@
 			<li ng-repeat="era in ::eras"
 				id="js-era-{{::era.name}}"
 				class="era"
-				style="flex: 1 1 {{::getWidthPercent(era.startDate, era.endDate)}}%">
+				style="width: {{::getWidthPercent(era.startDate, era.endDate)}}%;">
 				<h2 class="era__name">{{::era.name}}</h2>
 			</li>
 		</ul>
@@ -100,9 +100,9 @@
 </nav>
 
 <aside class="zoom-controls view__animate-load" ng-show="isLoaded">
-	<button class="zoom-controls__button" ng-click="zoom(+.25)" ng-disabled="pixelsPerYear >= 4">In</button>
-	<button class="zoom-controls__button" ng-click="setZoom(2)">1x</button>
-	<button class="zoom-controls__button" ng-click="zoom(-.25)" ng-disabled="pixelsPerYear <= .25">Out</button>
+	<button class="zoom-controls__button" ng-click="zoom(+.25)" ng-disabled="pixelsPerYear >= 32">In</button>
+	<button class="zoom-controls__button" ng-click="setZoom(4)">1x</button>
+	<button class="zoom-controls__button" ng-click="zoom(-.25)" ng-disabled="pixelsPerYear <= 2">Out</button>
 </aside>
 
 <div ui-view="detail" class="view" ng-class="{'view--active': isActiveDetail}"></div>

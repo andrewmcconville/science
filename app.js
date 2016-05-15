@@ -155,8 +155,8 @@ app.controller('homeCtrl', ['$scope', '$document', '$timeout', 'Eras', 'Events',
 		}
 	};
 
-	//set initial zoom aka heights
-	$scope.zoom(0);
+	//set initial zoom
+	$scope.zoom(2);
 
 	//show the main timeline after
 	//the view transition is done
