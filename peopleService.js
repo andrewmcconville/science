@@ -604,6 +604,14 @@ angular
                 deathDate: "1875-02-22"
             },
             {
+                name: "Christian Andreas Doppler",
+                displayName: "Doppler",
+                professions: ["physics", "mathematics"],
+                location: "Salzburg, Austria",
+                birthDate: "1803-11-29",
+                deathDate: "1853-03-17"
+            },
+            {
                 name: "Charles Darwin",
                 isHero: true,
                 displayName: "Darwin",
