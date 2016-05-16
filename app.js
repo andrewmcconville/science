@@ -118,7 +118,7 @@ app.controller('homeCtrl', ['$scope', '$document', '$timeout', 'Eras', 'Events',
 
 	$scope.scrollToEra = function(_era){
 		console.log(_era);
-		jsHome.scrollLeft = document.getElementById("js-era-" + _era).offsetLeft;
+		jsHome.scrollLeft = document.getElementById("js-era-" + _era).offsetLeft + 300;
 	};
 
 	$scope.zoom = function(_amount){
@@ -132,11 +132,11 @@ app.controller('homeCtrl', ['$scope', '$document', '$timeout', 'Eras', 'Events',
 			jsTimeScale.style.width = width + "px";
 			jsEras.style.width = width + "px";
 			jsEvents.style.width = width + "px";
-			jsHome.scrollLeft = jsHome.scrollLeft * ratio + 20;
+			jsHome.scrollLeft = jsHome.scrollLeft * ratio - 10;
 
 		//when zooming out: scroll first, then resize
 		} else {
-			jsHome.scrollLeft = jsHome.scrollLeft * ratio - 20;
+			jsHome.scrollLeft = jsHome.scrollLeft * ratio + 10;
 			jsTimeScale.style.width = width + "px";
 			jsEras.style.width = width + "px";
 			jsEvents.style.width = width + "px";
@@ -146,11 +146,11 @@ app.controller('homeCtrl', ['$scope', '$document', '$timeout', 'Eras', 'Events',
 	$scope.setZoom = function(_scale){
 		if($scope.pixelsPerYear < _scale){
 			while($scope.pixelsPerYear < _scale){
-				$scope.zoom(+.25);
+				$scope.zoom(+.5);
 			}
 		} else {
 			while($scope.pixelsPerYear > _scale){
-				$scope.zoom(-.25);
+				$scope.zoom(-.5);
 			}
 		}
 	};

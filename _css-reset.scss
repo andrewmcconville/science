@@ -16,6 +16,12 @@ a, button {
 	padding:0;
 }
 
+button {
+	color: rgba(0, 0, 0, .625);
+	font-family: 'Signika Negative', sans-serif;
+	font-size: 100%;
+}
+
 h1, h2, h3, h4, h5, h6, p, a, img, article, aside, figure, figcaption, footer, header, menu, nav, section, summary, time {
 	border: 0;
 	font-size: 100%;

@@ -6,9 +6,12 @@
 </header>
 
 <div class="view__content--horizontal" id="js-home">
-	<h1 class="view__heading">
-		Home Page
-	</h1>
+	<div class="introduction">
+		<h1 class="view__heading">
+			Home Page
+		</h1>
+		<p class="introduction__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
 
 	<div class="view__animate-load" ng-show="isLoaded">
 		<ul id="js-eras" class="eras">
@@ -36,7 +39,7 @@
 				</div>
 			</li>
 
-			<li ng-repeat-start="person in ::people track by person.url"
+			<li ng-repeat-start="person in ::people | filter:person.branch = 'life' track by person.url"
 				ng-if="::!person.isHero"
 				class="person--md"
 				style="left: {{::getLeftMidlife(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%">
@@ -44,7 +47,7 @@
 				<div class="person__meta">
 					<div class="person__name--md">{{::person.displayName || person.name}}</div>
 					<div class="person__professions--md">
-						<!-- <span class="person__birth-year">{{::person.birthDate | getYear}}, </span> -->
+						<span class="person__birth-year">{{::person.birthDate | getYear}}, </span>
 						<span class="person__profession">{{::person.professions[0]}}</span>
 					</div>
 				</div>
@@ -59,7 +62,7 @@
 				<div class="person__meta">
 					<div class="person__name--lg">{{::person.displayName || person.name}}</div>
 					<div class="person__professions--lg">
-						<!-- <span class="person__birth-year">{{::person.birthDate | getYear}}, </span> -->
+						<span class="person__birth-year">{{::person.birthDate | getYear}}, </span>
 						<span class="person__profession">{{::person.professions[0]}}</span>
 					</div>
 				</div>
@@ -100,9 +103,9 @@
 </nav>
 
 <aside class="zoom-controls view__animate-load" ng-show="isLoaded">
-	<button class="zoom-controls__button" ng-click="zoom(+.25)" ng-disabled="pixelsPerYear >= 32">In</button>
+	<button class="zoom-controls__button" ng-click="zoom(+.5)" ng-disabled="pixelsPerYear >= 32">+</button>
 	<button class="zoom-controls__button" ng-click="setZoom(4)">1x</button>
-	<button class="zoom-controls__button" ng-click="zoom(-.25)" ng-disabled="pixelsPerYear <= 2">Out</button>
+	<button class="zoom-controls__button" ng-click="zoom(-.5)" ng-disabled="pixelsPerYear <= 2">-</button>
 </aside>
 
 <div ui-view="detail" class="view" ng-class="{'view--active': isActiveDetail}"></div>

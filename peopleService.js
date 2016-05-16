@@ -5,6 +5,7 @@ angular
             {
                 name: "Thales",
                 location: "Miletus",
+                branch: "physical",
                 professions: ["astronomy", "mathematics", "philosophy"],
                 birthDate: "-000624-01-01",
                 deathDate: "-000546-01-01",
@@ -13,6 +14,7 @@ angular
             {
                 name: "Anaximander",
                 location: "Miletus",
+                branch: "physical",
                 professions: ["astronomy", "geometry", "geography", "metaphysics"],
                 birthDate: "-000610-01-01",
                 deathDate: "-000546-01-01"
@@ -21,6 +23,7 @@ angular
                 name: "Pythagoras",
                 isHero: true,
                 location: "Samos",
+                branch: "logical",
                 professions: ["mathematics", "music", "metaphysics"],
                 birthDate: "-000570-01-01",
                 deathDate: "-000495-01-01",
@@ -29,6 +32,7 @@ angular
             {
                 name: "Anaxagoras",
                 location: "Klazomenai",
+                branch: "logical",
                 professions: ["philosophy"],
                 birthDate: "-000510-01-01",
                 deathDate: "-000428-01-01"
@@ -36,6 +40,7 @@ angular
             {
                 name: "Socrates",
                 location: "Athens",
+                branch: "logical",
                 professions: ["philosophy", "epistemology"],
                 birthDate: "-000470-01-01",
                 deathDate: "-000399-01-01",
@@ -44,6 +49,7 @@ angular
             {
                 name: "Hippocrates",
                 location: "Island of Cos, Greece",
+                branch: "life",
                 professions: ["medicine"],
                 birthDate: "-000460-01-01",
                 deathDate: "-000375-01-01",
@@ -52,6 +58,7 @@ angular
             {
                 name: "Democritus",
                 location: "Abdera, Thrace",
+                branch: "logical",
                 professions: ["metaphysics", "astronomy", "mathematics"],
                 birthDate: "-000460-01-01",
                 deathDate: "-000370-01-01"
@@ -59,6 +66,7 @@ angular
             {
                 name: "Plato",
                 location: "Athens, Greece",
+                branch: "logical",
                 professions: ["philosophy", "epistemology"],
                 birthDate: "-000428-01-01",
                 deathDate: "-000348-01-01"
@@ -66,14 +74,16 @@ angular
             {
                 name: "Aristotle",
                 isHero: true,
+                branch: "logical",
                 location: "Stagira, Chalcidice, Greece",
-                professions: ["physics", "philosophy", "metaphysics"],
+                professions: ["philosophy", "metaphysics", "physics"],
                 birthDate: "-000384-01-01",
                 deathDate: "-000322-01-01"
             },
             {
                 name: "Euclid",
                 location: "Syracuse, Sicily",
+                branch: "logical",
                 professions: ["mathematics"],
                 birthDate: "-000323-01-01",
                 deathDate: "-000283-01-01",
@@ -82,6 +92,7 @@ angular
             {
                 name: "Aristarchus",
                 location: "Samos",
+                branch: "physical",
                 professions: ["astronomy", "mathematics"],
                 birthDate: "-000310-01-01",
                 deathDate: "-000230-01-01",
@@ -90,6 +101,7 @@ angular
             {
                 name: "Archimedes",
                 location: "Syracuse, Sicily",
+                branch: "applied",
                 professions: ["engineering", "mathematics", "physics", "astronomy"],
                 birthDate: "-000287-01-01",
                 deathDate: "-000212-01-01",
@@ -98,6 +110,7 @@ angular
             {
                 name: "Eratosthenes",
                 location: "Cyrene, Libya",
+                branch: "physical",
                 professions: ["geography", "mathematics", "music"],
                 birthDate: "-000276-01-01",
                 deathDate: "-000194-01-01",
@@ -105,6 +118,7 @@ angular
             },
             {
                 name: "Seleucus",
+                branch: "physical",
                 professions: ["astronomy", "philosophy"],
                 location: "Seleucia",
                 birthDate: "-000190-01-01",
@@ -112,6 +126,7 @@ angular
             },
             {
                 name: "Hipparchus",
+                branch: "physical",
                 professions: ["astronomy", "trigonometry"],
                 location: "Nicaea",
                 birthDate: "-000190-01-01",
@@ -121,12 +136,14 @@ angular
             {
                 name: "Pliny the Elder",
                 location: "Comum, Italy",
+                branch: "logical",
                 professions: ["author", "naturalism", "natural philosophy"],
                 birthDate: "0023-01-01",
                 deathDate: "0079-01-01"
             },
             {
                 name: "Ptolemy",
+                branch: "physical",
                 professions: ["astronomy", "mathematics", "geography"],
                 location: "Alexandria, Egypt",
                 birthDate: "000100-01-01",
@@ -134,6 +151,7 @@ angular
             },
             {
                 name: "Galen of Pergamon",
+                branch: "life",
                 professions: ["physiology",  "pathology", "pharmacology", "neurology", "anatomy"],
                 location: "Greek",
                 birthDate: "000129-01-01",
@@ -141,6 +159,7 @@ angular
             },
             {
                 name: "Paul of Aegina",
+                branch: "life",
                 professions: ["medicine"],
                 location: "Byzantine Empire",
                 birthDate: "000625-01-01",
@@ -149,6 +168,7 @@ angular
             {
                 name: "Muḥammad ibn Mūsā al-Khwārizmī",
                 displayName: "al-Khwārizmī",
+                branch: "logical",
                 professions: ["mathematics"],
                 location: "Khwarezm",
                 birthDate: "000780-01-01",
@@ -157,6 +177,7 @@ angular
             {
                 name: "Abu Yūsuf Yaʻqūb ibn ʼIsḥāq aṣ-Ṣabbāḥ al-Kindī",
                 displayName: "al-Kindī",
+                branch: "logical",
                 professions: ["cryptography ", "mathematics", "astronomy", "medicine"],
                 location: "Basra, Abbasid Caliphate",
                 birthDate: "000801-01-01",
@@ -165,6 +186,7 @@ angular
             {
                 name: "Al-Ṣābiʾ Thābit ibn Qurra al-Ḥarrānī",
                 displayName: "Thabit",
+                branch: "logical",
                 professions: ["mathematics", "astronomy"],
                 location: "Harran",
                 birthDate: "000826-01-01",
@@ -173,6 +195,7 @@ angular
             {
                 name: "Abu al-Qasim al-Zahrawi",
                 displayName: "al-Zahrawi",
+                branch: "life",
                 professions: ["physiology", "surgery"],
                 location: "Medina Azahara, Al-Andalus",
                 birthDate: "000936-01-01",
@@ -181,6 +204,7 @@ angular
             {
                 name: "Abū ʿAlī al-Ḥasan ibn al-Ḥasan ibn al-Haytham",
                 displayName: "Alhazen",
+                branch: "location",
                 professions: ["logic", "philosophy", "mathematics", "astronomy", "optics", "physics"],
                 location: "Basra, Buyid Emirate",
                 birthDate: "000965-01-01",
@@ -188,6 +212,7 @@ angular
             },
             {
                 name: "Avicenna",
+                branch: "life",
                 professions: ["medicine", "philosophy"],
                 location: "Iran",
                 birthDate: "000980-01-01",
@@ -196,6 +221,7 @@ angular
             {
                 name: "Leonardo Fibonacci",
                 displayName: "Fibonacci",
+                branch: "logical",
                 professions: ["mathematics"],
                 location: "Pisa",
                 birthDate: "1173-01-01",
@@ -204,6 +230,7 @@ angular
             {
                 name: "Roger Bacon",
                 displayName: "Bacon",
+                branch: "physical",
                 professions: ["alchemy", "optics", "linguistics"],
                 location: "England",
                 birthDate: "1220-01-01",
@@ -212,6 +239,7 @@ angular
             {
                 name: "Johannes Gensfleisch zur Laden zum Gutenberg",
                 displayName: "Gutenberg",
+                branch: "applied",
                 professions: ["printing", "invention"],
                 location: "Mainz, Electorate of Mainz",
                 birthDate: "1398-01-01",
@@ -220,6 +248,7 @@ angular
             {
                 name: "Leonardo da Vinci",
                 displayName: "da Vinci",
+                branch: "applied",
                 professions: ["invention", "art", "engineering", "mathematics", "botany"],
                 location: "Republic of Florence",
                 birthDate: "1452-04-15",
@@ -228,6 +257,7 @@ angular
             {
                 name: "Nicolaus Copernicus",
                 displayName: "Copernicus",
+                branch: "physical",
                 professions: ["astronomy", "mathematics"],
                 location: "Toruń, Poland",
                 birthDate: "1473-02-19",
@@ -235,6 +265,7 @@ angular
             },
             {
                 name: "Paracelsus",
+                branch: "life",
                 professions: ["toxicology", "medicine", "botany"],
                 location: "Switzerland",
                 birthDate: "1493-11-11",
@@ -243,6 +274,7 @@ angular
             {
                 name: "Andreas Vesalius",
                 displayName: "Vesalius",
+                branch: "life",
                 professions: ["anatomy", "medicine"],
                 location: "Brussels, Belgium",
                 birthDate: "1514-12-31",
@@ -251,6 +283,7 @@ angular
             {
                 name: "Tycho Brahe",
                 displayName: "Tycho",
+                branch: "physical",
                 professions: ["astronomy", "alchemy"],
                 location: "Denmark",
                 birthDate: "1546-12-14",
@@ -259,6 +292,7 @@ angular
             {
                 name: "Giordano Bruno",
                 displayName: "Bruno",
+                branch: "physical",
                 professions: ["cosmology", "philosophy"],
                 location: "Nola, Naples",
                 birthDate: "1548-01-01",
@@ -268,6 +302,7 @@ angular
                 name: "Galileo Galilei",
                 displayName: "Galileo",
                 isHero: true,
+                branch: "physical",
                 professions: ["physics", "astronomy", "engineering", "mathematics", "philosophy"],
                 location: "Pisa",
                 birthDate: "1564-02-15",
@@ -276,6 +311,7 @@ angular
             {
                 name: "Johannes Kepler",
                 displayName: "Kepler",
+                branch: "physical",
                 professions: ["astronomy", "mathematics", "astrology"],
                 location: "Württemberg, Germany",
                 birthDate: "1571-12-27",
@@ -284,6 +320,7 @@ angular
             {
                 name: "William Harvey",
                 displayName: "Harvey",
+                branch: "life",
                 professions: ["anatomy", "medicine"],
                 location: "Kent, England",
                 birthDate: "1578-04-01",
@@ -292,6 +329,7 @@ angular
             {
                 name: "René Descartes",
                 displayName: "Descartes",
+                branch: "logical",
                 professions: ["epistemology", "mathematics", "physics"],
                 location: "Kent, England",
                 birthDate: "1578-04-01",
@@ -300,6 +338,7 @@ angular
             {
                 name: "Blaise Pascal",
                 displayName: "Pascal",
+                branch: "logical",
                 professions: ["mathematics", "physics"],
                 location: "Auvergne, France",
                 birthDate: "1623-06-19",
@@ -308,6 +347,7 @@ angular
             {
                 name: "Robert Boyle",
                 displayName: "Boyle",
+                branch: "physical",
                 professions: ["chemistry", "physics"],
                 location: "Country Waterford, Ireland",
                 birthDate: "1627-01-25",
@@ -316,6 +356,7 @@ angular
             {
                 name: "Antonie van Leeuwenhoek",
                 displayName: "Leeuwenhoek",
+                branch: "life",
                 professions: ["microbiology"],
                 location: "Delft, Dutch Republic",
                 birthDate: "1632-10-24",
@@ -324,6 +365,7 @@ angular
             {
                 name: "Robert Hooke",
                 displayName: "Hooke",
+                branch: "life",
                 professions: ["microscopy", "architecture"],
                 location: "Isle of Wight, England",
                 birthDate: "1635-07-28",
@@ -333,6 +375,7 @@ angular
                 name: "Sir Isaac Newton",
                 displayName: "Newton",
                 isHero: true,
+                branch: "physical",
                 professions: ["physics", "natural philosophy", "mathematics", "astronomy", "alchemy"],
                 location: "Lincolnshire, England",
                 birthDate: "1642-12-25",
@@ -341,6 +384,7 @@ angular
             {
                 name: "Giovanni Domenico Cassini",
                 displayName: "Cassini",
+                branch: "physical",
                 professions: ["astronomy", "mathematics", "astrology", "engineering"],
                 location: "Perinaldo, Republic of Genova",
                 birthDate: "1625-06-08",
@@ -349,6 +393,7 @@ angular
             {
                 name: "Christiaan Huygens",
                 displayName: "Huygens",
+                branch: "physical",
                 professions: ["astronomy", "mathematics", "optics", "physics"],
                 location: "The Hague, Dutch Republic",
                 birthDate: "1629-04-14",
@@ -357,6 +402,7 @@ angular
             {
                 name: "Jacob Bernoulli",
                 displayName: "Bernoulli",
+                branch: "logical",
                 professions: ["mathematics"],
                 location: "Basel, Switzerland",
                 birthDate: "1654-12-27",
@@ -365,6 +411,7 @@ angular
             {
                 name: "Edmond Halley",
                 displayName: "Halley",
+                branch: "physical",
                 professions: ["astronomy", "geophysics", "mathematics", "physics"],
                 location: "Haggerston, Middlesex, England",
                 birthDate: "1656-11-08",
@@ -373,6 +420,7 @@ angular
             {
                 name: "Thomas Newcomen",
                 displayName: "Newcomen",
+                branch: "applied",
                 professions: ["engineering"],
                 location: "Dartmouth, Devon, England",
                 birthDate: "1664-02-28",
@@ -381,6 +429,7 @@ angular
             {
                 name: "Benjamin Franklin",
                 displayName: "Franklin",
+                branch: "physical",
                 professions: ["physics"],
                 location: "Boston, Massachusetts Bay, British America",
                 birthDate: "1706-01-17",
@@ -389,6 +438,7 @@ angular
             {
                 name: "Leonhard Euler",
                 displayName: "Euler",
+                branch: "logical",
                 professions: ["mathematics", "astronomy", "physics"],
                 location: "Basel, Switzerland",
                 birthDate: "1707-04-15",
@@ -397,6 +447,7 @@ angular
             {
                 name: "Carolus Linnaeus",
                 displayName: "Linnaeus",
+                branch: "life",
                 professions: ["botany", "zoology", "taxonomy"],
                 location: "Sweden",
                 birthDate: "1707-05-23",
@@ -405,6 +456,7 @@ angular
             {
                 name: "Henry Cavendish",
                 displayName: "Cavendish",
+                branch: "physical",
                 professions: ["chemistry", "physics"],
                 location: "Nice, France",
                 birthDate: "1731-10-10",
@@ -413,6 +465,7 @@ angular
             {
                 name: "Joseph Priestley",
                 displayName: "Priestley",
+                branch: "physical",
                 professions: ["chemistry",],
                 location: "Yorkshire, England",
                 birthDate: "1733-03-13",
@@ -421,6 +474,7 @@ angular
             {
                 name: "James Watt",
                 displayName: "Watt",
+                branch: "applied",
                 professions: ["engineering", "chemistry"],
                 location: "Greenock, Renfrewshire, Scotland",
                 birthDate: "1736-01-19",
@@ -429,6 +483,7 @@ angular
             {
                 name: "Charles-Augustin de Coulomb",
                 displayName: "Coulomb",
+                branch: "physical",
                 professions: ["physics"],
                 location: "Angoulême, Angoumois, France",
                 birthDate: "1736-06-14",
@@ -437,6 +492,7 @@ angular
             {
                 name: "Luigi Galvani",
                 displayName: "Galvani",
+                branch: "life",
                 professions: ["bioelectricity", "biology"],
                 location: "Bologna, Italy",
                 birthDate: "1737-09-09",
@@ -445,6 +501,7 @@ angular
             {
                 name: "William Herschel",
                 displayName: "Herschel",
+                branch: "physical",
                 professions: ["astronomy", "music"],
                 location: "Hanover, Germany",
                 birthDate: "1738-11-15",
@@ -453,6 +510,7 @@ angular
             {
                 name: "Antoine-Laurent de Lavoisier",
                 displayName: "Lavoisier",
+                branch: "physical",
                 professions: ["chemistry", "biology"],
                 location: "Paris, France",
                 birthDate: "1743-09-26",
@@ -461,6 +519,7 @@ angular
             {
                 name: "Alessandro Giuseppe Antonio Anastasio Volta",
                 displayName: "Volta",
+                branch: "physical",
                 professions: ["physics", "chemistry"],
                 location: "Como, Duchy of Milan",
                 birthDate: "1745-02-18",
@@ -469,6 +528,7 @@ angular
             {
                 name: "Pierre-Simon Laplace",
                 displayName: "Laplace",
+                branch: "logical",
                 professions: ["mathematics", "statistics", "physics"],
                 location: "Normandy, France",
                 birthDate: "1749-03-23",
@@ -478,6 +538,7 @@ angular
                 name: "Edward Jenner",
                 isHero: true,
                 displayName: "Jenner",
+                branch: "life",
                 professions: ["immunology", "zoology", "medicine"],
                 location: "Berkeley, Gloucestershire, England",
                 birthDate: "1749-05-17",
@@ -486,6 +547,7 @@ angular
             {
                 name: "John Dalton",
                 displayName: "Dalton",
+                branch: "physical",
                 professions: ["chemistry", "physics", "meteorology"],
                 location: "Eaglesfield, Cumberland, England",
                 birthDate: "1766-09-06",
@@ -494,6 +556,7 @@ angular
             {
                 name: "Georges Cuvier",
                 displayName: "Cuvier",
+                branch: "life",
                 professions: ["paleontology", "anatomy", "zoology"],
                 location: "Montbéliard, France",
                 birthDate: "1769-08-23",
@@ -502,6 +565,7 @@ angular
             {
                 name: "Alexander von Humboldt",
                 displayName: "Humboldt",
+                branch: "life",
                 professions: ["biogeography", "geography"],
                 location: "Berlin, Kingdom of Prussia",
                 birthDate: "1769-09-14",
@@ -510,6 +574,7 @@ angular
             {
                 name: "Thomas Young",
                 displayName: "Young",
+                branch: "physical",
                 professions: ["optics", "physics", "physiology", "egyptology"],
                 location: "Milverton, Somerset, England",
                 birthDate: "1773-06-13",
@@ -518,6 +583,7 @@ angular
             {
                 name: "André-Marie Ampère",
                 displayName: "Ampère",
+                branch: "physical",
                 professions: ["physics", "mathematics"],
                 location: "Lyon, France",
                 birthDate: "1775-01-22",
@@ -526,6 +592,7 @@ angular
             {
                 name: "Amedeo Avogadro",
                 displayName: "Avogadro",
+                branch: "physical",
                 professions: ["physics"],
                 location: "Turin, Piedmont-Sardinia",
                 birthDate: "1776-08-09",
@@ -534,6 +601,7 @@ angular
             {
                 name: "Johann Carl Friedrich Gauss",
                 displayName: "Gauss",
+                branch: "logical",
                 professions: ["mathematics", "physics", "astronomy", "optics", "geophysics"],
                 location: "Brunswick, Duchy of Brunswick-Wolfenbüttel, Holy Roman Empire",
                 birthDate: "1777-04-30",
@@ -542,6 +610,7 @@ angular
             {
                 name: "Joseph-Louis Gay-Lussac",
                 displayName: "Gay-Lussac",
+                branch: "physical",
                 professions: ["chemistry", "physics"],
                 location: "Saint-Léonard-de-Noblat, France",
                 birthDate: "1778-12-06",
@@ -550,6 +619,7 @@ angular
             {
                 name: "Sir Humphry Davy",
                 displayName: "Davy",
+                branch: "physical",
                 professions: ["chemistry"],
                 location: "Penzance, Cornwall, England",
                 birthDate: "1778-12-17",
@@ -558,6 +628,7 @@ angular
             {
                 name: "Jöns Jacob Berzelius",
                 displayName: "Berzelius",
+                branch: "physical",
                 professions: ["chemistry"],
                 location: "Väversunda, Östergötland, Sweden",
                 birthDate: "1779-08-20",
@@ -566,6 +637,7 @@ angular
             {
                 name: "John James Audubon",
                 displayName: "Audubon",
+                branch: "life",
                 professions: ["ornithology", "zoology"],
                 location: "Les Cayes, Saint-Domingue",
                 birthDate: "1785-04-26",
@@ -574,6 +646,7 @@ angular
             {
                 name: "Georg Simon Ohm",
                 displayName: "Ohm",
+                branch: "physical",
                 professions: ["physics", "mathematics"],
                 location: "Erlangen, Brandenburg-Bayreuth",
                 birthDate: "1789-03-16",
@@ -582,6 +655,7 @@ angular
             {
                 name: "Michael Faraday",
                 displayName: "Faraday",
+                branch: "physical",
                 professions: ["physics", "chemistry"],
                 location: "Newington Butts, England",
                 birthDate: "1791-09-22",
@@ -590,6 +664,7 @@ angular
             {
                 name: "Charles Babbage",
                 displayName: "Babbage",
+                branch: "logical",
                 professions: ["computing", "mathematics"],
                 location: "London, England",
                 birthDate: "1791-12-26",
@@ -598,6 +673,7 @@ angular
             {
                 name: "Sir Charles Lyell",
                 displayName: "Lyell",
+                branch: "physical",
                 professions: ["geology"],
                 location: "Kinnordy, Angus, Scotland",
                 birthDate: "1797-11-14",
@@ -606,6 +682,7 @@ angular
             {
                 name: "Christian Andreas Doppler",
                 displayName: "Doppler",
+                branch: "physical",
                 professions: ["physics", "mathematics"],
                 location: "Salzburg, Austria",
                 birthDate: "1803-11-29",
@@ -615,6 +692,7 @@ angular
                 name: "Charles Darwin",
                 isHero: true,
                 displayName: "Darwin",
+                branch: "life",
                 professions: ["evolution", "natural history", "geology"],
                 location: "Shrewsbury, Shropshire, England",
                 birthDate: "1809-02-12",
@@ -623,6 +701,7 @@ angular
             {
                 name: "Augusta Ada King-Noel, Countess of Lovelace",
                 displayName: "Lovelace",
+                branch: "logical",
                 professions: ["computing", "mathematics", "writing"],
                 location: "London, England",
                 birthDate: "1815-12-10",
@@ -639,6 +718,7 @@ angular
             {
                 name: "Gregor Mendel",
                 displayName: "Mendel",
+                branch: "life",
                 professions: ["genetics"],
                 location: "Silesia, Austrian Empire",
                 birthDate: "1822-07-20",
@@ -647,6 +727,7 @@ angular
             {
                 name: "Louis Pasteur",
                 displayName: "Pasteur",
+                branch: "life",
                 professions: ["microbiology", "chemistry"],
                 location: "Dole, France",
                 birthDate: "1822-12-27",
@@ -655,6 +736,7 @@ angular
             {
                 name: "Alfred Russel Wallace",
                 displayName: "Wallace",
+                branch: "life",
                 professions: ["evolution", "biology", "zoology"],
                 location: "Llanbadoc, Monmouthshire, Wales",
                 birthDate: "1823-01-08",
@@ -663,6 +745,7 @@ angular
             {
                 name: "Sir William Thomson, 1st Baron Kelvin (Lord Kelvin)",
                 displayName: "Lord Kelvin",
+                branch: "logical",
                 professions: ["thermodynamics", "physics", "mathematics"],
                 location: "Belfast, Ireland, United Kingdom",
                 birthDate: "1824-06-26",
@@ -671,6 +754,7 @@ angular
             {
                 name: "Sir Joseph Lister",
                 displayName: "Lister",
+                branch: "life",
                 professions: ["surgery", "medicine"],
                 location: "West Ham, England",
                 birthDate: "1827-04-05",
@@ -680,6 +764,7 @@ angular
                 name: "James Clerk Maxwell",
                 isHero: true,
                 displayName: "Maxwell",
+                branch: "physical",
                 professions: ["physics", "mathematics"],
                 location: "Edinburgh, Scotland",
                 birthDate: "1831-06-13",
@@ -688,6 +773,7 @@ angular
             {
                 name: "Dmitry Ivanovich Mendeleyev",
                 displayName: "Mendeleyev",
+                branch: "physical",
                 professions: ["chemistry", "physics"],
                 location: "Verkhnie Aremzyani, Tobolsk Governorate, Russian Empire",
                 birthDate: "1834-02-08",
@@ -696,6 +782,7 @@ angular
             {
                 name: "Edward Williams Morley",
                 displayName: "Morley",
+                branch: "physical",
                 professions: ["physics", "optics"],
                 location: "Newark, New Jersey",
                 birthDate: "1838-01-29",
@@ -704,6 +791,7 @@ angular
             {
                 name: "Ivan Petrovich Pavlov",
                 displayName: "Pavlov",
+                branch: "life",
                 professions: ["physiology"],
                 location: "Ryazan, Russian Empire",
                 birthDate: "1849-09-29",
@@ -712,6 +800,7 @@ angular
             {
                 name: "Albert Abraham Michelson",
                 displayName: "Michelson",
+                branch: "physical",
                 professions: ["physics"],
                 location: "Strzelno, Kingdom of Prussia",
                 birthDate: "1852-12-19",
@@ -720,6 +809,7 @@ angular
             {
                 name: "Robert Heinrich Herman Koch",
                 displayName: "Koch",
+                branch: "life",
                 professions: ["microbiology"],
                 location: "Clausthal, Kingdom of Hanover",
                 birthDate: "1843-12-11",
@@ -728,6 +818,7 @@ angular
             {
                 name: "Heinrich Rudolf Hertz",
                 displayName: "Hertz",
+                branch: "applied",
                 professions: ["electrical engineering", "physics"],
                 location: "Hamburg, Germany",
                 birthDate: "1857-02-22",
@@ -736,6 +827,7 @@ angular
             {
                 name: "Max Karl Ernst Ludwig Planck",
                 displayName: "Planck",
+                branch: "physical",
                 professions: ["quantum physics", "physics"],
                 location: "Kiel, Duchy of Holstein",
                 birthDate: "1858-04-23",
@@ -744,6 +836,7 @@ angular
             {
                 name: "Nettie Maria Stevens",
                 displayName: "Stevens",
+                branch: "life",
                 professions: ["genetics"],
                 location: "Cavendish, Vermont",
                 birthDate: "1861-07-07",
@@ -752,6 +845,7 @@ angular
             {
                 name: "William Bateson",
                 displayName: "Bateson",
+                branch: "life",
                 professions: ["genetics"],
                 location: "Whitby, Yorkshire",
                 birthDate: "1861-08-08",
@@ -760,6 +854,7 @@ angular
             {
                 name: "Antoine Henri Becquerel",
                 displayName: "Becquerel",
+                branch: "physical",
                 professions: ["radioactivity", "physics", "chemistry"],
                 location: " Paris, France",
                 birthDate: "1852-12-15",
@@ -768,6 +863,7 @@ angular
             {
                 name: "Nikola Tesla",
                 displayName: "Tesla",
+                branch: "applied",
                 professions: ["electrical engineering", "physics"],
                 location: "Smiljan, Austrian Empire",
                 birthDate: "1856-07-10",
@@ -776,6 +872,7 @@ angular
             {
                 name: "Pierre Curie",
                 displayName: "P. Curie",
+                branch: "physical",
                 professions: ["crystallography", "radioactivity", "physics", "chemistry"],
                 location: " Paris, France",
                 birthDate: "1859-05-15",
@@ -784,6 +881,7 @@ angular
             {
                 name: "Marie Skłodowska Curie",
                 displayName: "M. Curie",
+                branch: "physical",
                 professions: ["radioactivity", "physics", "chemistry"],
                 location: "Warsaw, Poland",
                 birthDate: "1867-11-07",
@@ -792,6 +890,7 @@ angular
             {
                 name: "Henrietta Swan Leavitt",
                 displayName: "Leavitt",
+                branch: "physical",
                 professions: ["astronomy"],
                 location: "Lancaster, Massachusetts, USA",
                 birthDate: "1868-07-04",
@@ -800,6 +899,7 @@ angular
             {
                 name: "Ernest Rutherford",
                 displayName: "Rutherford",
+                branch: "physical",
                 professions: ["nuclear physics", "chemistry", "physics"],
                 location: "Brightwater, Tasman District, New Zealand",
                 birthDate: "1871-08-30",
@@ -809,6 +909,7 @@ angular
                 name: "Albert Einstein",
                 isHero: true,
                 displayName: "Einstein",
+                branch: "physical",
                 professions: ["physics"],
                 location: "Ulm, Württemberg, Germany",
                 birthDate: "1879-03-14",
@@ -817,6 +918,7 @@ angular
             {
                 name: "Alfred Lothar Wegener",
                 displayName: "Wegener",
+                branch: "physical",
                 professions: ["geology", "meteorology", "astronomy"],
                 location: "Berlin, Germany",
                 birthDate: "1880-11-01",
@@ -825,6 +927,7 @@ angular
             {
                 name: "Sir Alexander Fleming",
                 displayName: "Fleming",
+                branch: "life",
                 professions: ["bacteriology", "immunology"],
                 location: "Lochfield, East Ayrshire, Scotland",
                 birthDate: "1881-08-06",
@@ -833,6 +936,7 @@ angular
             {
                 name: "Max Born",
                 displayName: "Born",
+                branch: "physical",
                 professions: ["quantum physics", "mathematics", "physics"],
                 location: "Breslau, German",
                 birthDate: "1882-12-11",
@@ -841,6 +945,7 @@ angular
             {
                 name: "Niels Bohr",
                 displayName: "Bohr",
+                branch: "physical",
                 professions: ["quantum physics", "physics"],
                 location: "Copenhagen, Denmark",
                 birthDate: "1885-10-07",
@@ -849,6 +954,7 @@ angular
             {
                 name: "Erwin Schrödinger",
                 displayName: "Schrödinger",
+                branch: "physical",
                 professions: ["quantum physics", "physics", "thermodynamics"],
                 location: "Vienna, Austria-Hungary",
                 birthDate: "1887-08-12",
@@ -857,6 +963,7 @@ angular
             {
                 name: "Selman Abraham Waksman",
                 displayName: "Waksman",
+                branch: "life",
                 professions: ["biochemistry", "microbiology"],
                 location: "Nova Pryluka, Kiev Governorate, Russian Empire",
                 birthDate: "1888-07-22",
@@ -865,6 +972,7 @@ angular
             {
                 name: "Edwin Powell Hubble",
                 displayName: "Hubble",
+                branch: "physical",
                 professions: ["astronomy"],
                 location: "Marshfield, Missouri, USA",
                 birthDate: "1889-11-30",
@@ -873,6 +981,7 @@ angular
             {
                 name: "Georges Henri Joseph Édouard Lemaître",
                 displayName: "Lemaître",
+                branch: "physical",
                 professions: ["cosmology", "astrophysics"],
                 location: "Charleroi, Belgium",
                 birthDate: "1894-07-17",
@@ -881,6 +990,7 @@ angular
             {
                 name: "Linus Pauling",
                 displayName: "Pauling",
+                branch: "life",
                 professions: ["quantum chemistry", "biochemistry"],
                 location: "Portland, Oregon, USA",
                 birthDate: "1901-02-28",
@@ -889,6 +999,7 @@ angular
             {
                 name: "Enrico Fermi",
                 displayName: "Fermi",
+                branch: "physical",
                 professions: ["nuclear physics", "quantum physics"],
                 location: "Rome, Italy",
                 birthDate: "1901-09-29",
@@ -897,6 +1008,7 @@ angular
             {
                 name: "Margaret Mead",
                 displayName: "Mead",
+                branch: "life",
                 professions: ["anthropology"],
                 location: "Philadelphia, Pennsylvania, USA",
                 birthDate: "1901-12-16",
@@ -905,6 +1017,7 @@ angular
             {
                 name: "Barbara McClintock",
                 displayName: "McClintock",
+                branch: "life",
                 professions: ["Cytogenetics", "physiology"],
                 location: "Hartford, Connecticut, USA",
                 birthDate: "1902-06-16",
@@ -913,6 +1026,7 @@ angular
             {
                 name: "Louis Seymour Bazett Leakey",
                 displayName: "L. Leakey",
+                branch: "life",
                 professions: ["paleoanthropology", "archaeology"],
                 location: "Kabete, British East Africa",
                 birthDate: "1903-08-07",
@@ -921,6 +1035,7 @@ angular
             {
                 name: "Georgiy Antonovich Gamov",
                 displayName: "Gamow",
+                branch: "physical",
                 professions: ["cosmology", "physics"],
                 location: "Odessa, Russia",
                 birthDate: "1904-03-04",
@@ -929,6 +1044,7 @@ angular
             {
                 name: "Julius Robert Oppenheimer",
                 displayName: "Oppenheimer",
+                branch: "physical",
                 professions: ["physics"],
                 location: "New York City, New York",
                 birthDate: "1904-04-22",
@@ -937,6 +1053,7 @@ angular
             {
                 name: "Hans Bethe",
                 displayName: "Bethe",
+                branch: "physical",
                 professions: ["nuclear physics", "quantum physics"],
                 location: "Strasbourg, Germany",
                 birthDate: "1906-07-02",
@@ -945,6 +1062,7 @@ angular
             {
                 name: "John Bardeen",
                 displayName: "Bardeen",
+                branch: "applied",
                 professions: ["electrical engineering", "physics"],
                 location: "Madison, Wisconsin, USA.",
                 birthDate: "1908-05-23",
@@ -953,6 +1071,7 @@ angular
             {
                 name: "Maria Goeppert Mayer",
                 displayName: "Mayer",
+                branch: "physical",
                 professions: ["physics"],
                 location: "Kattowitz, German Empire",
                 birthDate: "1906-06-28",
@@ -961,6 +1080,7 @@ angular
             {
                 name: "Rachel Carson",
                 displayName: "Carson",
+                branch: "life",
                 professions: ["marine biology"],
                 location: "Springdale, Pennsylvania, USA",
                 birthDate: "1907-05-27",
@@ -969,6 +1089,7 @@ angular
             {
                 name: "Jacques-Yves Cousteau",
                 displayName: "Cousteau",
+                branch: "life",
                 professions: ["oceanography"],
                 location: "Saint-André-de-Cubzac Gironde, France",
                 birthDate: "1910-06-11",
@@ -977,6 +1098,7 @@ angular
             {
                 name: "Luis Walter Alvarez",
                 displayName: "L. Alvarez",
+                branch: "physical",
                 professions: ["particle physics", "physics"],
                 location: "San Francisco, California, USA",
                 birthDate: "1911-06-13",
@@ -985,6 +1107,7 @@ angular
             {
                 name: "Alan Mathison Turing",
                 displayName: "Turing",
+                branch: "logical",
                 professions: ["computing", "mathematics", "cryptography"],
                 location: "Maida Vale, London, England",
                 birthDate: "1912-06-23",
@@ -993,6 +1116,7 @@ angular
             {
                 name: "Mary Leakey",
                 displayName: "M. Leakey",
+                branch: "life",
                 professions: ["paleoanthropology"],
                 location: "London, England, UK",
                 birthDate: "1913-02-06",
@@ -1001,6 +1125,7 @@ angular
             {
                 name: "Norman Ernest Borlaug",
                 displayName: "Borlaug",
+                branch: "life",
                 professions: ["agronomy", "biology", "genetics"],
                 location: "Cresco, Iowa",
                 birthDate: "1914-03-25",
@@ -1009,6 +1134,7 @@ angular
             {
                 name: "Jonas Edward Salk",
                 displayName: "Salk",
+                branch: "life",
                 professions: ["virology", "epidemiology"],
                 location: "New York, New York, USA",
                 birthDate: "1914-10-28",
@@ -1017,6 +1143,7 @@ angular
             {
                 name: "Sir Fred Hoyle",
                 displayName: "Hoyle",
+                branch: "physical",
                 professions: ["astronomy", "cosmology"],
                 location: "Gilstead, Bingley, West Riding of Yorkshire, England, UK",
                 birthDate: "1915-06-24",
@@ -1025,6 +1152,7 @@ angular
             {
                 name: "Francis Harry Compton Crick",
                 displayName: "Crick",
+                branch: "life",
                 professions: ["molecular biology", "biophysics", "genetics"],
                 location: "Weston Favell, Northamptonshire, England, UK",
                 birthDate: "1916-06-08",
@@ -1033,6 +1161,7 @@ angular
             {
                 name: "Richard Phillips Feynman",
                 displayName: "Feynman",
+                branch: "physical",
                 professions: ["quantum physics", "physics"],
                 location: "Queens, New York, USA",
                 birthDate: "1918-05-11",
@@ -1041,6 +1170,7 @@ angular
             {
                 name: "Rosalind Franklin",
                 displayName: "Franklin",
+                branch: "physical",
                 professions: ["chemistry", "crystallography"],
                 location: "Notting Hill, London, England, UK",
                 birthDate: "1920-07-25",

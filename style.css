@@ -12,6 +12,11 @@ a, button {
   outline: 0;
   padding: 0; }
 
+button {
+  color: rgba(0, 0, 0, 0.625);
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 100%; }
+
 h1, h2, h3, h4, h5, h6, p, a, img, article, aside, figure, figcaption, footer, header, menu, nav, section, summary, time {
   border: 0;
   font-size: 100%;
@@ -333,12 +338,6 @@ ol, ul {
   height: 26px;
   padding: 0 4px 0 12px; }
 
-.person__birth-year {
-  display: none; }
-  @media (min-width: 600px) {
-    .person__birth-year {
-      display: inline; } }
-
 .person__professions, .person__professions--md, .person__professions--lg {
   border-top: 1px solid #a0a0a0;
   font-weight: 300;
@@ -501,58 +500,15 @@ ol, ul {
   padding: 0 16px; }
 
 .zoom-controls {
-  bottom: 60px;
+  bottom: 35px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
   position: absolute;
-  right: 24px;
-  width: 40px; }
+  right: 24px; }
 
 .zoom-controls__button {
-  appearance: none;
-  -webkit-appearance: none;
-  background-color: #f8f8f8;
-  border: 1px solid #e0e0e0;
-  cursor: pointer;
-  font-size: 14px;
-  height: 40px;
-  width: 40px; }
-  .zoom-controls__button:hover {
-    background-color: #fff; }
-  .zoom-controls__button[disabled] {
-    color: rgba(0, 0, 0, 0.125); }
-  .zoom-controls__button:first-child {
-    border-bottom: none;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px; }
-  .zoom-controls__button:last-child {
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-top: none; }
-
-.era-nav {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: absolute;
-  right: 24px;
-  top: 114px;
-  width: 40px; }
-
-.era-nav__link {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -561,7 +517,7 @@ ol, ul {
   -webkit-appearance: none;
   background-color: #f8f8f8;
   border: 1px solid #e0e0e0;
-  border-bottom: none;
+  border-right: none;
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -573,14 +529,52 @@ ol, ul {
       -ms-flex-pack: center;
           justify-content: center;
   width: 40px; }
-  .era-nav__link:hover {
-    background-color: #fff; }
-  .era-nav__link:first-child {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px; }
-  .era-nav__link:last-child {
-    border-bottom: 1px solid #e0e0e0;
+  .zoom-controls__button[disabled] {
+    color: rgba(0, 0, 0, 0.125); }
+  .zoom-controls__button:first-child {
     border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px; }
+  .zoom-controls__button:last-child {
+    border-right: 1px solid #e0e0e0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px; }
+
+.era-nav {
+  bottom: 35px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  left: 24px;
+  position: absolute; }
+
+.era-nav__link {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  border-right: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px; }
+  .era-nav__link:first-child {
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px; }
+  .era-nav__link:last-child {
+    border-right: 1px solid #e0e0e0;
+    border-top-right-radius: 20px;
     border-bottom-right-radius: 20px; }
 
 .eras {
@@ -681,6 +675,12 @@ ol, ul {
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
+.introduction {
+  width: 300px; }
+
+.introduction__paragraph {
+  padding: 0 16px; }
+
 html {
   height: 100%; }
 
