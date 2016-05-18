@@ -87,12 +87,28 @@ app.controller('homeCtrl', ['$scope', '$document', '$timeout', 'Eras', 'Events',
 		firstYear = new Date($scope.eras[0].startDate).getUTCFullYear(),
 		lastYear = new Date($scope.eras[$scope.eras.length - 1].endDate).getUTCFullYear();
 
+	//build time scale
 	for(var i = firstYear; i <= lastYear; i += 25) {
 		var year;
 		year = document.createElement('li');
 		year.className = "time-scale__marker";
 		year.appendChild(document.createTextNode(Math.abs(i)));
 		jsTimeScale.appendChild(year);
+	};
+
+	$scope.branchFilters = [
+		{name: "life", active: true},
+		{name: "logical", active: true},
+		{name: "physical", active: false},
+		{name: "applied", active: false}
+	];
+
+	$scope.filterByBranch = function(_obj){
+		for(branch in $scope.branchFilters){
+			if($scope.branchFilters[branch].active && _obj.branch == $scope.branchFilters[branch].name){
+				return true
+			}
+		}
 	};
 
 	$scope.getLeft = function(_date){
