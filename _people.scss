@@ -13,12 +13,12 @@
 
 	&.ng-enter {
 		opacity: 0;
-		transition: transform 640ms, opacity 640ms;
+		transition: transform 640ms ease-out, opacity 640ms ease-out;
 		transform: translate3d(0, 16px, 0);
 	}
 
 	&.ng-enter-stagger {
-		transition-delay: 8ms;
+		transition-delay: 16ms;
 		transition-duration: 0ms;
 	}
 
@@ -29,12 +29,12 @@
 
 	&.ng-leave {
 		opacity: 1;
-		transition: transform 160ms, opacity 160ms;
+		transition: transform 160ms ease-in, opacity 160ms ease-in;
 		transform: translate3d(0, 0, 0);
 	}
 
 	&.ng-leave-stagger {
-		transition-delay: 4ms;
+		transition-delay: 8ms;
 		transition-duration: 0ms;
 	}
 

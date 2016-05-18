@@ -251,6 +251,36 @@ ol, ul {
   display: -ms-flexbox;
   display: flex;
   position: absolute; }
+  .person.ng-enter, .ng-enter.person--md, .ng-enter.person--lg {
+    opacity: 0;
+    -webkit-transition: -webkit-transform 640ms ease-out, opacity 640ms ease-out;
+            transition: transform 640ms ease-out, opacity 640ms ease-out;
+    -webkit-transform: translate3d(0, 16px, 0);
+            transform: translate3d(0, 16px, 0); }
+  .person.ng-enter-stagger, .ng-enter-stagger.person--md, .ng-enter-stagger.person--lg {
+    -webkit-transition-delay: 16ms;
+            transition-delay: 16ms;
+    -webkit-transition-duration: 0ms;
+            transition-duration: 0ms; }
+  .person.ng-enter-active, .ng-enter-active.person--md, .ng-enter-active.person--lg {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+  .person.ng-leave, .ng-leave.person--md, .ng-leave.person--lg {
+    opacity: 1;
+    -webkit-transition: -webkit-transform 160ms ease-in, opacity 160ms ease-in;
+            transition: transform 160ms ease-in, opacity 160ms ease-in;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+  .person.ng-leave-stagger, .ng-leave-stagger.person--md, .ng-leave-stagger.person--lg {
+    -webkit-transition-delay: 8ms;
+            transition-delay: 8ms;
+    -webkit-transition-duration: 0ms;
+            transition-duration: 0ms; }
+  .person.ng-leave-active, .ng-leave-active.person--md, .ng-leave-active.person--lg {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 8px, 0);
+            transform: translate3d(0, 8px, 0); }
 
 .person--md {
   margin-top: -19px; }
