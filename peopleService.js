@@ -1191,15 +1191,28 @@ angular
         };
 
         var getOffset = function(_index){
-            // if((_index + 3) % 3 == 0) {
-            //     return 0
-            // } else if((_index + 3) % 3 == 1) {
-            //     return 55
-            // }  else if((_index + 3) % 3 == 2) {
-            //     return 25
-            // }
-
             return (parseInt(_index.toString()[_index.toString().length - 1]) + 1) * 9
+        }
+
+        var shuffle = function(_array) {
+            var array = _array,
+                m = array.length,
+                t,
+                i;
+
+            // While there remain elements to shuffle…
+            while (m) {
+
+            // Pick a remaining element…
+            i = Math.floor(Math.random() * m--);
+
+            // And swap it with the current element.
+            t = array[m];
+                array[m] = array[i];
+                array[i] = t;
+            }
+
+            return array;
         }
 
         var bootstrapArray = function(_array){
@@ -1212,6 +1225,8 @@ angular
                     array[i].offset = getOffset(i);
                 }
             }
+
+            array = shuffle(array);
 
             return array
         }
