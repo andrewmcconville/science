@@ -31,7 +31,7 @@
 			<li ng-repeat="era in ::eras"
 				class="era__link"
 				style="left: {{::getLeft(era.startDate)}}%"
-				ui-sref="home.era({eraURL: era.url})">
+				ui-sref="home.era(::{eraURL: era.url})">
 				<div class="era__banner">
 					<div class="era__banner-animation"></div>
 					<div class="era__banner-tail--left"></div>
@@ -39,29 +39,16 @@
 				</div>
 			</li>
 
-			<li ng-repeat-start="person in ::people | filter:person.branch = 'life' track by person.url"
-				ng-if="::!person.isHero"
-				class="person--md"
-				style="left: {{::getLeftMidlife(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%">
-				<div class="person__avatar--md"></div>
-				<div class="person__meta">
-					<div class="person__name--md">{{::person.displayName || person.name}}</div>
-					<div class="person__professions--md">
-						<span class="person__birth-year">{{::person.birthDate | getYear}}, </span>
-						<span class="person__profession">{{::person.professions[0]}}</span>
-					</div>
-				</div>
-			</li>
-			<li ng-repeat-end
-				ng-if="::person.isHero"
-				class="person--lg"
+			<li ng-repeat="person in people | filter:filterByBranch track by person.url"
+				ng-class="::{'person--md': !person.isHero, 'person--lg': person.isHero}"
 				style="left: {{::getLeftMidlife(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%"
-				ui-sref="home.person({personURL: person.url})">
-				<div class="person__avatar--lg">
-					<div class="person__avatar-animation"></div></div>
+				ui-sref="home.person(::{personURL: person.url})">
+				<div ng-class="::{'person__avatar--md': !person.isHero, 'person__avatar--lg': person.isHero}">
+					<div class="person__avatar-animation" ng-show="::person.isHero"></div>
+				</div>
 				<div class="person__meta">
-					<div class="person__name--lg">{{::person.displayName || person.name}}</div>
-					<div class="person__professions--lg">
+					<div ng-class="::{'person__name--md': !person.isHero, 'person__name--lg': person.isHero}">{{::person.displayName || person.name}}</div>
+					<div ng-class="::{'person__professions--md': !person.isHero, 'person__professions--lg': person.isHero}">
 						<span class="person__birth-year">{{::person.birthDate | getYear}}, </span>
 						<span class="person__profession">{{::person.professions[0]}}</span>
 					</div>
@@ -81,7 +68,7 @@
 				ng-if="::event.isHero"
 				class="event--md"
 				style="left: {{::getLeft(event.startDate)}}%;"
-				ui-sref="home.event({eventURL: event.url})">
+				ui-sref="home.event(::{eventURL: event.url})">
 				<div class="event__avatar">
 					<div class="event__avatar-animation"></div>
 				</div>
@@ -91,6 +78,14 @@
 			</li>
 		</ul>
 	</div>
+</div>
+
+<div>
+	<span ng-repeat="branch in ::branchFilters">
+		<input type="checkbox" ng-model="branch.active">
+			<label>{{::branch.name}}</label>
+		</input>
+	</span>
 </div>
 
 <nav class="era-nav view__animate-load" ng-show="isLoaded">
