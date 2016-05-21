@@ -1,6 +1,8 @@
 var app = angular.module('science', ['ui.router', 'ngAnimate']);
 
-app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', function($urlRouterProvider, $stateProvider, $locationProvider){
+app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compileProvider', function($urlRouterProvider, $stateProvider, $locationProvider, $compileProvider){
+	$compileProvider.debugInfoEnabled(false);
+
 	$urlRouterProvider
 		.otherwise('/home');
 
