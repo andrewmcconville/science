@@ -1,0 +1,63 @@
+.bottom-interface {
+	bottom: 10px;
+	position: absolute;
+	width: 100%;
+}
+
+.filters__container {
+	position: absolute;
+}
+
+.filters__container--left {
+	@extend .filters__container;
+	left: 0;
+}
+
+.filters__progress {
+	background-color: #f0f0f0;
+	border-radius: 100%;
+	bottom: -114px;
+	height: 224px;
+	position: absolute;
+	width: 224px;
+}
+
+.filters__progress--left {
+	@extend .filters__progress;
+	left: -82px;
+}
+
+.filters__filter {
+	align-items: center;
+	background-color: #f0f0f0;
+	border-radius: 20px;
+	display: flex;
+	height: 40px;
+    justify-content: center;
+	position: absolute;
+	width: 40px;
+}
+
+.filters__filter--left {
+	@extend .filters__filter;
+
+	&:nth-child(2) {
+		bottom: 120px;
+		left: 10px;
+	}
+
+	&:nth-child(3) {
+		bottom: 112px;
+		left: 58px;
+	}
+
+	&:nth-child(4) {
+		bottom: 88px;
+		left: 100px;
+	}
+
+	&:nth-child(5) {
+		bottom: 50px;
+		left: 132px;
+	}
+}
