@@ -1,14 +1,14 @@
 var app = angular.module('science', ['ui.router', 'ngAnimate']);
 
 app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compileProvider', function($urlRouterProvider, $stateProvider, $locationProvider, $compileProvider){
-	$compileProvider.debugInfoEnabled(false);
+$compileProvider.debugInfoEnabled(false);
 
 	$urlRouterProvider
-		.otherwise('/home');
+		.otherwise('/');
 
 	$stateProvider
 		.state('home', {
-			url: '/home',
+			url: '/',
 			views: {
 				'root': {
 					templateUrl: 'home.html',
@@ -17,7 +17,7 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 			}
 		})
 		.state('home.event', {
-			url: '/event/:eventURL',
+			url: 'event/:eventURL',
 			views: {
 				'detail': {
 					templateUrl: 'event.html',
@@ -26,7 +26,7 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 			}
 		})
 		.state('home.era', {
-			url: '/era/:eraURL',
+			url: 'era/:eraURL',
 			views: {
 				'detail': {
 					templateUrl: 'era.html',
@@ -35,7 +35,7 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 			}
 		})
 		.state('home.person', {
-			url: '/person/:personURL',
+			url: 'person/:personURL',
 			views: {
 				'detail': {
 					templateUrl: 'person.html',
@@ -58,6 +58,15 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 				'root': {
 					templateUrl: 'about.html',
 					controller: 'aboutCtrl'
+				}
+			}
+		})
+		.state('home.settings', {
+			url: 'settings',
+			views: {
+				'settings': {
+					templateUrl: 'settings.html',
+					controller: 'settingsCtrl'
 				}
 			}
 		});
@@ -210,6 +219,11 @@ app.controller('eraCtrl', ['$scope', '$stateParams', 'Eras', function($scope, $s
 app.controller('aboutCtrl', ['$scope', function($scope){
 	console.log('About');
 	$scope.isActiveRoot = true;
+}]);
+
+app.controller('settingsCtrl', ['$scope', function($scope){
+	console.log('Settings');
+	$scope.isActiveSettings = true;
 }]);
 
 app.controller('grandCtrl', ['$scope', '$stateParams', function($scope, $stateParams){
