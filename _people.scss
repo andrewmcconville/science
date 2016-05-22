@@ -80,17 +80,11 @@
 }
 
 .person__avatar-animation {
-	animation: spin 8000ms infinite linear;
     border: 2px dotted #989898;
 	border-radius: 12.5px;
 	flex: 0 0 auto;
 	height: 25px;
 	width: 25px;
-}
-
-@keyframes spin {
-    from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
 }
 
 .person__meta {
