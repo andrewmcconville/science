@@ -1,8 +1,11 @@
 .era-nav {
 	bottom: 35px;
 	display: flex;
-    left: 24px;
+    left: 0;
+    margin: auto;
     position: absolute;
+    right: 0;
+    width: 320px;
 }
 
 .era-nav__link {
