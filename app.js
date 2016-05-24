@@ -1,7 +1,7 @@
 var app = angular.module('science', ['ui.router', 'ngAnimate']);
 
 app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compileProvider', function($urlRouterProvider, $stateProvider, $locationProvider, $compileProvider){
-$compileProvider.debugInfoEnabled(false);
+	$compileProvider.debugInfoEnabled(false);
 
 	$urlRouterProvider
 		.otherwise('/');
@@ -95,8 +95,12 @@ app.controller('homeCtrl', ['$scope', '$document', '$timeout', 'Eras', 'Events',
 		jsTimeScale = document.getElementById("js-time-scale"),
 		jsEras = document.getElementById("js-eras"),
 		jsEvents = document.getElementById("js-events"),
+		jsBottomUI = document.getElementById("js-bottom-ui"),
 		firstYear = new Date($scope.eras[0].startDate).getUTCFullYear(),
 		lastYear = new Date($scope.eras[$scope.eras.length - 1].endDate).getUTCFullYear();
+
+	//move ui relative to scrollbar's height so scrollbar is not covered by bottom ui
+	jsBottomUI.style.bottom = (jsHome.offsetHeight - jsHome.clientHeight) + "px";
 
 	//build time scale
 	for(var i = firstYear; i <= lastYear; i += 25) {
@@ -107,7 +111,7 @@ app.controller('homeCtrl', ['$scope', '$document', '$timeout', 'Eras', 'Events',
 		jsTimeScale.appendChild(year);
 	};
 
-	$scope.branchFilters = [
+	$scope.eventFilters = [
 		{name: "life", active: true},
 		{name: "logical", active: true},
 		{name: "physical", active: false},
@@ -115,8 +119,8 @@ app.controller('homeCtrl', ['$scope', '$document', '$timeout', 'Eras', 'Events',
 	];
 
 	$scope.filterByBranch = function(_obj){
-		for(branch in $scope.branchFilters){
-			if($scope.branchFilters[branch].active && _obj.branch == $scope.branchFilters[branch].name){
+		for(branch in $scope.eventFilters){
+			if($scope.eventFilters[branch].active && _obj.branch == $scope.eventFilters[branch].name){
 				return true
 			}
 		}
@@ -184,6 +188,7 @@ app.controller('homeCtrl', ['$scope', '$document', '$timeout', 'Eras', 'Events',
 
 	//set initial zoom
 	$scope.zoom(2);
+	dragscroll.reset();
 
 	//show the main timeline after
 	//the view transition is done
