@@ -1,5 +1,5 @@
 .time-scale {
-	bottom: 0;
+	bottom: 40px;
     display: flex;
     left: 0;
 	position: absolute;
@@ -23,7 +23,7 @@
 
 	//whole
 	&:nth-child(4n+1) {
-	    border-top: 2px solid rgba(0, 0, 0, .375);
+	    border-left: 2px solid rgba(0, 0, 0, .375);
 	    color: rgba(0, 0, 0, .5);
 		font-size: 14px;
 		font-weight: 600;
@@ -32,7 +32,7 @@
 
 	//half
 	&:nth-child(4n+3) { 
-	    border-top: 1px solid rgba(0, 0, 0, .25);
+	    border-left: 1px solid rgba(0, 0, 0, .25);
 	    color: rgba(0, 0, 0, .375);
 		font-size: 10px;
 		width: 40px;
@@ -40,7 +40,7 @@
 
 	//quarter
 	&:nth-child(2n+2) {
-	    border-top: 1px solid rgba(0, 0, 0, .125);
+	    border-left: 1px solid rgba(0, 0, 0, .125);
 	    color: rgba(0, 0, 0, .25);
 		font-size: 10px;
 		width: 32px;

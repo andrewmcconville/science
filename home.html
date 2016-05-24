@@ -1,15 +1,11 @@
-<header class="view__header">
-	<aside class="zoom-controls view__animate-load" ng-show="isLoaded">
-		<button class="zoom-controls__button" ng-click="zoom(+.5)" ng-disabled="pixelsPerYear >= 32">+</button>
-		<button class="zoom-controls__button" ng-click="setZoom(4)">1x</button>
-		<button class="zoom-controls__button" ng-click="zoom(-.5)" ng-disabled="pixelsPerYear <= 2">-</button>
-	</aside>
-	<nav class="header__nav">
-	    <a ui-sref="home.settings" class="header__link" ui-sref-active="header__link--active">Settings</a>
-	</nav>
+<header class="view__header" ng-show="isLoaded">
+	<button class="zoom-controls__button" ng-click="zoom(+.5)" ng-disabled="pixelsPerYear >= 32">+</button>
+	<button class="zoom-controls__button" ng-click="setZoom(4)">1x</button>
+	<button class="zoom-controls__button" ng-click="zoom(-.5)" ng-disabled="pixelsPerYear <= 2">-</button>
+	<a class="zoom-controls__button" ui-sref="home.settings" class="header__link" ui-sref-active="header__link--active">S</a>
 </header>
 
-<div class="view__content--horizontal" id="js-home">
+<div class="view__content--horizontal dragscroll" id="js-home">
 	<div class="introduction">
 		<h1 class="view__heading">
 			Home Page
@@ -26,10 +22,6 @@
 				<h2 class="era__name">{{::era.name}}</h2>
 			</li>
 		</ul>
-
-		<ol id="js-time-scale" class="time-scale"
-			ng-class="{'hide-quarter': pixelsPerYear <= .75, 'hide-half': pixelsPerYear <= .25}">
-		</ol>
 
 		<ul id="js-events" class="events">
 			<li ng-repeat="era in ::eras"
@@ -81,17 +73,14 @@
 				</div>
 			</li>
 		</ul>
+
+		<ol id="js-time-scale" class="time-scale"
+			ng-class="{'hide-quarter': pixelsPerYear <= .75, 'hide-half': pixelsPerYear <= .25}">
+		</ol>
 	</div>
 </div>
 
-<aside class="bottom-interface">
-	<div class="filters__container--left">
-		<div class="filters__progress--left"></div>
-		<div class="filters__filter--left" ng-repeat="branch in ::branchFilters">
-			<input type="checkbox" ng-model="branch.active"></input>
-		</div>
-	</div>
-
+<aside id="js-bottom-ui" class="bottom-ui">
 	<nav class="era-nav view__animate-load" ng-show="isLoaded">
 		<a ng-repeat="era in ::eras"
 			class="era-nav__link"
@@ -104,7 +93,18 @@
 		<a class="era-nav__link">D</a>
 	</nav>
 
-	<div>
+	<div class="filters__container--left">
+		<div class="filters__filter--left" ng-repeat="event in ::eventFilters">
+			<input type="checkbox" ng-model="event.active"></input>
+		</div>
+		<div class="filters__progress--left"></div>
+	</div>
+
+	<div class="filters__container--right">
+		<div class="filters__filter--right" ng-repeat="event in ::eventFilters">
+			<input type="checkbox" ng-model="event.active"></input>
+		</div>
+		<div class="filters__progress--right"></div>
 	</div>
 </aside>
 

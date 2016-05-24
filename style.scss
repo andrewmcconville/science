@@ -3,6 +3,7 @@
 @import "typography";
 @import "view";
 @import "header";
+@import "filters";
 
 @import "time-scale";
 @import "people";
@@ -12,6 +13,8 @@
 @import "era-nav";
 @import "eras";
 @import "introduction";
+
+@import "animate";
 
 html {
 	height: 100%;

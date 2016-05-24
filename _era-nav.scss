@@ -1,11 +1,12 @@
 .era-nav {
-	bottom: 35px;
+	background-color: #e8e8e8;
+	bottom: 0;
 	display: flex;
+	justify-content: center;
     left: 0;
     margin: auto;
     position: absolute;
     right: 0;
-    width: 320px;
 }
 
 .era-nav__link {

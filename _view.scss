@@ -2,6 +2,7 @@
 	bottom: 0;
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
 	top: 0;
 	transition: opacity 160ms;
 	//transform: translate3d(0, 0, 0);
@@ -33,9 +34,8 @@
 	color: #fff;
 	display: flex;
 	flex: 0 0 auto;
-	height: 54px;
-	justify-content: space-between;
-	padding: 0 16px;
+	justify-content: center;
+	padding: 2px 0;
 	position: relative;
 	width: 100%;
 }

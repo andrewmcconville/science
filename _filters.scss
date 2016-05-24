@@ -1,5 +1,5 @@
-.bottom-interface {
-	bottom: 10px;
+.bottom-ui {
+	bottom: 0;
 	position: absolute;
 	width: 100%;
 }
@@ -11,6 +11,11 @@
 .filters__container--left {
 	@extend .filters__container;
 	left: 0;
+}
+
+.filters__container--right {
+	@extend .filters__container;
+	right: 0;
 }
 
 .filters__progress {
@@ -27,13 +32,18 @@
 	left: -82px;
 }
 
+.filters__progress--right {
+	@extend .filters__progress;
+	right: -82px;
+}
+
 .filters__filter {
 	align-items: center;
 	background-color: #f0f0f0;
 	border-radius: 20px;
 	display: flex;
 	height: 40px;
-    justify-content: center;
+	justify-content: center;
 	position: absolute;
 	width: 40px;
 }
@@ -41,23 +51,47 @@
 .filters__filter--left {
 	@extend .filters__filter;
 
-	&:nth-child(2) {
+	&:nth-child(1) {
 		bottom: 120px;
 		left: 10px;
 	}
 
-	&:nth-child(3) {
+	&:nth-child(2) {
 		bottom: 112px;
 		left: 58px;
 	}
 
-	&:nth-child(4) {
+	&:nth-child(3) {
 		bottom: 88px;
 		left: 100px;
 	}
 
-	&:nth-child(5) {
+	&:nth-child(4) {
 		bottom: 50px;
 		left: 132px;
+	}
+}
+
+.filters__filter--right {
+	@extend .filters__filter;
+
+	&:nth-child(1) {
+		bottom: 120px;
+		right: 10px;
+	}
+
+	&:nth-child(2) {
+		bottom: 112px;
+		right: 58px;
+	}
+
+	&:nth-child(3) {
+		bottom: 88px;
+		right: 100px;
+	}
+
+	&:nth-child(4) {
+		bottom: 50px;
+		right: 132px;
 	}
 }
