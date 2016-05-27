@@ -212,9 +212,10 @@ ol, ul {
 
 .filters__progress, .filters__progress--left, .filters__progress--right {
   background-color: #f0f0f0;
-  border-radius: 100%;
-  bottom: -114px;
-  height: 224px;
+  border-top-left-radius: 112px;
+  border-top-right-radius: 112px;
+  bottom: 0;
+  height: 112px;
   position: absolute;
   width: 224px; }
 
@@ -319,6 +320,8 @@ ol, ul {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

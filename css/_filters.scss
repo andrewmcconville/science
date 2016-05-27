@@ -20,9 +20,10 @@
 
 .filters__progress {
 	background-color: #f0f0f0;
-	border-radius: 100%;
-	bottom: -114px;
-	height: 224px;
+	border-top-left-radius: 112px;
+    border-top-right-radius: 112px;
+	bottom: 0;
+	height: 112px;
 	position: absolute;
 	width: 224px;
 }
