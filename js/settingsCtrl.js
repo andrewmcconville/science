@@ -1,4 +1,4 @@
 app.controller('settingsCtrl', ['$scope', function($scope){
 	console.log('Settings');
-	$scope.isActiveSettings = true;
+	$scope.isActiveView = true;
 }]);

@@ -33,8 +33,8 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 	$scope.eventFilters = [
 		{name: "life", active: true},
 		{name: "logical", active: true},
-		{name: "physical", active: false},
-		{name: "applied", active: false}
+		{name: "physical", active: true},
+		{name: "applied", active: true}
 	];
 
 	$scope.filterByBranch = function(_obj){

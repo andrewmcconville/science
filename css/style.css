@@ -5,6 +5,7 @@
   display: none !important; }
 
 body {
+  color: rgba(0, 0, 0, 0.625);
   line-height: 1;
   margin: 0; }
 
@@ -12,8 +13,14 @@ a, button {
   outline: 0;
   padding: 0; }
 
-button {
+a {
   color: rgba(0, 0, 0, 0.625);
+  text-decoration: none; }
+
+button {
+  border: none;
+  color: rgba(0, 0, 0, 0.625);
+  cursor: pointer;
   font-family: 'Signika Negative', sans-serif;
   font-size: 100%; }
 
@@ -784,6 +791,27 @@ ol, ul {
 
 .introduction__paragraph {
   padding: 0 16px; }
+
+.settings {
+  background-color: rgba(255, 255, 255, 0.875);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%; }
+
+.settings__window {
+  margin: auto;
+  width: 160px; }
+
+.settings__button {
+  background-color: #e0e0e0;
+  display: block;
+  margin-bottom: 8px;
+  padding: 8px;
+  text-align: center;
+  width: 100%; }
 
 .animate .person__avatar-animation {
   -webkit-animation: spin 8000ms infinite linear;

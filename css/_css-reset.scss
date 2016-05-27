@@ -7,6 +7,7 @@
 }
 
 body {
+	color: rgba(0, 0, 0, .625);
 	line-height: 1;
 	margin:0;
 }
@@ -16,8 +17,15 @@ a, button {
 	padding:0;
 }
 
-button {
+a {
 	color: rgba(0, 0, 0, .625);
+	text-decoration: none;
+}
+
+button {
+	border: none;
+	color: rgba(0, 0, 0, .625);
+	cursor: pointer;
 	font-family: 'Signika Negative', sans-serif;
 	font-size: 100%;
 }

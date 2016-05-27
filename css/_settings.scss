@@ -1,0 +1,20 @@
+.settings {
+	background-color: rgba(255, 255, 255, .875);
+	display: flex;
+	height: 100%;
+	width: 100%;
+}
+
+.settings__window {
+	margin: auto;
+	width: 160px;
+}
+
+.settings__button {
+	background-color: #e0e0e0;
+	display: block;
+	margin-bottom: 8px;
+	padding: 8px;
+	text-align: center;
+	width: 100%;
+}
