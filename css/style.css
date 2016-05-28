@@ -6,7 +6,7 @@
 
 body {
   color: rgba(0, 0, 0, 0.625);
-  line-height: 1;
+  line-height: 1.25;
   margin: 0; }
 
 a, button {
@@ -26,7 +26,7 @@ button {
 
 h1, h2, h3, h4, h5, h6, p, a, img, article, aside, figure, figcaption, footer, header, menu, nav, section, summary, time {
   border: 0;
-  font-size: 100%;
+  font-size: 18px;
   font: inherit;
   vertical-align: baseline;
   margin: 0; }
@@ -40,6 +40,31 @@ ol, ul {
   padding: 0; }
 
 .view {
+  -webkit-transition: opacity 160ms;
+          transition: opacity 160ms; }
+  .view.ng-enter {
+    opacity: 0; }
+  .view.ng-enter-active {
+    opacity: 1; }
+  .view.ng-leave {
+    opacity: 1; }
+  .view.ng-leave-active {
+    opacity: 0; }
+
+.view__modal {
+  background-color: #fff;
+  bottom: 0;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.125);
+  left: 0;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: auto;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.view__fullscreen {
   bottom: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -51,21 +76,9 @@ ol, ul {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden;
+  position: absolute;
   top: 0;
-  -webkit-transition: opacity 160ms;
-          transition: opacity 160ms;
   width: 100%; }
-  .view.ng-enter {
-    opacity: 0; }
-  .view.ng-enter-active {
-    opacity: 1; }
-  .view.ng-leave {
-    opacity: 1; }
-  .view.ng-leave-active {
-    opacity: 0; }
-
-.view--active {
-  position: absolute; }
 
 .view__header {
   background-color: #a0a0a0;
@@ -792,20 +805,15 @@ ol, ul {
 .introduction__paragraph {
   padding: 0 16px; }
 
-.settings {
-  background-color: rgba(255, 255, 255, 0.875);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  width: 100%; }
+.menu {
+  height: 300px;
+  width: 200px; }
 
-.settings__window {
+.menu__window {
   margin: auto;
   width: 160px; }
 
-.settings__button {
+.menu__button {
   background-color: #e0e0e0;
   display: block;
   margin-bottom: 8px;

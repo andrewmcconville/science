@@ -1,7 +1,6 @@
 app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$timeout', 'Eras', 'Events', 'People', 'hotkeys', function($state, $scope, $location, $document, $timeout, Eras, Events, People, hotkeys) {
 	console.log('Home');
 
-	$scope.isActiveRoot = true;
 	$scope.isLoaded = false;
 
 	$scope.eras = Eras.getEras();
@@ -38,11 +37,14 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 	];
 
 	$scope.filterByBranch = function(_obj){
+		//console.log('filter');
+		//console.time('filter');
 		for(branch in $scope.eventFilters){
 			if($scope.eventFilters[branch].active && _obj.branch == $scope.eventFilters[branch].name){
 				return true
 			}
 		}
+		//console.timeEnd('filter');
 	};
 
 	$scope.getLeft = function(_date){
@@ -68,7 +70,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 
 	$scope.scrollToEra = function(_era){
 		console.log(_era);
-		jsHome.scrollLeft = document.getElementById("js-era-" + _era).offsetLeft + 300;
+		jsHome.scrollLeft = document.getElementById("js-era-" + _era).offsetLeft;
 	};
 
 	$scope.zoom = function(_amount){
@@ -113,7 +115,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 	//the view transition is done
 	//and everything is loaded
 	$document.ready(function(){
-		console.log('loaded');
+		//console.log('loaded');
 		$timeout(function(){
 			$scope.isLoaded = true;
 		}, 0);
@@ -124,14 +126,16 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 			hotkeys.add({
 				combo: 'esc',
 				description: 'Open main menu',
+				allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 				callback: function() {
-					$state.go('home.settings')
+					$state.go('home.menu')
 				}
 			});
 		} else {
 			hotkeys.add({
 				combo: 'esc',
 				description: 'Close child view',
+				allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 				callback: function() {
 					$state.go('^')
 				}
@@ -142,12 +146,14 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 	mapEscapeKey();
 
 	$scope.$on("$locationChangeSuccess", function(){
+		//console.log($location);
 		mapEscapeKey();
 	});
 
 	hotkeys.add({
 		combo: '1',
 		description: 'Toggle Life Events',
+		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 		callback: function() {
 			$scope.eventFilters[0].active = !$scope.eventFilters[0].active;
 		}
@@ -156,6 +162,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 	hotkeys.add({
 		combo: '2',
 		description: 'Toggle Logic Events',
+		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 		callback: function() {
 			$scope.eventFilters[1].active = !$scope.eventFilters[1].active;
 		}
@@ -164,6 +171,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 	hotkeys.add({
 		combo: '3',
 		description: 'Toggle Physical Events',
+		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 		callback: function() {
 			$scope.eventFilters[2].active = !$scope.eventFilters[2].active;
 		}
@@ -172,6 +180,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 	hotkeys.add({
 		combo: '4',
 		description: 'Toggle Applied Events',
+		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 		callback: function() {
 			$scope.eventFilters[3].active = !$scope.eventFilters[3].active;
 		}
@@ -180,6 +189,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 	hotkeys.add({
 		combo: '5',
 		description: 'Toggle All Events',
+		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 		callback: function() {
 			if($scope.eventFilters[0].active && $scope.eventFilters[1].active && $scope.eventFilters[2].active && $scope.eventFilters[3].active){
 				$scope.eventFilters[0].active = false;
@@ -198,6 +208,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 	hotkeys.add({
 		combo: 'c',
 		description: 'Zoom in',
+		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 		callback: function() {
 			$scope.zoom(+.5);
 		}
@@ -206,6 +217,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 	hotkeys.add({
 		combo: 'x',
 		description: 'Reset zoom',
+		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 		callback: function() {
 			$scope.setZoom(4);
 		}
@@ -214,6 +226,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 	hotkeys.add({
 		combo: 'z',
 		description: 'Zoom out',
+		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 		callback: function() {
 			$scope.zoom(-.5);
 		}
@@ -222,6 +235,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 	hotkeys.add({
 		combo: 'q',
 		description: 'Jump to Classical Era',
+		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 		callback: function() {
 			$scope.scrollToEra('Classical');
 		}
@@ -230,6 +244,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 	hotkeys.add({
 		combo: 'w',
 		description: 'Jump to Medieval Era',
+		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 		callback: function() {
 			$scope.scrollToEra('Medieval');
 		}
@@ -238,6 +253,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 	hotkeys.add({
 		combo: 'e',
 		description: 'Jump to Renaissance Era',
+		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 		callback: function() {
 			$scope.scrollToEra('Renaissance');
 		}
@@ -246,6 +262,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 	hotkeys.add({
 		combo: 'r',
 		description: 'Jump to Industrial Era',
+		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 		callback: function() {
 			$scope.scrollToEra('Industrial');
 		}
@@ -254,6 +271,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 	hotkeys.add({
 		combo: 't',
 		description: 'Jump to Modern Era',
+		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 		callback: function() {
 			$scope.scrollToEra('Modern');
 		}

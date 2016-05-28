@@ -1,16 +1,14 @@
-.settings {
-	background-color: rgba(255, 255, 255, .875);
-	display: flex;
-	height: 100%;
-	width: 100%;
+.menu {
+	height: 300px;
+	width: 200px;
 }
 
-.settings__window {
+.menu__window {
 	margin: auto;
 	width: 160px;
 }
 
-.settings__button {
+.menu__button {
 	background-color: #e0e0e0;
 	display: block;
 	margin-bottom: 8px;

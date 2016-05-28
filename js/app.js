@@ -4,22 +4,16 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 	$compileProvider.debugInfoEnabled(false);
 
 	$urlRouterProvider
+		.when('/era/', '/')
+		.when('/person/', '/')
+		.when('/event/', '/')
 		.otherwise('/');
 
 	$stateProvider
 		.state('home', {
 			url: '/',
-			views: {
-				'root': {
-					templateUrl: 'html/home.html',
-					controller: 'homeCtrl'
-				}
-			}
-		})
-		.state('home.event', {
-			url: 'event/:eventURL',
-			templateUrl: 'html/event.html',
-			controller: 'eventCtrl'
+			templateUrl: 'html/home.html',
+			controller: 'homeCtrl'
 		})
 		.state('home.era', {
 			url: 'era/:eraURL',
@@ -31,15 +25,30 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 			templateUrl: 'html/person.html',
 			controller: 'personCtrl'
 		})
-		.state('home.settings', {
-			url: 'settings',
-			templateUrl: 'html/settings.html',
-			controller: 'settingsCtrl'
+		.state('home.event', {
+			url: 'event/:eventURL',
+			templateUrl: 'html/event.html',
+			controller: 'eventCtrl'
 		})
-		.state('home.about', {
-			url: 'about',
+		.state('home.menu', {
+			url: 'menu',
+			templateUrl: 'html/menu.html',
+			controller: 'menuCtrl'
+		})
+		.state('home.menu.about', {
+			url: '^/about',
 			templateUrl: 'html/about.html',
 			controller: 'aboutCtrl'
+		})
+		.state('home.menu.graphics', {
+			url: '^/graphics',
+			templateUrl: 'html/graphics.html',
+			controller: 'graphicsCtrl'
+		})
+		.state('home.menu.audio', {
+			url: '^/audio',
+			templateUrl: 'html/audio.html',
+			controller: 'audioCtrl'
 		});
 
 	$locationProvider.html5Mode(true);
