@@ -29,6 +29,13 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 		jsTimeScale.appendChild(year);
 	};
 
+	$scope.peopleFilters = [
+		{name: "life", active: true},
+		{name: "logical", active: true},
+		{name: "physical", active: true},
+		{name: "applied", active: true}
+	];
+
 	$scope.eventFilters = [
 		{name: "life", active: true},
 		{name: "logical", active: true},
@@ -36,15 +43,29 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 		{name: "applied", active: true}
 	];
 
-	$scope.filterByBranch = function(_obj){
+	$scope.toggleFilter = function(_filter){
+		//console.log(_filter);
+		_filter.active = !_filter.active;
+	};
+
+	$scope.filterPeople = function(_person){
 		//console.log('filter');
-		//console.time('filter');
-		for(branch in $scope.eventFilters){
-			if($scope.eventFilters[branch].active && _obj.branch == $scope.eventFilters[branch].name){
+		for(filter in $scope.peopleFilters){
+			if($scope.peopleFilters[filter].active &&
+			   $scope.peopleFilters[filter].name == _person.branch){
 				return true
 			}
 		}
-		//console.timeEnd('filter');
+	};
+
+	$scope.filterEvents = function(_event){
+		//console.log('filter');
+		for(filter in $scope.eventFilters){
+			if($scope.eventFilters[filter].active &&
+			   $scope.eventFilters[filter].name == _event.branch){
+				return true
+			}
+		}
 	};
 
 	$scope.getLeft = function(_date){
@@ -152,42 +173,97 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 
 	hotkeys.add({
 		combo: '1',
-		description: 'Toggle Life Events',
+		description: 'Toggle Life People',
 		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 		callback: function() {
-			$scope.eventFilters[0].active = !$scope.eventFilters[0].active;
+			$scope.toggleFilter($scope.peopleFilters[0]);
 		}
 	});
 
 	hotkeys.add({
 		combo: '2',
-		description: 'Toggle Logic Events',
+		description: 'Toggle Logic People',
 		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 		callback: function() {
-			$scope.eventFilters[1].active = !$scope.eventFilters[1].active;
+			$scope.toggleFilter($scope.peopleFilters[1]);
 		}
 	});
 
 	hotkeys.add({
 		combo: '3',
-		description: 'Toggle Physical Events',
+		description: 'Toggle Physical People',
 		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 		callback: function() {
-			$scope.eventFilters[2].active = !$scope.eventFilters[2].active;
+			$scope.toggleFilter($scope.peopleFilters[2]);
 		}
 	});
 
 	hotkeys.add({
 		combo: '4',
-		description: 'Toggle Applied Events',
+		description: 'Toggle Applied People',
 		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 		callback: function() {
-			$scope.eventFilters[3].active = !$scope.eventFilters[3].active;
+			$scope.toggleFilter($scope.peopleFilters[3]);
 		}
 	});
 
 	hotkeys.add({
 		combo: '5',
+		description: 'Toggle All People',
+		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
+		callback: function() {
+			if($scope.peopleFilters[0].active && $scope.peopleFilters[1].active && $scope.peopleFilters[2].active && $scope.peopleFilters[3].active){
+				$scope.peopleFilters[0].active = false;
+				$scope.peopleFilters[1].active = false;
+				$scope.peopleFilters[2].active = false;
+				$scope.peopleFilters[3].active = false;
+			} else {
+				$scope.peopleFilters[0].active = true;
+				$scope.peopleFilters[1].active = true;
+				$scope.peopleFilters[2].active = true;
+				$scope.peopleFilters[3].active = true;
+			}
+		}
+	});
+
+	hotkeys.add({
+		combo: '6',
+		description: 'Toggle Life Events',
+		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
+		callback: function() {
+			$scope.toggleFilter($scope.eventFilters[0]);
+		}
+	});
+
+	hotkeys.add({
+		combo: '7',
+		description: 'Toggle Logic Events',
+		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
+		callback: function() {
+			$scope.toggleFilter($scope.eventFilters[1]);
+		}
+	});
+
+	hotkeys.add({
+		combo: '8',
+		description: 'Toggle Physical Events',
+		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
+		callback: function() {
+			$scope.toggleFilter($scope.eventFilters[2]);
+		}
+	});
+
+	hotkeys.add({
+		combo: '9',
+		description: 'Toggle Applied Events',
+		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
+		callback: function() {
+			$scope.toggleFilter($scope.eventFilters[3]);
+		}
+	});
+
+	hotkeys.add({
+		combo: '0',
 		description: 'Toggle All Events',
 		allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 		callback: function() {

@@ -41,12 +41,17 @@
 .filters__filter {
 	align-items: center;
 	background-color: #f0f0f0;
+	border: 1px solid transparent;
 	border-radius: 20px;
 	display: flex;
 	height: 40px;
 	justify-content: center;
 	position: absolute;
 	width: 40px;
+}
+
+.filters__filter--active {
+	border: 1px solid #d0d0d0;
 }
 
 .filters__filter--left {

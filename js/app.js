@@ -54,7 +54,3 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 	$locationProvider.html5Mode(true);
 	$locationProvider.hashPrefix('!');
 }]);
-
-app.controller('appCtrl', ['$scope', '$state', function($scope, $state) {
-	console.log('App');
-}]);

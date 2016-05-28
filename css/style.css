@@ -251,6 +251,7 @@ ol, ul {
       -ms-flex-align: center;
           align-items: center;
   background-color: #f0f0f0;
+  border: 1px solid transparent;
   border-radius: 20px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -263,6 +264,9 @@ ol, ul {
           justify-content: center;
   position: absolute;
   width: 40px; }
+
+.filters__filter--active {
+  border: 1px solid #d0d0d0; }
 
 .filters__filter--left:nth-child(1) {
   bottom: 120px;

@@ -5,16 +5,19 @@ angular
             {
                 name: "Geometry",
                 isHero: true,
+                branch: "logical",
                 people: ["Euclid"],
                 startDate: "-000323-01-01"
             },
             {
                 name: "Heliocentrism",
+                branch: "physical",
                 people: ["Aristarchus"],
                 startDate: "-000280-01-01"
             },
             {
                 name: "Tides",
+                branch: "physical",
                 people: ["Seleucus"],
                 startDate: "-000150-01-01"
             },

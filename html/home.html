@@ -8,6 +8,7 @@
 
 	<div class="view__content--horizontal dragscroll" id="js-home">
 		<div class="view__animate-load" ng-show="isLoaded">
+<!-- era bg -->
 			<ul id="js-eras" class="eras">
 				<li ng-repeat="era in ::eras"
 					id="js-era-{{::era.name}}"
@@ -18,6 +19,7 @@
 			</ul>
 
 			<ul id="js-events" class="events">
+<!-- eras -->
 				<li ng-repeat="era in ::eras"
 					class="era__link"
 					style="left: {{::getLeft(era.startDate)}}%"
@@ -28,8 +30,8 @@
 						<div class="era__banner-tail--right"></div>
 					</div>
 				</li>
-
-				<li ng-repeat="person in people | filter:filterByBranch track by person.url"
+<!-- people -->
+				<li ng-repeat="person in people | filter:filterPeople track by person.url"
 					ng-class="::{'person--md': !person.isHero, 'person--lg': person.isHero}"
 					style="left: {{::getLeft(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%"
 					ui-sref="home.person(::{personURL: person.url})">
@@ -44,8 +46,8 @@
 						</div>
 					</div>
 				</li>
-
-				<li ng-repeat-start="event in ::events track by event.url"
+<!-- events -->
+				<li ng-repeat-start="event in events | filter:filterEvents track by event.url"
 					ng-if="::!event.isHero"
 					class="event--md"
 					style="left: {{::getLeft(event.startDate)}}%;">
@@ -67,7 +69,7 @@
 					</div>
 				</li>
 			</ul>
-
+<!-- time scale -->
 			<ol id="js-time-scale" class="time-scale"
 				ng-class="{'hide-quarter': pixelsPerYear <= .75, 'hide-half': pixelsPerYear <= .25}">
 			</ol>
@@ -88,16 +90,20 @@
 		</nav>
 
 		<div class="filters__container--left">
-			<div class="filters__filter--left" ng-repeat="event in ::eventFilters">
-				<input type="checkbox" ng-model="event.active"></input>
-			</div>
+			<button class="filters__filter--left"
+					ng-repeat="filter in ::peopleFilters"
+					ng-click="toggleFilter(filter)"
+					ng-class="{'filters__filter--active': filter.active}">
+			</button>
 			<div class="filters__progress--left"></div>
 		</div>
 
 		<div class="filters__container--right">
-			<div class="filters__filter--right" ng-repeat="event in ::eventFilters">
-				<input type="checkbox" ng-model="event.active"></input>
-			</div>
+			<button class="filters__filter--right"
+					ng-repeat="filter in ::eventFilters"
+					ng-click="toggleFilter(filter)"
+					ng-class="{'filters__filter--active': filter.active}">
+			</button>
 			<div class="filters__progress--right"></div>
 		</div>
 	</aside>
