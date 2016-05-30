@@ -14,6 +14,13 @@
 	top: 0;
 }
 
+.modal__overlay {
+	background-color: rgba(255, 255, 255, .5);
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+
 .modal__header {
 	align-items: center;
 	display: flex;
@@ -32,6 +39,7 @@
 }
 
 .modal__title {
+	color: rgba(0, 0, 0, .375);
 	font-size: 12px;
 }
 

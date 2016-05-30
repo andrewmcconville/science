@@ -13,12 +13,16 @@
 }
 
 .person-detail--md__date {
+	color: rgba(0, 0, 0, .375);
 	font-size: 12px;
+	font-weight: 600;
 	text-align: center;
 }
 
 .person-detail--md__location {
+	color: rgba(0, 0, 0, .375);
 	font-size: 12px;
+	font-weight: 600;
 	margin-bottom: 16px;
 	text-align: center;
 }
@@ -37,6 +41,7 @@
 .person-detail--md__trivia {
     color: rgba(0, 0, 0, .5);
 	font-size: 14px;
+	font-weight: 300;
 	margin-bottom: 16px;
 }
 
