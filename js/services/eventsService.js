@@ -7,24 +7,24 @@ angular
                 isHero: true,
                 branch: "logical",
                 people: ["Euclid"],
-                startDate: "-000323-01-01"
+                startDate: "-000323"
             },
             {
                 name: "Heliocentrism",
                 branch: "physical",
                 people: ["Aristarchus"],
-                startDate: "-000280-01-01"
+                startDate: "-000280"
             },
             {
                 name: "Tides",
                 branch: "physical",
                 people: ["Seleucus"],
-                startDate: "-000150-01-01"
+                startDate: "-000150"
             },
             {
                 name: "xxx",
                 people: [],
-                startDate: "0000-01-01"
+                startDate: "0000"
             }
         ];
 

@@ -7,8 +7,8 @@ angular
                 location: "Miletus",
                 branch: "physical",
                 professions: ["astronomy", "mathematics", "philosophy"],
-                birthDate: "-000624-01-01",
-                deathDate: "-000546-01-01",
+                birthDate: "-000624",
+                deathDate: "-000546",
                 offset: 50,
                 excerpt: "Often regarded as the first philosopher Thales turned to natural explanations, over mystical stories, to describe natural phenomena. He is also one of the first mathematicians having a theorem named after him. Thales’ Theorem states an inscribed triangle which bisects a circle across its diameter is always a right triangle.",
                 trivia: "Using shadows Thales calculated the heights of The Pyramids"
@@ -18,8 +18,8 @@ angular
                 location: "Miletus",
                 branch: "physical",
                 professions: ["astronomy", "geometry", "geography", "metaphysics"],
-                birthDate: "-000610-01-01",
-                deathDate: "-000546-01-01",
+                birthDate: "-000610",
+                deathDate: "-000546",
                 excerpt: "Revolutionized cosmology with a mechanical model of the world; proposing the Earth exists unsupported in an infinite cosmos.",
                 trivia: "Calibrated sundials to calculate equinoxes and solstices."
             },
@@ -29,8 +29,8 @@ angular
                 location: "Samos",
                 branch: "logical",
                 professions: ["mathematics", "music", "metaphysics"],
-                birthDate: "-000570-01-01",
-                deathDate: "-000495-01-01",
+                birthDate: "-000570",
+                deathDate: "-000495",
                 intro: "Pythagoras made influential contributions to philosophy and religion in the late 6th century BC. He is often revered as a great mathematician and scientist and is best known for the Pythagorean theorem which bears his name."
             },
             {
@@ -38,8 +38,8 @@ angular
                 location: "Klazomenai",
                 branch: "logical",
                 professions: ["philosophy"],
-                birthDate: "-000510-01-01",
-                deathDate: "-000428-01-01",
+                birthDate: "-000510",
+                deathDate: "-000428",
                 excerpt: "Proposed the sun is a fiery rock about the size of the Greek Peloponnese.",
                 trivia: "Correctly explained the cause of eclipses."
             },
@@ -48,19 +48,19 @@ angular
                 location: "Athens",
                 branch: "logical",
                 professions: ["philosophy", "epistemology"],
-                birthDate: "-000470-01-01",
-                deathDate: "-000399-01-01",
+                birthDate: "-000470",
+                deathDate: "-000399",
                 offset: 70,
                 excerpt: "Introduced the Socratic method of critical thinking. It eliminates contradicting hypotheses and progressively distills a theory is through logic.",
-                trivia: "Continuously asked why to draw out the fundamental reasoning of a claim."
+                trivia: "Continuously asked why to draw out the fundamental reasoning of ideas."
             },
             {
                 name: "Hippocrates",
                 location: "Island of Cos, Greece",
                 branch: "life",
                 professions: ["medicine"],
-                birthDate: "-000460-01-01",
-                deathDate: "-000375-01-01",
+                birthDate: "-000460",
+                deathDate: "-000375",
                 offset: 35
             },
             {
@@ -68,16 +68,16 @@ angular
                 location: "Abdera, Thrace",
                 branch: "logical",
                 professions: ["metaphysics", "astronomy", "mathematics"],
-                birthDate: "-000460-01-01",
-                deathDate: "-000370-01-01"
+                birthDate: "-000460",
+                deathDate: "-000370"
             },
             {
                 name: "Plato",
                 location: "Athens, Greece",
                 branch: "logical",
                 professions: ["philosophy", "epistemology"],
-                birthDate: "-000428-01-01",
-                deathDate: "-000348-01-01"
+                birthDate: "-000428",
+                deathDate: "-000348"
             },
             {
                 name: "Aristotle",
@@ -85,16 +85,16 @@ angular
                 branch: "logical",
                 location: "Stagira, Chalcidice, Greece",
                 professions: ["philosophy", "metaphysics", "physics"],
-                birthDate: "-000384-01-01",
-                deathDate: "-000322-01-01"
+                birthDate: "-000384",
+                deathDate: "-000322"
             },
             {
                 name: "Euclid",
                 location: "Syracuse, Sicily",
                 branch: "logical",
                 professions: ["mathematics"],
-                birthDate: "-000323-01-01",
-                deathDate: "-000283-01-01",
+                birthDate: "-000323",
+                deathDate: "-000283",
                 offset: 60
             },
             {
@@ -102,8 +102,8 @@ angular
                 location: "Samos",
                 branch: "physical",
                 professions: ["astronomy", "mathematics"],
-                birthDate: "-000310-01-01",
-                deathDate: "-000230-01-01",
+                birthDate: "-000310",
+                deathDate: "-000230",
                 offset: 30
             },
             {
@@ -111,8 +111,8 @@ angular
                 location: "Syracuse, Sicily",
                 branch: "applied",
                 professions: ["engineering", "mathematics", "physics", "astronomy"],
-                birthDate: "-000287-01-01",
-                deathDate: "-000212-01-01",
+                birthDate: "-000287",
+                deathDate: "-000212",
                 offset: 40
             },
             {
@@ -120,8 +120,8 @@ angular
                 location: "Cyrene, Libya",
                 branch: "physical",
                 professions: ["geography", "mathematics", "music"],
-                birthDate: "-000276-01-01",
-                deathDate: "-000194-01-01",
+                birthDate: "-000276",
+                deathDate: "-000194",
                 offset: 60
             },
             {
@@ -129,16 +129,16 @@ angular
                 branch: "physical",
                 professions: ["astronomy", "philosophy"],
                 location: "Seleucia",
-                birthDate: "-000190-01-01",
-                deathDate: "-000150-01-01"
+                birthDate: "-000190",
+                deathDate: "-000150"
             },
             {
                 name: "Hipparchus",
                 branch: "physical",
                 professions: ["astronomy", "trigonometry"],
                 location: "Nicaea",
-                birthDate: "-000190-01-01",
-                deathDate: "-100020-01-01",
+                birthDate: "-000190",
+                deathDate: "-100020",
                 offset: 10
             },
             {
@@ -146,32 +146,32 @@ angular
                 location: "Comum, Italy",
                 branch: "logical",
                 professions: ["author", "naturalism", "natural philosophy"],
-                birthDate: "0023-01-01",
-                deathDate: "0079-01-01"
+                birthDate: "0023",
+                deathDate: "0079"
             },
             {
                 name: "Ptolemy",
                 branch: "physical",
                 professions: ["astronomy", "mathematics", "geography"],
                 location: "Alexandria, Egypt",
-                birthDate: "000100-01-01",
-                deathDate: "000170-01-01"
+                birthDate: "000100",
+                deathDate: "000170"
             },
             {
                 name: "Galen of Pergamon",
                 branch: "life",
                 professions: ["physiology",  "pathology", "pharmacology", "neurology", "anatomy"],
                 location: "Greek",
-                birthDate: "000129-01-01",
-                deathDate: "000216-01-01"
+                birthDate: "000129",
+                deathDate: "000216"
             },
             {
                 name: "Paul of Aegina",
                 branch: "life",
                 professions: ["medicine"],
                 location: "Byzantine Empire",
-                birthDate: "000625-01-01",
-                deathDate: "000690-01-01"
+                birthDate: "000625",
+                deathDate: "000690"
             },
             {
                 name: "Muḥammad ibn Mūsā al-Khwārizmī",
@@ -179,8 +179,8 @@ angular
                 branch: "logical",
                 professions: ["mathematics"],
                 location: "Khwarezm",
-                birthDate: "000780-01-01",
-                deathDate: "000650-01-01"
+                birthDate: "000780",
+                deathDate: "000650"
             },
             {
                 name: "Abu Yūsuf Yaʻqūb ibn ʼIsḥāq aṣ-Ṣabbāḥ al-Kindī",
@@ -188,8 +188,8 @@ angular
                 branch: "logical",
                 professions: ["cryptography ", "mathematics", "astronomy", "medicine"],
                 location: "Basra, Abbasid Caliphate",
-                birthDate: "000801-01-01",
-                deathDate: "00873-01-01"
+                birthDate: "000801",
+                deathDate: "00873"
             },
             {
                 name: "Al-Ṣābiʾ Thābit ibn Qurra al-Ḥarrānī",
@@ -197,7 +197,7 @@ angular
                 branch: "logical",
                 professions: ["mathematics", "astronomy"],
                 location: "Harran",
-                birthDate: "000826-01-01",
+                birthDate: "000826",
                 deathDate: "00901-02-18"
             },
             {
@@ -206,8 +206,8 @@ angular
                 branch: "life",
                 professions: ["physiology", "surgery"],
                 location: "Medina Azahara, Al-Andalus",
-                birthDate: "000936-01-01",
-                deathDate: "1013-01-01"
+                birthDate: "000936",
+                deathDate: "1013"
             },
             {
                 name: "Abū ʿAlī al-Ḥasan ibn al-Ḥasan ibn al-Haytham",
@@ -215,16 +215,16 @@ angular
                 branch: "location",
                 professions: ["logic", "philosophy", "mathematics", "astronomy", "optics", "physics"],
                 location: "Basra, Buyid Emirate",
-                birthDate: "000965-01-01",
-                deathDate: "1040-01-01"
+                birthDate: "000965",
+                deathDate: "1040"
             },
             {
                 name: "Avicenna",
                 branch: "life",
                 professions: ["medicine", "philosophy"],
                 location: "Iran",
-                birthDate: "000980-01-01",
-                deathDate: "1037-01-01"
+                birthDate: "000980",
+                deathDate: "1037"
             },
             {
                 name: "Leonardo Fibonacci",
@@ -232,8 +232,8 @@ angular
                 branch: "logical",
                 professions: ["mathematics"],
                 location: "Pisa",
-                birthDate: "1173-01-01",
-                deathDate: "1245-01-01"
+                birthDate: "1173",
+                deathDate: "1245"
             },
             {
                 name: "Roger Bacon",
@@ -241,8 +241,8 @@ angular
                 branch: "physical",
                 professions: ["alchemy", "optics", "linguistics"],
                 location: "England",
-                birthDate: "1220-01-01",
-                deathDate: "1292-01-01"
+                birthDate: "1220",
+                deathDate: "1292"
             },
             {
                 name: "Johannes Gensfleisch zur Laden zum Gutenberg",
@@ -250,7 +250,7 @@ angular
                 branch: "applied",
                 professions: ["printing", "invention"],
                 location: "Mainz, Electorate of Mainz",
-                birthDate: "1398-01-01",
+                birthDate: "1398",
                 deathDate: "1468-02-03"
             },
             {
@@ -303,7 +303,7 @@ angular
                 branch: "physical",
                 professions: ["cosmology", "philosophy"],
                 location: "Nola, Naples",
-                birthDate: "1548-01-01",
+                birthDate: "1548",
                 deathDate: "1600-02-17"
             },
             {
@@ -830,7 +830,7 @@ angular
                 professions: ["electrical engineering", "physics"],
                 location: "Hamburg, Germany",
                 birthDate: "1857-02-22",
-                deathDate: "1894-01-01"
+                deathDate: "1894"
             },
             {
                 name: "Max Karl Ernst Ludwig Planck",
@@ -930,7 +930,7 @@ angular
                 professions: ["geology", "meteorology", "astronomy"],
                 location: "Berlin, Germany",
                 birthDate: "1880-11-01",
-                deathDate: "1930-01-01"
+                deathDate: "1930-11"
             },
             {
                 name: "Sir Alexander Fleming",
@@ -1189,8 +1189,8 @@ angular
                 displayName: "ddd",
                 professions: ["ppp"],
                 location: "lll",
-                birthDate: "0000-01-01",
-                deathDate: "0000-01-01"
+                birthDate: "0000",
+                deathDate: "0000"
             }
         ];
 
