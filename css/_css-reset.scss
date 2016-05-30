@@ -24,6 +24,9 @@ a {
 }
 
 button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 	border: none;
 	color: rgba(0, 0, 0, .625);
 	cursor: pointer;

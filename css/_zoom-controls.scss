@@ -6,16 +6,15 @@
 }
 
 .zoom-controls__button {
-    align-items: center;
-	appearance: none;
-	-webkit-appearance: none;
+	align-items: center;
 	background-color: #f8f8f8;
 	border: 1px solid #e0e0e0;
 	border-right: none;
-	cursor: pointer;
-    display: flex;
+	display: flex;
+	display: -webkit-box;
 	height: 40px;
-    justify-content: center;
+	justify-content: center;
+	text-align: center;
 	width: 40px;
 
 	&[disabled] {

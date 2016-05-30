@@ -1,6 +1,8 @@
 .modal__overlay {
+	align-items: center;
 	display: flex;
 	height: 100%;
+	justify-content: center;
 	position: absolute;
 	width: 100%;
 }
@@ -12,19 +14,13 @@
 
 .modal__window {
 	background-color: #fff;
-	// bottom: 0;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1),
 				0 2px 32px 0 rgba(0, 0, 0, .05);
 	display: flex;
 	flex-direction: column;
 	height: 400px;
-	// left: 0;
-	margin: auto;
 	max-height: 100%;
 	max-width: 100%;
-	// position: absolute;
-	// right: 0;
-	// top: 0;
 	width: 256px;
 }
 
@@ -64,6 +60,7 @@
 	display: flex;
 	flex: 1 1 auto;
 	flex-direction: column;
+	-webkit-overflow-scrolling: touch;
 	overflow-x: hidden;
 	overflow-y: auto;
 	padding: 20px 20px 0 20px;
@@ -71,7 +68,7 @@
 
 .modal__span-height {
 	display: flex;
-	flex: 1 1 auto;
+	flex: 1 0 auto;
 	flex-direction: column;
 	justify-content: space-between;
 }
