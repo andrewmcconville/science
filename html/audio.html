@@ -1,7 +1,15 @@
-<div class="modal menu">
-	<div class="menu__window">
-		<h1>Audio</h1>
-		<p class="menu__button">Music</p>
-		<p class="menu__button">UI</p>
+<div class="modal__overlay" ui-sref="home">
+	<div class="modal__window" ng-click="$event.stopPropagation();">
+		<header class="modal__header">
+			<div class="modal__icon">Au</div>
+			<p class="modal__title">Audio</p>
+			<a ui-sref="^" class="modal__button-close">
+				<span class="icon-close"></span>
+			</a>
+		</header>
+		<div class="modal__scrollable">
+			<p class="menu__button">Music</p>
+			<p class="menu__button">UI</p>
+		</div>
 	</div>
 </div>

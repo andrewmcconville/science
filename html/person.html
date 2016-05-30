@@ -1,5 +1,5 @@
-<div class="modal__overlay" ui-sref="^">
-	<article class="person-detail--md modal" ng-click="$event.stopPropagation();">
+<div class="modal__overlay--opaque" ui-sref="^">
+	<article class="modal__window person-detail--md" ng-click="$event.stopPropagation();">
 		<header class="modal__header">
 			<div class="modal__icon">{{::person.branch.substring(0, 2)}}</div>
 			<p class="modal__title">Person</p>
@@ -15,7 +15,7 @@
 				<span class="person-detail--md__birth-year">{{::person.deathDate | getYear}}</span>
 			</div>
 			<div class="person-detail--md__location">{{::person.location}}</div>
-			<div class="person-detail--md__span-height">
+			<div class="modal__span-height">
 				<div>
 					<p class="person-detail--md__excerpt">
 						{{::person.excerpt}}
