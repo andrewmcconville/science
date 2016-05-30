@@ -39,7 +39,9 @@ angular
                 branch: "logical",
                 professions: ["philosophy"],
                 birthDate: "-000510-01-01",
-                deathDate: "-000428-01-01"
+                deathDate: "-000428-01-01",
+                excerpt: "Proposed the sun is a fiery rock about the size of the Greek Peloponnese.",
+                trivia: "Correctly explained the cause of eclipses."
             },
             {
                 name: "Socrates",
@@ -48,7 +50,9 @@ angular
                 professions: ["philosophy", "epistemology"],
                 birthDate: "-000470-01-01",
                 deathDate: "-000399-01-01",
-                offset: 70
+                offset: 70,
+                excerpt: "Introduced the Socratic method of critical thinking. It eliminates contradicting hypotheses and progressively distills a theory is through logic.",
+                trivia: "Continuously asked why to draw out the fundamental reasoning of a claim."
             },
             {
                 name: "Hippocrates",
@@ -747,7 +751,7 @@ angular
                 deathDate: "1913-11-07"
             },
             {
-                name: "Sir William Thomson, 1st Baron Kelvin (Lord Kelvin)",
+                name: "Sir William Thomson (Lord Kelvin)",
                 displayName: "Lord Kelvin",
                 branch: "logical",
                 professions: ["thermodynamics", "physics", "mathematics"],
