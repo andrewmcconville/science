@@ -10,9 +10,12 @@
 		<div class="modal__scrollable">
 			<h1 class="person-detail--md__title">{{::person.name}}</h1>
 			<div class="person-detail--md__date">
-				<span class="person-detail--md__birth-year">{{::person.birthDate | getYear}}</span>
-				to
-				<span class="person-detail--md__birth-year">{{::person.deathDate | getYear}}</span>
+				{{::person.birthDate | getDate}}
+				<span class="person-detail--md__date--light" ng-if="::person.birthDate < 0">BCE</span>
+				<span class="person-detail--md__date--light">-</span>
+				{{::person.deathDate | getDate}}
+				<span class="person-detail--md__date--light" ng-if="::person.birthDate < 0">BCE</span>
+				<span class="person-detail--md__date--light">({{::person.age}})</span>
 			</div>
 			<div class="person-detail--md__location">{{::person.location}}</div>
 			<div class="modal__span-height">

@@ -10,7 +10,7 @@ angular
                 birthDate: "-000624",
                 deathDate: "-000546",
                 offset: 50,
-                excerpt: "Often regarded as the first philosopher Thales turned to natural explanations, over mystical stories, to describe natural phenomena. He is also one of the first mathematicians having a theorem named after him. Thales’ Theorem states an inscribed triangle which bisects a circle across its diameter is always a right triangle.",
+                excerpt: "Often regarded as the first philosopher Thales turned to natural explanations, over mystical stories, to describe natural phenomena. He is also one of the first mathematicians to have a theorem named after him. Thales’ Theorem states an inscribed triangle which bisects a circle across its diameter is always a right triangle.",
                 trivia: "Using shadows Thales calculated the heights of The Pyramids"
             },
             {
@@ -51,7 +51,7 @@ angular
                 birthDate: "-000470",
                 deathDate: "-000399",
                 offset: 70,
-                excerpt: "Introduced the Socratic method of critical thinking. It eliminates contradicting hypotheses and progressively distills a theory is through logic.",
+                excerpt: "Introduced the Socratic method of critical thinking. It eliminates contradicting hypotheses and progressively distills a theory through logic.",
                 trivia: "Continuously asked why to draw out the fundamental reasoning of ideas."
             },
             {

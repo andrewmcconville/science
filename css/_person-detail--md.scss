@@ -20,6 +20,12 @@
 	text-align: center;
 }
 
+.person-detail--md__date--light {
+	color: rgba(0, 0, 0, 0.25);
+	font-size: 11px;
+	font-weight: 400;
+}
+
 .person-detail--md__location {
 	color: rgba(0, 0, 0, .375);
 	flex: 0 0 auto;
