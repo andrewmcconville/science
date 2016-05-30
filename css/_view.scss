@@ -20,21 +20,6 @@
 	}
 }
 
-.view__modal {
-	background-color: #fff;
-	bottom: 0;
-	box-shadow: 0 2px 16px 0 rgba(0, 0, 0, .125);
-	//display: flex;
-	left: 0;
-	margin: auto;
-	max-height: 100%;
-	max-width: 100%;
-	overflow: auto;
-	position: absolute;
-	right: 0;
-	top: 0;
-}
-
 .view__fullscreen {
 	bottom: 0;
 	display: flex;
@@ -42,17 +27,6 @@
 	overflow: hidden;
 	position: absolute;
 	top: 0;
-	width: 100%;
-}
-
-.view__header {
-	background-color: #a0a0a0;
-	color: #fff;
-	display: flex;
-	flex: 0 0 auto;
-	justify-content: center;
-	padding: 2px 0;
-	position: relative;
 	width: 100%;
 }
 

@@ -3,13 +3,15 @@ angular
     .factory('People', function(){
         var people = [
             {
-                name: "Thales",
+                name: "Thales of Miletus",
                 location: "Miletus",
                 branch: "physical",
                 professions: ["astronomy", "mathematics", "philosophy"],
                 birthDate: "-000624-01-01",
                 deathDate: "-000546-01-01",
-                offset: 50
+                offset: 50,
+                excerpt: "Often regarded as the first philosopher Thales turned to natural explanations, over mystical stories, to describe natural phenomena. He is also one of the first mathematicians having a theorem named after him. Thales’ Theorem states an inscribed triangle which bisects a circle across its diameter is always a right triangle.",
+                trivia: "Using shadows Thales calculated the heights of The Pyramids"
             },
             {
                 name: "Anaximander",
@@ -17,7 +19,9 @@ angular
                 branch: "physical",
                 professions: ["astronomy", "geometry", "geography", "metaphysics"],
                 birthDate: "-000610-01-01",
-                deathDate: "-000546-01-01"
+                deathDate: "-000546-01-01",
+                excerpt: "Revolutionized cosmology with a mechanical model of the world; proposing the Earth exists unsupported in an infinite cosmos.",
+                trivia: "Calibrated sundials to calculate equinoxes and solstices."
             },
             {
                 name: "Pythagoras",

@@ -41,17 +41,18 @@
 .filters__filter {
 	align-items: center;
 	background-color: #f0f0f0;
-	border: 1px solid transparent;
+	color: rgba(0, 0, 0, .125);
 	border-radius: 20px;
 	display: flex;
 	height: 40px;
 	justify-content: center;
 	position: absolute;
+	text-transform: capitalize;
 	width: 40px;
 }
 
 .filters__filter--active {
-	border: 1px solid #d0d0d0;
+	color: rgba(0, 0, 0, 0.625);
 }
 
 .filters__filter--left {
@@ -82,22 +83,22 @@
 	@extend .filters__filter;
 
 	&:nth-child(1) {
-		bottom: 120px;
-		right: 10px;
+		bottom: 50px;
+		right: 132px;
 	}
 
 	&:nth-child(2) {
-		bottom: 112px;
-		right: 58px;
-	}
-
-	&:nth-child(3) {
 		bottom: 88px;
 		right: 100px;
 	}
 
+	&:nth-child(3) {
+		bottom: 112px;
+		right: 58px;
+	}
+
 	&:nth-child(4) {
-		bottom: 50px;
-		right: 132px;
+		bottom: 120px;
+		right: 10px;
 	}
 }

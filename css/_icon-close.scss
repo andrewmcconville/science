@@ -1,0 +1,23 @@
+.icon-close {
+	height: 16px;
+	position: relative;
+	width: 16px;
+}
+
+.icon-close:before,
+.icon-close:after {
+	background-color: rgba(0, 0, 0, .675);
+	content: ' ';
+	height: 16px;
+	left: 7px;
+	position: absolute;
+	width: 1px;
+}
+
+.icon-close:before {
+	transform: rotate(45deg);
+}
+
+.icon-close:after {
+	transform: rotate(-45deg);
+}

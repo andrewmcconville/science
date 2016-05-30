@@ -25,6 +25,11 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 			templateUrl: 'html/person.html',
 			controller: 'personCtrl'
 		})
+		.state('home.personHero', {
+			url: 'person-hero/:personURL',
+			templateUrl: 'html/person-hero.html',
+			controller: 'personCtrl'
+		})
 		.state('home.event', {
 			url: 'event/:eventURL',
 			templateUrl: 'html/event.html',

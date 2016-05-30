@@ -1,5 +1,5 @@
 <div class="view__fullscreen">
-	<header class="view__header" ng-show="isLoaded">
+	<header class="timeline__header" ng-show="isLoaded">
 		<button class="zoom-controls__button" ng-click="zoom(+.5)" ng-disabled="pixelsPerYear >= 32">+</button>
 		<button class="zoom-controls__button" ng-click="setZoom(4)">1x</button>
 		<button class="zoom-controls__button" ng-click="zoom(-.5)" ng-disabled="pixelsPerYear <= 2">-</button>
@@ -31,16 +31,32 @@
 					</div>
 				</li>
 <!-- people -->
-				<li ng-repeat="person in people | filter:filterPeople track by person.url"
-					ng-class="::{'person--md': !person.isHero, 'person--lg': person.isHero}"
+				<li ng-repeat-start="person in people | filter:filterPeople track by person.url"
+					ng-if="::!person.isHero"
+					class="person--md"
 					style="left: {{::getLeft(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%"
 					ui-sref="home.person(::{personURL: person.url})">
-					<div ng-class="::{'person__avatar--md': !person.isHero, 'person__avatar--lg': person.isHero}">
-						<div class="person__avatar-animation" ng-show="::person.isHero"></div>
+					<div class="person__avatar--md">
 					</div>
 					<div class="person__meta">
-						<div ng-class="::{'person__name--md': !person.isHero, 'person__name--lg': person.isHero}">{{::person.displayName || person.name}}</div>
-						<div ng-class="::{'person__professions--md': !person.isHero, 'person__professions--lg': person.isHero}">
+						<div class="person__name--md">{{::person.displayName || person.name}}</div>
+						<div class="person__professions--md">
+							<span class="person__birth-year">{{::person.birthDate | getYear}}, </span>
+							<span class="person__profession">{{::person.professions[0]}}</span>
+						</div>
+					</div>
+				</li>
+				<li ng-repeat-end
+					ng-if="::person.isHero"
+					class="person--lg"
+					style="left: {{::getLeft(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%"
+					ui-sref="home.personHero(::{personURL: person.url})">
+					<div class="person__avatar--lg">
+						<div class="person__avatar-animation"></div>
+					</div>
+					<div class="person__meta">
+						<div class="person__name--lg">{{::person.displayName || person.name}}</div>
+						<div class="person__professions--lg">
 							<span class="person__birth-year">{{::person.birthDate | getYear}}, </span>
 							<span class="person__profession">{{::person.professions[0]}}</span>
 						</div>
@@ -94,6 +110,7 @@
 					ng-repeat="filter in ::peopleFilters"
 					ng-click="toggleFilter(filter)"
 					ng-class="{'filters__filter--active': filter.active}">
+					{{::filter.name.substring(0, 2)}}
 			</button>
 			<div class="filters__progress--left"></div>
 		</div>
@@ -103,6 +120,7 @@
 					ng-repeat="filter in ::eventFilters"
 					ng-click="toggleFilter(filter)"
 					ng-class="{'filters__filter--active': filter.active}">
+					{{::filter.name.substring(0, 2)}}
 			</button>
 			<div class="filters__progress--right"></div>
 		</div>

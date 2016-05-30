@@ -1,16 +1,31 @@
-<div class="view__fullscreen">
-	<header class="view__header">
-		<a ui-sref="^" class="header__close">close</a>
+<article class="person-detail--md modal">
+	<header class="modal__header">
+		<div class="modal__icon">{{::person.branch.substring(0, 2)}}</div>
+		<p class="modal__title">Person</p>
+		<a ui-sref="^" class="modal__button-close">
+			<span class="icon-close"></span>
+		</a>
 	</header>
-
-	<article class="view__content--vertical">
-		<div ui-sref="^" class="detail__cover"></div>
-		<div class="detail__info">
-			<div class="detail__info-inner">
-				<div class="detail__avatar"></div>
-				<h1 class="detail__title">{{::person.name}}</h1>
-				<p class="detail__intro">{{::person.intro}}</p>
-			</div>
+	<div class="modal__scrollable">
+		<h1 class="person-detail--md__title">{{::person.name}}</h1>
+		<div class="person-detail--md__date">
+			<span class="person-detail--md__birth-year">{{::person.birthDate | getYear}}</span>
+			to
+			<span class="person-detail--md__birth-year">{{::person.deathDate | getYear}}</span>
 		</div>
-	</article>
-</div>
+		<div class="person-detail--md__location">{{::person.location}}</div>
+		<div class="person-detail--md__span-height">
+			<div>
+				<p class="person-detail--md__excerpt">
+					{{::person.excerpt}}
+				</p>
+				<p class="person-detail--md__trivia">
+					{{::person.trivia}}
+				</p>
+			</div>
+			<ul class="person-detail--md__professions">
+				<li class="person-detail--md__profession" ng-repeat="profession in person.professions">{{::profession}}</li>
+			</ul>
+		</div>
+	</div>
+</article>

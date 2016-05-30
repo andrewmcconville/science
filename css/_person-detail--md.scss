@@ -1,0 +1,54 @@
+.person-detail--md {
+	height: 400px;
+	width: 256px;
+}
+
+.person-detail--md__title {
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 1;
+	margin-bottom: 2px;
+	margin-top: 16px;
+	text-align: center;
+}
+
+.person-detail--md__date {
+	font-size: 12px;
+	text-align: center;
+}
+
+.person-detail--md__location {
+	font-size: 12px;
+	margin-bottom: 16px;
+	text-align: center;
+}
+
+.person-detail--md__span-height {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.person-detail--md__excerpt {
+	margin-bottom: 16px;
+}
+
+.person-detail--md__trivia {
+    color: rgba(0, 0, 0, .5);
+	font-size: 14px;
+	margin-bottom: 16px;
+}
+
+.person-detail--md__professions {
+	margin-bottom: 20px;
+}
+
+.person-detail--md__profession {
+	background-color: #f0f0f0;
+	display: inline-block;
+	font-size: 10px;
+	line-height: 2;
+	margin: 1px;
+	padding: 0px 4px;
+}
