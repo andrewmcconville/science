@@ -6,20 +6,15 @@
 	display: none !important;
 }
 
-body {
+a,
+button {
 	color: rgba(0, 0, 0, .625);
-	line-height: 1.25;
-	margin:0;
-}
-
-a, button {
 	outline: 0;
 	padding:0;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 a {
-	color: rgba(0, 0, 0, .625);
 	text-decoration: none;
 }
 
@@ -28,22 +23,13 @@ button {
 	-moz-appearance: none;
 	appearance: none;
 	border: none;
-	color: rgba(0, 0, 0, .625);
 	cursor: pointer;
 	font-family: 'Signika Negative', sans-serif;
 	font-size: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, img, article, aside, figure, figcaption, footer, header, menu, nav, section, summary, time {
-	border: 0;
-	font-size: 18px;
-	font: inherit;
-	vertical-align: baseline;
+p, h1, h2, h3 {
 	margin: 0;
-}
-
-article, aside, details, figcaption, figure, footer, header, menu, nav, section {
-	display: block
 }
 
 ol, ul {

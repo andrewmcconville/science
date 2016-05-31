@@ -1,9 +1,17 @@
 <div class="view__fullscreen">
 	<header class="timeline__header" ng-show="isLoaded">
-		<button class="zoom-controls__button" ng-click="zoom(+.5)" ng-disabled="pixelsPerYear >= 32">+</button>
-		<button class="zoom-controls__button" ng-click="setZoom(4)">1x</button>
-		<button class="zoom-controls__button" ng-click="zoom(-.5)" ng-disabled="pixelsPerYear <= 2">-</button>
-		<a class="zoom-controls__button" ui-sref="home.menu" class="header__link" ui-sref-active="header__link--active">S</a>
+		<button class="zoom-controls__button" ng-click="zoom(+.5)" ng-disabled="pixelsPerYear >= 32">
+			<span class="typcn typcn-zoom-in-outline"></span>
+		</button>
+		<button class="zoom-controls__button" ng-click="zoom(-.5)" ng-disabled="pixelsPerYear <= 2">
+			<span class="typcn typcn-zoom-out-outline"></span>
+		</button>
+		<button class="zoom-controls__button" ng-click="setZoom(4)">
+			<span class="typcn typcn-zoom-outline"></span>
+		</button>
+		<a class="zoom-controls__button" ui-sref="home.menu" class="header__link" ui-sref-active="header__link--active">
+			<span class="typcn typcn-cog-outline"></span>
+		</a>
 	</header>
 
 	<div class="view__content--horizontal dragscroll" id="js-home">
@@ -110,7 +118,10 @@
 					ng-repeat="filter in ::peopleFilters"
 					ng-click="toggleFilter(filter)"
 					ng-class="{'filters__filter--active': filter.active}">
-					{{::filter.name.substring(0, 2)}}
+					<span class="typcn typcn-leaf" ng-if="::filter.name == 'life'"></span>
+					<span class="typcn typcn-pi-outline" ng-if="::filter.name == 'logical'"></span>
+					<span class="typcn typcn-beaker" ng-if="::filter.name == 'physical'"></span>
+					<span class="typcn typcn-spanner-outline" ng-if="::filter.name == 'applied'"></span>
 			</button>
 			<div class="filters__progress--left"></div>
 		</div>
@@ -120,7 +131,10 @@
 					ng-repeat="filter in ::eventFilters"
 					ng-click="toggleFilter(filter)"
 					ng-class="{'filters__filter--active': filter.active}">
-					{{::filter.name.substring(0, 2)}}
+					<span class="typcn typcn-leaf" ng-if="::filter.name == 'life'"></span>
+					<span class="typcn typcn-pi-outline" ng-if="::filter.name == 'logical'"></span>
+					<span class="typcn typcn-beaker" ng-if="::filter.name == 'physical'"></span>
+					<span class="typcn typcn-spanner-outline" ng-if="::filter.name == 'applied'"></span>
 			</button>
 			<div class="filters__progress--right"></div>
 		</div>

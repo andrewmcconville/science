@@ -1,21 +1,23 @@
+@font-face {
+  font-family: 'typicons';
+  src: url("path/to/typicons.eot");
+  src: url("path/to/typicons.eot?#iefix") format("embedded-opentype"), url("path/to/typicons.woff") format("woff"), url("path/to/typicons.ttf") format("truetype"), url("path/to/typicons.svg#typicons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 * {
   box-sizing: border-box; }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important; }
 
-body {
+a,
+button {
   color: rgba(0, 0, 0, 0.625);
-  line-height: 1.25;
-  margin: 0; }
-
-a, button {
   outline: 0;
   padding: 0;
   -webkit-tap-highlight-color: transparent; }
 
 a {
-  color: rgba(0, 0, 0, 0.625);
   text-decoration: none; }
 
 button {
@@ -23,20 +25,12 @@ button {
   -moz-appearance: none;
   appearance: none;
   border: none;
-  color: rgba(0, 0, 0, 0.625);
   cursor: pointer;
   font-family: 'Signika Negative', sans-serif;
   font-size: 100%; }
 
-h1, h2, h3, h4, h5, h6, p, a, img, article, aside, figure, figcaption, footer, header, menu, nav, section, summary, time {
-  border: 0;
-  font-size: 18px;
-  font: inherit;
-  vertical-align: baseline;
+p, h1, h2, h3 {
   margin: 0; }
-
-article, aside, details, figcaption, figure, footer, header, menu, nav, section {
-  display: block; }
 
 ol, ul {
   list-style: none;
@@ -219,15 +213,17 @@ ol, ul {
 
 .filters__filter, .filters__filter--left, .filters__filter--right {
   background-color: #f0f0f0;
-  color: rgba(0, 0, 0, 0.125);
   border-radius: 20px;
+  color: rgba(0, 0, 0, 0.125);
+  font-size: 24px;
   height: 40px;
+  line-height: 1;
   position: absolute;
   text-transform: capitalize;
   width: 40px; }
 
 .filters__filter--active {
-  color: rgba(0, 0, 0, 0.625); }
+  color: rgba(0, 0, 0, 0.5); }
 
 .filters__filter--left:nth-child(1) {
   bottom: 120px;
@@ -682,11 +678,13 @@ ol, ul {
   display: -ms-flexbox;
   display: flex;
   display: -webkit-box;
+  font-size: 24px;
   height: 40px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  line-height: 1;
   text-align: center;
   width: 40px; }
   .zoom-controls__button[disabled] {
@@ -913,11 +911,13 @@ ol, ul {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  font-size: 22px;
   height: 32px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  line-height: 1;
   text-transform: capitalize;
   width: 32px; }
 
@@ -935,11 +935,13 @@ ol, ul {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  font-size: 20px;
   height: 32px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  line-height: 1;
   position: relative;
   width: 32px; }
 
@@ -993,30 +995,6 @@ ol, ul {
   font-size: 12px;
   margin-bottom: 20px; }
 
-.icon-close {
-  height: 16px;
-  position: relative;
-  width: 16px; }
-
-.icon-close:before,
-.icon-close:after {
-  background-color: rgba(0, 0, 0, 0.675);
-  content: ' ';
-  height: 16px;
-  left: 7px;
-  position: absolute;
-  width: 1px; }
-
-.icon-close:before {
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg); }
-
-.icon-close:after {
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg); }
-
 .animate .person__avatar-animation {
   -webkit-animation: spin 8000ms infinite linear;
           animation: spin 8000ms infinite linear; }
@@ -1035,6 +1013,8 @@ body {
   color: rgba(0, 0, 0, 0.625);
   font-family: 'Signika Negative', sans-serif;
   height: 100%;
+  line-height: 1.25;
+  margin: 0;
   overflow: hidden; }
 
 .content__placeholder {

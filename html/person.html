@@ -1,10 +1,15 @@
 <div class="modal__overlay--opaque" ui-sref="^">
 	<article class="modal__window person-detail--md" ng-click="$event.stopPropagation();">
 		<header class="modal__header">
-			<div class="modal__icon">{{::person.branch.substring(0, 2)}}</div>
+			<div class="modal__icon">
+				<span class="typcn typcn-leaf" ng-if="::person.branch == 'life'"></span>
+				<span class="typcn typcn-pi-outline" ng-if="::person.branch == 'logical'"></span>
+				<span class="typcn typcn-beaker" ng-if="::person.branch == 'physical'"></span>
+				<span class="typcn typcn-spanner-outline" ng-if="::person.branch == 'applied'"></span>
+			</div>
 			<p class="modal__title">Luminary</p>
 			<a ui-sref="^" class="modal__button-close">
-				<span class="icon-close"></span>
+				<span class="typcn typcn-times-outline"></span>
 			</a>
 		</header>
 		<div class="modal__scrollable">
