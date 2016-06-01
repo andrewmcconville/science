@@ -1,0 +1,11 @@
+{
+  "name": "heroku-node-test-app",
+  "description": "Our sample Node to Heroku app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "~4.9.8"
+  }
+}

@@ -1,0 +1,56 @@
+@font-face {
+	font-family: 'typicons';
+	src: url("path/to/typicons.eot");
+	src: url("path/to/typicons.eot?#iefix") format('embedded-opentype'),
+		 url("path/to/typicons.woff") format('woff'),
+		 url("path/to/typicons.ttf") format('truetype'),
+		 url("path/to/typicons.svg#typicons") format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import "css-reset";
+
+@import "typography";
+@import "view";
+@import "header";
+@import "filters";
+
+@import "timeline";
+@import "time-scale";
+@import "people";
+@import "person-detail--md";
+@import "events";
+@import "detail";
+@import "zoom-controls";
+@import "era-nav";
+@import "eras";
+@import "introduction";
+
+@import "modal";
+@import "menu";
+
+@import "animate";
+
+html {
+	height: 100%;
+}
+
+body {
+	color: rgba(0, 0, 0, .625);
+	//font-family: 'Dosis', sans-serif;
+	//font-family: 'Rubik', sans-serif;
+	//font-family: 'Rajdhani', sans-serif;
+	font-family: 'Signika Negative', sans-serif;
+	height: 100%;
+	line-height: 1.25;
+	margin: 0;
+	overflow: hidden;
+}
+
+.content__placeholder {
+	background-color: #f0f0f0;
+	height: 200px;
+	margin-bottom: 8px;
+	padding: 16px;
+}
