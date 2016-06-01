@@ -197,7 +197,8 @@ ol, ul {
   right: 0; }
 
 .filters__progress, .filters__progress--left, .filters__progress--right {
-  background-color: #f0f0f0;
+  background-color: #fff;
+  border: 1px solid #b8b8b8;
   border-top-left-radius: 112px;
   border-top-right-radius: 112px;
   bottom: 0;
@@ -212,7 +213,8 @@ ol, ul {
   right: -82px; }
 
 .filters__filter, .filters__filter--left, .filters__filter--right {
-  background-color: #f0f0f0;
+  background-color: #fff;
+  border: 1px solid #b8b8b8;
   border-radius: 20px;
   color: rgba(0, 0, 0, 0.125);
   font-size: 24px;
@@ -704,7 +706,9 @@ ol, ul {
     border-bottom-right-radius: 20px; }
 
 .era-nav {
-  background-color: #e8e8e8;
+  background-color: #fff;
+  border-bottom: 1px solid #b8b8b8;
+  border-top: 1px solid #b8b8b8;
   bottom: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -726,9 +730,7 @@ ol, ul {
           align-items: center;
   appearance: none;
   -webkit-appearance: none;
-  background-color: #f8f8f8;
-  border: 1px solid #e0e0e0;
-  border-right: none;
+  border-left: 1px solid #e0e0e0;
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -740,13 +742,8 @@ ol, ul {
       -ms-flex-pack: center;
           justify-content: center;
   width: 40px; }
-  .era-nav__link:first-child {
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px; }
   .era-nav__link:last-child {
-    border-right: 1px solid #e0e0e0;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px; }
+    border-right: 1px solid #e0e0e0; }
 
 .eras {
   bottom: 0;

@@ -19,7 +19,8 @@
 }
 
 .filters__progress {
-	background-color: #f0f0f0;
+	background-color: #fff;
+	border: 1px solid #b8b8b8;
 	border-top-left-radius: 112px;
     border-top-right-radius: 112px;
 	bottom: 0;
@@ -39,7 +40,8 @@
 }
 
 .filters__filter {
-	background-color: #f0f0f0;
+	background-color: #fff;
+	border: 1px solid #b8b8b8;
 	border-radius: 20px;
 	color: rgba(0, 0, 0, .125);
 	font-size: 24px;

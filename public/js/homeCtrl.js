@@ -130,7 +130,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 
 	//set initial zoom
 	$scope.zoom(2);
-	dragscroll.reset();
+	//dragscroll.reset();
 
 	//show the main timeline after
 	//the view transition is done
