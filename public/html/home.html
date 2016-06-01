@@ -1,19 +1,4 @@
 <div class="view__fullscreen">
-	<header class="timeline__header" ng-show="isLoaded">
-		<button class="zoom-controls__button" ng-click="zoom(+.5)" ng-disabled="pixelsPerYear >= 32">
-			<span class="typcn typcn-zoom-in-outline"></span>
-		</button>
-		<button class="zoom-controls__button" ng-click="zoom(-.5)" ng-disabled="pixelsPerYear <= 2">
-			<span class="typcn typcn-zoom-out-outline"></span>
-		</button>
-		<button class="zoom-controls__button" ng-click="setZoom(4)">
-			<span class="typcn typcn-zoom-outline"></span>
-		</button>
-		<a class="zoom-controls__button" ui-sref="home.menu" class="header__link" ui-sref-active="header__link--active">
-			<span class="typcn typcn-cog-outline"></span>
-		</a>
-	</header>
-
 	<div class="view__content--horizontal dragscroll" id="js-home">
 		<div class="view__animate-load" ng-show="isLoaded">
 <!-- era bg -->
@@ -94,6 +79,21 @@
 			</ol>
 		</div>
 	</div>
+
+	<aside class="zoom-controls" ng-show="isLoaded">
+		<button class="zoom-controls__button" ng-click="zoom(+.5)" ng-disabled="pixelsPerYear >= 32">
+			<span class="typcn typcn-zoom-in-outline"></span>
+		</button>
+		<button class="zoom-controls__button" ng-click="zoom(-.5)" ng-disabled="pixelsPerYear <= 2">
+			<span class="typcn typcn-zoom-out-outline"></span>
+		</button>
+		<button class="zoom-controls__button" ng-click="setZoom(4)">
+			<span class="typcn typcn-zoom-outline"></span>
+		</button>
+		<a class="zoom-controls__button" ui-sref="home.menu" class="header__link" ui-sref-active="header__link--active">
+			<span class="typcn typcn-cog-outline"></span>
+		</a>
+	</aside>
 
 	<aside id="js-bottom-ui" class="bottom-ui">
 		<nav class="era-nav view__animate-load" ng-show="isLoaded">

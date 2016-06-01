@@ -666,20 +666,23 @@ ol, ul {
   padding: 0 16px; }
 
 .zoom-controls {
-  bottom: 35px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  left: 0;
+  margin: auto;
   position: absolute;
-  right: 24px; }
+  right: 0;
+  top: 0;
+  width: 160px; }
 
 .zoom-controls__button {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #f8f8f8;
+  background-color: #fff;
   border: 1px solid #e0e0e0;
   border-right: none;
   display: -webkit-flex;

@@ -1199,7 +1199,7 @@ angular
         };
 
         var getOffset = function(_index){
-            return (parseInt(_index.toString()[_index.toString().length - 1]) + 1) * 9
+            return (parseInt(_index.toString()[_index.toString().length - 1]) + 1) * 8
         }
 
         var shuffle = function(_array) {
