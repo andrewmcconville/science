@@ -7,9 +7,7 @@
 }
 
 .person {
-	align-items: center;
 	backface-visibility: hidden;
-	display: flex;
 	position: absolute;
 
 	&.ng-enter {
@@ -81,21 +79,31 @@
 }
 
 .person__avatar-animation {
-    border: 2px dotted #989898;
-	border-radius: 12.5px;
+	border: 2px dotted #888;
+	border-radius: 100%;
+	bottom: 0;
 	flex: 0 0 auto;
-	height: 25px;
-	width: 25px;
+	height: 34px;
+	left: -12px;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	width: 34px;
 }
 
-.person__meta {
-	margin-top: -2px;
-	overflow: hidden;
+.person__content {
+	background-color: #fff;
+	border: 2px solid #b8b8b8;
+	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
 }
 
 .person__name {
-	line-height: 26px;
+	line-height: 1;
 	overflow: hidden;
+	padding: 4px 12px 2px 8px;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -104,16 +112,12 @@
 	@extend .person__name;
 	font-size: 18px;
 	font-weight: 300;
-	height: 26px;
-	padding: 0 4px 0 8px;
 }
 
 .person__name--lg {
 	@extend .person__name;
 	font-size: 24px;
 	font-weight: 400;
-	height: 26px;
-	padding: 0 4px 0 12px;
 }
 
 // .person__birth-year {
@@ -124,27 +128,28 @@
 // 	}
 // }
 
-.person__professions {
-	border-top: 1px solid #a0a0a0;
+.person__meta {
+	background-color: #fbfbfb;
+	border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+	border-top: 1px solid #b8b8b8;
+	font-size: 12px;
 	font-weight: 300;
-	height: 20px;
-	margin-top: -4px;
 	overflow: hidden;
+	padding: 2px 12px 2px 8px;
 	text-overflow: ellipsis;
 	text-transform: capitalize;
 	white-space: nowrap;
 }
 
-.person__professions--md {
-	@extend .person__professions;
-	font-size: 12px;
-	padding: 2px 4px 0 8px;
+.person__meta--md {
+	@extend .person__meta;
+	font-size: 10px;
 }
 
-.person__professions--lg {
-	@extend .person__professions;
+.person__meta--lg {
+	@extend .person__meta;
 	font-size: 14px;
-	padding: 2px 4px 0 12px;
 }
 
 .person__profession {

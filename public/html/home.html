@@ -44,12 +44,9 @@
 					class="person--md"
 					style="left: {{::getLeft(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%"
 					ui-sref="home.person(::{personURL: person.url})">
-					<div class="person__avatar--md">
-					</div>
-					<div class="person__meta">
+					<div class="person__content">
 						<div class="person__name--md">{{::person.displayName || person.name}}</div>
-						<div class="person__professions--md">
-							<span class="person__birth-year">{{::person.birthDate | getYear}}, </span>
+						<div class="person__meta">
 							<span class="person__profession">{{::person.professions[0]}}</span>
 						</div>
 					</div>
@@ -59,12 +56,10 @@
 					class="person--lg"
 					style="left: {{::getLeft(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%"
 					ui-sref="home.personHero(::{personURL: person.url})">
-					<div class="person__avatar--lg">
-						<div class="person__avatar-animation"></div>
-					</div>
-					<div class="person__meta">
+					<div class="person__avatar-animation"></div>
+					<div class="person__content">
 						<div class="person__name--lg">{{::person.displayName || person.name}}</div>
-						<div class="person__professions--lg">
+						<div class="person__meta--lg">
 							<span class="person__birth-year">{{::person.birthDate | getYear}}, </span>
 							<span class="person__profession">{{::person.professions[0]}}</span>
 						</div>

@@ -316,16 +316,8 @@ ol, ul {
   top: 100px; }
 
 .person, .person--md, .person--lg {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   position: absolute; }
   .person.ng-enter, .ng-enter.person--md, .ng-enter.person--lg {
     opacity: 0;
@@ -396,54 +388,68 @@ ol, ul {
   width: 11px; }
 
 .person__avatar-animation {
-  border: 2px dotted #989898;
-  border-radius: 12.5px;
+  border: 2px dotted #888;
+  border-radius: 100%;
+  bottom: 0;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  height: 25px;
-  width: 25px; }
+  height: 34px;
+  left: -12px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  width: 34px; }
 
-.person__meta {
-  margin-top: -2px;
-  overflow: hidden; }
+.person__content {
+  background-color: #fff;
+  border: 2px solid #b8b8b8;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative; }
 
 .person__name, .person__name--md, .person__name--lg {
-  line-height: 26px;
+  line-height: 1;
   overflow: hidden;
+  padding: 4px 12px 2px 8px;
   text-overflow: ellipsis;
   white-space: nowrap; }
 
 .person__name--md {
   font-size: 18px;
-  font-weight: 300;
-  height: 26px;
-  padding: 0 4px 0 8px; }
+  font-weight: 300; }
 
 .person__name--lg {
   font-size: 24px;
-  font-weight: 400;
-  height: 26px;
-  padding: 0 4px 0 12px; }
+  font-weight: 400; }
 
-.person__professions, .person__professions--md, .person__professions--lg {
-  border-top: 1px solid #a0a0a0;
+.person__meta, .person__meta--md, .person__meta--lg {
+  background-color: #fbfbfb;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-top: 1px solid #b8b8b8;
+  font-size: 12px;
   font-weight: 300;
-  height: 20px;
-  margin-top: -4px;
   overflow: hidden;
+  padding: 2px 12px 2px 8px;
   text-overflow: ellipsis;
   text-transform: capitalize;
   white-space: nowrap; }
 
-.person__professions--md {
-  font-size: 12px;
-  padding: 2px 4px 0 8px; }
+.person__meta--md {
+  font-size: 10px; }
 
-.person__professions--lg {
-  font-size: 14px;
-  padding: 2px 4px 0 12px; }
+.person__meta--lg {
+  font-size: 14px; }
 
 .person__profession:after {
   content: ", "; }
