@@ -512,12 +512,13 @@ ol, ul {
   margin-bottom: 20px; }
 
 .person-detail--md__profession {
-  background-color: #f0f0f0;
+  border: 1px solid #b8b8b8;
+  border-radius: 2px;
   display: inline-block;
   font-size: 10px;
   line-height: 2;
   margin: 1px;
-  padding: 0px 4px; }
+  padding: 0px 6px; }
 
 .events {
   bottom: 0;
@@ -874,6 +875,8 @@ ol, ul {
 
 .modal__window {
   background-color: #fff;
+  border: 2px solid #b8b8b8;
+  border-radius: 4px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 32px 0 rgba(0, 0, 0, 0.05);
   display: -webkit-box;
   display: -webkit-flex;
@@ -912,7 +915,11 @@ ol, ul {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #e0e0e0;
+  background-color: #fff;
+  border-bottom: 1px solid #b8b8b8;
+  border-right: 1px solid #b8b8b8;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 2px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -928,15 +935,28 @@ ol, ul {
   width: 32px; }
 
 .modal__title {
-  color: rgba(0, 0, 0, 0.375);
-  font-size: 12px; }
+  border-bottom: 1px solid #b8b8b8;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  font-weight: 300;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  letter-spacing: 1px;
+  padding-bottom: 4px;
+  text-align: center; }
 
 .modal__button-close {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #e0e0e0;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #b8b8b8;
+  border-left: 1px solid #b8b8b8;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 2px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -990,7 +1010,9 @@ ol, ul {
           justify-content: space-between; }
 
 .menu__button {
-  background-color: #e0e0e0;
+  background-color: #f8f8f8;
+  border: 1px solid #b8b8b8;
+  border-radius: 4px;
   display: block;
   margin-bottom: 8px;
   padding: 8px;

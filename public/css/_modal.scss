@@ -14,6 +14,8 @@
 
 .modal__window {
 	background-color: #fff;
+	border: 2px solid #b8b8b8;
+	border-radius: 4px;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1),
 				0 2px 32px 0 rgba(0, 0, 0, .05);
 	display: flex;
@@ -33,7 +35,11 @@
 
 .modal__icon {
 	align-items: center;
-	background-color: #e0e0e0;
+	background-color: #fff;
+	border-bottom: 1px solid #b8b8b8;
+	border-right: 1px solid #b8b8b8;
+	border-bottom-right-radius: 4px;
+	border-top-left-radius: 2px;
 	display: flex;
 	font-size: 22px;
 	height: 32px;
@@ -44,13 +50,23 @@
 }
 
 .modal__title {
-	color: rgba(0, 0, 0, .375);
+	border-bottom: 1px solid #b8b8b8;
+	color: rgba(0, 0, 0, .5);
 	font-size: 12px;
+	font-weight: 300;
+	flex: 1 0 auto;
+	letter-spacing: 1px;
+	padding-bottom: 4px;
+	text-align: center;
 }
 
 .modal__button-close {
 	align-items: center;
-	background-color: #e0e0e0;
+	background-color: #f8f8f8;
+	border-bottom: 1px solid #b8b8b8;
+	border-left: 1px solid #b8b8b8;
+	border-bottom-left-radius: 4px;
+	border-top-right-radius: 2px;
 	display: flex;
 	font-size: 20px;
 	height: 32px;
