@@ -1,0 +1,39 @@
+.era-nav {
+	background-color: #fff;
+	border-bottom: 1px solid #b8b8b8;
+	border-top: 1px solid #b8b8b8;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+}
+
+.era-nav__link {
+    align-items: center;
+	appearance: none;
+	-webkit-appearance: none;
+	border-left: 1px solid #e0e0e0;
+	cursor: pointer;
+    display: flex;
+	height: 40px;
+    justify-content: center;
+	width: 40px;
+
+	&:last-child {
+		border-right: 1px solid #e0e0e0;
+	}
+
+	// &:first-child {
+	// 	border-bottom-left-radius: 20px;
+	// 	border-top-left-radius: 20px;
+	// }
+
+	// &:last-child {
+	// 	border-right: 1px solid #e0e0e0;
+	// 	border-top-right-radius: 20px;
+	// 	border-bottom-right-radius: 20px;
+	// }
+}

@@ -1,0 +1,164 @@
+.people {
+	left: 64px;
+	position: absolute;
+	right: 16px;
+	top: 100px;
+	//transition: height 320ms;
+}
+
+.person {
+	backface-visibility: hidden;
+	position: absolute;
+
+	&.ng-enter {
+		opacity: 0;
+		transition: transform 640ms ease-out, opacity 640ms ease-out;
+		transform: translate3d(0, 16px, 0);
+	}
+
+	&.ng-enter-stagger {
+		transition-delay: 16ms;
+		transition-duration: 0ms;
+	}
+
+	&.ng-enter-active {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+
+	&.ng-leave {
+		opacity: 1;
+		transition: transform 160ms ease-in, opacity 160ms ease-in;
+		transform: translate3d(0, 0, 0);
+	}
+
+	&.ng-leave-stagger {
+		transition-delay: 8ms;
+		transition-duration: 0ms;
+	}
+
+	&.ng-leave-active {
+		opacity: 0;
+		transform: translate3d(0, 8px, 0);
+	}
+}
+
+.person--md {
+	@extend .person;
+	margin-top: -19px;
+}
+
+.person--lg {
+	@extend .person;
+	cursor: pointer;
+	margin-top: -19px;
+	//z-index: 1;
+}
+
+.person__avatar {
+	align-items: center;
+	background-color: #f0f0f0;
+	border: 1px solid #a0a0a0;
+	display: flex;
+	flex: 0 0 auto;
+	justify-content: center;
+}
+
+.person__avatar--md {
+	@extend .person__avatar;
+	border-radius: 3.5px;
+	height: 7px;
+	width: 7px;
+}
+
+.person__avatar--lg {
+	@extend .person__avatar;
+	border-radius: 5.5px;
+	height: 11px;
+	width: 11px;
+}
+
+.person__avatar-animation {
+	border: 2px dotted #888;
+	border-radius: 100%;
+	bottom: 0;
+	flex: 0 0 auto;
+	height: 34px;
+	left: -12px;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	width: 34px;
+}
+
+.person__content {
+	background-color: #fff;
+	border: 2px solid #b8b8b8;
+	border-radius: 4px;
+	box-shadow: 0 2px 0px 2px rgba(128, 128, 128, .125);
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.person__name {
+	line-height: 1;
+	overflow: hidden;
+	padding: 4px 12px 2px 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.person__name--md {
+	@extend .person__name;
+	font-size: 18px;
+	font-weight: 300;
+}
+
+.person__name--lg {
+	@extend .person__name;
+	font-size: 24px;
+	font-weight: 400;
+}
+
+// .person__birth-year {
+// 	display: none;
+
+// 	@media (min-width: 600px) {
+// 		display: inline;
+// 	}
+// }
+
+.person__meta {
+	background-color: #fbfbfb;
+	border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+	border-top: 1px solid #b8b8b8;
+	font-size: 12px;
+	font-weight: 300;
+	overflow: hidden;
+	padding: 2px 12px 2px 8px;
+	text-overflow: ellipsis;
+	text-transform: capitalize;
+	white-space: nowrap;
+}
+
+.person__meta--md {
+	@extend .person__meta;
+	font-size: 10px;
+}
+
+.person__meta--lg {
+	@extend .person__meta;
+	font-size: 14px;
+}
+
+.person__profession {
+	&:after {
+		content: ", ";
+	}
+
+	&:nth-last-child(1):after {
+		content: "";
+	}
+}
