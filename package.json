@@ -1,5 +1,5 @@
 {
-  "name": "science-time",
+  "name": "science",
   "description": "Science Time",
   "main": "server.js",
   "scripts": {
