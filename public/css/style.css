@@ -216,6 +216,7 @@ ol, ul {
   background-color: #fff;
   border: 1px solid #b8b8b8;
   border-radius: 20px;
+  box-shadow: 0 1px 0px 1px rgba(0, 0, 0, 0.0625);
   color: rgba(0, 0, 0, 0.125);
   font-size: 24px;
   height: 40px;
@@ -252,6 +253,30 @@ ol, ul {
 .filters__filter--right:nth-child(4) {
   bottom: 120px;
   right: 10px; }
+
+.filters__hotkey {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  border: 1px solid #b8b8b8;
+  border-radius: 8px;
+  bottom: -2px;
+  box-shadow: 0 1px 0px 1px rgba(0, 0, 0, 0.0625);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 10px;
+  height: 16px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  right: -2px;
+  width: 16px; }
 
 .timeline__header {
   background-color: #a0a0a0;
@@ -408,7 +433,7 @@ ol, ul {
   background-color: #fff;
   border: 2px solid #b8b8b8;
   border-radius: 4px;
-  box-shadow: 0 2px 0px 2px rgba(128, 128, 128, 0.125);
+  box-shadow: 0 2px 0px 2px rgba(0, 0, 0, 0.0625);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -423,12 +448,12 @@ ol, ul {
 .person__name, .person__name--md, .person__name--lg {
   line-height: 1;
   overflow: hidden;
-  padding: 4px 12px 2px 8px;
+  padding: 4px 6px 2px 6px;
   text-overflow: ellipsis;
   white-space: nowrap; }
 
 .person__name--md {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 300; }
 
 .person__name--lg {
@@ -440,10 +465,10 @@ ol, ul {
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
   border-top: 1px solid #b8b8b8;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 300;
   overflow: hidden;
-  padding: 2px 12px 2px 8px;
+  padding: 2px 6px 3px 6px;
   text-overflow: ellipsis;
   text-transform: capitalize;
   white-space: nowrap; }
@@ -878,7 +903,7 @@ ol, ul {
   background-color: #fff;
   border: 2px solid #b8b8b8;
   border-radius: 4px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 32px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 0px 2px rgba(0, 0, 0, 0.0625);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

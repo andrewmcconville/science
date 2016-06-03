@@ -9,6 +9,7 @@
 	font-style: normal;
 }
 
+@import "variables";
 @import "css-reset";
 
 @import "typography";
@@ -24,7 +25,7 @@
 @import "detail";
 @import "zoom-controls";
 @import "era-nav";
-@import "eras";
+@import "eras"; 
 @import "introduction";
 
 @import "modal";
