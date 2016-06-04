@@ -9,7 +9,7 @@ var autoprefixer = require("gulp-autoprefixer");
 var merge = require('merge-stream');
 
 // default task
-//gulp.task('default', ['scripts', 'styles', 'watch']);
+gulp.task('default', ['scripts', 'styles', 'watch']);
 
 // script task
 gulp.task('scripts', function(){
@@ -43,12 +43,11 @@ gulp.task('styles', function(){
 	;
 
 	return merge(css, scss)
-	.pipe(concat('all.min.css'))
-	.pipe(gulp.dest('./public/'));
+		.pipe(concat('all.min.css'))
+		.pipe(gulp.dest('./public/'));
 });
 
-// watch task
-// gulp.task('watch', function(){
-// 	gulp.watch('./src/sass/*.scss', ['styles']);
-// 	gulp.watch('./src/js/*.js', ['scripts']);
-// });
+gulp.task('watch', function(){
+	gulp.watch('./src/css/*.scss', ['styles']);
+	gulp.watch('./src/js/**/*.js', ['scripts']);
+});
