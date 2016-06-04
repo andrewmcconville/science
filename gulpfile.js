@@ -6,9 +6,7 @@ var gulp = require('gulp'),
 	sass = require("gulp-sass"),
 	uglify = require("gulp-uglify"),
 	autoprefixer = require("gulp-autoprefixer"),
-	merge = require('merge-stream'),
-	replace = require('gulp-replace'),
-	fs = require('fs');
+	merge = require('merge-stream')
 
 // default task
 gulp.task('default', ['scripts', 'styles', 'watch']);
@@ -50,19 +48,8 @@ gulp.task('styles', function(){
 		.pipe(gulp.dest('./public/'));
 });
 
-// embed css in index
-// gulp.task('embed', function(){
-// 	return gulp.src('./src/index.html')
-// 	.pipe(replace(/<link href="all.min.css"[^>]*>/, function(s) {
-// 		var style = fs.readFileSync('./src/all.min.css', 'utf8');
-// 		return '<style>\n' + style + '\n\t</style>';
-// 	}))
-// 	.pipe(gulp.dest('./public/'));
-// });
-
 gulp.task('watch', function(){
 	gulp.watch('./src/css/*.scss', ['styles']);
-	//gulp.watch('./src/all.min.css', ['embed']);
 	gulp.watch('./src/js/*.js', ['scripts']);
 	gulp.watch('./src/js/**/*.js', ['scripts']);
 });

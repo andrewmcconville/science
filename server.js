@@ -1,9 +1,12 @@
 var compress = require('compression');
 var express = require('express');
+
 var app = express();
 
 // activate gzip
-app.use(compress());  
+app.use(compress());
+
+app.use(require('prerender-node'));
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
