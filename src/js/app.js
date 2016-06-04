@@ -10,47 +10,45 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 		.otherwise('/');
 
 	$stateProvider
-		.state('home', {
-			url: '/',
-			templateUrl: 'html/home.html',
-			controller: 'homeCtrl'
+		.state('root', {
+			url: ''
 		})
-		.state('home.era', {
-			url: 'era/:eraURL',
+		.state('era', {
+			url: '/era/:eraURL',
 			templateUrl: 'html/era.html',
 			controller: 'eraCtrl'
 		})
-		.state('home.person', {
-			url: 'person/:personURL',
+		.state('person', {
+			url: '/person/:personURL',
 			templateUrl: 'html/person.html',
 			controller: 'personCtrl'
 		})
-		.state('home.personHero', {
-			url: 'person-hero/:personURL',
+		.state('personHero', {
+			url: '/person-hero/:personURL',
 			templateUrl: 'html/person-hero.html',
 			controller: 'personCtrl'
 		})
-		.state('home.event', {
-			url: 'event/:eventURL',
+		.state('event', {
+			url: '/event/:eventURL',
 			templateUrl: 'html/event.html',
 			controller: 'eventCtrl'
 		})
-		.state('home.menu', {
-			url: 'menu',
+		.state('menu', {
+			url: '/menu',
 			templateUrl: 'html/menu.html',
 			controller: 'menuCtrl'
 		})
-		.state('home.menu.about', {
+		.state('menu.about', {
 			url: '^/about',
 			templateUrl: 'html/about.html',
 			controller: 'aboutCtrl'
 		})
-		.state('home.menu.graphics', {
+		.state('menu.graphics', {
 			url: '^/graphics',
 			templateUrl: 'html/graphics.html',
 			controller: 'graphicsCtrl'
 		})
-		.state('home.menu.audio', {
+		.state('menu.audio', {
 			url: '^/audio',
 			templateUrl: 'html/audio.html',
 			controller: 'audioCtrl'

@@ -1,4 +1,4 @@
-app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$timeout', 'Eras', 'Events', 'People', 'hotkeys', function($state, $scope, $location, $document, $timeout, Eras, Events, People, hotkeys) {
+app.controller('rootCtrl', ['$state', '$scope', '$location', '$document', '$timeout', 'Eras', 'Events', 'People', 'hotkeys', function($state, $scope, $location, $document, $timeout, Eras, Events, People, hotkeys) {
 	console.log('Home');
 
 	$scope.isLoaded = false;
@@ -149,7 +149,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 				description: 'Open main menu',
 				allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 				callback: function() {
-					$state.go('home.menu')
+					$state.go('menu')
 				}
 			});
 		} else {
