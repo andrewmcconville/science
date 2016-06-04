@@ -39,11 +39,11 @@ gulp.task('styles', function(){
 	var scss = gulp.src('./src/css/*.scss')
 		.pipe(sass())
 		.pipe(autoprefixer())
+		.pipe(cssmin())
 	;
 
 	return merge(css, scss)
 	.pipe(concat('all.min.css'))
-	.pipe(cssmin())
 	.pipe(gulp.dest('./public/'));
 });
 
