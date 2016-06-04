@@ -11,7 +11,7 @@ var gulp = require('gulp'),
 	fs = require('fs');
 
 // default task
-gulp.task('default', ['scripts', 'styles', 'embed', 'watch']);
+gulp.task('default', ['scripts', 'styles', 'watch']);
 
 // script task
 gulp.task('scripts', function(){
@@ -47,22 +47,22 @@ gulp.task('styles', function(){
 
 	return merge(css, scss)
 		.pipe(concat('all.min.css'))
-		.pipe(gulp.dest('./src/'));
+		.pipe(gulp.dest('./public/'));
 });
 
 // embed css in index
-gulp.task('embed', function(){
-	return gulp.src('./src/index.html')
-	.pipe(replace(/<link href="all.min.css"[^>]*>/, function(s) {
-		var style = fs.readFileSync('./src/all.min.css', 'utf8');
-		return '<style>\n' + style + '\n\t</style>';
-	}))
-	.pipe(gulp.dest('./public/'));
-});
+// gulp.task('embed', function(){
+// 	return gulp.src('./src/index.html')
+// 	.pipe(replace(/<link href="all.min.css"[^>]*>/, function(s) {
+// 		var style = fs.readFileSync('./src/all.min.css', 'utf8');
+// 		return '<style>\n' + style + '\n\t</style>';
+// 	}))
+// 	.pipe(gulp.dest('./public/'));
+// });
 
 gulp.task('watch', function(){
 	gulp.watch('./src/css/*.scss', ['styles']);
-	gulp.watch('./src/all.min.css', ['embed']);
+	//gulp.watch('./src/all.min.css', ['embed']);
 	gulp.watch('./src/js/*.js', ['scripts']);
 	gulp.watch('./src/js/**/*.js', ['scripts']);
 });
