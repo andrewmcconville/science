@@ -143,7 +143,10 @@ app.controller('rootCtrl', ['$state', '$scope', '$location', '$document', '$time
 	});
 
 	var mapEscapeKey = function(){
-		if($location.path() === "/"){
+		if( $location.path() === "/" ||
+			$location.path() === "/about" ||
+			$location.path() === "/audio" ||
+			$location.path() === "/graphics"){
 			hotkeys.add({
 				combo: 'esc',
 				description: 'Open main menu',
@@ -158,7 +161,7 @@ app.controller('rootCtrl', ['$state', '$scope', '$location', '$document', '$time
 				description: 'Close child view',
 				allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 				callback: function() {
-					$state.go('^')
+					$state.go('root')
 				}
 			});
 		}
