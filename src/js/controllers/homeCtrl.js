@@ -1,4 +1,4 @@
-app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$timeout', 'Eras', 'Events', 'People', 'hotkeys', function($state, $scope, $location, $document, $timeout, Eras, Events, People, hotkeys) {
+app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$document', '$timeout', 'Eras', 'Events', 'People', 'hotkeys', function($state, $scope, $rootScope, $location, $document, $timeout, Eras, Events, People, hotkeys) {
 	console.log('Home');
 
 	$scope.isLoaded = false;
@@ -355,4 +355,13 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 			$scope.scrollToEra('Modern');
 		}
 	});
+
+	$rootScope.metadata = {
+		'canonical': '',
+		'pageTitle': 'by Andrew McConville',
+		'title': 'Science Time by Andrew McConville',
+		'description': 'A brief history of science',
+		'image': 'https://science-time.herokuapp.com/android-chrome-192x192.png',
+		'name': 'Science Time by Andrew McConville'
+	};
 }]);

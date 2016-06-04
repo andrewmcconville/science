@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui" />
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <title>Science {{'AngularTitle'}}</title>
+    <title>Science Time {{metadata.pageTitle}}</title>
 
     <base href="/">
 
@@ -30,18 +30,31 @@
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <!-- SEO -->
+    <link rel="canonical" href="https://science-time.herokuapp.com{{metadata.canonical}}">
+    <meta name="author" content="Andrew McConville">
+    <meta name="description" content="{{metadata.description}}">
+    <link rel="author" href="https://plus.google.com/+AndrewMcConville/">
+    <meta itemprop="name" content="{{metadata.name}}">
+    <meta itemprop="description" content="{{metadata.description}}">
+    <meta itemprop="image" content="{{metadata.image}}">
+
     <!-- Facebook -->
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Science Time">
     <meta property="article:author" content="https://www.facebook.com/andrew.d.mcconville">
-    <meta property="og:title" content="{{metadata.title || 'AndrewTitle'}}">
-    <meta property="og:description" content="{{metadata.description || 'AndrewDescription'}}">
-<!--     <meta property="og:url" content="http://andrewmcconville.com{{metadata.canonical}}">
-    <meta property="article:section" content="{{metadata.section}}">
-    <meta property="article:published_time" content="{{metadata.date}}">
-    <meta property="og:image" content="{{metadata.image}}"> -->
-</head>
+    <meta property="og:title" content="{{metadata.title}}">
+    <meta property="og:description" content="{{metadata.description}}">
+    <meta property="og:url" content="https://science-time.herokuapp.com{{metadata.canonical}}">
+    <meta property="og:image" content="{{metadata.image}}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@drew_mcconville">
+    <meta name="twitter:title" content="{{metadata.title}}">
+    <meta name="twitter:description" content="{{metadata.description}}">
+    <meta name="twitter:image" content="{{metadata.image}}"></head>
 
 <body class="animate">
     <ui-view class="view"></ui-view>
