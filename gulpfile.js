@@ -31,6 +31,7 @@ gulp.task('scripts', function(){
 // styles task
 gulp.task('styles', function(){
 	var css = gulp.src([
+			'./src/css/lib/google-font.css',
 			'./src/css/lib/typicons/typicons.min.css',
 			'./src/css/lib/hotkeys.min.css'
 		]);
