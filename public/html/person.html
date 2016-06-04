@@ -1,4 +1,4 @@
-<div class="modal__overlay--opaque" ui-sref="root">
+<div class="modal__overlay--opaque" ui-sref="home">
 	<article class="modal__window person-detail--md" ng-click="$event.stopPropagation();">
 		<header class="modal__header">
 			<div class="modal__icon">
@@ -8,7 +8,7 @@
 				<span class="typcn typcn-spanner-outline" ng-if="::person.branch == 'applied'"></span>
 			</div>
 			<p class="modal__title">Luminary</p>
-			<a ui-sref="root" class="modal__button-close">
+			<a ui-sref="^" class="modal__button-close">
 				<span class="typcn typcn-times-outline"></span>
 			</a>
 		</header>
