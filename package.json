@@ -7,7 +7,8 @@
   },
   "dependencies": {
     "compression": "~1.6.2",
-    "express": "~4.9.8"
+    "express": "~4.9.8",
+    "prerender-node": "^2.3.0"
   },
   "author": "Andrew McConville",
   "devDependencies": {
