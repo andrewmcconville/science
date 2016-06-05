@@ -13,6 +13,6 @@ app.controller('personCtrl', ['$scope', '$rootScope', '$state', '$stateParams', 
 		description: $state.current.params.metadata.excerpt,
 		image: 'https://science-time.herokuapp.com/android-chrome-192x192.png',
 		name: $state.current.params.metadata.name,
-        published: toState.params.metadata.published
+        published: $state.current.params.metadata.published
 	};
 }]);
