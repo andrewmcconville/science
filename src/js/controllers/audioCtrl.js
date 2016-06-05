@@ -1,3 +1,3 @@
 app.controller('audioCtrl', ['$scope', function($scope){
-	console.log('Audio');
+	//console.log('Audio');
 }]);

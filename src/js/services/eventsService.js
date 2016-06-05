@@ -58,7 +58,7 @@ angular
 
         return {
             getEvents: function(){
-                console.log("events: " + events.length);
+                //console.log("events: " + events.length);
                 return bootstrapArray(events)
             },
             getEvent: function(url){

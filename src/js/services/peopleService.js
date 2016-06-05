@@ -1241,7 +1241,7 @@ angular
 
         return {
             getPeople: function(){
-                console.log("people: " + people.length);
+                //console.log("people: " + people.length);
                 return bootstrapArray(people)
             },
             getPerson: function(url){

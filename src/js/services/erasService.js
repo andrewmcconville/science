@@ -45,7 +45,7 @@ angular
 
         return {
             getEras: function(){
-                console.log("eras: " + eras.length);
+                //console.log("eras: " + eras.length);
                 return bootstrapArray(eras)
             },
             getEra: function(url){
