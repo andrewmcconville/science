@@ -18,7 +18,8 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 				metadata: {
 					canonical: "",
 					name: "Science Time",
-					excerpt: "A brief history of science"
+					excerpt: "A brief history of science",
+					published: "2016-06-05T17:00:00+05:00"
 				},
 			}
 		})
@@ -62,7 +63,8 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 				metadata: {
 					canonical: "/menu",
 					name: "Science Time Main Menu",
-					excerpt: "App Navigation"
+					excerpt: "App Navigation",
+					published: "2016-06-05T17:00:00+05:00"
 				}
 			}
 		})
@@ -74,7 +76,8 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 				metadata: {
 					canonical: "/about",
 					name: "About Science Time",
-					excerpt: "An overview of the project"
+					excerpt: "An overview of the project",
+					published: "2016-06-05T17:00:00+05:00"
 				}
 			}
 		})
@@ -86,7 +89,8 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 				metadata: {
 					canonical: "/graphics",
 					name: "Graphic Settings for Science Time",
-					excerpt: "Tweak the graphics"
+					excerpt: "Tweak the graphics",
+					published: "2016-06-05T17:00:00+05:00"
 				}
 			}
 		})
@@ -98,7 +102,8 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 				metadata: {
 					canonical: "/audio",
 					name: "Audio Settings for Science Time",
-					excerpt: "Tweak the audio"
+					excerpt: "Tweak the audio",
+					published: "2016-06-05T17:00:00+05:00"
 				}
 			}
 		});

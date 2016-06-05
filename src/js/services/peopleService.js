@@ -9,6 +9,7 @@ angular
                 professions: ["astronomy", "mathematics", "philosophy"],
                 birthDate: "-000624",
                 deathDate: "-000546",
+                published: "2016-06-05T17:00:00+05:00",
                 offset: 50,
                 excerpt: "Often regarded as the first philosopher Thales turned to natural explanations, over mystical stories, to describe natural phenomena. He is also one of the first mathematicians to have a theorem named after him. Thales’ Theorem states an inscribed triangle which bisects a circle across its diameter is always a right triangle.",
                 trivia: "Using shadows Thales calculated the heights of The Pyramids"
@@ -20,6 +21,7 @@ angular
                 professions: ["astronomy", "geometry", "geography", "metaphysics"],
                 birthDate: "-000610",
                 deathDate: "-000546",
+                published: "2016-06-05T17:00:00+05:00",
                 excerpt: "Revolutionized cosmology with a mechanical model of the world; proposing the Earth exists unsupported in an infinite cosmos.",
                 trivia: "Calibrated sundials to calculate equinoxes and solstices."
             },
@@ -31,6 +33,7 @@ angular
                 professions: ["mathematics", "music", "metaphysics"],
                 birthDate: "-000570",
                 deathDate: "-000495",
+                published: "2016-06-05T17:00:00+05:00",
                 intro: "Pythagoras made influential contributions to philosophy and religion in the late 6th century BC. He is often revered as a great mathematician and scientist and is best known for the Pythagorean theorem which bears his name."
             },
             {
@@ -40,6 +43,7 @@ angular
                 professions: ["philosophy"],
                 birthDate: "-000510",
                 deathDate: "-000428",
+                published: "2016-06-05T17:00:00+05:00",
                 excerpt: "Proposed the sun is a fiery rock about the size of the Greek Peloponnese.",
                 trivia: "Correctly explained the cause of eclipses."
             },
@@ -50,6 +54,7 @@ angular
                 professions: ["philosophy", "epistemology"],
                 birthDate: "-000470",
                 deathDate: "-000399",
+                published: "2016-06-05T17:00:00+05:00",
                 offset: 70,
                 excerpt: "Introduced the Socratic method of critical thinking. It eliminates contradicting hypotheses and progressively distills a theory through logic.",
                 trivia: "Continuously asked why to draw out the fundamental reasoning of ideas."
@@ -61,6 +66,7 @@ angular
                 professions: ["medicine"],
                 birthDate: "-000460",
                 deathDate: "-000375",
+                published: "2016-06-05T17:00:00+05:00",
                 offset: 35
             },
             {
@@ -69,7 +75,8 @@ angular
                 branch: "logical",
                 professions: ["metaphysics", "astronomy", "mathematics"],
                 birthDate: "-000460",
-                deathDate: "-000370"
+                deathDate: "-000370",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Plato",
@@ -77,7 +84,8 @@ angular
                 branch: "logical",
                 professions: ["philosophy", "epistemology"],
                 birthDate: "-000428",
-                deathDate: "-000348"
+                deathDate: "-000348",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Aristotle",
@@ -86,7 +94,8 @@ angular
                 location: "Stagira, Chalcidice, Greece",
                 professions: ["philosophy", "metaphysics", "physics"],
                 birthDate: "-000384",
-                deathDate: "-000322"
+                deathDate: "-000322",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Euclid",
@@ -95,6 +104,7 @@ angular
                 professions: ["mathematics"],
                 birthDate: "-000323",
                 deathDate: "-000283",
+                published: "2016-06-05T17:00:00+05:00",
                 offset: 60
             },
             {
@@ -104,6 +114,7 @@ angular
                 professions: ["astronomy", "mathematics"],
                 birthDate: "-000310",
                 deathDate: "-000230",
+                published: "2016-06-05T17:00:00+05:00",
                 offset: 30
             },
             {
@@ -113,6 +124,7 @@ angular
                 professions: ["engineering", "mathematics", "physics", "astronomy"],
                 birthDate: "-000287",
                 deathDate: "-000212",
+                published: "2016-06-05T17:00:00+05:00",
                 offset: 40
             },
             {
@@ -122,6 +134,7 @@ angular
                 professions: ["geography", "mathematics", "music"],
                 birthDate: "-000276",
                 deathDate: "-000194",
+                published: "2016-06-05T17:00:00+05:00",
                 offset: 60
             },
             {
@@ -130,7 +143,8 @@ angular
                 professions: ["astronomy", "philosophy"],
                 location: "Seleucia",
                 birthDate: "-000190",
-                deathDate: "-000150"
+                deathDate: "-000150",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Hipparchus",
@@ -139,6 +153,7 @@ angular
                 location: "Nicaea",
                 birthDate: "-000190",
                 deathDate: "-100020",
+                published: "2016-06-05T17:00:00+05:00",
                 offset: 10
             },
             {
@@ -147,7 +162,8 @@ angular
                 branch: "logical",
                 professions: ["author", "naturalism", "natural philosophy"],
                 birthDate: "0023",
-                deathDate: "0079"
+                deathDate: "0079",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Ptolemy",
@@ -155,7 +171,8 @@ angular
                 professions: ["astronomy", "mathematics", "geography"],
                 location: "Alexandria, Egypt",
                 birthDate: "000100",
-                deathDate: "000170"
+                deathDate: "000170",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Galen of Pergamon",
@@ -163,7 +180,8 @@ angular
                 professions: ["physiology",  "pathology", "pharmacology", "neurology", "anatomy"],
                 location: "Greek",
                 birthDate: "000129",
-                deathDate: "000216"
+                deathDate: "000216",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Paul of Aegina",
@@ -171,7 +189,8 @@ angular
                 professions: ["medicine"],
                 location: "Byzantine Empire",
                 birthDate: "000625",
-                deathDate: "000690"
+                deathDate: "000690",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Muḥammad ibn Mūsā al-Khwārizmī",
@@ -180,7 +199,8 @@ angular
                 professions: ["mathematics"],
                 location: "Khwarezm",
                 birthDate: "000780",
-                deathDate: "000650"
+                deathDate: "000650",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Abu Yūsuf Yaʻqūb ibn ʼIsḥāq aṣ-Ṣabbāḥ al-Kindī",
@@ -189,7 +209,8 @@ angular
                 professions: ["cryptography ", "mathematics", "astronomy", "medicine"],
                 location: "Basra, Abbasid Caliphate",
                 birthDate: "000801",
-                deathDate: "00873"
+                deathDate: "00873",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Al-Ṣābiʾ Thābit ibn Qurra al-Ḥarrānī",
@@ -198,7 +219,8 @@ angular
                 professions: ["mathematics", "astronomy"],
                 location: "Harran",
                 birthDate: "000826",
-                deathDate: "00901-02-18"
+                deathDate: "00901-02-18",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Abu al-Qasim al-Zahrawi",
@@ -207,7 +229,8 @@ angular
                 professions: ["physiology", "surgery"],
                 location: "Medina Azahara, Al-Andalus",
                 birthDate: "000936",
-                deathDate: "1013"
+                deathDate: "1013",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Abū ʿAlī al-Ḥasan ibn al-Ḥasan ibn al-Haytham",
@@ -216,7 +239,8 @@ angular
                 professions: ["logic", "philosophy", "mathematics", "astronomy", "optics", "physics"],
                 location: "Basra, Buyid Emirate",
                 birthDate: "000965",
-                deathDate: "1040"
+                deathDate: "1040",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Avicenna",
@@ -224,7 +248,8 @@ angular
                 professions: ["medicine", "philosophy"],
                 location: "Iran",
                 birthDate: "000980",
-                deathDate: "1037"
+                deathDate: "1037",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Leonardo Fibonacci",
@@ -233,7 +258,8 @@ angular
                 professions: ["mathematics"],
                 location: "Pisa",
                 birthDate: "1173",
-                deathDate: "1245"
+                deathDate: "1245",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Roger Bacon",
@@ -242,7 +268,8 @@ angular
                 professions: ["alchemy", "optics", "linguistics"],
                 location: "England",
                 birthDate: "1220",
-                deathDate: "1292"
+                deathDate: "1292",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Johannes Gensfleisch zur Laden zum Gutenberg",
@@ -251,7 +278,8 @@ angular
                 professions: ["printing", "invention"],
                 location: "Mainz, Electorate of Mainz",
                 birthDate: "1398",
-                deathDate: "1468-02-03"
+                deathDate: "1468-02-03",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Leonardo da Vinci",
@@ -260,7 +288,8 @@ angular
                 professions: ["invention", "art", "engineering", "mathematics", "botany"],
                 location: "Republic of Florence",
                 birthDate: "1452-04-15",
-                deathDate: "1519-05-02"
+                deathDate: "1519-05-02",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Nicolaus Copernicus",
@@ -269,7 +298,8 @@ angular
                 professions: ["astronomy", "mathematics"],
                 location: "Toruń, Poland",
                 birthDate: "1473-02-19",
-                deathDate: "1543-05-24"
+                deathDate: "1543-05-24",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Paracelsus",
@@ -277,7 +307,8 @@ angular
                 professions: ["toxicology", "medicine", "botany"],
                 location: "Switzerland",
                 birthDate: "1493-11-11",
-                deathDate: "1541-09-24"
+                deathDate: "1541-09-24",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Andreas Vesalius",
@@ -286,7 +317,8 @@ angular
                 professions: ["anatomy", "medicine"],
                 location: "Brussels, Belgium",
                 birthDate: "1514-12-31",
-                deathDate: "1564-10-15"
+                deathDate: "1564-10-15",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Tycho Brahe",
@@ -295,7 +327,8 @@ angular
                 professions: ["astronomy", "alchemy"],
                 location: "Denmark",
                 birthDate: "1546-12-14",
-                deathDate: "1601-10-24"
+                deathDate: "1601-10-24",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Giordano Bruno",
@@ -304,7 +337,8 @@ angular
                 professions: ["cosmology", "philosophy"],
                 location: "Nola, Naples",
                 birthDate: "1548",
-                deathDate: "1600-02-17"
+                deathDate: "1600-02-17",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Galileo Galilei",
@@ -314,7 +348,8 @@ angular
                 professions: ["physics", "astronomy", "engineering", "mathematics", "philosophy"],
                 location: "Pisa",
                 birthDate: "1564-02-15",
-                deathDate: "1642-01-08"
+                deathDate: "1642-01-08",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Johannes Kepler",
@@ -323,7 +358,8 @@ angular
                 professions: ["astronomy", "mathematics", "astrology"],
                 location: "Württemberg, Germany",
                 birthDate: "1571-12-27",
-                deathDate: "1630-11-15"
+                deathDate: "1630-11-15",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "William Harvey",
@@ -332,7 +368,8 @@ angular
                 professions: ["anatomy", "medicine"],
                 location: "Kent, England",
                 birthDate: "1578-04-01",
-                deathDate: "1657-06-03"
+                deathDate: "1657-06-03",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "René Descartes",
@@ -341,7 +378,8 @@ angular
                 professions: ["epistemology", "mathematics", "physics"],
                 location: "Kent, England",
                 birthDate: "1578-04-01",
-                deathDate: "1657-06-03"
+                deathDate: "1657-06-03",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Blaise Pascal",
@@ -350,7 +388,8 @@ angular
                 professions: ["mathematics", "physics"],
                 location: "Auvergne, France",
                 birthDate: "1623-06-19",
-                deathDate: "1662-09-19"
+                deathDate: "1662-09-19",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Robert Boyle",
@@ -359,7 +398,8 @@ angular
                 professions: ["chemistry", "physics"],
                 location: "Country Waterford, Ireland",
                 birthDate: "1627-01-25",
-                deathDate: "1691-12-31"
+                deathDate: "1691-12-31",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Antonie van Leeuwenhoek",
@@ -368,7 +408,8 @@ angular
                 professions: ["microbiology"],
                 location: "Delft, Dutch Republic",
                 birthDate: "1632-10-24",
-                deathDate: "1723-08-26"
+                deathDate: "1723-08-26",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Robert Hooke",
@@ -377,7 +418,8 @@ angular
                 professions: ["microscopy", "architecture"],
                 location: "Isle of Wight, England",
                 birthDate: "1635-07-28",
-                deathDate: "1703-03-03"
+                deathDate: "1703-03-03",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Sir Isaac Newton",
@@ -387,7 +429,8 @@ angular
                 professions: ["physics", "natural philosophy", "mathematics", "astronomy", "alchemy"],
                 location: "Lincolnshire, England",
                 birthDate: "1642-12-25",
-                deathDate: "1727-03-31"
+                deathDate: "1727-03-31",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Giovanni Domenico Cassini",
@@ -396,7 +439,8 @@ angular
                 professions: ["astronomy", "mathematics", "astrology", "engineering"],
                 location: "Perinaldo, Republic of Genova",
                 birthDate: "1625-06-08",
-                deathDate: "1712-09-14"
+                deathDate: "1712-09-14",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Christiaan Huygens",
@@ -405,7 +449,8 @@ angular
                 professions: ["astronomy", "mathematics", "optics", "physics"],
                 location: "The Hague, Dutch Republic",
                 birthDate: "1629-04-14",
-                deathDate: "1695-07-08"
+                deathDate: "1695-07-08",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Jacob Bernoulli",
@@ -414,7 +459,8 @@ angular
                 professions: ["mathematics"],
                 location: "Basel, Switzerland",
                 birthDate: "1654-12-27",
-                deathDate: "1705-08-16"
+                deathDate: "1705-08-16",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Edmond Halley",
@@ -423,7 +469,8 @@ angular
                 professions: ["astronomy", "geophysics", "mathematics", "physics"],
                 location: "Haggerston, Middlesex, England",
                 birthDate: "1656-11-08",
-                deathDate: "1742-01-14"
+                deathDate: "1742-01-14",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Thomas Newcomen",
@@ -432,7 +479,8 @@ angular
                 professions: ["engineering"],
                 location: "Dartmouth, Devon, England",
                 birthDate: "1664-02-28",
-                deathDate: "1729-08-05"
+                deathDate: "1729-08-05",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Benjamin Franklin",
@@ -441,7 +489,8 @@ angular
                 professions: ["physics"],
                 location: "Boston, Massachusetts Bay, British America",
                 birthDate: "1706-01-17",
-                deathDate: "1790-04-14"
+                deathDate: "1790-04-14",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Leonhard Euler",
@@ -450,7 +499,8 @@ angular
                 professions: ["mathematics", "astronomy", "physics"],
                 location: "Basel, Switzerland",
                 birthDate: "1707-04-15",
-                deathDate: "1783-09-18"
+                deathDate: "1783-09-18",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Carolus Linnaeus",
@@ -459,7 +509,8 @@ angular
                 professions: ["botany", "zoology", "taxonomy"],
                 location: "Sweden",
                 birthDate: "1707-05-23",
-                deathDate: "1778-01-10"
+                deathDate: "1778-01-10",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Henry Cavendish",
@@ -468,7 +519,8 @@ angular
                 professions: ["chemistry", "physics"],
                 location: "Nice, France",
                 birthDate: "1731-10-10",
-                deathDate: "1810-02-24"
+                deathDate: "1810-02-24",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Joseph Priestley",
@@ -477,7 +529,8 @@ angular
                 professions: ["chemistry",],
                 location: "Yorkshire, England",
                 birthDate: "1733-03-13",
-                deathDate: "1804-02-06"
+                deathDate: "1804-02-06",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "James Watt",
@@ -486,7 +539,8 @@ angular
                 professions: ["engineering", "chemistry"],
                 location: "Greenock, Renfrewshire, Scotland",
                 birthDate: "1736-01-19",
-                deathDate: "1819-08-25"
+                deathDate: "1819-08-25",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Charles-Augustin de Coulomb",
@@ -495,7 +549,8 @@ angular
                 professions: ["physics"],
                 location: "Angoulême, Angoumois, France",
                 birthDate: "1736-06-14",
-                deathDate: "1806-08-23"
+                deathDate: "1806-08-23",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Luigi Galvani",
@@ -504,7 +559,8 @@ angular
                 professions: ["bioelectricity", "biology"],
                 location: "Bologna, Italy",
                 birthDate: "1737-09-09",
-                deathDate: "1798-12-04"
+                deathDate: "1798-12-04",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "William Herschel",
@@ -513,7 +569,8 @@ angular
                 professions: ["astronomy", "music"],
                 location: "Hanover, Germany",
                 birthDate: "1738-11-15",
-                deathDate: "1822-09-25"
+                deathDate: "1822-09-25",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Antoine-Laurent de Lavoisier",
@@ -522,7 +579,8 @@ angular
                 professions: ["chemistry", "biology"],
                 location: "Paris, France",
                 birthDate: "1743-09-26",
-                deathDate: "1794-05-08"
+                deathDate: "1794-05-08",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Alessandro Giuseppe Antonio Anastasio Volta",
@@ -531,7 +589,8 @@ angular
                 professions: ["physics", "chemistry"],
                 location: "Como, Duchy of Milan",
                 birthDate: "1745-02-18",
-                deathDate: "1827-03-05"
+                deathDate: "1827-03-05",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Pierre-Simon Laplace",
@@ -540,7 +599,8 @@ angular
                 professions: ["mathematics", "statistics", "physics"],
                 location: "Normandy, France",
                 birthDate: "1749-03-23",
-                deathDate: "1827-03-05"
+                deathDate: "1827-03-05",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Edward Jenner",
@@ -550,7 +610,8 @@ angular
                 professions: ["immunology", "zoology", "medicine"],
                 location: "Berkeley, Gloucestershire, England",
                 birthDate: "1749-05-17",
-                deathDate: "1823-01-26"
+                deathDate: "1823-01-26",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "John Dalton",
@@ -559,7 +620,8 @@ angular
                 professions: ["chemistry", "physics", "meteorology"],
                 location: "Eaglesfield, Cumberland, England",
                 birthDate: "1766-09-06",
-                deathDate: "1844-07-27"
+                deathDate: "1844-07-27",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Georges Cuvier",
@@ -568,7 +630,8 @@ angular
                 professions: ["paleontology", "anatomy", "zoology"],
                 location: "Montbéliard, France",
                 birthDate: "1769-08-23",
-                deathDate: "1832-05-13"
+                deathDate: "1832-05-13",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Alexander von Humboldt",
@@ -577,7 +640,8 @@ angular
                 professions: ["biogeography", "geography"],
                 location: "Berlin, Kingdom of Prussia",
                 birthDate: "1769-09-14",
-                deathDate: "1859-05-06"
+                deathDate: "1859-05-06",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Thomas Young",
@@ -586,7 +650,8 @@ angular
                 professions: ["optics", "physics", "physiology", "egyptology"],
                 location: "Milverton, Somerset, England",
                 birthDate: "1773-06-13",
-                deathDate: "1829-05-10"
+                deathDate: "1829-05-10",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "André-Marie Ampère",
@@ -595,7 +660,8 @@ angular
                 professions: ["physics", "mathematics"],
                 location: "Lyon, France",
                 birthDate: "1775-01-22",
-                deathDate: "1836-06-10"
+                deathDate: "1836-06-10",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Amedeo Avogadro",
@@ -604,7 +670,8 @@ angular
                 professions: ["physics"],
                 location: "Turin, Piedmont-Sardinia",
                 birthDate: "1776-08-09",
-                deathDate: "1856-07-09"
+                deathDate: "1856-07-09",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Johann Carl Friedrich Gauss",
@@ -613,7 +680,8 @@ angular
                 professions: ["mathematics", "physics", "astronomy", "optics", "geophysics"],
                 location: "Brunswick, Duchy of Brunswick-Wolfenbüttel, Holy Roman Empire",
                 birthDate: "1777-04-30",
-                deathDate: "1855-02-23"
+                deathDate: "1855-02-23",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Joseph-Louis Gay-Lussac",
@@ -622,7 +690,8 @@ angular
                 professions: ["chemistry", "physics"],
                 location: "Saint-Léonard-de-Noblat, France",
                 birthDate: "1778-12-06",
-                deathDate: "1850-05-09"
+                deathDate: "1850-05-09",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Sir Humphry Davy",
@@ -631,7 +700,8 @@ angular
                 professions: ["chemistry"],
                 location: "Penzance, Cornwall, England",
                 birthDate: "1778-12-17",
-                deathDate: "1829-05-29"
+                deathDate: "1829-05-29",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Jöns Jacob Berzelius",
@@ -640,7 +710,8 @@ angular
                 professions: ["chemistry"],
                 location: "Väversunda, Östergötland, Sweden",
                 birthDate: "1779-08-20",
-                deathDate: "1848-08-07"
+                deathDate: "1848-08-07",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "John James Audubon",
@@ -649,7 +720,8 @@ angular
                 professions: ["ornithology", "zoology"],
                 location: "Les Cayes, Saint-Domingue",
                 birthDate: "1785-04-26",
-                deathDate: "1851-01-27"
+                deathDate: "1851-01-27",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Georg Simon Ohm",
@@ -658,7 +730,8 @@ angular
                 professions: ["physics", "mathematics"],
                 location: "Erlangen, Brandenburg-Bayreuth",
                 birthDate: "1789-03-16",
-                deathDate: "1854-07-06"
+                deathDate: "1854-07-06",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Michael Faraday",
@@ -667,7 +740,8 @@ angular
                 professions: ["physics", "chemistry"],
                 location: "Newington Butts, England",
                 birthDate: "1791-09-22",
-                deathDate: "1867-08-25"
+                deathDate: "1867-08-25",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Charles Babbage",
@@ -676,7 +750,8 @@ angular
                 professions: ["computing", "mathematics"],
                 location: "London, England",
                 birthDate: "1791-12-26",
-                deathDate: "1871-10-18"
+                deathDate: "1871-10-18",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Sir Charles Lyell",
@@ -685,7 +760,8 @@ angular
                 professions: ["geology"],
                 location: "Kinnordy, Angus, Scotland",
                 birthDate: "1797-11-14",
-                deathDate: "1875-02-22"
+                deathDate: "1875-02-22",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Christian Andreas Doppler",
@@ -694,7 +770,8 @@ angular
                 professions: ["physics", "mathematics"],
                 location: "Salzburg, Austria",
                 birthDate: "1803-11-29",
-                deathDate: "1853-03-17"
+                deathDate: "1853-03-17",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Charles Darwin",
@@ -704,7 +781,8 @@ angular
                 professions: ["evolution", "natural history", "geology"],
                 location: "Shrewsbury, Shropshire, England",
                 birthDate: "1809-02-12",
-                deathDate: "1882-04-19"
+                deathDate: "1882-04-19",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Augusta Ada King-Noel, Countess of Lovelace",
@@ -713,7 +791,8 @@ angular
                 professions: ["computing", "mathematics", "writing"],
                 location: "London, England",
                 birthDate: "1815-12-10",
-                deathDate: "1852-11-27"
+                deathDate: "1852-11-27",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Sir Francis Galton",
@@ -721,7 +800,8 @@ angular
                 professions: ["anthropology", "sociology", "eugenics", "genetics", "statistics"],
                 location: "Birmingham, Warwickshire, England",
                 birthDate: "1822-02-16",
-                deathDate: "1911-01-17"
+                deathDate: "1911-01-17",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Gregor Mendel",
@@ -730,7 +810,8 @@ angular
                 professions: ["genetics"],
                 location: "Silesia, Austrian Empire",
                 birthDate: "1822-07-20",
-                deathDate: "1884-01-06"
+                deathDate: "1884-01-06",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Louis Pasteur",
@@ -739,7 +820,8 @@ angular
                 professions: ["microbiology", "chemistry"],
                 location: "Dole, France",
                 birthDate: "1822-12-27",
-                deathDate: "1895-09-28"
+                deathDate: "1895-09-28",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Alfred Russel Wallace",
@@ -748,7 +830,8 @@ angular
                 professions: ["evolution", "biology", "zoology"],
                 location: "Llanbadoc, Monmouthshire, Wales",
                 birthDate: "1823-01-08",
-                deathDate: "1913-11-07"
+                deathDate: "1913-11-07",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Sir William Thomson (Lord Kelvin)",
@@ -757,7 +840,8 @@ angular
                 professions: ["thermodynamics", "physics", "mathematics"],
                 location: "Belfast, Ireland, United Kingdom",
                 birthDate: "1824-06-26",
-                deathDate: "1907-12-17"
+                deathDate: "1907-12-17",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Sir Joseph Lister",
@@ -766,7 +850,8 @@ angular
                 professions: ["surgery", "medicine"],
                 location: "West Ham, England",
                 birthDate: "1827-04-05",
-                deathDate: "1912-02-10"
+                deathDate: "1912-02-10",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "James Clerk Maxwell",
@@ -776,7 +861,8 @@ angular
                 professions: ["physics", "mathematics"],
                 location: "Edinburgh, Scotland",
                 birthDate: "1831-06-13",
-                deathDate: "1879-11-05"
+                deathDate: "1879-11-05",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Dmitry Ivanovich Mendeleyev",
@@ -785,7 +871,8 @@ angular
                 professions: ["chemistry", "physics"],
                 location: "Verkhnie Aremzyani, Tobolsk Governorate, Russian Empire",
                 birthDate: "1834-02-08",
-                deathDate: "1907-02-02"
+                deathDate: "1907-02-02",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Edward Williams Morley",
@@ -794,7 +881,8 @@ angular
                 professions: ["physics", "optics"],
                 location: "Newark, New Jersey",
                 birthDate: "1838-01-29",
-                deathDate: "1923-02-24"
+                deathDate: "1923-02-24",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Ivan Petrovich Pavlov",
@@ -803,7 +891,8 @@ angular
                 professions: ["physiology"],
                 location: "Ryazan, Russian Empire",
                 birthDate: "1849-09-29",
-                deathDate: "1936-02-27"
+                deathDate: "1936-02-27",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Albert Abraham Michelson",
@@ -812,7 +901,8 @@ angular
                 professions: ["physics"],
                 location: "Strzelno, Kingdom of Prussia",
                 birthDate: "1852-12-19",
-                deathDate: "1931-05-09"
+                deathDate: "1931-05-09",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Robert Heinrich Herman Koch",
@@ -821,7 +911,8 @@ angular
                 professions: ["microbiology"],
                 location: "Clausthal, Kingdom of Hanover",
                 birthDate: "1843-12-11",
-                deathDate: "1910-05-27"
+                deathDate: "1910-05-27",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Heinrich Rudolf Hertz",
@@ -830,7 +921,8 @@ angular
                 professions: ["electrical engineering", "physics"],
                 location: "Hamburg, Germany",
                 birthDate: "1857-02-22",
-                deathDate: "1894"
+                deathDate: "1894",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Max Karl Ernst Ludwig Planck",
@@ -839,7 +931,8 @@ angular
                 professions: ["quantum physics", "physics"],
                 location: "Kiel, Duchy of Holstein",
                 birthDate: "1858-04-23",
-                deathDate: "1947-10-04"
+                deathDate: "1947-10-04",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Nettie Maria Stevens",
@@ -848,7 +941,8 @@ angular
                 professions: ["genetics"],
                 location: "Cavendish, Vermont",
                 birthDate: "1861-07-07",
-                deathDate: "1912-05-04"
+                deathDate: "1912-05-04",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "William Bateson",
@@ -857,7 +951,8 @@ angular
                 professions: ["genetics"],
                 location: "Whitby, Yorkshire",
                 birthDate: "1861-08-08",
-                deathDate: "1926-02-08"
+                deathDate: "1926-02-08",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Antoine Henri Becquerel",
@@ -866,7 +961,8 @@ angular
                 professions: ["radioactivity", "physics", "chemistry"],
                 location: " Paris, France",
                 birthDate: "1852-12-15",
-                deathDate: "1908-08-25"
+                deathDate: "1908-08-25",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Nikola Tesla",
@@ -875,7 +971,8 @@ angular
                 professions: ["electrical engineering", "physics"],
                 location: "Smiljan, Austrian Empire",
                 birthDate: "1856-07-10",
-                deathDate: "1943-01-07"
+                deathDate: "1943-01-07",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Pierre Curie",
@@ -884,7 +981,8 @@ angular
                 professions: ["crystallography", "radioactivity", "physics", "chemistry"],
                 location: " Paris, France",
                 birthDate: "1859-05-15",
-                deathDate: "1906-04-19"
+                deathDate: "1906-04-19",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Marie Skłodowska Curie",
@@ -893,7 +991,8 @@ angular
                 professions: ["radioactivity", "physics", "chemistry"],
                 location: "Warsaw, Poland",
                 birthDate: "1867-11-07",
-                deathDate: "1934-07-04"
+                deathDate: "1934-07-04",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Henrietta Swan Leavitt",
@@ -902,7 +1001,8 @@ angular
                 professions: ["astronomy"],
                 location: "Lancaster, Massachusetts, USA",
                 birthDate: "1868-07-04",
-                deathDate: "1921-12-12"
+                deathDate: "1921-12-12",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Ernest Rutherford",
@@ -911,7 +1011,8 @@ angular
                 professions: ["nuclear physics", "chemistry", "physics"],
                 location: "Brightwater, Tasman District, New Zealand",
                 birthDate: "1871-08-30",
-                deathDate: "1937-10-19"
+                deathDate: "1937-10-19",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Albert Einstein",
@@ -921,7 +1022,8 @@ angular
                 professions: ["physics"],
                 location: "Ulm, Württemberg, Germany",
                 birthDate: "1879-03-14",
-                deathDate: "1955-04-18"
+                deathDate: "1955-04-18",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Alfred Lothar Wegener",
@@ -930,7 +1032,8 @@ angular
                 professions: ["geology", "meteorology", "astronomy"],
                 location: "Berlin, Germany",
                 birthDate: "1880-11-01",
-                deathDate: "1930-11"
+                deathDate: "1930-11",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Sir Alexander Fleming",
@@ -939,7 +1042,8 @@ angular
                 professions: ["bacteriology", "immunology"],
                 location: "Lochfield, East Ayrshire, Scotland",
                 birthDate: "1881-08-06",
-                deathDate: "1955-03-11"
+                deathDate: "1955-03-11",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Max Born",
@@ -948,7 +1052,8 @@ angular
                 professions: ["quantum physics", "mathematics", "physics"],
                 location: "Breslau, German",
                 birthDate: "1882-12-11",
-                deathDate: "1970-01-05"
+                deathDate: "1970-01-05",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Niels Bohr",
@@ -957,7 +1062,8 @@ angular
                 professions: ["quantum physics", "physics"],
                 location: "Copenhagen, Denmark",
                 birthDate: "1885-10-07",
-                deathDate: "1962-11-18"
+                deathDate: "1962-11-18",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Erwin Schrödinger",
@@ -966,7 +1072,8 @@ angular
                 professions: ["quantum physics", "physics", "thermodynamics"],
                 location: "Vienna, Austria-Hungary",
                 birthDate: "1887-08-12",
-                deathDate: "1961-01-04"
+                deathDate: "1961-01-04",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Selman Abraham Waksman",
@@ -975,7 +1082,8 @@ angular
                 professions: ["biochemistry", "microbiology"],
                 location: "Nova Pryluka, Kiev Governorate, Russian Empire",
                 birthDate: "1888-07-22",
-                deathDate: "1973-08-16"
+                deathDate: "1973-08-16",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Edwin Powell Hubble",
@@ -984,7 +1092,8 @@ angular
                 professions: ["astronomy"],
                 location: "Marshfield, Missouri, USA",
                 birthDate: "1889-11-30",
-                deathDate: "1953-09-28"
+                deathDate: "1953-09-28",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Georges Henri Joseph Édouard Lemaître",
@@ -993,7 +1102,8 @@ angular
                 professions: ["cosmology", "astrophysics"],
                 location: "Charleroi, Belgium",
                 birthDate: "1894-07-17",
-                deathDate: "1966-06-20"
+                deathDate: "1966-06-20",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Linus Pauling",
@@ -1002,7 +1112,8 @@ angular
                 professions: ["quantum chemistry", "biochemistry"],
                 location: "Portland, Oregon, USA",
                 birthDate: "1901-02-28",
-                deathDate: "1994-08-19"
+                deathDate: "1994-08-19",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Enrico Fermi",
@@ -1011,7 +1122,8 @@ angular
                 professions: ["nuclear physics", "quantum physics"],
                 location: "Rome, Italy",
                 birthDate: "1901-09-29",
-                deathDate: "1954-11-28"
+                deathDate: "1954-11-28",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Margaret Mead",
@@ -1020,7 +1132,8 @@ angular
                 professions: ["anthropology"],
                 location: "Philadelphia, Pennsylvania, USA",
                 birthDate: "1901-12-16",
-                deathDate: "1978-11-15"
+                deathDate: "1978-11-15",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Barbara McClintock",
@@ -1029,7 +1142,8 @@ angular
                 professions: ["Cytogenetics", "physiology"],
                 location: "Hartford, Connecticut, USA",
                 birthDate: "1902-06-16",
-                deathDate: "1992-09-02"
+                deathDate: "1992-09-02",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Louis Seymour Bazett Leakey",
@@ -1038,7 +1152,8 @@ angular
                 professions: ["paleoanthropology", "archaeology"],
                 location: "Kabete, British East Africa",
                 birthDate: "1903-08-07",
-                deathDate: "1972-10-01"
+                deathDate: "1972-10-01",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Georgiy Antonovich Gamov",
@@ -1047,7 +1162,8 @@ angular
                 professions: ["cosmology", "physics"],
                 location: "Odessa, Russia",
                 birthDate: "1904-03-04",
-                deathDate: "1968-08-19"
+                deathDate: "1968-08-19",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Julius Robert Oppenheimer",
@@ -1056,7 +1172,8 @@ angular
                 professions: ["physics"],
                 location: "New York City, New York",
                 birthDate: "1904-04-22",
-                deathDate: "1967-02-18"
+                deathDate: "1967-02-18",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Hans Bethe",
@@ -1065,7 +1182,8 @@ angular
                 professions: ["nuclear physics", "quantum physics"],
                 location: "Strasbourg, Germany",
                 birthDate: "1906-07-02",
-                deathDate: "2005-03-06"
+                deathDate: "2005-03-06",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "John Bardeen",
@@ -1074,7 +1192,8 @@ angular
                 professions: ["electrical engineering", "physics"],
                 location: "Madison, Wisconsin, USA.",
                 birthDate: "1908-05-23",
-                deathDate: "1991-01-30"
+                deathDate: "1991-01-30",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Maria Goeppert Mayer",
@@ -1083,7 +1202,8 @@ angular
                 professions: ["physics"],
                 location: "Kattowitz, German Empire",
                 birthDate: "1906-06-28",
-                deathDate: "1972-02-20"
+                deathDate: "1972-02-20",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Rachel Carson",
@@ -1092,7 +1212,8 @@ angular
                 professions: ["marine biology"],
                 location: "Springdale, Pennsylvania, USA",
                 birthDate: "1907-05-27",
-                deathDate: "1964-04-14"
+                deathDate: "1964-04-14",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Jacques-Yves Cousteau",
@@ -1101,7 +1222,8 @@ angular
                 professions: ["oceanography"],
                 location: "Saint-André-de-Cubzac Gironde, France",
                 birthDate: "1910-06-11",
-                deathDate: "1977-06-25"
+                deathDate: "1977-06-25",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Luis Walter Alvarez",
@@ -1110,7 +1232,8 @@ angular
                 professions: ["particle physics", "physics"],
                 location: "San Francisco, California, USA",
                 birthDate: "1911-06-13",
-                deathDate: "1988-09-01"
+                deathDate: "1988-09-01",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Alan Mathison Turing",
@@ -1119,7 +1242,8 @@ angular
                 professions: ["computing", "mathematics", "cryptography"],
                 location: "Maida Vale, London, England",
                 birthDate: "1912-06-23",
-                deathDate: "1954-06-07"
+                deathDate: "1954-06-07",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Mary Leakey",
@@ -1128,7 +1252,8 @@ angular
                 professions: ["paleoanthropology"],
                 location: "London, England, UK",
                 birthDate: "1913-02-06",
-                deathDate: "1996-12-09"
+                deathDate: "1996-12-09",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Norman Ernest Borlaug",
@@ -1137,7 +1262,8 @@ angular
                 professions: ["agronomy", "biology", "genetics"],
                 location: "Cresco, Iowa",
                 birthDate: "1914-03-25",
-                deathDate: "2009-09-12"
+                deathDate: "2009-09-12",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Jonas Edward Salk",
@@ -1146,7 +1272,8 @@ angular
                 professions: ["virology", "epidemiology"],
                 location: "New York, New York, USA",
                 birthDate: "1914-10-28",
-                deathDate: "1995-06-23"
+                deathDate: "1995-06-23",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Sir Fred Hoyle",
@@ -1155,7 +1282,8 @@ angular
                 professions: ["astronomy", "cosmology"],
                 location: "Gilstead, Bingley, West Riding of Yorkshire, England, UK",
                 birthDate: "1915-06-24",
-                deathDate: "2001-08-20"
+                deathDate: "2001-08-20",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Francis Harry Compton Crick",
@@ -1164,7 +1292,8 @@ angular
                 professions: ["molecular biology", "biophysics", "genetics"],
                 location: "Weston Favell, Northamptonshire, England, UK",
                 birthDate: "1916-06-08",
-                deathDate: "2004-07-28"
+                deathDate: "2004-07-28",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Richard Phillips Feynman",
@@ -1173,7 +1302,8 @@ angular
                 professions: ["quantum physics", "physics"],
                 location: "Queens, New York, USA",
                 birthDate: "1918-05-11",
-                deathDate: "1988-02-15"
+                deathDate: "1988-02-15",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Rosalind Franklin",
@@ -1182,7 +1312,8 @@ angular
                 professions: ["chemistry", "crystallography"],
                 location: "Notting Hill, London, England, UK",
                 birthDate: "1920-07-25",
-                deathDate: "1958-04-16"
+                deathDate: "1958-04-16",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "nnn",
