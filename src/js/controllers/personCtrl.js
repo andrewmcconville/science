@@ -5,7 +5,7 @@ app.controller('personCtrl', ['$scope', '$rootScope', '$stateParams', 'People', 
 	$scope.person.age = new Date($scope.person.deathDate).getUTCFullYear() - new Date($scope.person.birthDate).getUTCFullYear();
 
 	$rootScope.metadata = {
-		'canonical': $scope.person.url,
+		'canonical': '/person/' + $scope.person.url,
 		'pageTitle': $scope.person.name,
 		'title': $scope.person.name,
 		'description': $scope.person.excerpt,
