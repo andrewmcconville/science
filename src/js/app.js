@@ -1,7 +1,7 @@
 var app = angular.module('science', ['ui.router', 'ngAnimate', 'cfp.hotkeys']);
 
 app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compileProvider', function($urlRouterProvider, $stateProvider, $locationProvider, $compileProvider){
-	//$compileProvider.debugInfoEnabled(false);
+	$compileProvider.debugInfoEnabled(false);
 
 	$urlRouterProvider
 		.when('/era/', '/')
