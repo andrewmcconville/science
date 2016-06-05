@@ -358,7 +358,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 
 	$rootScope.metadata = {
 		'canonical': '',
-		'pageTitle': 'by Andrew McConville',
+		'pageTitle': 'Science Time by Andrew McConville',
 		'title': 'Science Time by Andrew McConville',
 		'description': 'A brief history of science',
 		'image': 'https://science-time.herokuapp.com/android-chrome-192x192.png',

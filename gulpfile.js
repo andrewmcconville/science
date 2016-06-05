@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 	sass = require("gulp-sass"),
 	uglify = require("gulp-uglify"),
 	autoprefixer = require("gulp-autoprefixer"),
-	merge = require('merge-stream')
+	merge = require('merge-stream');
 
 // default task
 gulp.task('default', ['scripts', 'styles', 'watch']);
