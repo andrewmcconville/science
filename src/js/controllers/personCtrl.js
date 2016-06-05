@@ -7,11 +7,12 @@ app.controller('personCtrl', ['$scope', '$rootScope', '$state', '$stateParams', 
 	//on first load, update metadata
 	$state.current.params.metadata = $scope.person;
 	$rootScope.metadata = {
-		'canonical': '/person/' + $state.current.params.metadata.url,
-		'pageTitle': $state.current.params.metadata.name,
-		'title': $state.current.params.metadata.name,
-		'description': $state.current.params.metadata.excerpt,
-		'image': 'https://science-time.herokuapp.com/android-chrome-192x192.png',
-		'name': $state.current.params.metadata.name
+		canonical: '/person/' + $state.current.params.metadata.url,
+		pageTitle: $state.current.params.metadata.name,
+		title: $state.current.params.metadata.name,
+		description: $state.current.params.metadata.excerpt,
+		image: 'https://science-time.herokuapp.com/android-chrome-192x192.png',
+		name: $state.current.params.metadata.name,
+        published: toState.params.metadata.published
 	};
 }]);
