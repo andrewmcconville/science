@@ -7,24 +7,29 @@ angular
                 isHero: true,
                 branch: "logical",
                 people: ["Euclid"],
-                startDate: "-000323"
+                startDate: "-000323",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Heliocentrism",
                 branch: "physical",
                 people: ["Aristarchus"],
-                startDate: "-000280"
+                startDate: "-000280",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "Tides",
                 branch: "physical",
                 people: ["Seleucus"],
-                startDate: "-000150"
+                startDate: "-000150",
+                published: "2016-06-05T17:00:00+05:00"
             },
             {
                 name: "xxx",
+                branch: "bbb",
                 people: [],
-                startDate: "0000"
+                startDate: "0000",
+                published: "2016-06-05T17:00:00+05:00"
             }
         ];
 
@@ -58,7 +63,7 @@ angular
 
         return {
             getEvents: function(){
-                console.log("events: " + events.length);
+                //console.log("events: " + events.length);
                 return bootstrapArray(events)
             },
             getEvent: function(url){

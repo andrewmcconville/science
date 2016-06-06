@@ -1,11 +1,12 @@
-var compress = require('compression');
-var express = require('express');
+var compress = require('compression'),
+	express = require('express');
 
 var app = express();
 
 // activate gzip
 app.use(compress());
 
+//send prerendered pages to bots
 app.use(require('prerender-node'));
 
 // set the port of our application

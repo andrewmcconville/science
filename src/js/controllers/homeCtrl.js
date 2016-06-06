@@ -1,5 +1,5 @@
-app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$timeout', 'Eras', 'Events', 'People', 'hotkeys', function($state, $scope, $location, $document, $timeout, Eras, Events, People, hotkeys) {
-	console.log('Home');
+app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$document', '$timeout', 'Eras', 'Events', 'People', 'hotkeys', function($state, $scope, $rootScope, $location, $document, $timeout, Eras, Events, People, hotkeys) {
+	//console.log('Home');
 
 	$scope.isLoaded = false;
 
@@ -143,10 +143,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$location', '$document', '$time
 	});
 
 	var mapEscapeKey = function(){
-		if( $location.path() === "/" ||
-			$location.path() === "/about" ||
-			$location.path() === "/audio" ||
-			$location.path() === "/graphics"){
+		if( $location.path() === "/"){
 			hotkeys.add({
 				combo: 'esc',
 				description: 'Open main menu',

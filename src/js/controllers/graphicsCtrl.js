@@ -1,3 +1,3 @@
 app.controller('graphicsCtrl', ['$scope', function($scope){
-	console.log('Graphics');
+	//console.log('Graphics');
 }]);
