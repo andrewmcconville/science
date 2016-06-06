@@ -12,7 +12,7 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 	$stateProvider
 		.state('home', {
 			url: '/',
-			templateUrl: 'html/home.html',
+			templateUrl: 'home.html',
 			controller: 'homeCtrl',
 			params: {
 				metadata: {
@@ -25,7 +25,7 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 		})
 		.state('home.era', {
 			url: 'era/:eraURL',
-			templateUrl: 'html/era.html',
+			templateUrl: 'era.html',
 			controller: 'eraCtrl',
 			params: {
 				metadata: {},
@@ -33,7 +33,7 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 		})
 		.state('home.person', {
 			url: 'person/:personURL',
-			templateUrl: 'html/person.html',
+			templateUrl: 'person.html',
 			controller: 'personCtrl',
 			params: {
 				metadata: {},
@@ -41,7 +41,7 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 		})
 		.state('home.personHero', {
 			url: 'person-hero/:personURL',
-			templateUrl: 'html/person-hero.html',
+			templateUrl: 'person-hero.html',
 			controller: 'personCtrl',
 			params: {
 				metadata: {},
@@ -49,7 +49,7 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 		})
 		.state('home.event', {
 			url: 'event/:eventURL',
-			templateUrl: 'html/event.html',
+			templateUrl: 'event.html',
 			controller: 'eventCtrl',
 			params: {
 				metadata: {},
@@ -57,7 +57,7 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 		})
 		.state('home.menu', {
 			url: 'menu',
-			templateUrl: 'html/menu.html',
+			templateUrl: 'menu.html',
 			controller: 'menuCtrl',
 			params: {
 				metadata: {
@@ -70,7 +70,7 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 		})
 		.state('home.menu.about', {
 			url: '^/about',
-			templateUrl: 'html/about.html',
+			templateUrl: 'about.html',
 			controller: 'aboutCtrl',
 			params: {
 				metadata: {
@@ -83,7 +83,7 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 		})
 		.state('home.menu.graphics', {
 			url: '^/graphics',
-			templateUrl: 'html/graphics.html',
+			templateUrl: 'graphics.html',
 			controller: 'graphicsCtrl',
 			params: {
 				metadata: {
@@ -96,7 +96,7 @@ app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', '$compi
 		})
 		.state('home.menu.audio', {
 			url: '^/audio',
-			templateUrl: 'html/audio.html',
+			templateUrl: 'audio.html',
 			controller: 'audioCtrl',
 			params: {
 				metadata: {
