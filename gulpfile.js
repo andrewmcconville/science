@@ -6,11 +6,11 @@ var gulp = require('gulp'),
 	sass = require("gulp-sass"),
 	uglify = require("gulp-uglify"),
 	autoprefixer = require("gulp-autoprefixer"),
-	templateCache = require('gulp-angular-templatecache');
+	//templateCache = require('gulp-angular-templatecache');
 	merge = require('merge-stream');
 
 // default task
-gulp.task('default', ['html', 'scripts', 'styles', 'watchScripts', 'watchStyles']);
+gulp.task('default', ['scripts', 'styles', 'watchScripts', 'watchStyles']);
 
 // script task
 gulp.task('scripts', function(){
@@ -20,7 +20,7 @@ gulp.task('scripts', function(){
 		'./src/js/lib/angular-animate.js',
 		'./src/js/lib/hotkeys.min.js',
 		'./src/js/app.js',
-		'./src/js/templates.js',
+		//'./src/js/templates.js',
 		'./src/js/services/*.js',
 		'./src/js/controllers/*.js',
 		'./src/js/filters/appFilters.js'
@@ -51,11 +51,11 @@ gulp.task('styles', function(){
 });
 
 // html template cache
-gulp.task('html', function () {
-	return gulp.src('./src/html/*.html')
-		.pipe(templateCache({module: "science"}))
-		.pipe(gulp.dest('./src/js/'));
-});
+// gulp.task('html', function () {
+// 	return gulp.src('./src/html/*.html')
+// 		.pipe(templateCache({module: "science"}))
+// 		.pipe(gulp.dest('./src/js/'));
+// });
 
 gulp.task('watchStyles', function(){
 	gulp.watch('./src/css/*.scss', ['styles']);
