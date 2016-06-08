@@ -12,73 +12,75 @@
                 </li>
             </ul>
 
-            <ul id="js-events" class="events">
+            <nav>
+                <ul id="js-events" class="events">
 <!-- eras -->
-                <li ng-repeat="era in ::eras"
-                    ng-cloak
-                    class="era__link"
-                    style="left: {{::getLeft(era.startDate)}}%"
-                    ui-sref="home.era(::{eraURL: era.url})">
-                    <div class="era__banner">
-                        <div class="era__banner-animation"></div>
-                        <div class="era__banner-tail--left"></div>
-                        <div class="era__banner-tail--right"></div>
-                    </div>
-                </li>
+                    <li ng-repeat="era in ::eras"
+                        ng-cloak
+                        class="era__link"
+                        style="left: {{::getLeft(era.startDate)}}%"
+                        ui-sref="home.era(::{eraURL: era.url})">
+                        <div class="era__banner">
+                            <div class="era__banner-animation"></div>
+                            <div class="era__banner-tail--left"></div>
+                            <div class="era__banner-tail--right"></div>
+                        </div>
+                    </li>
 <!-- people -->
-                <li ng-repeat-start="person in people | filter:filterPeople track by person.url"
-                    ng-cloak
-                    ng-if="::!person.isHero"
-                    class="person--md"
-                    style="left: {{::getLeft(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%"
-                    ui-sref="home.person(::{personURL: person.url})">
-                    <div class="person__content">
-                        <div class="person__name--md">{{::person.displayName || person.name}}</div>
-                        <div class="person__meta">
-                            <span class="person__profession">{{::person.professions[0]}}</span>
+                    <li ng-repeat-start="person in people | filter:filterPeople track by person.url"
+                        ng-cloak
+                        ng-if="::!person.isHero"
+                        class="person--md"
+                        style="left: {{::getLeft(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%"
+                        ui-sref="home.person(::{personURL: person.url})">
+                        <div class="person__content">
+                            <div class="person__name--md">{{::person.displayName || person.name}}</div>
+                            <div class="person__meta">
+                                <span class="person__profession">{{::person.professions[0]}}</span>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li ng-repeat-end
-                    ng-cloak
-                    ng-if="::person.isHero"
-                    class="person--lg"
-                    style="left: {{::getLeft(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%"
-                    ui-sref="home.personHero(::{personURL: person.url})">
-                    <div class="person__avatar-animation"></div>
-                    <div class="person__content">
-                        <div class="person__name--lg">{{::person.displayName || person.name}}</div>
-                        <div class="person__meta--lg">
-                            <span class="person__birth-year">{{::person.birthDate | getYear}}, </span>
-                            <span class="person__profession">{{::person.professions[0]}}</span>
+                    </li>
+                    <li ng-repeat-end
+                        ng-cloak
+                        ng-if="::person.isHero"
+                        class="person--lg"
+                        style="left: {{::getLeft(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%"
+                        ui-sref="home.personHero(::{personURL: person.url})">
+                        <div class="person__avatar-animation"></div>
+                        <div class="person__content">
+                            <div class="person__name--lg">{{::person.displayName || person.name}}</div>
+                            <div class="person__meta--lg">
+                                <span class="person__birth-year">{{::person.birthDate | getYear}}, </span>
+                                <span class="person__profession">{{::person.professions[0]}}</span>
+                            </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
 <!-- events -->
-                <li ng-repeat-start="event in events | filter:filterEvents track by event.url"
-                    ng-cloak
-                    ng-if="::!event.isHero"
-                    class="event--md"
-                    style="left: {{::getLeft(event.startDate)}}%;">
-                    <div class="event__avatar"></div>
-                    <div class="event__meta">
-                        <div class="event__name">{{::event.name}}, {{::event.startDate | getYear}}</div>
-                    </div>
-                </li>
-                <li ng-repeat-end
-                    ng-cloak
-                    ng-if="::event.isHero"
-                    class="event--md"
-                    style="left: {{::getLeft(event.startDate)}}%;"
-                    ui-sref="home.event(::{eventURL: event.url})">
-                    <div class="event__avatar">
-                        <div class="event__avatar-animation"></div>
-                    </div>
-                    <div class="event__meta">
-                        <div class="event__name">{{::event.name}}, {{::event.startDate | getYear}}</div>
-                    </div>
-                </li>
-            </ul>
+                    <li ng-repeat-start="event in events | filter:filterEvents track by event.url"
+                        ng-cloak
+                        ng-if="::!event.isHero"
+                        class="event--md"
+                        style="left: {{::getLeft(event.startDate)}}%;">
+                        <div class="event__avatar"></div>
+                        <div class="event__meta">
+                            <div class="event__name">{{::event.name}}, {{::event.startDate | getYear}}</div>
+                        </div>
+                    </li>
+                    <li ng-repeat-end
+                        ng-cloak
+                        ng-if="::event.isHero"
+                        class="event--md"
+                        style="left: {{::getLeft(event.startDate)}}%;"
+                        ui-sref="home.event(::{eventURL: event.url})">
+                        <div class="event__avatar">
+                            <div class="event__avatar-animation"></div>
+                        </div>
+                        <div class="event__meta">
+                            <div class="event__name">{{::event.name}}, {{::event.startDate | getYear}}</div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
 <!-- time scale -->
             <ol id="js-time-scale"
                 class="time-scale"
@@ -88,7 +90,7 @@
         </div>
     </div>
 <!-- zoom controls -->
-    <aside class="zoom-controls" ng-show="isLoaded">
+    <menu class="zoom-controls" ng-show="isLoaded">
         <button class="zoom-controls__button" ng-click="zoom(+.5)" ng-disabled="pixelsPerYear >= 32">
             <span class="typcn typcn-zoom-in-outline"></span>
         </button>
@@ -101,7 +103,7 @@
         <a ui-sref="home.menu" class="zoom-controls__button">
             <span class="typcn typcn-cog-outline"></span>
         </a>
-    </aside>
+    </menu>
 <!-- bottom ui -->
     <aside id="js-bottom-ui" class="bottom-ui">
         <nav class="era-nav view__animate-load" ng-show="isLoaded">
@@ -117,25 +119,25 @@
             <a class="era-nav__link">D</a>
         </nav>
 
-        <div class="filters__container--left">
+        <menu class="filters__container--left">
             <button ng-repeat="filter in ::peopleFilters"
                     ng-cloak
                     ng-click="toggleFilter(filter)"
                     class="filters__filter--left"
                     ng-class="{'filters__filter--active': filter.active}">
-                    <span class="typcn typcn-leaf" ng-if="::filter.name == 'life'"></span>
+                    <svg class="filters__icon" ng-if="::filter.name == 'life'" viewBox="0 0 20 20"><path d="M11.6547,10C14.3433,7.924,17,5.42,17,1a1,1,0,0,0-2,0,7.6238,7.6238,0,0,1-.2569,2H9A0.5,0.5,0,0,0,9,4h5.3849A9.218,9.218,0,0,1,12.131,7H10.5a0.5,0.5,0,0,0,0,1h0.4663C10.6514,8.252,10.3278,8.5005,10,8.7487A19.7242,19.7242,0,0,1,6.9014,6H10a0.5,0.5,0,0,0,0-1H6.1534A7.0732,7.0732,0,0,1,5.0676,2H12a0.5,0.5,0,0,0,0-1H5A1,1,0,0,0,3,1c0,4.42,2.6567,6.924,5.3453,9C5.6567,12.076,3,14.58,3,19a1,1,0,0,0,2,0h7a0.5,0.5,0,0,0,0-1H5.0676a7.0732,7.0732,0,0,1,1.0858-3H11a0.5,0.5,0,0,0,0-1H6.9014A19.7242,19.7242,0,0,1,10,11.2513c0.3278,0.2481.6514,0.4966,0.9663,0.7487H9.5a0.5,0.5,0,0,0,0,1h2.631a9.2187,9.2187,0,0,1,2.2539,3H9a0.5,0.5,0,0,0,0,1h5.7431A7.6238,7.6238,0,0,1,15,19a1,1,0,0,0,2,0C17,14.58,14.3433,12.076,11.6547,10Z"/></svg>
                     <span class="filters__hotkey" ng-if="::filter.name == 'life'">1</span>
-                    <span class="typcn typcn-pi-outline" ng-if="::filter.name == 'logical'"></span>
+                    <svg class="filters__icon" ng-if="::filter.name == 'logical'" viewBox="0 0 20 20"><path d="M19,9H17.5139C16.59,7.0686,13.8359,3,7,3H2A10.4282,10.4282,0,0,1,4.1,6H1A1,1,0,0,0,1,8H4.7788a9.3849,9.3849,0,0,1,0,4H1a1,1,0,0,0,0,2H4.0992A10.425,10.425,0,0,1,2,17H7.0065c6.831,0,9.5837-4.0686,10.5074-6H19A1,1,0,0,0,19,9ZM7,10.02A11.4938,11.4938,0,0,0,5.8516,5H7c0.2034,0,.3917.0141,0.5864,0.0223a9.1023,9.1023,0,0,1,1.4175,4.9885A9.1263,9.1263,0,0,1,7.586,14.978C7.3935,14.986,7.2075,15,7.0065,15H5.85A11.5189,11.5189,0,0,0,7,10.02Zm1.8047,4.8538a10.297,10.297,0,0,0,1.1992-4.8614A10.266,10.266,0,0,0,8.8056,5.1271a8.5815,8.5815,0,0,1,6.9764,4.8737A8.5781,8.5781,0,0,1,8.8047,14.8736Z"/></svg>
                     <span class="filters__hotkey" ng-if="::filter.name == 'logical'">2</span>
-                    <span class="typcn typcn-beaker" ng-if="::filter.name == 'physical'"></span>
+                    <svg class="filters__icon" ng-if="::filter.name == 'physical'" viewBox="0 0 20 20"><path d="M17.7 5a3.37 3.37 0 0 0-3.15-1.55 8.87 8.87 0 0 0-1.85.23C12 1.52 10.84 0 9.04 0S6.08 1.52 5.38 3.68a8.87 8.87 0 0 0-1.84-.23A3.37 3.37 0 0 0 .38 5c-.56.98-.78 2.65 1.36 5C-.4 12.35-.18 14.02.38 15a3.37 3.37 0 0 0 3.16 1.55 8.87 8.87 0 0 0 1.84-.23C6.08 18.48 7.25 20 9.04 20s2.97-1.52 3.66-3.68a8.87 8.87 0 0 0 1.85.23A3.37 3.37 0 0 0 17.7 15c.57-.98.8-2.65-1.35-5 2.14-2.35 1.92-4.02 1.35-5zm-6.3 2.34l-.6-.37-.62-.34q.54-.24 1.06-.43c.07.36.12.75.16 1.14zM9.04 2c.82 0 1.55 1.26 2 3.2a21.6 21.6 0 0 0-2 .85 21.6 21.6 0 0 0-2-.85c.46-1.94 1.2-3.2 2-3.2zm-2.2 4.2l1.07.43c-.2.1-.4.22-.6.34l-.6.37.18-1.14zm-3.3 8.35A1.55 1.55 0 0 1 2.12 14c-.4-.7.32-1.97 1.78-3.34a21.55 21.55 0 0 0 1.72 1.3c.06.72.15 1.45.27 2.17a8.55 8.55 0 0 1-2.4.42zm2.02-3.85c-.32-.23-.63-.47-.9-.7.27-.23.58-.47.9-.7l-.02.7.02.7zm.06-2.67a21.53 21.53 0 0 0-1.72 1.3C2.44 7.98 1.7 6.73 2.12 6a1.55 1.55 0 0 1 1.42-.55 8.55 8.55 0 0 1 2.35.42c-.17.72-.26 1.45-.3 2.16zm1.07 4.63c.2.12.34.25.6.37l.6.34q-.58.24-1.1.43l-.15-1.14zM9 18c-.8 0-1.54-1.26-2-3.2a21.6 21.6 0 0 0 2-.85 21.6 21.6 0 0 0 2 .85c-.45 1.94-1.18 3.2-2 3.2zm2.2-4.2q-.52-.2-1.06-.43c.2-.1.4-.22.6-.34l.62-.37c-.05.4-.1.78-.17 1.14zm.26-2.38l-1.2.75s-.85.46-1.27.67c-.4-.2-.84-.43-1.26-.67s-.83-.5-1.2-.75c-.04-.46-.06-.93-.06-1.42s0-.96.04-1.42c.37-.25.77-.5 1.2-.75S8.6 7.37 9 7.16c.43.2.84.43 1.26.67s.82.5 1.2.75c.03.46.04.93.04 1.42s0 .96-.04 1.42zm4.5 2.58a1.55 1.55 0 0 1-1.42.55 8.55 8.55 0 0 1-2.35-.42c.1-.72.2-1.45.23-2.16a21.55 21.55 0 0 0 1.73-1.3c1.44 1.36 2.17 2.62 1.76 3.33zm-3.44-4.7c.32.23.63.47.9.7-.27.23-.58.47-.9.7V9.3zm1.66.04a21.54 21.54 0 0 0-1.75-1.3c-.05-.72-.14-1.45-.26-2.17a8.55 8.55 0 0 1 2.34-.42 1.55 1.55 0 0 1 1.45.55c.4.7-.32 1.97-1.78 3.34z"/><circle cx="9.04" cy="10" r="1"/></svg>
                     <span class="filters__hotkey" ng-if="::filter.name == 'physical'">3</span>
-                    <span class="typcn typcn-spanner-outline" ng-if="::filter.name == 'applied'"></span>
+                    <svg class="filters__icon" ng-if="::filter.name == 'applied'" viewBox="0 0 20 20"><path d="M10,2a0.9994,0.9994,0,0,1,1,1V4.1843a2.98,2.98,0,0,1,1.1564,4.8923L13.6182,12H15a1,1,0,0,1,0,2H14.6182l1.2764,2.5527a1,1,0,0,1-1.7891.8945L12.3818,14H7.6182L5.8945,17.4473a1,1,0,1,1-1.7891-.8945L5.3818,14H5a1,1,0,0,1,0-2H6.3818L7.8436,9.0766A2.98,2.98,0,0,1,9,4.1843V3a0.9994,0.9994,0,0,1,1-1m0,6A1,1,0,1,0,9,7a1,1,0,0,0,1,1m0,2a2.9508,2.9508,0,0,1-.3635-0.0367L8.6182,12h2.7637L10.3635,9.9633A2.9508,2.9508,0,0,1,10,10M10,0A3.0034,3.0034,0,0,0,7,3V3.0149A4.9726,4.9726,0,0,0,5.5291,9.2333L5.1458,10H5a2.9985,2.9985,0,0,0-2.31,4.9119l-0.3732.7464a3,3,0,0,0,5.3658,2.6854L8.8542,16h2.2915l1.1709,2.3417A2.9867,2.9867,0,0,0,15.001,20a3,3,0,0,0,2.6824-4.3417L17.31,14.9119A2.9985,2.9985,0,0,0,15,10H14.8542l-0.3834-.7667A4.9726,4.9726,0,0,0,13,3.0149V3a3.0034,3.0034,0,0,0-3-3h0Z"/></svg>
                     <span class="filters__hotkey" ng-if="::filter.name == 'applied'">4</span>
             </button>
             <div class="filters__progress--left"></div>
-        </div>
+        </menu>
 
-        <div class="filters__container--right">
+        <menu class="filters__container--right">
             <button ng-cloak
                     ng-repeat="filter in ::eventFilters"
                     ng-click="toggleFilter(filter)"
@@ -151,7 +153,7 @@
                     <span class="filters__hotkey" ng-if="::filter.name == 'applied'">9</span>
             </button>
             <div class="filters__progress--right"></div>
-        </div>
+        </menu>
     </aside>
 </div>
 
