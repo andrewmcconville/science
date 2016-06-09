@@ -89,6 +89,15 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 		return 100 * Math.abs((startYear - endYear) / (lastYear - firstYear))
 	};
 
+	$scope.getEra = function(_birthDate){
+		for(var i = 0; $scope.eras.length > i; i++){
+			if(new Date(_birthDate).getUTCFullYear() < new Date($scope.eras[i].endDate).getUTCFullYear()){
+				//console.log($scope.eras[i].name);
+				return $scope.eras[i].name
+			}
+		}
+	};
+
 	$scope.scrollToEra = function(_era){
 		console.log(_era);
 		jsHome.scrollLeft = document.getElementById("js-era-" + _era).offsetLeft;

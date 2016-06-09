@@ -30,7 +30,13 @@
                     <li ng-repeat-start="person in people | filter:filterPeople track by person.url"
                         ng-cloak
                         ng-if="::!person.isHero"
-                        class="person--md"
+                        ng-class="::{
+                            'person--md--classical': getEra(person.birthDate) == 'Classical',
+                            'person--md--medieval': getEra(person.birthDate) == 'Medieval',
+                            'person--md--renaissance': getEra(person.birthDate) == 'Renaissance',
+                            'person--md--industrial': getEra(person.birthDate) == 'Industrial',
+                            'person--md--modern': getEra(person.birthDate) == 'Modern',
+                        }"
                         style="left: {{::getLeft(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%"
                         ui-sref="home.person(::{personURL: person.url})">
                         <div class="person__content">

@@ -835,7 +835,7 @@ angular
             },
             {
                 name: "Sir William Thomson (Lord Kelvin)",
-                displayName: "Lord Kelvin",
+                displayName: "Kelvin",
                 branch: "logical",
                 professions: ["thermodynamics", "physics", "mathematics"],
                 location: "Belfast, Ireland, United Kingdom",
