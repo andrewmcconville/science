@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="fragment" content="!">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <title ng-bind="metadata.pageTitle">Science Time</title>
@@ -40,8 +40,9 @@
     <!-- Google -->
     <link rel="author" href="https://plus.google.com/+AndrewMcConville/">
     <link rel="canonical" href="https://science-time.herokuapp.com{{metadata.canonical}}">
-    <!-- <meta name="author" content="Andrew McConville"> -->
-    <!-- <meta name="description" content="{{metadata.description}}"> -->
+    <meta name="author" content="Andrew McConville">
+    <meta name="description" content="{{metadata.description}}">
+    <meta name="thumbnail" content="{{metadata.image}}" />
 
     <!-- Facebook and Pinterest-->
     <meta property="og:title" content="{{metadata.title}}">
@@ -52,7 +53,10 @@
     <meta property="og:site_name" content="Science Time">
     <meta property="og:type" content="article">
     <meta property="article:author" content="https://www.facebook.com/andrew.d.mcconville">
+    <meta property="article:author" content="Andrew McConville">
     <meta property="article:published_time" content="{{metadata.published}}">
+    <meta property="article:section" content="{{metadata.section}}">
+    <meta property="article:tag" content="{{metadata.tag.toString()}}">
 
     <!-- Twitter -->
     <meta name="twitter:title" content="{{metadata.title}}">

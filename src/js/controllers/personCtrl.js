@@ -13,6 +13,8 @@ app.controller('personCtrl', ['$scope', '$rootScope', '$state', '$stateParams', 
 		description: $state.current.params.metadata.excerpt,
 		image: 'https://science-time.herokuapp.com/android-chrome-192x192.png',
 		name: $state.current.params.metadata.name,
-        published: $state.current.params.metadata.published
+        published: $state.current.params.metadata.published,
+        section: $state.current.params.metadata.branch.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1);}) + " Sciences",
+        tag: $state.current.params.metadata.professions
 	};
 }]);
