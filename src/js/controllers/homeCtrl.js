@@ -23,7 +23,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 	//build time scale
 	for(var i = firstYear; i <= lastYear; i += 25) {
 		var year;
-		year = document.createElement('li');
+		year = document.createElement('span');
 		year.className = "time-scale__marker";
 		year.appendChild(document.createTextNode(Math.abs(i)));
 		jsTimeScale.appendChild(year);
@@ -93,13 +93,14 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 		for(var i = 0; $scope.eras.length > i; i++){
 			if(new Date(_birthDate).getUTCFullYear() < new Date($scope.eras[i].endDate).getUTCFullYear()){
 				//console.log($scope.eras[i].name);
-				return $scope.eras[i].name
+				return $scope.eras[i].name.toLowerCase();
 			}
 		}
 	};
 
 	$scope.scrollToEra = function(_era){
 		console.log(_era);
+		$state.go('home');
 		jsHome.scrollLeft = document.getElementById("js-era-" + _era).offsetLeft;
 	};
 

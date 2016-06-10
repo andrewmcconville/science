@@ -9,7 +9,7 @@ app.filter('getDate', ['$filter', function($filter){
 		if(UTC < 0){
 			return Math.abs(new Date(UTC).getUTCFullYear());
 		} else {
-			return $filter('date')(new Date(UTC), 'y');
+			return $filter('date')(new Date(UTC), 'MMM d, y');
 		}
 	}
 }]);

@@ -152,9 +152,18 @@ angular
                 professions: ["astronomy", "trigonometry"],
                 location: "Nicaea",
                 birthDate: "-000190",
-                deathDate: "-100020",
+                deathDate: "-000120",
                 published: "2016-06-05T17:00:00+05:00",
                 offset: 10
+            },
+            {
+                name: "Hero of Alexandria",
+                location: "Alexandria, Roman Egypt",
+                branch: "applied",
+                professions: ["mathematics", "engineering"],
+                birthDate: "0010",
+                deathDate: "0070",
+                published: "2016-06-09T09:14:00+05:00"
             },
             {
                 name: "Pliny the Elder",
@@ -885,6 +894,26 @@ angular
                 published: "2016-06-05T17:00:00+05:00"
             },
             {
+                name: "Robert Heinrich Herman Koch",
+                displayName: "Koch",
+                branch: "life",
+                professions: ["microbiology"],
+                location: "Clausthal, Kingdom of Hanover",
+                birthDate: "1843-12-11",
+                deathDate: "1910-05-27",
+                published: "2016-06-05T17:00:00+05:00"
+            },
+            {
+                name: "Ludwig Eduard Boltzmann",
+                displayName: "Boltzmann",
+                branch: "physical",
+                professions: ["physics", "mathematics"],
+                location: "Clausthal, Kingdom of Hanover",
+                birthDate: "1844-02-20",
+                deathDate: "1906-09-05",
+                published: "2016-06-09T19:28:00+05:00"
+            },
+            {
                 name: "Ivan Petrovich Pavlov",
                 displayName: "Pavlov",
                 branch: "life",
@@ -892,6 +921,16 @@ angular
                 location: "Ryazan, Russian Empire",
                 birthDate: "1849-09-29",
                 deathDate: "1936-02-27",
+                published: "2016-06-05T17:00:00+05:00"
+            },
+            {
+                name: "Antoine Henri Becquerel",
+                displayName: "Becquerel",
+                branch: "physical",
+                professions: ["radioactivity", "physics", "chemistry"],
+                location: " Paris, France",
+                birthDate: "1852-12-15",
+                deathDate: "1908-08-25",
                 published: "2016-06-05T17:00:00+05:00"
             },
             {
@@ -905,13 +944,13 @@ angular
                 published: "2016-06-05T17:00:00+05:00"
             },
             {
-                name: "Robert Heinrich Herman Koch",
-                displayName: "Koch",
-                branch: "life",
-                professions: ["microbiology"],
-                location: "Clausthal, Kingdom of Hanover",
-                birthDate: "1843-12-11",
-                deathDate: "1910-05-27",
+                name: "Nikola Tesla",
+                displayName: "Tesla",
+                branch: "applied",
+                professions: ["electrical engineering", "physics"],
+                location: "Smiljan, Austrian Empire",
+                birthDate: "1856-07-10",
+                deathDate: "1943-01-07",
                 published: "2016-06-05T17:00:00+05:00"
             },
             {
@@ -935,6 +974,16 @@ angular
                 published: "2016-06-05T17:00:00+05:00"
             },
             {
+                name: "Pierre Curie",
+                displayName: "P. Curie",
+                branch: "physical",
+                professions: ["crystallography", "radioactivity", "physics", "chemistry"],
+                location: " Paris, France",
+                birthDate: "1859-05-15",
+                deathDate: "1906-04-19",
+                published: "2016-06-05T17:00:00+05:00"
+            },
+            {
                 name: "Nettie Maria Stevens",
                 displayName: "Stevens",
                 branch: "life",
@@ -952,36 +1001,6 @@ angular
                 location: "Whitby, Yorkshire",
                 birthDate: "1861-08-08",
                 deathDate: "1926-02-08",
-                published: "2016-06-05T17:00:00+05:00"
-            },
-            {
-                name: "Antoine Henri Becquerel",
-                displayName: "Becquerel",
-                branch: "physical",
-                professions: ["radioactivity", "physics", "chemistry"],
-                location: " Paris, France",
-                birthDate: "1852-12-15",
-                deathDate: "1908-08-25",
-                published: "2016-06-05T17:00:00+05:00"
-            },
-            {
-                name: "Nikola Tesla",
-                displayName: "Tesla",
-                branch: "applied",
-                professions: ["electrical engineering", "physics"],
-                location: "Smiljan, Austrian Empire",
-                birthDate: "1856-07-10",
-                deathDate: "1943-01-07",
-                published: "2016-06-05T17:00:00+05:00"
-            },
-            {
-                name: "Pierre Curie",
-                displayName: "P. Curie",
-                branch: "physical",
-                professions: ["crystallography", "radioactivity", "physics", "chemistry"],
-                location: " Paris, France",
-                birthDate: "1859-05-15",
-                deathDate: "1906-04-19",
                 published: "2016-06-05T17:00:00+05:00"
             },
             {
@@ -1342,13 +1361,13 @@ angular
             // While there remain elements to shuffle…
             while (m) {
 
-            // Pick a remaining element…
-            i = Math.floor(Math.random() * m--);
+                // Pick a remaining element…
+                i = Math.floor(Math.random() * m--);
 
-            // And swap it with the current element.
-            t = array[m];
-                array[m] = array[i];
-                array[i] = t;
+                // And swap it with the current element.
+                t = array[m];
+                    array[m] = array[i];
+                    array[i] = t;
             }
 
             return array;
@@ -1365,7 +1384,7 @@ angular
                 }
             }
 
-            array = shuffle(array);
+            //array = shuffle(array);
 
             return array
         }

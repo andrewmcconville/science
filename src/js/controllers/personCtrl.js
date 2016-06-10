@@ -3,6 +3,7 @@ app.controller('personCtrl', ['$scope', '$rootScope', '$state', '$stateParams', 
 
 	$scope.person = People.getPerson($stateParams.personURL);
 	$scope.person.age = new Date($scope.person.deathDate).getUTCFullYear() - new Date($scope.person.birthDate).getUTCFullYear();
+	$scope.person.ago = (new Date().getUTCFullYear() - new Date($scope.person.birthDate).getUTCFullYear()).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 	//on first load, update metadata
 	$state.current.params.metadata = $scope.person;

@@ -4,7 +4,6 @@
 <!-- era bg -->
             <ul id="js-eras" class="eras">
                 <li ng-repeat="era in ::eras"
-                    ng-cloak
                     id="js-era-{{::era.name}}"
                     class="era"
                     style="width: {{::getWidthPercent(era.startDate, era.endDate)}}%;">
@@ -12,87 +11,73 @@
                 </li>
             </ul>
 
-            <nav>
-                <ul id="js-events" class="events">
+            <nav id="js-events" class="events">
 <!-- eras -->
-                    <li ng-repeat="era in ::eras"
-                        ng-cloak
-                        class="era__link"
-                        style="left: {{::getLeft(era.startDate)}}%"
-                        ui-sref="home.era(::{eraURL: era.url})">
-                        <div class="era__banner">
-                            <div class="era__banner-animation"></div>
-                            <div class="era__banner-tail--left"></div>
-                            <div class="era__banner-tail--right"></div>
-                        </div>
-                    </li>
+                <a ng-repeat="era in ::eras"
+                    class="era__link"
+                    style="left: {{::getLeft(era.startDate)}}%"
+                    ui-sref="home.era(::{eraURL: era.url})">
+                    <div class="era__banner">
+                        <div class="era__banner-animation"></div>
+                        <div class="era__banner-tail--left"></div>
+                        <div class="era__banner-tail--right"></div>
+                    </div>
+                </a>
 <!-- people -->
-                    <li ng-repeat-start="person in people | filter:filterPeople track by person.url"
-                        ng-cloak
-                        ng-if="::!person.isHero"
-                        ng-class="::{
-                            'person--md--classical': getEra(person.birthDate) == 'Classical',
-                            'person--md--medieval': getEra(person.birthDate) == 'Medieval',
-                            'person--md--renaissance': getEra(person.birthDate) == 'Renaissance',
-                            'person--md--industrial': getEra(person.birthDate) == 'Industrial',
-                            'person--md--modern': getEra(person.birthDate) == 'Modern',
-                        }"
-                        style="left: {{::getLeft(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%"
-                        ui-sref="home.person(::{personURL: person.url})">
-                        <div class="person__content">
-                            <div class="person__name--md">{{::person.displayName || person.name}}</div>
-                            <div class="person__meta">
-                                <span class="person__profession">{{::person.professions[0]}}</span>
-                            </div>
+                <a ng-repeat-start="person in people | filter:filterPeople track by person.url"
+                    ng-if="::!person.isHero"
+                    class="person--md--{{::getEra(person.birthDate)}}"
+                    style="left: {{::getLeft(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%"
+                    ui-sref="home.person(::{personURL: person.url})">
+                    <div class="person__content">
+                        <div class="person__name--md">{{::person.displayName || person.name}}</div>
+                        <div class="person__meta">
+                            <span class="person__profession">{{::person.professions[0]}}</span>
                         </div>
-                    </li>
-                    <li ng-repeat-end
-                        ng-cloak
-                        ng-if="::person.isHero"
-                        class="person--lg"
-                        style="left: {{::getLeft(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%"
-                        ui-sref="home.personHero(::{personURL: person.url})">
-                        <div class="person__avatar-animation"></div>
-                        <div class="person__content">
-                            <div class="person__name--lg">{{::person.displayName || person.name}}</div>
-                            <div class="person__meta--lg">
-                                <span class="person__birth-year">{{::person.birthDate | getYear}}, </span>
-                                <span class="person__profession">{{::person.professions[0]}}</span>
-                            </div>
+                    </div>
+                </a>
+                <a ng-repeat-end
+                    ng-if="::person.isHero"
+                    class="person--lg"
+                    style="left: {{::getLeft(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%"
+                    ui-sref="home.person(::{personURL: person.url})">
+                    <div class="person__avatar-animation"></div>
+                    <div class="person__content">
+                        <div class="person__name--lg">{{::person.displayName || person.name}}</div>
+                        <div class="person__meta--lg">
+                            <span class="person__birth-year">{{::person.birthDate | getYear}}, </span>
+                            <span class="person__profession">{{::person.professions[0]}}</span>
                         </div>
-                    </li>
+                    </div>
+                </a>
 <!-- events -->
-                    <li ng-repeat-start="event in events | filter:filterEvents track by event.url"
-                        ng-cloak
-                        ng-if="::!event.isHero"
-                        class="event--md"
-                        style="left: {{::getLeft(event.startDate)}}%;">
-                        <div class="event__avatar"></div>
-                        <div class="event__meta">
-                            <div class="event__name">{{::event.name}}, {{::event.startDate | getYear}}</div>
-                        </div>
-                    </li>
-                    <li ng-repeat-end
-                        ng-cloak
-                        ng-if="::event.isHero"
-                        class="event--md"
-                        style="left: {{::getLeft(event.startDate)}}%;"
-                        ui-sref="home.event(::{eventURL: event.url})">
-                        <div class="event__avatar">
-                            <div class="event__avatar-animation"></div>
-                        </div>
-                        <div class="event__meta">
-                            <div class="event__name">{{::event.name}}, {{::event.startDate | getYear}}</div>
-                        </div>
-                    </li>
-                </ul>
+                <a ng-repeat-start="event in events | filter:filterEvents track by event.url"
+                    ng-if="::!event.isHero"
+                    class="event--md"
+                    style="left: {{::getLeft(event.startDate)}}%;">
+                    <div class="event__avatar"></div>
+                    <div class="event__meta">
+                        <div class="event__name">{{::event.name}}, {{::event.startDate | getYear}}</div>
+                    </div>
+                </a>
+                <a ng-repeat-end
+                    ng-if="::event.isHero"
+                    class="event--md"
+                    style="left: {{::getLeft(event.startDate)}}%;"
+                    ui-sref="home.event(::{eventURL: event.url})">
+                    <div class="event__avatar">
+                        <div class="event__avatar-animation"></div>
+                    </div>
+                    <div class="event__meta">
+                        <div class="event__name">{{::event.name}}, {{::event.startDate | getYear}}</div>
+                    </div>
+                </a>
             </nav>
 <!-- time scale -->
-            <ol id="js-time-scale"
+            <div id="js-time-scale"
                 class="time-scale"
-                ng-cloak
                 ng-class="{'hide-quarter': pixelsPerYear <= .75, 'hide-half': pixelsPerYear <= .25}">
-            </ol>
+            </div>
         </div>
     </div>
 <!-- zoom controls -->
@@ -114,20 +99,20 @@
     <aside id="js-bottom-ui" class="bottom-ui">
         <nav class="era-nav view__animate-load" ng-show="isLoaded">
             <a ng-repeat="era in ::eras"
-                ng-cloak
                 class="era-nav__link"
                 ng-click="scrollToEra(era.name)">
                 <span class="era-nav__era-initial">{{::era.name.charAt(0)}}</span>
                 <span class="era-nav__era-name" ng-hide="true">{{::era.name}}</span>
             </a>
+        <!--
             <a class="era-nav__link">A</a>
             <a class="era-nav__link">S</a>
             <a class="era-nav__link">D</a>
+         -->
         </nav>
 
         <menu class="filters__container--left">
             <button ng-repeat="filter in ::peopleFilters"
-                    ng-cloak
                     ng-click="toggleFilter(filter)"
                     class="filters__filter--left"
                     ng-class="{'filters__filter--active': filter.active}">
@@ -144,8 +129,7 @@
         </menu>
 
         <menu class="filters__container--right">
-            <button ng-cloak
-                    ng-repeat="filter in ::eventFilters"
+            <button ng-repeat="filter in ::eventFilters"
                     ng-click="toggleFilter(filter)"
                     class="filters__filter--right"
                     ng-class="{'filters__filter--active': filter.active}">
