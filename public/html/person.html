@@ -13,43 +13,43 @@
 			</a>
 		</header>
 		<div class="modal__scrollable">
-			<h1 class="person-detail--md__title">{{::person.name}}</h1>
-			<div class="modal__span-height">
-				<div>
-					<div class="person-detail--md__date-layout">
-						<div class="person-detail--md__date-layout--left">
-							<p class="person-detail--md__date">
-								{{::person.birthDate | getDate}}
-								<span class="person-detail--md__date--light" ng-if="::person.birthDate < 0">BCE</span>
-							</p>
-							<p class="person-detail--md__date">
-								{{::person.deathDate | getDate}}
-								<span class="person-detail--md__date--light" ng-if="::person.birthDate < 0">BCE</span>
-							</p>
-						</div>
-						<div class="person-detail--md__date-layout--right">
-							<p class="person-detail--md__date">
-								{{::person.ago}} 
-								<span class="person-detail--md__date--light">years ago</span>
-							</p>
-							<p class="person-detail--md__date">
-								{{::person.age}}
-								<span class="person-detail--md__date--light">years old</span>
-							</p>
-						</div>
-					</div>
-					<div class="person-detail--md__location">{{::person.location}}</div>
-					<p class="person-detail--md__excerpt">
-						{{::person.excerpt}}
+			<h1 class="person-detail--md__title">
+				{{::person.name}}
+			</h1>
+			<div class="person-detail--md__location">
+				{{::person.location}}
+			</div>
+			<div class="person-detail--md__date-layout">
+				<div class="person-detail--md__date-layout--left">
+					<p class="person-detail--md__date">
+						{{::person.birthDate | getDate}}
+						<span class="person-detail--md__date--light" ng-if="::person.birthDate < 0">BCE</span>
 					</p>
-					<p class="person-detail--md__trivia">
-						{{::person.trivia}}
+					<p class="person-detail--md__date">
+						{{::person.deathDate | getDate}}
+						<span class="person-detail--md__date--light" ng-if="::person.birthDate < 0">BCE</span>
 					</p>
 				</div>
-				<ul class="person-detail--md__professions">
-					<li class="person-detail--md__profession" ng-repeat="profession in person.professions">{{::profession}}</li>
-				</ul>
+				<div class="person-detail--md__date-layout--right">
+					<p class="person-detail--md__date">
+						{{::person.ago}} 
+						<span class="person-detail--md__date--light">years ago</span>
+					</p>
+					<p class="person-detail--md__date">
+						{{::person.age}}
+						<span class="person-detail--md__date--light">years old</span>
+					</p>
+				</div>
 			</div>
+			<ul class="person-detail--md__professions">
+				<li class="person-detail--md__profession">{{::person.branch}} sciences</li><li class="person-detail--md__profession" ng-repeat="profession in person.professions">{{::profession}}</li>
+			</ul>
+			<p class="person-detail--md__excerpt">
+				{{::person.excerpt}}
+			</p>
+			<p class="person-detail--md__trivia">
+				{{::person.trivia}}
+			</p>
 		</div>
 	</article>
 </div>

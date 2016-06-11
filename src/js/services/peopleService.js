@@ -12,7 +12,7 @@ angular
                 published: "2016-06-05T17:00:00+05:00",
                 offset: 50,
                 excerpt: "Often regarded as the first philosopher Thales turned to natural explanations, over mystical stories, to describe natural phenomena. He is also one of the first mathematicians to have a theorem named after him. Thales’ Theorem states an inscribed triangle which bisects a circle across its diameter is always a right triangle.",
-                trivia: "Using shadows Thales calculated the heights of The Pyramids"
+                trivia: "Using their shadows Thales was able to calculate the heights of The Pyramids"
             },
             {
                 name: "Anaximander",

@@ -76,9 +76,6 @@
 }
 
 .modal__scrollable {
-	display: flex;
-	flex: 1 1 auto;
-	flex-direction: column;
 	-webkit-overflow-scrolling: touch;
 	overflow-x: hidden;
 	overflow-y: auto;
