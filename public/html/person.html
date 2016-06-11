@@ -22,12 +22,14 @@
 			<div class="person-detail--md__date-layout">
 				<div class="person-detail--md__date-layout--left">
 					<p class="person-detail--md__date">
+						<span class="person-detail--md__date--light" ng-if="::person.birthDate.length < 8">c.</span>
 						{{::person.birthDate | getDate}}
 						<span class="person-detail--md__date--light" ng-if="::person.birthDate < 0">BCE</span>
 					</p>
 					<p class="person-detail--md__date">
+						<span class="person-detail--md__date--light" ng-if="::person.deathDate.length < 8">c.</span>
 						{{::person.deathDate | getDate}}
-						<span class="person-detail--md__date--light" ng-if="::person.birthDate < 0">BCE</span>
+						<span class="person-detail--md__date--light" ng-if="::person.deathDate < 0">BCE</span>
 					</p>
 				</div>
 				<div class="person-detail--md__date-layout--right">

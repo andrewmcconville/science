@@ -97,6 +97,7 @@
 }
 
 .person__avatar-animation {
+	-webkit-backface-visibility: hidden;
 	border: 2px dotted #888;
 	border-radius: 100%;
 	bottom: 0;
