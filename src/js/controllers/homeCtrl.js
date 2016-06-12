@@ -70,7 +70,6 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 
 	$scope.getLeft = function(_date){
 		var	year = new Date(_date).getUTCFullYear();
-			//year = moment().set("year", _date);
 
 		return 100 * (Math.abs(firstYear) + year) / (lastYear - firstYear)
 	};

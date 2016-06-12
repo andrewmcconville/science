@@ -2,10 +2,10 @@
 	<article class="modal__window person-detail--md" ng-click="$event.stopPropagation();">
 		<header class="modal__header">
 			<div class="modal__icon">
-				<span class="typcn typcn-leaf" ng-if="::person.branch == 'life'"></span>
-				<span class="typcn typcn-pi-outline" ng-if="::person.branch == 'logical'"></span>
-				<span class="typcn typcn-beaker" ng-if="::person.branch == 'physical'"></span>
-				<span class="typcn typcn-spanner-outline" ng-if="::person.branch == 'applied'"></span>
+				<svg class="filters__icon" ng-if="::person.branch == 'life'"><use xlink:href="img/icon-sprite.svg#icon-dna"></use></svg>
+				<svg class="filters__icon" ng-if="::person.branch == 'logical'"><use xlink:href="img/icon-sprite.svg#icon-gate"></use></svg>
+				<svg class="filters__icon" ng-if="::person.branch == 'physical'"><use xlink:href="img/icon-sprite.svg#icon-atom"></use></svg>
+				<svg class="filters__icon" ng-if="::person.branch == 'applied'"><use xlink:href="img/icon-sprite.svg#icon-compass"></use></svg>
 			</div>
 			<p class="modal__title">Luminary</p>
 			<a ui-sref="^" class="modal__button-close">
