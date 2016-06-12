@@ -2,14 +2,14 @@
 	<article class="modal__window person-detail--md" ng-click="$event.stopPropagation();">
 		<header class="modal__header">
 			<div class="modal__icon">
-				<svg class="filters__icon" ng-if="::person.branch == 'life'"><use xlink:href="img/icon-sprite.svg#icon-dna"></use></svg>
-				<svg class="filters__icon" ng-if="::person.branch == 'logical'"><use xlink:href="img/icon-sprite.svg#icon-gate"></use></svg>
-				<svg class="filters__icon" ng-if="::person.branch == 'physical'"><use xlink:href="img/icon-sprite.svg#icon-atom"></use></svg>
-				<svg class="filters__icon" ng-if="::person.branch == 'applied'"><use xlink:href="img/icon-sprite.svg#icon-compass"></use></svg>
+				<svg class="icon-20" ng-if="::person.branch == 'life'"><use xlink:href="img/icon-sprite.svg#icon-dna"></use></svg>
+				<svg class="icon-20" ng-if="::person.branch == 'logical'"><use xlink:href="img/icon-sprite.svg#icon-gate"></use></svg>
+				<svg class="icon-20" ng-if="::person.branch == 'physical'"><use xlink:href="img/icon-sprite.svg#icon-atom"></use></svg>
+				<svg class="icon-20" ng-if="::person.branch == 'applied'"><use xlink:href="img/icon-sprite.svg#icon-compass"></use></svg>
 			</div>
 			<p class="modal__title">Luminary</p>
 			<a ui-sref="^" class="modal__button-close">
-				<span class="typcn typcn-times-outline"></span>
+				<svg class="icon-20"><use xlink:href="img/icon-sprite.svg#icon-close"></use></svg>
 			</a>
 		</header>
 		<div class="modal__scrollable">

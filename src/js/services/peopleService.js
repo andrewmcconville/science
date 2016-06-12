@@ -5,8 +5,8 @@ angular
             {
                 name: "Thales of Miletus",
                 location: "Miletus",
-                branch: "physical",
-                professions: ["astronomy", "mathematics", "philosophy"],
+                branch: "logical",
+                professions: ["mathematics", "astronomy", "philosophy"],
                 birthDate: "-000624",
                 deathDate: "-000546",
                 published: "2016-06-05T17:00:00+05:00",
@@ -17,7 +17,7 @@ angular
             {
                 name: "Anaximander",
                 location: "Miletus",
-                branch: "physical",
+                branch: "logical",
                 professions: ["astronomy", "geometry", "geography", "metaphysics"],
                 birthDate: "-000610",
                 deathDate: "-000546",
