@@ -97,6 +97,11 @@
     </menu>
 <!-- bottom ui -->
     <aside id="js-bottom-ui" class="bottom-ui">
+        <div class="exp-bar">
+            <div class="exp-bar__pulse" ng-show="showExpAnimation"></div>
+            <div id="js-exp" class="exp-bar__progress"></div>
+        </div>
+
         <nav class="era-nav view__animate-load" ng-show="isLoaded">
             <a ng-repeat="era in ::eras"
                 class="era-nav__link"
@@ -147,5 +152,7 @@
         </menu>
     </aside>
 </div>
+
+<div class="exp-animation" ng-show="showExpAnimation"></div>
 
 <ui-view class="view view--child"></ui-view>

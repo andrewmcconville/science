@@ -2,6 +2,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 	//console.log('Home');
 
 	$scope.isLoaded = false;
+	$scope.showExpAnimation = false;
 
 	$scope.eras = Eras.getEras();
 	$scope.events = Events.getEvents();
@@ -14,6 +15,8 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 		jsEras = document.getElementById("js-eras"),
 		jsEvents = document.getElementById("js-events"),
 		jsBottomUI = document.getElementById("js-bottom-ui"),
+		jsExp = document.getElementById("js-exp"),
+		userExploredEvents = [],
 		firstYear = new Date($scope.eras[0].startDate).getUTCFullYear(),
 		lastYear = new Date($scope.eras[$scope.eras.length - 1].endDate).getUTCFullYear();
 
@@ -104,6 +107,26 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 		jsHome.scrollLeft = document.getElementById("js-era-" + _era).offsetLeft;
 	};
 
+	$scope.updateUserExploredEvents = function(_event){
+		//if(userExploredEvents.indexOf(_event) + 1){
+		//} else {
+			userExploredEvents.push(_event);
+			$scope.showExpAnimation = true;
+			console.log($scope.showExpAnimation);
+			$scope.updateExp();
+		//}
+	};
+
+	$scope.updateExp = function(){
+		var totalPossible = $scope.eras.length + $scope.events.length + $scope.people.length;
+		
+		jsExp.style.width = (userExploredEvents.length / totalPossible * 100) + '%';
+		$timeout(function(){
+			$scope.showExpAnimation = false;
+			console.log($scope.showExpAnimation);
+		}, 16);
+	};
+
 	$scope.zoom = function(_amount){
 		$scope.pixelsPerYear += _amount;
 		
@@ -159,7 +182,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 				description: 'Open main menu',
 				allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 				callback: function() {
-					$state.go('home.menu')
+					$state.go('home.menu');
 				}
 			});
 		} else {
@@ -168,7 +191,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 				description: 'Close child view',
 				allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 				callback: function() {
-					$state.go('^')
+					$state.go('^');
 				}
 			});
 		}

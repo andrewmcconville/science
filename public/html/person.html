@@ -8,7 +8,7 @@
 				<svg class="icon-20" ng-if="::person.branch == 'applied'"><use xlink:href="img/icon-sprite.svg#icon-compass"></use></svg>
 			</div>
 			<p class="modal__title">Luminary</p>
-			<a ui-sref="^" class="modal__button-close">
+			<a ui-sref="^" class="modal__button-close" ng-click="updateUserExploredEvents(person.url)">
 				<svg class="icon-20"><use xlink:href="img/icon-sprite.svg#icon-close"></use></svg>
 			</a>
 		</header>

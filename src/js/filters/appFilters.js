@@ -6,7 +6,6 @@ app.filter('getYear', function(){
 
 app.filter('getDate', ['$filter', function($filter){
 	return function(UTC){
-		console.log(UTC);
 		if(UTC.length < 8){
 			return Math.abs(new Date(UTC).getUTCFullYear());
 		} else {
