@@ -3,6 +3,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 
 	$scope.isLoaded = false;
 	$scope.showExpAnimation = false;
+	$scope.userLevel = 1;
 
 	$scope.eras = Eras.getEras();
 	$scope.events = Events.getEvents();
@@ -110,8 +111,46 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 		//if(userExploredEvents.indexOf(_event) + 1){
 		//} else {
 			userExploredEvents.push(_event);
+			updateLevel();
 			animateExp1();
 		//}
+	};
+
+	var levelCaps = [2, 5, 9];
+	console.log('Level: ' + $scope.userLevel + ' Total: ' + userExploredEvents.length + ' Level Req: ' + levelCaps[0] + ' Progress: ' + 0);
+	function updateLevel(){
+		var levelCap = 0;
+		var progress = 0;
+
+		if(userExploredEvents.length < levelCaps[0]){
+			$scope.userLevel = 1;
+			levelRequirement = levelCaps[0];
+			progress = userExploredEvents.length;
+			animateExp3(progress, levelRequirement);
+			console.log('Level: ' + $scope.userLevel + ' Total: ' + userExploredEvents.length + ' Level Req: ' + levelRequirement + ' Progress: ' + progress);
+
+		} else if(userExploredEvents.length < levelCaps[1]){
+			$scope.userLevel = 2;
+			levelRequirement = levelCaps[1] - levelCaps[0];
+			progress = userExploredEvents.length - levelCaps[0];
+			animateExp3(progress, levelRequirement);
+			console.log('Level: ' + $scope.userLevel + ' Total: ' + userExploredEvents.length + ' Level Req: ' + levelRequirement + ' Progress: ' + progress);
+
+		} else if(userExploredEvents.length < levelCaps[2]){
+			$scope.userLevel = 3;
+			levelRequirement = levelCaps[2] - levelCaps[1];
+			progress = userExploredEvents.length - levelCaps[1];
+			animateExp3(progress, levelRequirement);
+			console.log('Level: ' + $scope.userLevel + ' Total: ' + userExploredEvents.length + ' Level Req: ' + levelRequirement + ' Progress: ' + progress);
+
+		} else {
+			$scope.userLevel = 4;
+			levelRequirement = levelCaps[3] - levelCaps[2];
+			progress = userExploredEvents.length - levelCaps[2];
+			animateExp3(progress, levelRequirement);
+			console.log('Level: ' + $scope.userLevel + ' Total: ' + userExploredEvents.length + ' Level Req: ' + levelRequirement + ' Progress: ' + progress);
+
+		}
 	};
 
 	function animateExp1(){
@@ -126,15 +165,14 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 		$scope.showExpAnimation2 = true;
 		$timeout(function(){
 			$scope.showExpAnimation2 = false;
-			animateExp3();
+			//animateExp3();
 		}, 480);
 	};
 
-	function animateExp3(){
-		var totalPossible = $scope.eras.length + $scope.events.length + $scope.people.length;
-
+	function animateExp3(_progress, _requirement){
 		$timeout(function(){
-			$scope.expProgressWidth = (userExploredEvents.length / totalPossible * 100);
+			console.log('prog: '  + _progress + ' req: ' + _requirement);
+			$scope.expProgressWidth = _progress / _requirement * 100;
 		}, 480);
 	};
 

@@ -131,7 +131,9 @@
                     <svg class="filters__icon icon-20" ng-if="::filter.name == 'applied'"><use xlink:href="img/icon-sprite.svg#icon-compass"></use></svg>
                     <span class="filters__hotkey" ng-if="::filter.name == 'applied'">4</span>
             </button>
-            <div class="filters__progress--left"></div>
+            <div class="filters__progress--left">
+                <div style="position: absolute; right: 80px; top: 50px;">-{{userLevel}}-</div>
+            </div>
         </menu>
 
         <menu class="filters__container--right">
