@@ -15,7 +15,6 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 		jsEras = document.getElementById("js-eras"),
 		jsEvents = document.getElementById("js-events"),
 		jsBottomUI = document.getElementById("js-bottom-ui"),
-		jsExp = document.getElementById("js-exp"),
 		userExploredEvents = [],
 		firstYear = new Date($scope.eras[0].startDate).getUTCFullYear(),
 		lastYear = new Date($scope.eras[$scope.eras.length - 1].endDate).getUTCFullYear();
@@ -135,7 +134,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 		var totalPossible = $scope.eras.length + $scope.events.length + $scope.people.length;
 
 		$timeout(function(){
-			jsExp.style.width = (userExploredEvents.length / totalPossible * 100) + '%';
+			$scope.expProgressWidth = (userExploredEvents.length / totalPossible * 100);
 		}, 480);
 	};
 
