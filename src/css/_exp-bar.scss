@@ -35,6 +35,9 @@
 .exp-bar__progress {
 	background-color: #e0e0e0;
 	height: 7px;
+	left: 0;
+	position: absolute;
+	top: 1px;
 	transition: all 1280ms;
 	width: 0;
 }

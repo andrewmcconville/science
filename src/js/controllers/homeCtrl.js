@@ -111,20 +111,32 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 		//if(userExploredEvents.indexOf(_event) + 1){
 		//} else {
 			userExploredEvents.push(_event);
-			$scope.showExpAnimation = true;
-			console.log($scope.showExpAnimation);
-			$scope.updateExp();
+			animateExp1();
 		//}
 	};
 
-	$scope.updateExp = function(){
-		var totalPossible = $scope.eras.length + $scope.events.length + $scope.people.length;
-		
-		jsExp.style.width = (userExploredEvents.length / totalPossible * 100) + '%';
+	function animateExp1(){
+		$scope.showExpAnimation = true;
 		$timeout(function(){
 			$scope.showExpAnimation = false;
-			console.log($scope.showExpAnimation);
+			animateExp2();
 		}, 16);
+	};
+
+	function animateExp2(){
+		$scope.showExpAnimation2 = true;
+		$timeout(function(){
+			$scope.showExpAnimation2 = false;
+			animateExp3();
+		}, 480);
+	};
+
+	function animateExp3(){
+		var totalPossible = $scope.eras.length + $scope.events.length + $scope.people.length;
+
+		$timeout(function(){
+			jsExp.style.width = (userExploredEvents.length / totalPossible * 100) + '%';
+		}, 480);
 	};
 
 	$scope.zoom = function(_amount){
