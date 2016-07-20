@@ -193,6 +193,15 @@ angular
                 published: "2016-06-05T17:00:00+05:00"
             },
             {
+                name: "Hypatia",
+                branch: "logical",
+                professions: ["mathematics", "astronomy"],
+                location: "Alexandria",
+                birthDate: "000360",
+                deathDate: "000415",
+                published: "2016-07-19T17:20:22+05:00"
+            },
+            {
                 name: "Paul of Aegina",
                 branch: "life",
                 professions: ["medicine"],
