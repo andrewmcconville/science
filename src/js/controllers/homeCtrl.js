@@ -15,6 +15,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 		jsTimeScale = document.getElementById("js-time-scale"),
 		jsEras = document.getElementById("js-eras"),
 		jsEvents = document.getElementById("js-events"),
+		jsScroller = document.getElementById("js-scroller"),
 		jsBottomUI = document.getElementById("js-bottom-ui"),
 		userExploredEvents = [],
 		firstYear = new Date($scope.eras[0].startDate).getUTCFullYear(),
@@ -22,6 +23,19 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 
 	//move ui relative to scrollbar's height so scrollbar is not covered by bottom ui
 	jsBottomUI.style.bottom = (jsHome.offsetHeight - jsHome.clientHeight) + "px";
+
+	//iScroll
+	var myScroll = new IScroll(jsHome,{
+		//bounce: false,
+		bounceTime: 320,
+		//momentum: false,
+		deceleration: 0.005,
+		mouseWheel: true,
+		//mouseWheelSpeed: 20,
+		//probeType: 3,
+		scrollX: true,
+		scrollY: false
+	});
 
 	//build time scale
 	for(var i = firstYear; i <= lastYear; i += 25) {
@@ -130,6 +144,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 			console.log('Level: ' + $scope.userLevel + ' Total: ' + userExploredEvents.length + ' Level Req: ' + levelRequirement + ' Progress: ' + progress);
 
 		} else if(userExploredEvents.length < levelCaps[1]){
+			animateExp3(100, 100);
 			$scope.userLevel = 2;
 			levelRequirement = levelCaps[1] - levelCaps[0];
 			progress = userExploredEvents.length - levelCaps[0];
@@ -187,7 +202,9 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 			jsTimeScale.style.width = width + "px";
 			jsEras.style.width = width + "px";
 			jsEvents.style.width = width + "px";
+			jsScroller.style.width = width + "px";
 			jsHome.scrollLeft = jsHome.scrollLeft * ratio - 10;
+			myScroll.refresh()
 
 		//when zooming out: scroll first, then resize
 		} else {
@@ -195,6 +212,8 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 			jsTimeScale.style.width = width + "px";
 			jsEras.style.width = width + "px";
 			jsEvents.style.width = width + "px";
+			jsScroller.style.width = width + "px";
+			myScroll.refresh()
 		}
 	};
 

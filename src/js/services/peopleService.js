@@ -803,6 +803,16 @@ angular
                 published: "2016-06-05T17:00:00+05:00"
             },
             {
+                name: "Urbain Le Verrier",
+                displayName: "Le Verrier",
+                branch: "physical",
+                professions: ["astronomy"],
+                location: "Saint-Lô, France",
+                birthDate: "1811-03-11",
+                deathDate: "1877-09-23",
+                published: "2016-11-07T19:00:00+05:00"
+            },
+            {
                 name: "Augusta Ada King-Noel, Countess of Lovelace",
                 displayName: "Lovelace",
                 branch: "logical",

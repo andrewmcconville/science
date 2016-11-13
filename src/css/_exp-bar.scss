@@ -2,10 +2,18 @@
 	background-color: #b8b8b8;
 	bottom: 41px;
 	height: 9px;
-	left: 128px;
 	padding: 1px;
 	position: absolute;
-	right: 128px;
+
+	@media(max-width: 719px) {
+		left: 0;
+		right: 0;
+	}
+
+	@media(min-width: 720px) {
+		left: 128px;
+		right: 128px;
+	}
 }
 
 .exp-bar__pulse {
