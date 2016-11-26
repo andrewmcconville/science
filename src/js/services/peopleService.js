@@ -471,6 +471,16 @@ angular
                 published: "2016-06-05T17:00:00+05:00"
             },
             {
+                name: "Gottfried Wilhelm Leibniz",
+                displayName: "Leibniz",
+                branch: "logical",
+                professions: ["mathematics", "metaphysics"],
+                location: "Hanover, Holy Roman Empire",
+                birthDate: "1646-07-01",
+                deathDate: "1716-11-14",
+                published: "2016-11-14T17:00:00+05:00"
+            },
+            {
                 name: "Jacob Bernoulli",
                 displayName: "Bernoulli",
                 branch: "logical",
