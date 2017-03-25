@@ -1063,6 +1063,26 @@ angular
                 published: "2016-06-05T17:00:00+05:00"
             },
             {
+                name: "Elise Meitner",
+                displayName: "Meitner",
+                branch: "physical",
+                professions: ["nuclear physics", "chemistry", "physics"],
+                location: "Vienna, Austria-Hungary",
+                birthDate: "1878-11-07",
+                deathDate: "1968-10-27",
+                published: "2017-02-03T17:00:00+05:00"
+            },
+            {
+                name: "Otto Hahn",
+                displayName: "Hahn",
+                branch: "physical",
+                professions: ["chemistry", "nuclear physics"],
+                location: "Frankfurt, Germany",
+                birthDate: "1879-03-08",
+                deathDate: "1968-07-28", 
+                published: "2017-02-03T17:00:00+05:00"
+            },
+            {
                 name: "Albert Einstein",
                 isHero: true,
                 displayName: "Einstein",
