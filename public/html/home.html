@@ -1,10 +1,9 @@
 <div class="view__fullscreen">
     <div class="view__content--horizontal dragscroll" id="js-home">
-        <div class="view__animate-load" ng-show="isLoaded">
+        <div class="view__animate-load" ng-show="isLoaded" id="js-scroller" style="width: 10800px">
 <!-- era bg -->
             <ul id="js-eras" class="eras">
                 <li ng-repeat="era in ::eras"
-                    ng-cloak
                     id="js-era-{{::era.name}}"
                     class="era"
                     style="width: {{::getWidthPercent(era.startDate, era.endDate)}}%;">
@@ -12,10 +11,9 @@
                 </li>
             </ul>
 
-            <ul id="js-events" class="events">
+            <nav id="js-events" class="events">
 <!-- eras -->
-                <li ng-repeat="era in ::eras"
-                    ng-cloak
+                <a ng-repeat="era in ::eras"
                     class="era__link"
                     style="left: {{::getLeft(era.startDate)}}%"
                     ui-sref="home.era(::{eraURL: era.url})">
@@ -24,12 +22,11 @@
                         <div class="era__banner-tail--left"></div>
                         <div class="era__banner-tail--right"></div>
                     </div>
-                </li>
+                </a>
 <!-- people -->
-                <li ng-repeat-start="person in people | filter:filterPeople track by person.url"
-                    ng-cloak
+                <a ng-repeat-start="person in people | filter:filterPeople track by person.url"
                     ng-if="::!person.isHero"
-                    class="person--md"
+                    class="person--md--{{::getEra(person.birthDate)}}"
                     style="left: {{::getLeft(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%"
                     ui-sref="home.person(::{personURL: person.url})">
                     <div class="person__content">
@@ -38,13 +35,12 @@
                             <span class="person__profession">{{::person.professions[0]}}</span>
                         </div>
                     </div>
-                </li>
-                <li ng-repeat-end
-                    ng-cloak
+                </a>
+                <a ng-repeat-end
                     ng-if="::person.isHero"
                     class="person--lg"
                     style="left: {{::getLeft(person.birthDate, person.deathDate)}}%; top: {{::person.offset}}%;}}%"
-                    ui-sref="home.personHero(::{personURL: person.url})">
+                    ui-sref="home.person(::{personURL: person.url})">
                     <div class="person__avatar-animation"></div>
                     <div class="person__content">
                         <div class="person__name--lg">{{::person.displayName || person.name}}</div>
@@ -53,10 +49,9 @@
                             <span class="person__profession">{{::person.professions[0]}}</span>
                         </div>
                     </div>
-                </li>
+                </a>
 <!-- events -->
-                <li ng-repeat-start="event in events | filter:filterEvents track by event.url"
-                    ng-cloak
+                <a ng-repeat-start="event in events | filter:filterEvents track by event.url"
                     ng-if="::!event.isHero"
                     class="event--md"
                     style="left: {{::getLeft(event.startDate)}}%;">
@@ -64,9 +59,8 @@
                     <div class="event__meta">
                         <div class="event__name">{{::event.name}}, {{::event.startDate | getYear}}</div>
                     </div>
-                </li>
-                <li ng-repeat-end
-                    ng-cloak
+                </a>
+                <a ng-repeat-end
                     ng-if="::event.isHero"
                     class="event--md"
                     style="left: {{::getLeft(event.startDate)}}%;"
@@ -77,18 +71,17 @@
                     <div class="event__meta">
                         <div class="event__name">{{::event.name}}, {{::event.startDate | getYear}}</div>
                     </div>
-                </li>
-            </ul>
+                </a>
+            </nav>
 <!-- time scale -->
-            <ol id="js-time-scale"
+            <div id="js-time-scale"
                 class="time-scale"
-                ng-cloak
                 ng-class="{'hide-quarter': pixelsPerYear <= .75, 'hide-half': pixelsPerYear <= .25}">
-            </ol>
+            </div>
         </div>
     </div>
 <!-- zoom controls -->
-    <aside class="zoom-controls" ng-show="isLoaded">
+    <menu class="zoom-controls" ng-show="isLoaded">
         <button class="zoom-controls__button" ng-click="zoom(+.5)" ng-disabled="pixelsPerYear >= 32">
             <span class="typcn typcn-zoom-in-outline"></span>
         </button>
@@ -101,58 +94,67 @@
         <a ui-sref="home.menu" class="zoom-controls__button">
             <span class="typcn typcn-cog-outline"></span>
         </a>
-    </aside>
+    </menu>
 <!-- bottom ui -->
     <aside id="js-bottom-ui" class="bottom-ui">
+        <div class="exp-bar">
+            <div class="exp-bar__pulse" ng-show="showExpAnimation2"></div>
+            <div class="exp-bar__progress" style="width: {{expProgressWidth}}%"></div>
+        </div>
+
         <nav class="era-nav view__animate-load" ng-show="isLoaded">
             <a ng-repeat="era in ::eras"
-                ng-cloak
                 class="era-nav__link"
                 ng-click="scrollToEra(era.name)">
                 <span class="era-nav__era-initial">{{::era.name.charAt(0)}}</span>
                 <span class="era-nav__era-name" ng-hide="true">{{::era.name}}</span>
             </a>
+        <!--
             <a class="era-nav__link">A</a>
             <a class="era-nav__link">S</a>
             <a class="era-nav__link">D</a>
+         -->
         </nav>
 
-        <div class="filters__container--left">
+        <menu class="filters__container--left">
             <button ng-repeat="filter in ::peopleFilters"
-                    ng-cloak
                     ng-click="toggleFilter(filter)"
                     class="filters__filter--left"
+                    title="{{::filter.name}}"
                     ng-class="{'filters__filter--active': filter.active}">
-                    <span class="typcn typcn-leaf" ng-if="::filter.name == 'life'"></span>
+                    <svg class="filters__icon icon-20" ng-if="::filter.name == 'life'"><use xlink:href="img/icon-sprite.svg#icon-dna"></use></svg>
                     <span class="filters__hotkey" ng-if="::filter.name == 'life'">1</span>
-                    <span class="typcn typcn-pi-outline" ng-if="::filter.name == 'logical'"></span>
+                    <svg class="filters__icon icon-20" ng-if="::filter.name == 'logical'"><use xlink:href="img/icon-sprite.svg#icon-venn"></use></svg>
                     <span class="filters__hotkey" ng-if="::filter.name == 'logical'">2</span>
-                    <span class="typcn typcn-beaker" ng-if="::filter.name == 'physical'"></span>
+                    <svg class="filters__icon icon-20" ng-if="::filter.name == 'physical'"><use xlink:href="img/icon-sprite.svg#icon-atom"></use></svg>
                     <span class="filters__hotkey" ng-if="::filter.name == 'physical'">3</span>
-                    <span class="typcn typcn-spanner-outline" ng-if="::filter.name == 'applied'"></span>
+                    <svg class="filters__icon icon-20" ng-if="::filter.name == 'applied'"><use xlink:href="img/icon-sprite.svg#icon-compass"></use></svg>
                     <span class="filters__hotkey" ng-if="::filter.name == 'applied'">4</span>
             </button>
-            <div class="filters__progress--left"></div>
-        </div>
+            <div class="filters__progress--left">
+                <div style="position: absolute; right: 80px; top: 50px;">-{{userLevel}}-</div>
+            </div>
+        </menu>
 
-        <div class="filters__container--right">
-            <button ng-cloak
-                    ng-repeat="filter in ::eventFilters"
+        <menu class="filters__container--right">
+            <button ng-repeat="filter in ::eventFilters"
                     ng-click="toggleFilter(filter)"
                     class="filters__filter--right"
                     ng-class="{'filters__filter--active': filter.active}">
-                    <span class="typcn typcn-leaf" ng-if="::filter.name == 'life'"></span>
+                    <svg class="filters__icon icon-20" ng-if="::filter.name == 'life'"><use xlink:href="img/icon-sprite.svg#icon-dna"></use></svg>
                     <span class="filters__hotkey" ng-if="::filter.name == 'life'">6</span>
-                    <span class="typcn typcn-pi-outline" ng-if="::filter.name == 'logical'"></span>
+                    <svg class="filters__icon icon-20" ng-if="::filter.name == 'logical'"><use xlink:href="img/icon-sprite.svg#icon-venn"></use></svg>
                     <span class="filters__hotkey" ng-if="::filter.name == 'logical'">7</span>
-                    <span class="typcn typcn-beaker" ng-if="::filter.name == 'physical'"></span>
+                    <svg class="filters__icon icon-20" ng-if="::filter.name == 'physical'"><use xlink:href="img/icon-sprite.svg#icon-atom"></use></svg>
                     <span class="filters__hotkey" ng-if="::filter.name == 'physical'">8</span>
-                    <span class="typcn typcn-spanner-outline" ng-if="::filter.name == 'applied'"></span>
+                    <svg class="filters__icon icon-20" ng-if="::filter.name == 'applied'"><use xlink:href="img/icon-sprite.svg#icon-compass"></use></svg>
                     <span class="filters__hotkey" ng-if="::filter.name == 'applied'">9</span>
             </button>
             <div class="filters__progress--right"></div>
-        </div>
+        </menu>
     </aside>
 </div>
+
+<div class="exp-animation" ng-show="showExpAnimation"></div>
 
 <ui-view class="view view--child"></ui-view>

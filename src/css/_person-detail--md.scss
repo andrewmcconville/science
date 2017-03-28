@@ -1,23 +1,51 @@
 .person-detail--md {
-	height: 400px;
-	width: 256px;
+	// height: 420px;
+	// width: 280px;
 }
 
 .person-detail--md__title {
 	flex: 0 0 auto;
+	font-family: 'Abril Fatface', serif;
 	font-size: 22px;
-	font-weight: 300;
 	line-height: 1;
-	margin-bottom: 2px;
+	margin-bottom: 8px;
 	text-align: center;
+}
+
+.person-detail--md__location {
+	color: rgba(0, 0, 0, .375);
+	flex: 0 0 auto;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 1;
+	margin-bottom: 4px;
+	text-align: center;
+}
+
+.person-detail--md__date-layout {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 16px;
+}
+
+.person-detail--md__date-layout--left {
+	border-right: 1px solid #e0e0e0;
+	padding: 2px 4px 2px 0;
+	text-align: right;
+	width: 50%;
+}
+
+.person-detail--md__date-layout--right {
+	padding: 2px 0 2px 4px;
+	text-align: left;
+	width: 50%;
 }
 
 .person-detail--md__date {
 	color: rgba(0, 0, 0, .375);
-	flex: 0 0 auto;
+	flex: 1 1 auto;
 	font-size: 12px;
 	font-weight: 600;
-	text-align: center;
 }
 
 .person-detail--md__date--light {
@@ -26,28 +54,8 @@
 	font-weight: 400;
 }
 
-.person-detail--md__location {
-	color: rgba(0, 0, 0, .375);
-	flex: 0 0 auto;
-	font-size: 12px;
-	font-weight: 600;
-	margin-bottom: 16px;
-	text-align: center;
-}
-
-.person-detail--md__excerpt {
-	margin-bottom: 16px;
-}
-
-.person-detail--md__trivia {
-    color: rgba(0, 0, 0, .5);
-	font-size: 14px;
-	font-weight: 300;
-	margin-bottom: 16px;
-}
-
 .person-detail--md__professions {
-	margin-bottom: 20px;
+	margin-bottom: 16px;
 }
 
 .person-detail--md__profession {
@@ -55,7 +63,20 @@
 	border-radius: 2px;
 	display: inline-block;
 	font-size: 10px;
-	line-height: 2;
+	line-height: 1;
 	margin: 1px;
-	padding: 0px 6px;
+	padding: 4px 6px;
+}
+
+.person-detail--md__excerpt {
+	margin-bottom: 16px;
+}
+
+.person-detail--md__trivia {
+	border-top: 1px solid #e0e0e0;
+    color: rgba(0, 0, 0, .5);
+	font-size: 14px;
+	font-weight: 300;
+	margin-bottom: 20px;
+	padding-top: 4px;
 }

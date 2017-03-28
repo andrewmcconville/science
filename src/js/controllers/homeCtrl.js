@@ -2,6 +2,8 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 	//console.log('Home');
 
 	$scope.isLoaded = false;
+	$scope.showExpAnimation = false;
+	$scope.userLevel = 1;
 
 	$scope.eras = Eras.getEras();
 	$scope.events = Events.getEvents();
@@ -13,17 +15,32 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 		jsTimeScale = document.getElementById("js-time-scale"),
 		jsEras = document.getElementById("js-eras"),
 		jsEvents = document.getElementById("js-events"),
+		jsScroller = document.getElementById("js-scroller"),
 		jsBottomUI = document.getElementById("js-bottom-ui"),
+		userExploredEvents = [],
 		firstYear = new Date($scope.eras[0].startDate).getUTCFullYear(),
 		lastYear = new Date($scope.eras[$scope.eras.length - 1].endDate).getUTCFullYear();
 
 	//move ui relative to scrollbar's height so scrollbar is not covered by bottom ui
 	jsBottomUI.style.bottom = (jsHome.offsetHeight - jsHome.clientHeight) + "px";
 
+	//iScroll
+	var myScroll = new IScroll(jsHome,{
+		//bounce: false,
+		bounceTime: 320,
+		//momentum: false,
+		deceleration: 0.005,
+		mouseWheel: true,
+		//mouseWheelSpeed: 20,
+		//probeType: 3,
+		scrollX: true,
+		scrollY: false
+	});
+
 	//build time scale
 	for(var i = firstYear; i <= lastYear; i += 25) {
 		var year;
-		year = document.createElement('li');
+		year = document.createElement('span');
 		year.className = "time-scale__marker";
 		year.appendChild(document.createTextNode(Math.abs(i)));
 		jsTimeScale.appendChild(year);
@@ -89,9 +106,89 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 		return 100 * Math.abs((startYear - endYear) / (lastYear - firstYear))
 	};
 
+	$scope.getEra = function(_birthDate){
+		for(var i = 0; $scope.eras.length > i; i++){
+			if(new Date(_birthDate).getUTCFullYear() < new Date($scope.eras[i].endDate).getUTCFullYear()){
+				//console.log($scope.eras[i].name);
+				return $scope.eras[i].name.toLowerCase();
+			}
+		}
+	};
+
 	$scope.scrollToEra = function(_era){
 		console.log(_era);
+		$state.go('home');
 		jsHome.scrollLeft = document.getElementById("js-era-" + _era).offsetLeft;
+	};
+
+	$scope.updateUserExploredEvents = function(_event){
+		//if(userExploredEvents.indexOf(_event) + 1){
+		//} else {
+			userExploredEvents.push(_event);
+			updateLevel();
+			animateExp1();
+		//}
+	};
+
+	var levelCaps = [2, 5, 9];
+	console.log('Level: ' + $scope.userLevel + ' Total: ' + userExploredEvents.length + ' Level Req: ' + levelCaps[0] + ' Progress: ' + 0);
+	function updateLevel(){
+		var levelCap = 0;
+		var progress = 0;
+
+		if(userExploredEvents.length < levelCaps[0]){
+			$scope.userLevel = 1;
+			levelRequirement = levelCaps[0];
+			progress = userExploredEvents.length;
+			animateExp3(progress, levelRequirement);
+			console.log('Level: ' + $scope.userLevel + ' Total: ' + userExploredEvents.length + ' Level Req: ' + levelRequirement + ' Progress: ' + progress);
+
+		} else if(userExploredEvents.length < levelCaps[1]){
+			animateExp3(100, 100);
+			$scope.userLevel = 2;
+			levelRequirement = levelCaps[1] - levelCaps[0];
+			progress = userExploredEvents.length - levelCaps[0];
+			animateExp3(progress, levelRequirement);
+			console.log('Level: ' + $scope.userLevel + ' Total: ' + userExploredEvents.length + ' Level Req: ' + levelRequirement + ' Progress: ' + progress);
+
+		} else if(userExploredEvents.length < levelCaps[2]){
+			$scope.userLevel = 3;
+			levelRequirement = levelCaps[2] - levelCaps[1];
+			progress = userExploredEvents.length - levelCaps[1];
+			animateExp3(progress, levelRequirement);
+			console.log('Level: ' + $scope.userLevel + ' Total: ' + userExploredEvents.length + ' Level Req: ' + levelRequirement + ' Progress: ' + progress);
+
+		} else {
+			$scope.userLevel = 4;
+			levelRequirement = levelCaps[3] - levelCaps[2];
+			progress = userExploredEvents.length - levelCaps[2];
+			animateExp3(progress, levelRequirement);
+			console.log('Level: ' + $scope.userLevel + ' Total: ' + userExploredEvents.length + ' Level Req: ' + levelRequirement + ' Progress: ' + progress);
+
+		}
+	};
+
+	function animateExp1(){
+		$scope.showExpAnimation = true;
+		$timeout(function(){
+			$scope.showExpAnimation = false;
+			animateExp2();
+		}, 16);
+	};
+
+	function animateExp2(){
+		$scope.showExpAnimation2 = true;
+		$timeout(function(){
+			$scope.showExpAnimation2 = false;
+			//animateExp3();
+		}, 480);
+	};
+
+	function animateExp3(_progress, _requirement){
+		$timeout(function(){
+			console.log('prog: '  + _progress + ' req: ' + _requirement);
+			$scope.expProgressWidth = _progress / _requirement * 100;
+		}, 480);
 	};
 
 	$scope.zoom = function(_amount){
@@ -105,7 +202,9 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 			jsTimeScale.style.width = width + "px";
 			jsEras.style.width = width + "px";
 			jsEvents.style.width = width + "px";
+			jsScroller.style.width = width + "px";
 			jsHome.scrollLeft = jsHome.scrollLeft * ratio - 10;
+			myScroll.refresh()
 
 		//when zooming out: scroll first, then resize
 		} else {
@@ -113,6 +212,8 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 			jsTimeScale.style.width = width + "px";
 			jsEras.style.width = width + "px";
 			jsEvents.style.width = width + "px";
+			jsScroller.style.width = width + "px";
+			myScroll.refresh()
 		}
 	};
 
@@ -149,7 +250,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 				description: 'Open main menu',
 				allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 				callback: function() {
-					$state.go('home.menu')
+					$state.go('home.menu');
 				}
 			});
 		} else {
@@ -158,7 +259,7 @@ app.controller('homeCtrl', ['$state', '$scope', '$rootScope', '$location', '$doc
 				description: 'Close child view',
 				allowIn: ['INPUT', 'SELECT', 'TEXTAREA'],
 				callback: function() {
-					$state.go('^')
+					$state.go('^');
 				}
 			});
 		}

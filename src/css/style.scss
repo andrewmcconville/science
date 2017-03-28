@@ -12,11 +12,15 @@
 @import "variables";
 @import "css-reset";
 
+@import "icons";
 @import "typography";
 @import "view";
+@import "modal";
 @import "header";
 @import "filters";
 
+@import "exp-bar";
+@import "exp-animation";
 @import "timeline";
 @import "time-scale";
 @import "people";
@@ -28,7 +32,6 @@
 @import "eras"; 
 @import "introduction";
 
-@import "modal";
 @import "menu";
 
 @import "animate";
@@ -51,4 +54,31 @@ body {
 	height: 200px;
 	margin-bottom: 8px;
 	padding: 16px;
+}
+
+#js-scroller {
+	position: absolute;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	height: 100%;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+#js-home {
+	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }

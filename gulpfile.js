@@ -18,6 +18,8 @@ gulp.task('scripts', function(){
 		'./src/js/lib/angular.js',
 		'./src/js/lib/angular-ui-router.js',
 		'./src/js/lib/angular-animate.js',
+		//'./src/js/lib/moment.js',
+		'./src/js/lib/iscroll.js',
 		'./src/js/lib/hotkeys.min.js',
 		'./src/js/app.js',
 		//'./src/js/templates.js',
@@ -34,7 +36,7 @@ gulp.task('scripts', function(){
 gulp.task('styles', function(){
 	var css = gulp.src([
 			'./src/css/lib/typicons/typicons.min.css',
-			'./src/css/lib/google-font.css',
+			//'./src/css/lib/google-font.css',
 			'./src/css/lib/hotkeys.min.css'
 		])
 		.pipe(cssmin());

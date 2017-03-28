@@ -1,0 +1,51 @@
+.exp-bar {
+	background-color: #b8b8b8;
+	bottom: 41px;
+	height: 9px;
+	padding: 1px;
+	position: absolute;
+
+	@media(max-width: 719px) {
+		left: 0;
+		right: 0;
+	}
+
+	@media(min-width: 720px) {
+		left: 128px;
+		right: 128px;
+	}
+}
+
+.exp-bar__pulse {
+	background-color: #b8b8b8;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	transition: all 1280ms;
+
+	&.ng-hide-remove {
+	}
+
+	&.ng-hide-remove-active {
+	}
+
+	&.ng-hide-add {
+		background-color: orange;
+	}
+
+	&.ng-hide-add-active {
+		background-color: #b8b8b8;
+	}
+}
+
+.exp-bar__progress {
+	background-color: #e0e0e0;
+	height: 7px;
+	left: 0;
+	position: absolute;
+	top: 1px;
+	transition: all 1280ms;
+	width: 0;
+}

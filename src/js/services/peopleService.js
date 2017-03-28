@@ -5,19 +5,19 @@ angular
             {
                 name: "Thales of Miletus",
                 location: "Miletus",
-                branch: "physical",
-                professions: ["astronomy", "mathematics", "philosophy"],
+                branch: "logical",
+                professions: ["mathematics", "astronomy", "philosophy"],
                 birthDate: "-000624",
                 deathDate: "-000546",
                 published: "2016-06-05T17:00:00+05:00",
                 offset: 50,
                 excerpt: "Often regarded as the first philosopher Thales turned to natural explanations, over mystical stories, to describe natural phenomena. He is also one of the first mathematicians to have a theorem named after him. Thales’ Theorem states an inscribed triangle which bisects a circle across its diameter is always a right triangle.",
-                trivia: "Using shadows Thales calculated the heights of The Pyramids"
+                trivia: "Using their shadows Thales was able to calculate the heights of The Pyramids"
             },
             {
                 name: "Anaximander",
                 location: "Miletus",
-                branch: "physical",
+                branch: "logical",
                 professions: ["astronomy", "geometry", "geography", "metaphysics"],
                 birthDate: "-000610",
                 deathDate: "-000546",
@@ -152,9 +152,18 @@ angular
                 professions: ["astronomy", "trigonometry"],
                 location: "Nicaea",
                 birthDate: "-000190",
-                deathDate: "-100020",
+                deathDate: "-000120",
                 published: "2016-06-05T17:00:00+05:00",
                 offset: 10
+            },
+            {
+                name: "Hero of Alexandria",
+                location: "Alexandria, Roman Egypt",
+                branch: "applied",
+                professions: ["mathematics", "engineering"],
+                birthDate: "0010",
+                deathDate: "0070",
+                published: "2016-06-09T09:14:00+05:00"
             },
             {
                 name: "Pliny the Elder",
@@ -182,6 +191,15 @@ angular
                 birthDate: "000129",
                 deathDate: "000216",
                 published: "2016-06-05T17:00:00+05:00"
+            },
+            {
+                name: "Hypatia",
+                branch: "logical",
+                professions: ["mathematics", "astronomy"],
+                location: "Alexandria",
+                birthDate: "000360",
+                deathDate: "000415",
+                published: "2016-07-19T17:20:22+05:00"
             },
             {
                 name: "Paul of Aegina",
@@ -451,6 +469,16 @@ angular
                 birthDate: "1629-04-14",
                 deathDate: "1695-07-08",
                 published: "2016-06-05T17:00:00+05:00"
+            },
+            {
+                name: "Gottfried Wilhelm Leibniz",
+                displayName: "Leibniz",
+                branch: "logical",
+                professions: ["mathematics", "metaphysics"],
+                location: "Hanover, Holy Roman Empire",
+                birthDate: "1646-07-01",
+                deathDate: "1716-11-14",
+                published: "2016-11-14T17:00:00+05:00"
             },
             {
                 name: "Jacob Bernoulli",
@@ -785,6 +813,16 @@ angular
                 published: "2016-06-05T17:00:00+05:00"
             },
             {
+                name: "Urbain Le Verrier",
+                displayName: "Le Verrier",
+                branch: "physical",
+                professions: ["astronomy"],
+                location: "Saint-Lô, France",
+                birthDate: "1811-03-11",
+                deathDate: "1877-09-23",
+                published: "2016-11-07T19:00:00+05:00"
+            },
+            {
                 name: "Augusta Ada King-Noel, Countess of Lovelace",
                 displayName: "Lovelace",
                 branch: "logical",
@@ -835,7 +873,7 @@ angular
             },
             {
                 name: "Sir William Thomson (Lord Kelvin)",
-                displayName: "Lord Kelvin",
+                displayName: "Kelvin",
                 branch: "logical",
                 professions: ["thermodynamics", "physics", "mathematics"],
                 location: "Belfast, Ireland, United Kingdom",
@@ -885,6 +923,26 @@ angular
                 published: "2016-06-05T17:00:00+05:00"
             },
             {
+                name: "Robert Heinrich Herman Koch",
+                displayName: "Koch",
+                branch: "life",
+                professions: ["microbiology"],
+                location: "Clausthal, Kingdom of Hanover",
+                birthDate: "1843-12-11",
+                deathDate: "1910-05-27",
+                published: "2016-06-05T17:00:00+05:00"
+            },
+            {
+                name: "Ludwig Eduard Boltzmann",
+                displayName: "Boltzmann",
+                branch: "physical",
+                professions: ["physics", "mathematics"],
+                location: "Clausthal, Kingdom of Hanover",
+                birthDate: "1844-02-20",
+                deathDate: "1906-09-05",
+                published: "2016-06-09T19:28:00+05:00"
+            },
+            {
                 name: "Ivan Petrovich Pavlov",
                 displayName: "Pavlov",
                 branch: "life",
@@ -892,6 +950,16 @@ angular
                 location: "Ryazan, Russian Empire",
                 birthDate: "1849-09-29",
                 deathDate: "1936-02-27",
+                published: "2016-06-05T17:00:00+05:00"
+            },
+            {
+                name: "Antoine Henri Becquerel",
+                displayName: "Becquerel",
+                branch: "physical",
+                professions: ["radioactivity", "physics", "chemistry"],
+                location: " Paris, France",
+                birthDate: "1852-12-15",
+                deathDate: "1908-08-25",
                 published: "2016-06-05T17:00:00+05:00"
             },
             {
@@ -905,13 +973,13 @@ angular
                 published: "2016-06-05T17:00:00+05:00"
             },
             {
-                name: "Robert Heinrich Herman Koch",
-                displayName: "Koch",
-                branch: "life",
-                professions: ["microbiology"],
-                location: "Clausthal, Kingdom of Hanover",
-                birthDate: "1843-12-11",
-                deathDate: "1910-05-27",
+                name: "Nikola Tesla",
+                displayName: "Tesla",
+                branch: "applied",
+                professions: ["electrical engineering", "physics"],
+                location: "Smiljan, Austrian Empire",
+                birthDate: "1856-07-10",
+                deathDate: "1943-01-07",
                 published: "2016-06-05T17:00:00+05:00"
             },
             {
@@ -935,6 +1003,16 @@ angular
                 published: "2016-06-05T17:00:00+05:00"
             },
             {
+                name: "Pierre Curie",
+                displayName: "P. Curie",
+                branch: "physical",
+                professions: ["crystallography", "radioactivity", "physics", "chemistry"],
+                location: " Paris, France",
+                birthDate: "1859-05-15",
+                deathDate: "1906-04-19",
+                published: "2016-06-05T17:00:00+05:00"
+            },
+            {
                 name: "Nettie Maria Stevens",
                 displayName: "Stevens",
                 branch: "life",
@@ -952,36 +1030,6 @@ angular
                 location: "Whitby, Yorkshire",
                 birthDate: "1861-08-08",
                 deathDate: "1926-02-08",
-                published: "2016-06-05T17:00:00+05:00"
-            },
-            {
-                name: "Antoine Henri Becquerel",
-                displayName: "Becquerel",
-                branch: "physical",
-                professions: ["radioactivity", "physics", "chemistry"],
-                location: " Paris, France",
-                birthDate: "1852-12-15",
-                deathDate: "1908-08-25",
-                published: "2016-06-05T17:00:00+05:00"
-            },
-            {
-                name: "Nikola Tesla",
-                displayName: "Tesla",
-                branch: "applied",
-                professions: ["electrical engineering", "physics"],
-                location: "Smiljan, Austrian Empire",
-                birthDate: "1856-07-10",
-                deathDate: "1943-01-07",
-                published: "2016-06-05T17:00:00+05:00"
-            },
-            {
-                name: "Pierre Curie",
-                displayName: "P. Curie",
-                branch: "physical",
-                professions: ["crystallography", "radioactivity", "physics", "chemistry"],
-                location: " Paris, France",
-                birthDate: "1859-05-15",
-                deathDate: "1906-04-19",
                 published: "2016-06-05T17:00:00+05:00"
             },
             {
@@ -1013,6 +1061,26 @@ angular
                 birthDate: "1871-08-30",
                 deathDate: "1937-10-19",
                 published: "2016-06-05T17:00:00+05:00"
+            },
+            {
+                name: "Elise Meitner",
+                displayName: "Meitner",
+                branch: "physical",
+                professions: ["nuclear physics", "chemistry", "physics"],
+                location: "Vienna, Austria-Hungary",
+                birthDate: "1878-11-07",
+                deathDate: "1968-10-27",
+                published: "2017-02-03T17:00:00+05:00"
+            },
+            {
+                name: "Otto Hahn",
+                displayName: "Hahn",
+                branch: "physical",
+                professions: ["chemistry", "nuclear physics"],
+                location: "Frankfurt, Germany",
+                birthDate: "1879-03-08",
+                deathDate: "1968-07-28", 
+                published: "2017-02-03T17:00:00+05:00"
             },
             {
                 name: "Albert Einstein",
@@ -1342,13 +1410,13 @@ angular
             // While there remain elements to shuffle…
             while (m) {
 
-            // Pick a remaining element…
-            i = Math.floor(Math.random() * m--);
+                // Pick a remaining element…
+                i = Math.floor(Math.random() * m--);
 
-            // And swap it with the current element.
-            t = array[m];
-                array[m] = array[i];
-                array[i] = t;
+                // And swap it with the current element.
+                t = array[m];
+                    array[m] = array[i];
+                    array[i] = t;
             }
 
             return array;
@@ -1365,7 +1433,7 @@ angular
                 }
             }
 
-            array = shuffle(array);
+            //array = shuffle(array);
 
             return array
         }

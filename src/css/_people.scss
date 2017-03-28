@@ -43,16 +43,34 @@
 	}
 }
 
-.person--md {
+.person--md--classical {
 	@extend .person;
-	margin-top: -19px;
+	width: 128px;
+}
+
+.person--md--medieval {
+	@extend .person;
+	width: 112px;
+}
+
+.person--md--renaissance {
+	@extend .person;
+	width: 96px;
+}
+
+.person--md--industrial {
+	@extend .person;
+	width: 80px;
+}
+
+.person--md--modern {
+	@extend .person;
+	width: 80px;
 }
 
 .person--lg {
 	@extend .person;
-	cursor: pointer;
-	margin-top: -19px;
-	//z-index: 1;
+	width: 160px;
 }
 
 .person__avatar {
@@ -79,6 +97,7 @@
 }
 
 .person__avatar-animation {
+	-webkit-backface-visibility: hidden;
 	border: 2px dotted #888;
 	border-radius: 100%;
 	bottom: 0;

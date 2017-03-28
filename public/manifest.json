@@ -1,5 +1,21 @@
 {
-	"name": "science-time",
+	"manifest_version": 2,
+	"version": "0",
+	"version_name": "beta",
+
+	"name": "Science Time",
+	"short_name": "Science Time",
+	"dir": "ltr",
+	"lang": "en-US",
+	"default_locale": "en",
+	"description": "A brief history of science",
+	"author": "Andrew McConville",
+
+	"start_url": "/",
+	"theme_color": "#000000",
+	"background_color": "#FFFFFF",
+	"display": "standalone",
+	"orientation": "portrait-primary",
 	"icons": [
 		{
 			"src": "\/android-chrome-36x36.png",
