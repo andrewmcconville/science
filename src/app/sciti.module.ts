@@ -3,18 +3,20 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { AppComponent } from './app.component';
+import { ScitiComponent } from './sciti.component';
+import { routing, scitiRoutingProviders } from './sciti.routes';
 
 @NgModule({
   declarations: [
-    AppComponent
+    ScitiComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [scitiRoutingProviders],
+  bootstrap: [ScitiComponent]
 })
-export class AppModule { }
+export class ScitiModule { }
