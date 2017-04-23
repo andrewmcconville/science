@@ -1,13 +1,23 @@
 <p>time machine works!</p>
 
 <ul>
-  <li><a [routerLink]="['/']">root</a></li>
+  <li class="flex flex-center-center">
+    <a class="button" [routerLink]="['/']">root</a>
+  </li>
 
-  <li><a [routerLink]="['/time-machine']">time machine</a></li>
-  <li><a [routerLink]="['/time-machine/child']">child</a></li>
+  <li class="flex flex-center-center">
+    <a class="button" [routerLink]="['/time-machine']">time machine</a>
+  </li>
+  <li class="flex flex-center-center">
+    <a class="button" [routerLink]="['/time-machine/child']">child</a>
+  </li>
 
-  <li><a [routerLink]="['/timeline']">timeline</a></li>
-  <li><a [routerLink]="['/timeline/luminary']">luminary</a></li>
+  <li class="flex flex-center-center">
+    <a class="button" [routerLink]="['/timeline']">timeline</a>
+  </li>
+  <li class="flex flex-center-center">
+    <a class="button" [routerLink]="['/timeline/luminary']">luminary</a>
+  </li>
 </ul>
 
 <router-outlet></router-outlet>
