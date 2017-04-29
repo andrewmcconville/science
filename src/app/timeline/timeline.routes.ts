@@ -5,13 +5,9 @@ import { LuminaryComponent } from './luminary/luminary.component';
 
 const timelineRoutes: Routes = [
   {
-    path: '',
-    component: TimelineComponent,
+    path: '', component: TimelineComponent,
     children: [
-      {
-        path: 'luminary',
-        component: LuminaryComponent
-      }
+      { path: 'luminary', component: LuminaryComponent }
     ]
   }
 ];

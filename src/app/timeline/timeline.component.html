@@ -2,21 +2,21 @@
 
 <ul>
   <li class="flex flex-center-center">
-    <a class="button" [routerLink]="['/']">root</a>
+    <a class="button" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">root</a>
   </li>
 
   <li class="flex flex-center-center">
-    <a class="button" [routerLink]="['/time-machine']">time machine</a>
+    <a class="button" [routerLink]="['/time-machine']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">time machine</a>
   </li>
   <li class="flex flex-center-center">
-    <a class="button" [routerLink]="['/time-machine/child']">child</a>
+    <a class="button" [routerLink]="['/time-machine/child']" routerLinkActive="active">child</a>
   </li>
 
   <li class="flex flex-center-center">
-    <a class="button" [routerLink]="['/timeline']">timeline</a>
+    <a class="button" [routerLink]="['/timeline']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">timeline</a>
   </li>
   <li class="flex flex-center-center">
-    <a class="button" [routerLink]="['/timeline/luminary']">luminary</a>
+    <a class="button" [routerLink]="['/timeline/luminary']" routerLinkActive="active">luminary</a>
   </li>
 </ul>
 

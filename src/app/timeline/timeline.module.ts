@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { timelineRouting } from './timeline.routes';
 
@@ -10,7 +9,6 @@ import { LuminaryComponent } from './luminary/luminary.component';
 
 @NgModule({
   imports: [
-    CommonModule,
     timelineRouting
   ],
   declarations: [
