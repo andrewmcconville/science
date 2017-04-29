@@ -5,8 +5,12 @@ import { timelineRouting } from './timeline.routes';
 
 import { TimelineComponent } from './timeline.component';
 import { UiTimelineComponent } from './ui-timeline/ui-timeline.component';
-import { UiUserComponent } from './ui-user/ui-user.component';
 import { LuminaryComponent } from './luminary/luminary.component';
+import { UserControlsComponent } from './user-controls/user-controls.component';
+import { UserLogComponent } from './user-log/user-log.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserSettingsComponent } from './user-settings/user-settings.component';
+import { UserStatsComponent } from './user-stats/user-stats.component';
 
 @NgModule({
   imports: [
@@ -17,7 +21,11 @@ import { LuminaryComponent } from './luminary/luminary.component';
     TimelineComponent,
     LuminaryComponent,
     UiTimelineComponent,
-    UiUserComponent
+    UserControlsComponent,
+    UserLogComponent,
+    UserListComponent,
+    UserSettingsComponent,
+    UserStatsComponent
   ]
 })
 export class TimelineModule { }

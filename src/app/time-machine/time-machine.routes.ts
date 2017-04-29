@@ -5,13 +5,9 @@ import { ChildComponent } from './child/child.component';
 
 const timeMachineRoutes: Routes = [
   {
-    path: '',
-    component: TimeMachineComponent,
+    path: '', component: TimeMachineComponent,
     children: [
-      {
-        path: 'child',
-        component: ChildComponent
-      }
+      { path: 'child', component: ChildComponent }
     ]
   }
 ];

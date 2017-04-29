@@ -8,5 +8,5 @@ import { ViewEncapsulation } from '@angular/core';
   styleUrls: ['./sciti.component.scss']
 })
 export class ScitiComponent {
-  title = 'Sciti works!';
+  title = 'Sci-ti works!';
 }
