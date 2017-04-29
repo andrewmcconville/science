@@ -1,0 +1,11 @@
+<div>user ui<div>
+
+<button (click)="toggleStats()">user</button>
+<button (click)="toggleList()">list</button>
+<button (click)="toggleLog()">log</button>
+<button (click)="toggleSettings()">settings</button>
+
+<sciti-user-stats *ngIf="user.showStats"></sciti-user-stats>
+<sciti-user-list *ngIf="user.showList"></sciti-user-list>
+<sciti-user-log *ngIf="user.showLog"></sciti-user-log>
+<sciti-user-settings *ngIf="user.showSettings"></sciti-user-settings>

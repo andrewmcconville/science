@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { ScitiComponent } from './sciti.component';
@@ -12,7 +11,6 @@ import { routing, scitiRoutingProviders } from './sciti.routes';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     HttpModule,
     routing
   ],
