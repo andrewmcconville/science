@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { timelineRouting } from './timeline.routes';
 
 import { TimelineComponent } from './timeline.component';
-import { UiTimelineComponent } from './ui-timeline/ui-timeline.component';
+import { TimelineControlsComponent } from './timeline-controls/timeline-controls.component';
+import { TimelineDataComponent } from './timeline-data/timeline-data.component';
 import { LuminaryComponent } from './luminary/luminary.component';
 import { UserControlsComponent } from './user-controls/user-controls.component';
 import { UserLogComponent } from './user-log/user-log.component';
@@ -19,8 +20,10 @@ import { UserStatsComponent } from './user-stats/user-stats.component';
   ],
   declarations: [
     TimelineComponent,
+    TimelineControlsComponent,
+    TimelineDataComponent,
     LuminaryComponent,
-    UiTimelineComponent,
+    TimelineControlsComponent,
     UserControlsComponent,
     UserLogComponent,
     UserListComponent,

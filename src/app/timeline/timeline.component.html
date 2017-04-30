@@ -1,26 +1,6 @@
-<p>timeline works!</p>
-
-<ul>
-  <li class="flex flex-center-center">
-    <a class="button" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">root</a>
-  </li>
-
-  <li class="flex flex-center-center">
-    <a class="button" [routerLink]="['/time-machine']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">time machine</a>
-  </li>
-  <li class="flex flex-center-center">
-    <a class="button" [routerLink]="['/time-machine/child']" routerLinkActive="active">child</a>
-  </li>
-
-  <li class="flex flex-center-center">
-    <a class="button" [routerLink]="['/timeline']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">timeline</a>
-  </li>
-  <li class="flex flex-center-center">
-    <a class="button" [routerLink]="['/timeline/luminary']" routerLinkActive="active">luminary</a>
-  </li>
-</ul>
+<sciti-timeline-data></sciti-timeline-data>
 
 <sciti-user-controls></sciti-user-controls>
-<sciti-ui-timeline></sciti-ui-timeline>
+<sciti-timeline-controls></sciti-timeline-controls>
 
 <router-outlet></router-outlet>
