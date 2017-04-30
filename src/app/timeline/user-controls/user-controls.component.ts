@@ -12,7 +12,7 @@ export class UserControlsComponent {
         showList: false,
         showLog: false,
         showSettings: false
-    }
+    };
 
     @HostListener('window:keypress', ['$event'])
     keyPress(event: KeyboardEvent) {
@@ -39,7 +39,7 @@ export class UserControlsComponent {
     }
 
     toggleStats(): void {
-        if(this.user.showStats) {
+        if (this.user.showStats) {
             this.closeAll();
         } else {
             this.closeAll();
@@ -48,7 +48,7 @@ export class UserControlsComponent {
     }
 
     toggleList(): void {
-        if(this.user.showList) {
+        if (this.user.showList) {
             this.closeAll();
         } else {
             this.closeAll();
@@ -57,7 +57,7 @@ export class UserControlsComponent {
     }
 
     toggleLog(): void {
-        if(this.user.showLog) {
+        if (this.user.showLog) {
             this.closeAll();
         } else {
             this.closeAll();
@@ -66,7 +66,7 @@ export class UserControlsComponent {
     }
 
     toggleSettings(): void {
-        if(this.user.showSettings) {
+        if (this.user.showSettings) {
             this.closeAll();
         } else {
             this.closeAll();
