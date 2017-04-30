@@ -1,3 +1,9 @@
-//helpers
+// variables
+@import "./styles/_colors.scss";
+
+// resets
+@import "./styles/_google-fonts.scss";
 @import "./styles/_reset.scss";
+
+// helpers
 @import "./styles/_flexbox.scss";

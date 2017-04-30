@@ -1,5 +1,11 @@
-<ul>
-    <li class="luminary" [style.top]="luminary.offset + 'px'" *ngFor="let luminary of luminaries">
-        <div>{{luminary.birthDate}} - {{luminary.displayName || luminary.name}}</div>
-    </li>
-</ul>
+<div class="timeline-data__luminaries">
+    <div class="timeline-data__luminaries-inner">
+        <sciti-timeline-card
+            [ngClass]="{'timeline-card__hero': luminary.isHero}"
+            [style.top]="luminary.offsetTop + 'px'"
+            [style.left]="luminary.offsetLeft + '%'"
+            *ngFor="let luminary of luminaries; let i = index"
+            [luminary]="luminary">
+        </sciti-timeline-card>
+    </div>
+</div>

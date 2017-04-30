@@ -1,0 +1,74 @@
+@import "../../styles/_colors.scss";
+
+:host {
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0 2px 0 2px rgba(0, 0, 0, 0.08);
+    position: absolute;
+}
+
+:host.timeline-card__hero {
+    z-index: 1;
+}
+
+.timeline-card__link {
+    cursor: pointer;
+    display: block;
+}
+
+.timeline-card__header {
+    color: $neutral;
+    height: 20px;
+    font-size: 10px;
+    font-weight: 300;
+    text-transform: capitalize;
+    padding: 0 6px;
+}
+
+.timeline-card__header--hero {
+    color: $secondary;
+    height: 20px;
+    font-size: 10px;
+    font-weight: 300;
+    text-transform: capitalize;
+    padding: 0 6px;
+}
+
+.timeline-card__name {
+    background-color: $neutral-lighter;
+    color: $primary;
+    height: 30px;
+    font-size: 14px;
+    padding: 0 6px;
+    width: 118px;
+}
+
+.timeline-card__name--hero {
+    background: linear-gradient(-13deg, $primary 0%, $secondary 100%);
+    color: #fff;
+    height: 50px;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 0 6px;
+    width: 158px;
+}
+
+.timeline-card__status {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    height: 8px;
+    width: 8px;
+}
+
+.timeline-card__status--new {
+    @extend .timeline-card__status;
+    background-color: #fff;
+    border-color: $neutral;
+}
+
+.timeline-card__status--read {
+    @extend .timeline-card__status;
+    background-color: $neutral;
+    border-color: #fff;
+}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ILuminary } from './luminary.model';
+import { ILuminary } from '../luminary/luminary.model';
 import { luminaries } from '../../api/luminaries';
 
 @Component({
@@ -14,19 +14,41 @@ export class TimelineDataComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
-        console.dir(luminaries.reverse());
-        this.luminaries.forEach((luminary: ILuminary) => {
-            luminary.offset = this.setVerticalOffset(luminary.birthDate);
+        this.luminaries.forEach((luminary: ILuminary, index: number) => {
+            luminary.offsetTop = this.setOffsetTop(luminary.birthDate);
+            luminary.offsetLeft = this.setOffsetLeft(index);
         });
     }
 
-    setVerticalOffset(birthDate: string): number {
-        let dateFull: Date = new Date(birthDate);
-        let yearUTC: number = dateFull.getUTCFullYear();
-        //let monthUTC: number = dateFull.getUTCMonth();
-        //let dateUTC: number = dateFull.getUTCDate();
-        let offset: number = (2000 - yearUTC) * 4;
+    setOffsetTop(birthDate: string): number {
+        const dateFull: Date = new Date(birthDate);
+        const yearUTC: number = dateFull.getUTCFullYear();
+        const pixelsPerYear: number = 24;
+        let offsetTop: number = ((1921 - yearUTC) * pixelsPerYear);
 
-        return offset;
+        if(yearUTC < 2000 && yearUTC >= 1900) {
+            offsetTop = (offsetTop / 1) - ((dateFull.getUTCMonth() + 1) * pixelsPerYear / 12);
+        } else if(yearUTC < 1900 && yearUTC >= 1700) {
+            offsetTop = (offsetTop / 1) - ((dateFull.getUTCMonth() + 1) * pixelsPerYear / 12);
+        } else if(yearUTC < 1700 && yearUTC >= 1300) {
+            offsetTop = (offsetTop / 1) - ((dateFull.getUTCMonth() + 1) * pixelsPerYear / 12);
+        } else if(yearUTC < 1300 && yearUTC >= 500) {
+            offsetTop = (offsetTop / 1) - ((dateFull.getUTCMonth() + 1) * pixelsPerYear / 12);
+        } else {
+            offsetTop = (offsetTop / 1) - ((dateFull.getUTCMonth() + 1) * pixelsPerYear / 12);
+        }
+
+        return offsetTop;
+    }
+
+    setOffsetLeft(index: number): number {
+        const colunms: number = 8;
+        const offsetLeft: number = (index % colunms / colunms * 100) + this.randomInteger(-6, 6);
+
+        return offsetLeft;
+    }
+
+    randomInteger(min: number, max: number): number {
+        return 0 //Math.floor(Math.random() * (max - min + 1) + min);
     }
 }

@@ -1,3 +1,9 @@
-.luminary {
-    position: absolute;
+.timeline-data__luminaries {
+    position: relative;
+    width: 100%;
+}
+
+.timeline-data__luminaries-inner {
+    margin: 0 6%;
+    position: relative;
 }

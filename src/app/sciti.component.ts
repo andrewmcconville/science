@@ -7,6 +7,4 @@ import { ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
   styleUrls: ['./sciti.component.scss']
 })
-export class ScitiComponent {
-  title = 'Sci-ti works!';
-}
+export class ScitiComponent { }
