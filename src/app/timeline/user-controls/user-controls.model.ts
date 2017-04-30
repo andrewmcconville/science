@@ -1,6 +1,6 @@
 export interface IUserControls {
-    showStats: boolean,
-    showList: boolean,
-    showLog: boolean,
-    showSettings: boolean
+    showStats: boolean;
+    showList: boolean;
+    showLog: boolean;
+    showSettings: boolean;
 }

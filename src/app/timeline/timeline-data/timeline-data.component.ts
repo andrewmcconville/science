@@ -10,5 +10,6 @@ import { luminaries } from '../../api/luminaries';
 })
 export class TimelineDataComponent {
     public luminaries: Array<ILuminary> = luminaries;
+
     constructor() { }
 }
