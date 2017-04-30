@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { timelineRouting } from './timeline.routes';
 
+import { TimelineCardComponent } from './timeline-card/timeline-card.component';
 import { TimelineComponent } from './timeline.component';
 import { TimelineControlsComponent } from './timeline-controls/timeline-controls.component';
 import { TimelineDataComponent } from './timeline-data/timeline-data.component';
@@ -19,6 +20,7 @@ import { UserStatsComponent } from './user-stats/user-stats.component';
     timelineRouting
   ],
   declarations: [
+    TimelineCardComponent,
     TimelineComponent,
     TimelineControlsComponent,
     TimelineDataComponent,

@@ -1,0 +1,10 @@
+<a class="timeline-card__link">
+    <header class="timeline-card__header flex flex-between-center"
+        [ngClass]="{'timeline-card__header': !luminary.isHero, 'timeline-card__header--hero': luminary.isHero}">
+        {{luminary.professions[0]}}
+        <span class="timeline-card__status--new"></span>
+    </header>
+    <div class="flex flex-start-center"
+        [ngClass]="{'timeline-card__name': !luminary.isHero, 'timeline-card__name--hero': luminary.isHero}">
+    {{luminary.displayName || luminary.name}}</div>
+</a>
