@@ -1,6 +1,5 @@
-<div>timeline data</div>
 <ul>
-    <li *ngFor="let luminary of luminaries">
-        {{luminary.displayName || luminary.name}}
+    <li class="luminary" [style.top]="luminary.offset + 'px'" *ngFor="let luminary of luminaries">
+        <div>{{luminary.birthDate}} - {{luminary.displayName || luminary.name}}</div>
     </li>
 </ul>
