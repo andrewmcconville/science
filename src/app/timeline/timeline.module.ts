@@ -7,6 +7,7 @@ import { TimelineCardComponent } from './timeline-card/timeline-card.component';
 import { TimelineComponent } from './timeline.component';
 import { TimelineControlsComponent } from './timeline-controls/timeline-controls.component';
 import { TimelineDataComponent } from './timeline-data/timeline-data.component';
+import { TimelineScaleComponent } from './timeline-scale/timeline-scale.component';
 import { LuminaryComponent } from './luminary/luminary.component';
 import { UserControlsComponent } from './user-controls/user-controls.component';
 import { UserLogComponent } from './user-log/user-log.component';
@@ -24,6 +25,7 @@ import { UserStatsComponent } from './user-stats/user-stats.component';
     TimelineComponent,
     TimelineControlsComponent,
     TimelineDataComponent,
+    TimelineScaleComponent,
     LuminaryComponent,
     TimelineControlsComponent,
     UserControlsComponent,

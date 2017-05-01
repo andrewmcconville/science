@@ -1,5 +1,8 @@
 @import "../../styles/_colors.scss";
 
+$base-height: 9px;
+$base-width: 30px;
+
 :host {
     background-color: #fff;
     border: 1px solid #fff;
@@ -7,7 +10,12 @@
     position: absolute;
 }
 
-:host.timeline-card__hero {
+:host.timeline-card {
+    width: $base-width * 3;
+}
+
+:host.timeline-card--hero {
+    width: $base-width * 4;
     z-index: 1;
 }
 
@@ -17,40 +25,50 @@
 }
 
 .timeline-card__header {
-    color: $neutral;
-    height: 20px;
     font-size: 10px;
     font-weight: 300;
-    text-transform: capitalize;
     padding: 0 6px;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+.timeline-card__header--normal {
+    @extend .timeline-card__header;
+    color: $neutral;
+    height: $base-height * 2;
 }
 
 .timeline-card__header--hero {
+    @extend .timeline-card__header;
     color: $secondary;
-    height: 20px;
-    font-size: 10px;
-    font-weight: 300;
-    text-transform: capitalize;
-    padding: 0 6px;
+    height: $base-height * 2;
 }
 
 .timeline-card__name {
     background-color: $neutral-lighter;
     color: $primary;
-    height: 30px;
+    height: $base-height * 3;
     font-size: 14px;
-    padding: 0 6px;
-    width: 118px;
+    overflow: hidden;
+    padding: 5px 6px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .timeline-card__name--hero {
     background: linear-gradient(-13deg, $primary 0%, $secondary 100%);
     color: #fff;
-    height: 50px;
+    height: $base-height * 5;
     font-size: 22px;
     font-weight: 600;
-    padding: 0 6px;
-    width: 158px;
+    padding: 9px 6px;
+}
+
+.timeline-card__profession {
+    margin-right: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .timeline-card__status {
