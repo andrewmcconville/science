@@ -10,6 +10,7 @@ import { luminaries } from '../../api/luminaries';
 })
 export class TimelineDataComponent implements OnInit {
     public luminaries: Array<ILuminary> = luminaries;
+    public dateScale: Array<number> = this.scaleYears();
 
     constructor() { }
 
