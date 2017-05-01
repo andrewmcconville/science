@@ -18,38 +18,56 @@ export class TimelineDataComponent implements OnInit {
         this.luminaries.forEach((luminary: ILuminary, index: number) => {
             luminary.offsetTop = this.setOffsetTop(luminary.birthDate);
             luminary.offsetLeft = this.setOffsetLeft(index);
+
+            // if( luminary.name.charAt((luminary.name.indexOf(' ')) + 1) == 'v' ||
+            //     luminary.name.charAt((luminary.name.indexOf(' ')) + 1) == 'd' ||
+            //     luminary.name.charAt((luminary.name.indexOf(' ')) + 1) == 'o' ||
+            //     luminary.name.charAt((luminary.name.indexOf(' ')) + 1) == 't' ||
+            //     (luminary.name.charAt((luminary.name.indexOf(' ')) + 1) == 'L' && luminary.name.charAt((luminary.name.indexOf(' ')) + 2) == 'e' && luminary.name.charAt((luminary.name.indexOf(' ')) + 3) == ' ')
+            // ) {
+            //     luminary.url = luminary.name.toLowerCase().replace(/\s/g, "-");
+            //     console.log(luminary.url)
+            // } else if (luminary.name.indexOf(' ') == -1) {
+            //     luminary.url = luminary.name.toLowerCase();
+            //     console.log(luminary.url);
+            // } else {
+            //     const firstName: string = luminary.name.slice(0, luminary.name.indexOf(' '));
+            //     const lastName: string = luminary.name.slice(luminary.name.lastIndexOf(' ') + 1, luminary.name.length);
+            //     luminary.url = firstName.toLowerCase()+'-'+lastName.toLowerCase();
+            //     console.log(luminary.url)
+            // }
+
         });
     }
 
-    setOffsetTop(birthDate: string): number {
-        const dateFull: Date = new Date(birthDate);
-        const yearUTC: number = dateFull.getUTCFullYear();
+    setOffsetTop(dateUTC: string): number {
+        const date: Date = new Date(dateUTC);
+        const year: number = date.getUTCFullYear();
+        const month: number = date.getUTCMonth();
         const pixelsPerYear: number = 24;
-        let offsetTop: number = ((1921 - yearUTC) * pixelsPerYear);
-
-        if(yearUTC < 2000 && yearUTC >= 1900) {
-            offsetTop = (offsetTop / 1) - ((dateFull.getUTCMonth() + 1) * pixelsPerYear / 12);
-        } else if(yearUTC < 1900 && yearUTC >= 1700) {
-            offsetTop = (offsetTop / 1) - ((dateFull.getUTCMonth() + 1) * pixelsPerYear / 12);
-        } else if(yearUTC < 1700 && yearUTC >= 1300) {
-            offsetTop = (offsetTop / 1) - ((dateFull.getUTCMonth() + 1) * pixelsPerYear / 12);
-        } else if(yearUTC < 1300 && yearUTC >= 500) {
-            offsetTop = (offsetTop / 1) - ((dateFull.getUTCMonth() + 1) * pixelsPerYear / 12);
-        } else {
-            offsetTop = (offsetTop / 1) - ((dateFull.getUTCMonth() + 1) * pixelsPerYear / 12);
-        }
+        const offsetTop: number = ((1921 - year) * pixelsPerYear) - ((month + 1) * pixelsPerYear / 12);
 
         return offsetTop;
     }
 
     setOffsetLeft(index: number): number {
-        const colunms: number = 8;
-        const offsetLeft: number = (index % colunms / colunms * 100) + this.randomInteger(-6, 6);
+        const colunms: number = 3;
+        const offsetLeft: number = (index % colunms / colunms * 100) + (this.randomInteger(-60, 60) / 10);
 
         return offsetLeft;
     }
 
     randomInteger(min: number, max: number): number {
-        return 0 //Math.floor(Math.random() * (max - min + 1) + min);
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    scaleYears(): Array<number> {
+        let years: Array<number> = [];
+
+        for (let i = 2000; i > -630; i -= 10) {
+            years.push(Math.abs(i));
+        }
+
+        return years;
     }
 }

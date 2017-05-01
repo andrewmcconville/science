@@ -1,10 +1,11 @@
-<a class="timeline-card__link">
+<a class="timeline-card__link" [routerLink]="['/timeline/luminary', luminary.url]">
     <header class="timeline-card__header flex flex-between-center"
-        [ngClass]="{'timeline-card__header': !luminary.isHero, 'timeline-card__header--hero': luminary.isHero}">
-        {{luminary.professions[0]}}
-        <span class="timeline-card__status--new"></span>
+        [ngClass]="{'timeline-card__header--normal': !luminary.isHero, 'timeline-card__header--hero': luminary.isHero}">
+        <span class="timeline-card__profession">{{luminary.professions[0]}}</span>
+        <span class="timeline-card__status--new flex-noshrink"></span>
     </header>
-    <div class="flex flex-start-center"
+    <div class=""
         [ngClass]="{'timeline-card__name': !luminary.isHero, 'timeline-card__name--hero': luminary.isHero}">
-    {{luminary.displayName || luminary.name}}</div>
+        {{luminary.displayName || luminary.name}}
+    </div>
 </a>

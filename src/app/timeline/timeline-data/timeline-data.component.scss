@@ -1,9 +1,25 @@
+@import "../../styles/_colors.scss";
+
 .timeline-data__luminaries {
     position: relative;
-    width: 100%;
+
+    @media(max-width: 399px) { width: 100%; }
+    @media(min-width: 400px) { width: 50%; }
 }
 
 .timeline-data__luminaries-inner {
     margin: 0 6%;
     position: relative;
+}
+
+.timeline-data__scale {
+    color: $neutral;
+    font-size: 12px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: -1896px;
+    //width: 30px;
 }

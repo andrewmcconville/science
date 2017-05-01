@@ -7,7 +7,7 @@ const timelineRoutes: Routes = [
   {
     path: '', component: TimelineComponent,
     children: [
-      { path: 'luminary', component: LuminaryComponent }
+      { path: 'luminary/:url', component: LuminaryComponent }
     ]
   }
 ];

@@ -14,4 +14,5 @@ export interface ILuminary {
     offsetLeft?: number;
     offsetTop?: number;
     trivia?: string;
+    url?: string;
 }
