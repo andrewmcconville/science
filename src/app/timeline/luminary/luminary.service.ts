@@ -7,7 +7,7 @@ import { ILuminary } from './luminary.model';
 export class LuminaryService {
 
     constructor() { }
-    
+
     getLuminaries(): Array<ILuminary> {
         return luminaries;
     }
@@ -16,11 +16,11 @@ export class LuminaryService {
         let match: ILuminary;
 
         luminaries.map((luminary: ILuminary) => {
-            if(luminary.url === url) {
-                match = luminary
+            if (luminary.url === url) {
+                match = luminary;
             }
         });
 
-        return match
+        return match;
     }
 }

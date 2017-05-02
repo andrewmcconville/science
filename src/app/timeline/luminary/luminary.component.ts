@@ -36,6 +36,6 @@ export class LuminaryComponent implements OnInit {
             return {url: params['url']};
         }).subscribe((params: Params) => {
             this.luminary = this.luminaryService.getLuminaryByURL(params.url);
-        })
+        });
     }
 }

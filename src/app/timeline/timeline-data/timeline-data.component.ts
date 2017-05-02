@@ -43,7 +43,7 @@ export class TimelineDataComponent implements OnInit {
     }
 
     scaleYears(): Array<number> {
-        let years: Array<number> = [];
+        const years: Array<number> = [];
 
         for (let i = 2000; i > -630; i -= 10) {
             years.push(Math.abs(i));
