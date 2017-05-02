@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 import { ILuminary } from './luminary.model';
+import { LuminaryService } from '../luminary/luminary.service';
 
 @Component({
     selector: 'sciti-luminary',
@@ -14,6 +15,7 @@ export class LuminaryComponent implements OnInit {
     luminary: ILuminary;
 
     constructor(
+        private luminaryService: LuminaryService,
         private route: ActivatedRoute,
         private router: Router
     ) { }
@@ -27,27 +29,13 @@ export class LuminaryComponent implements OnInit {
 
     ngOnInit(): void {
         this.getLuminaryByRouteParam();
-        this.luminary = {
-            'name': 'Rosalind Franklin',
-            'displayName': 'Franklin',
-            'branch': 'physical',
-            'professions': [
-                'chemistry',
-                'crystallography'
-            ],
-            'location': 'Notting Hill, London, England, UK',
-            'birthDate': '1920-07-25',
-            'deathDate': '1958-04-16',
-            'published': '2016-06-05T17:00:00+05:00'
-        };
     }
 
-    private getLuminaryByRouteParam(): void {
+    getLuminaryByRouteParam(): void {
         this.route.params.map((params: Params) => {
-            return params['url'];
+            return {url: params['url']};
         }).subscribe((params: Params) => {
-            console.log(params);
+            this.luminary = this.luminaryService.getLuminaryByURL(params.url);
         })
     }
-
 }

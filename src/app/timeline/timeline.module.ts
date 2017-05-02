@@ -9,6 +9,7 @@ import { TimelineControlsComponent } from './timeline-controls/timeline-controls
 import { TimelineDataComponent } from './timeline-data/timeline-data.component';
 import { TimelineScaleComponent } from './timeline-scale/timeline-scale.component';
 import { LuminaryComponent } from './luminary/luminary.component';
+import { LuminaryService } from './luminary/luminary.service';
 import { UserControlsComponent } from './user-controls/user-controls.component';
 import { UserLogComponent } from './user-log/user-log.component';
 import { UserListComponent } from './user-list/user-list.component';
@@ -33,6 +34,9 @@ import { UserStatsComponent } from './user-stats/user-stats.component';
     UserListComponent,
     UserSettingsComponent,
     UserStatsComponent
+  ],
+  providers: [
+    LuminaryService
   ]
 })
 export class TimelineModule { }
