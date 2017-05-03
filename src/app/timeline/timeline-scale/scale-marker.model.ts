@@ -1,4 +1,4 @@
 export interface IScaleMarker {
-    height: number,
-    period: number
+    height: number;
+    period: number;
 }

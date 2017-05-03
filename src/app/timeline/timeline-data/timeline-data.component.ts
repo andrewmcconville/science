@@ -17,7 +17,7 @@ export class TimelineDataComponent implements OnInit {
     public timelineScale: Array<IScaleMarker> = this.getScale();
 
     constructor(private luminaryService: LuminaryService) { }
-    
+
     @HostListener('window:keyup', ['$event'])
     keyUp(event: KeyboardEvent) {
         if (event.keyCode === 37) {
@@ -68,7 +68,7 @@ export class TimelineDataComponent implements OnInit {
     }
 
     setOffsetLeft(index: number): number {
-        return (index % this.colunms / this.colunms * 100);// + (this.randomInteger(-60, 60) / 10);
+        return (index % this.colunms / this.colunms * 100); // + (this.randomInteger(-60, 60) / 10);
     }
 
     randomInteger(min: number, max: number): number {
