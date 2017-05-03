@@ -2,6 +2,7 @@
 
 .timeline-data__luminaries {
     position: relative;
+    transform: translate3d(0, 0, 0);
 
     @media(max-width: 399px) { width: 100%; }
     @media(min-width: 400px) { width: 50%; }
@@ -20,6 +21,7 @@
     position: absolute;
     right: 0;
     text-align: center;
-    top: -1896px;
+    transform: translate3d(0, 0, 0);
+    //top: -1896px;
     //width: 30px;
 }
