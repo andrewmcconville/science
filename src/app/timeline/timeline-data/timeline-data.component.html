@@ -1,16 +1,17 @@
-<div class="timeline-data__scale">
+<div class="timeline-data__scale" [style.top]="(-1 * 8 * 10 * pixelsPerYear) + pixelsPerYear + 'px'">
     <sciti-timeline-scale
-        *ngFor="let date of dateScale"
-        [date]="date">
+        *ngFor="let marker of timelineScale"
+        [style.height]="marker.height + 'px'"
+        [period]="marker.period">
     </sciti-timeline-scale>
 </div>
 <div class="timeline-data__luminaries">
     <div class="timeline-data__luminaries-inner">
         <sciti-timeline-card
+            *ngFor="let luminary of luminaries"
             [ngClass]="{'timeline-card': !luminary.isHero, 'timeline-card--hero': luminary.isHero}"
             [style.top]="luminary.offsetTop + 'px'"
             [style.left]="luminary.offsetLeft + '%'"
-            *ngFor="let luminary of luminaries"
             [luminary]="luminary">
         </sciti-timeline-card>
     </div>
