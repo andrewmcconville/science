@@ -10,8 +10,8 @@
         <sciti-timeline-card
             *ngFor="let luminary of luminaries"
             [ngClass]="{'timeline-card': !luminary.isHero, 'timeline-card--hero': luminary.isHero}"
-            [style.transform]="'translate3d(0, ' + luminary.offsetTop + 'px, 0)'"
-            [style.left]="luminary.offsetLeft + '%'"
+            [style.transform]="'translate3d(' + luminary.offsetLeft + '%, ' + luminary.offsetTop + 'px, 0)'"
+            [style.width]="luminary.width + '%'"
             [luminary]="luminary">
         </sciti-timeline-card>
     </div>

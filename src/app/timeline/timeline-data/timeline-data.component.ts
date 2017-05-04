@@ -19,6 +19,15 @@ export class TimelineDataComponent implements OnInit {
 
     constructor(private luminaryService: LuminaryService) { }
 
+    @HostListener('window:keydown', ['$event'])
+    keyDown(event: KeyboardEvent) {
+        if (event.keyCode === 40) {
+            event.preventDefault();
+        } else if (event.keyCode === 38) {
+            event.preventDefault();
+        }
+    }
+
     @HostListener('window:keyup', ['$event'])
     keyUp(event: KeyboardEvent) {
         if (event.keyCode === 37) {
@@ -27,12 +36,12 @@ export class TimelineDataComponent implements OnInit {
         } else if (event.keyCode === 39) {
             this.colunms = this.colunms + 1;
             this.updateLuminariesHorizontal();
-        } else if (event.keyCode === 109 || event.keyCode === 189) {
+        } else if (event.keyCode === 109 || event.keyCode === 189 || event.keyCode === 40) {
             event.preventDefault();
             this.pixelsPerYear = this.pixelsPerYear / 2;
             this.updateLuminariesVertical();
             this.updateScale();
-        } else if (event.keyCode === 107 || event.keyCode === 187) {
+        } else if (event.keyCode === 107 || event.keyCode === 187 || event.keyCode === 38) {
             event.preventDefault();
             this.pixelsPerYear = this.pixelsPerYear * 2;
             this.updateLuminariesVertical();
@@ -49,6 +58,7 @@ export class TimelineDataComponent implements OnInit {
     updateLuminariesHorizontal(): void {
         this.luminaries.forEach((luminary: ILuminary, index: number) => {
             luminary.offsetLeft = this.getHorizontalOffset(index);
+            luminary.width = this.getWidth();
         });
     }
 
@@ -74,7 +84,12 @@ export class TimelineDataComponent implements OnInit {
     }
 
     getHorizontalOffset(index: number): number {
-        return (index % this.colunms / this.colunms * 100); // + (this.randomInteger(-60, 60) / 10);
+        return (index % this.colunms * 100); // + (this.randomInteger(-60, 60) / 10);
+        //return (index % this.colunms / this.colunms * 100); // + (this.randomInteger(-60, 60) / 10);
+    }
+
+    getWidth(): number {
+        return 1 / this.colunms * 100;
     }
 
     randomInteger(min: number, max: number): number {
