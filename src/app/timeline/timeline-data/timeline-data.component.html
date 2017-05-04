@@ -1,7 +1,7 @@
-<div class="timeline-data__scale" [style.top]="(-1 * 8 * 10 * pixelsPerYear) + pixelsPerYear + 'px'">
+<div class="timeline-data__scale">
     <sciti-timeline-scale
         *ngFor="let marker of timelineScale"
-        [style.height]="marker.height + 'px'"
+        [style.transform]="'translate3d(0, ' + marker.offsetTop + 'px, 0)'"
         [period]="marker.period">
     </sciti-timeline-scale>
 </div>
@@ -10,7 +10,7 @@
         <sciti-timeline-card
             *ngFor="let luminary of luminaries"
             [ngClass]="{'timeline-card': !luminary.isHero, 'timeline-card--hero': luminary.isHero}"
-            [style.top]="luminary.offsetTop + 'px'"
+            [style.transform]="'translate3d(0, ' + luminary.offsetTop + 'px, 0)'"
             [style.left]="luminary.offsetLeft + '%'"
             [luminary]="luminary">
         </sciti-timeline-card>

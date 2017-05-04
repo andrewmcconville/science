@@ -8,6 +8,7 @@ $base-width: 30px;
     border: 1px solid #fff;
     box-shadow: 0 2px 0 2px rgba(0, 0, 0, 0.08);
     position: absolute;
+    transition: transform 320ms ease-in-out;
 }
 
 :host.timeline-card {
