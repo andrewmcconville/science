@@ -2,5 +2,8 @@
 
 :host {
     border-top: 1px solid #fff;
-    display: block;
+    left: 0;
+    position: absolute;
+    transition: transform 320ms ease-in-out;
+    width: 100%;
 }

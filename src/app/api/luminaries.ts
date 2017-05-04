@@ -1590,7 +1590,7 @@ export const luminaries: Array<ILuminary> = [
             'philosophy'
         ],
         'location': 'Iran',
-        'birthDate': '000980',
+        'birthDate': '0980',
         'deathDate': '1037',
         'published': '2016-06-05T17:00:00+05:00',
         'url': 'avicenna'
@@ -1608,7 +1608,7 @@ export const luminaries: Array<ILuminary> = [
             'physics'
         ],
         'location': 'Basra, Buyid Emirate',
-        'birthDate': '000965',
+        'birthDate': '0965',
         'deathDate': '1040',
         'published': '2016-06-05T17:00:00+05:00',
         'url': 'abū-al-haytham'
@@ -1622,7 +1622,7 @@ export const luminaries: Array<ILuminary> = [
             'surgery'
         ],
         'location': 'Medina Azahara, Al-Andalus',
-        'birthDate': '000936',
+        'birthDate': '0936',
         'deathDate': '1013',
         'published': '2016-06-05T17:00:00+05:00',
         'url': 'abu-al-zahrawi'
@@ -1636,8 +1636,8 @@ export const luminaries: Array<ILuminary> = [
             'astronomy'
         ],
         'location': 'Harran',
-        'birthDate': '000826',
-        'deathDate': '00901-02-18',
+        'birthDate': '0826',
+        'deathDate': '0901-02-18',
         'published': '2016-06-05T17:00:00+05:00',
         'url': 'al-ṣābiʾ-al-ḥarrānī'
     },
@@ -1652,8 +1652,8 @@ export const luminaries: Array<ILuminary> = [
             'medicine'
         ],
         'location': 'Basra, Abbasid Caliphate',
-        'birthDate': '000801',
-        'deathDate': '00873',
+        'birthDate': '0801',
+        'deathDate': '0873',
         'published': '2016-06-05T17:00:00+05:00',
         'url': 'abu-al-kindī'
     },
@@ -1665,8 +1665,8 @@ export const luminaries: Array<ILuminary> = [
             'mathematics'
         ],
         'location': 'Khwarezm',
-        'birthDate': '000780',
-        'deathDate': '000650',
+        'birthDate': '0780',
+        'deathDate': '0650',
         'published': '2016-06-05T17:00:00+05:00',
         'url': 'muḥammad-al-khwārizmī'
     },
@@ -1677,8 +1677,8 @@ export const luminaries: Array<ILuminary> = [
             'medicine'
         ],
         'location': 'Byzantine Empire',
-        'birthDate': '000625',
-        'deathDate': '000690',
+        'birthDate': '0625',
+        'deathDate': '0690',
         'published': '2016-06-05T17:00:00+05:00',
         'url': 'paul-of-aegina'
     },
@@ -1690,8 +1690,8 @@ export const luminaries: Array<ILuminary> = [
             'astronomy'
         ],
         'location': 'Alexandria',
-        'birthDate': '000360',
-        'deathDate': '000415',
+        'birthDate': '0360',
+        'deathDate': '0415',
         'published': '2016-07-19T17:20:22+05:00',
         'url': 'hypatia'
     },
@@ -1706,8 +1706,8 @@ export const luminaries: Array<ILuminary> = [
             'anatomy'
         ],
         'location': 'Greek',
-        'birthDate': '000129',
-        'deathDate': '000216',
+        'birthDate': '0129',
+        'deathDate': '0216',
         'published': '2016-06-05T17:00:00+05:00',
         'url': 'galen-of-pergamon'
     },
@@ -1720,8 +1720,8 @@ export const luminaries: Array<ILuminary> = [
             'geography'
         ],
         'location': 'Alexandria, Egypt',
-        'birthDate': '000100',
-        'deathDate': '000170',
+        'birthDate': '0100',
+        'deathDate': '0170',
         'published': '2016-06-05T17:00:00+05:00',
         'url': 'ptolemy'
     },

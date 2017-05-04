@@ -13,6 +13,7 @@ import { LuminaryService } from '../luminary/luminary.service';
 export class TimelineDataComponent implements OnInit {
     public colunms: number = 3;
     public pixelsPerYear: number = 24;
+    public startYear: number = 1920;
     public luminaries: Array<ILuminary> = this.luminaryService.getLuminaries();
     public timelineScale: Array<IScaleMarker> = this.getScale();
 
@@ -22,52 +23,57 @@ export class TimelineDataComponent implements OnInit {
     keyUp(event: KeyboardEvent) {
         if (event.keyCode === 37) {
             this.colunms = this.colunms - 1;
-            console.log(this.colunms);
-            this.updateLuminaries();
+            this.updateLuminariesHorizontal();
         } else if (event.keyCode === 39) {
             this.colunms = this.colunms + 1;
-            console.log(this.colunms);
-            this.updateLuminaries();
-        } else if (event.keyCode === 40) {
+            this.updateLuminariesHorizontal();
+        } else if (event.keyCode === 109 || event.keyCode === 189) {
+            event.preventDefault();
             this.pixelsPerYear = this.pixelsPerYear / 2;
-            console.log(this.pixelsPerYear);
-            this.updateLuminaries();
+            this.updateLuminariesVertical();
             this.updateScale();
-        } else if (event.keyCode === 38) {
+        } else if (event.keyCode === 107 || event.keyCode === 187) {
+            event.preventDefault();
             this.pixelsPerYear = this.pixelsPerYear * 2;
-            console.log(this.pixelsPerYear);
-            this.updateLuminaries();
+            this.updateLuminariesVertical();
             this.updateScale();
         }
     }
 
     ngOnInit() {
-        this.updateLuminaries();
+        this.updateLuminariesHorizontal();
+        this.updateLuminariesVertical();
+        this.updateScale();
     }
 
-    updateLuminaries(): void {
+    updateLuminariesHorizontal(): void {
         this.luminaries.forEach((luminary: ILuminary, index: number) => {
-            luminary.offsetTop = this.setOffsetTop(luminary.birthDate);
-            luminary.offsetLeft = this.setOffsetLeft(index);
+            luminary.offsetLeft = this.getHorizontalOffset(index);
+        });
+    }
+
+    updateLuminariesVertical(): void {
+        this.luminaries.forEach((luminary: ILuminary, index: number) => {
+            luminary.offsetTop = this.getVerticalOffset(luminary.birthDate);
         });
     }
 
     updateScale(): void {
         this.timelineScale.forEach((marker: IScaleMarker) => {
-            marker.height = this.pixelsPerYear * 10;
+            marker.offsetTop = this.getVerticalOffset(marker.date);
         });
     }
 
-    setOffsetTop(dateUTC: string): number {
+    getVerticalOffset(dateUTC: string): number {
         const date: Date = new Date(dateUTC);
         const year: number = date.getUTCFullYear();
         const month: number = date.getUTCMonth();
-        const offsetTop: number = ((1921 - year) * this.pixelsPerYear) - ((month + 1) * this.pixelsPerYear / 12);
+        const offsetTop: number = ((this.startYear + 1 - year) * this.pixelsPerYear) - ((month + 1) * this.pixelsPerYear / 12);
 
         return offsetTop;
     }
 
-    setOffsetLeft(index: number): number {
+    getHorizontalOffset(index: number): number {
         return (index % this.colunms / this.colunms * 100); // + (this.randomInteger(-60, 60) / 10);
     }
 
@@ -76,11 +82,26 @@ export class TimelineDataComponent implements OnInit {
     }
 
     getScale(): Array<IScaleMarker> {
-        const years: Array<IScaleMarker> = [];
+        let years: Array<IScaleMarker> = [];
+        let date: string;
 
-        for (let i = 2000; i > -630; i -= 10) {
+        for (let i = 2000; i >= -640; i -= 10) {
+            if(i >= 1000) {
+                date = '' + i;
+            } else if(i < 1000 && i >= 100) {
+                date = '0' + i;
+            } else if(i < 100 && i > 0) {
+                date = '00' + i;
+            } else if(i === 0) {
+                date = '0000';
+            } else if(i < 0 && i > -100) {
+                date = '-0000' + Math.abs(i);
+            } else if(i <= -100 && i > -1000) {
+                date = '-000' + Math.abs(i);
+            }
+
             years.push({
-                height: this.pixelsPerYear * 10,
+                date: date + '-01-01',
                 period: Math.abs(i)
             });
         }
