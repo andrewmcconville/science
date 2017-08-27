@@ -1,0 +1,55 @@
+@import "./_colors.scss";
+
+.button,
+button {
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+    color: $primary;
+    cursor: pointer;
+    font-family: 'Assistant', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    padding: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: #fff;
+        color: #000;
+        text-decoration: none;
+    }
+
+    &:active {
+        background-color: #fff;
+        color: #000;
+        text-decoration: none;
+    }
+
+    &.active {
+        background-color: pink;
+    }
+}
+
+.button--hot-key {
+    @extend button;
+    border: 1px solid $primary;
+    border-radius: 100%;
+    height: 40px;
+    position: relative;
+    width: 40px; 
+}
+
+.button__hot-key {
+    background-color: #fff;
+    border: 1px solid $primary;
+    border-radius: 8px;
+    bottom: -2px;
+    font-size: 10px;
+    min-height: 16px;
+    min-width: 16px; 
+    padding: 2px;
+    position: absolute;
+    right: -2px;
+}

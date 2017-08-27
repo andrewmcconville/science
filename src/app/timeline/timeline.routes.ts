@@ -9,6 +9,9 @@ const timelineRoutes: Routes = [
     children: [
       { path: 'luminary/:url', component: LuminaryComponent }
     ]
+  },
+  {
+    path: 'aux', component: LuminaryComponent, outlet: 'user'
   }
 ];
 export const timelineRouting: ModuleWithProviders = RouterModule.forChild(timelineRoutes);

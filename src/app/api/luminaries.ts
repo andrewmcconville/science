@@ -1,6 +1,20 @@
 import { ILuminary } from '../timeline/luminary/luminary.model';
 
 export const luminaries: Array<ILuminary> = [
+    // {
+    //     'name': 'Sally Ride',
+    //     'displayName': 'Sally Ride',
+    //     'branch': 'physical',
+    //     'professions': [
+    //         'astronaut',
+    //         'optics'
+    //     ],
+    //     'location': 'Encino, California, US',
+    //     'birthDate': '1951-05-26',
+    //     'deathDate': '2010-07-23',
+    //     'published': '2017-08-19T17:10:51+05:00',
+    //     'url': 'sally-ride'
+    // },
     {
         'name': 'Rosalind Franklin',
         'displayName': 'Franklin',
@@ -168,6 +182,21 @@ export const luminaries: Array<ILuminary> = [
         'deathDate': '1964-04-14',
         'published': '2016-06-05T17:00:00+05:00',
         'url': 'rachel-carson'
+    },
+    {
+        'name': 'Grace Hopper',
+        'displayName': 'Hopper',
+        'isHero': true,
+        'branch': 'logical',
+        'professions': [
+            'computing',
+            'compilers'
+        ],
+        'location': 'New York City, New York, USA',
+        'birthDate': '1906-12-09',
+        'deathDate': '1992-01-01',
+        'published': '2017-08-19T17:10:44+05:00',
+        'url': 'grace-hopper'
     },
     {
         'name': 'Hans Bethe',
@@ -480,6 +509,7 @@ export const luminaries: Array<ILuminary> = [
     {
         'name': 'Marie Skłodowska Curie',
         'displayName': 'M. Curie',
+        'isHero': true,
         'branch': 'physical',
         'professions': [
             'radioactivity',
@@ -805,7 +835,7 @@ export const luminaries: Array<ILuminary> = [
     },
     {
         'name': 'Charles Darwin',
-        'isHero': true,
+        'isHero': false,
         'displayName': 'Darwin',
         'branch': 'life',
         'professions': [

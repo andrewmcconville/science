@@ -11,6 +11,11 @@ body {
     margin: 0;
 }
 
+pre {
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -23,37 +28,4 @@ p {
 
 a {
     text-decoration: none;
-}
-
-.button,
-button {
-    -webkit-appearance: none;
-    background-color: #fff;
-    border: 1px solid #000;
-    border-radius: 0;
-    color: #000;
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Assistant', sans-serif;
-    font-size: 16px;
-    line-height: 1;
-    padding: 8px 10px;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    &:hover {
-        background-color: #fff;
-        color: #000;
-        text-decoration: none;
-    }
-
-    &:active {
-        background-color: #fff;
-        color: #000;
-        text-decoration: none;
-    }
-
-    &.active {
-        background-color: pink;
-    }
 }

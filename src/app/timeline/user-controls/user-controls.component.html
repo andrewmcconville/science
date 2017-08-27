@@ -1,9 +1,23 @@
-<button (click)="toggleStats()">user</button>
-<button (click)="toggleList()">list</button>
-<button (click)="toggleLog()">log</button>
-<button (click)="toggleSettings()">settings</button>
+<button class="button--hot-key" (click)="toggleStats()">
+    Ch
+    <div class="button__hot-key">j</div>
+</button>
+<button class="button--hot-key" (click)="toggleList()">
+    Li
+    <div class="button__hot-key">k</div>
+</button>
+<button class="button--hot-key" (click)="toggleLog()">
+    Lo
+    <div class="button__hot-key">l</div>
+</button>
+<button class="button--hot-key" (click)="toggleSettings()">
+    Se
+    <div class="button__hot-key">esc</div>
+</button>
 
-<sciti-user-stats *ngIf="user.showStats"></sciti-user-stats>
-<sciti-user-list *ngIf="user.showList"></sciti-user-list>
-<sciti-user-log *ngIf="user.showLog"></sciti-user-log>
-<sciti-user-settings *ngIf="user.showSettings"></sciti-user-settings>
+<aside class="modal--user-controls">
+    <sciti-user-stats *ngIf="user.showStats" class="modal--basic"></sciti-user-stats>
+    <sciti-user-list *ngIf="user.showList" class="modal--basic"></sciti-user-list>
+    <sciti-user-log *ngIf="user.showLog" class="modal--basic"></sciti-user-log>
+    <sciti-user-settings *ngIf="user.showSettings" class="modal--basic"></sciti-user-settings>
+</aside>

@@ -1,0 +1,44 @@
+@import "./colors.scss";
+
+.modal {
+
+}
+
+.modal--basic {
+    background-color: #fff;
+    border: 2px solid #fff;
+    width: 100%;
+
+    @media(min-width: 400px) {
+        max-width: 320px;
+    }
+}
+
+.modal--user-controls {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    min-width: 320px;
+}
+
+.modal__header {
+    background-color: #fff;
+    border-bottom: 1px solid $neutral-lighter;
+    color: $neutral;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.modal__icon {
+    height: 36px;
+    width: 36px;
+}
+
+.modal__title {
+}
+
+.modal__close {
+    height: 36px;
+    width: 36px;
+}

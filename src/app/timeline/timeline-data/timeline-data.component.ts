@@ -13,7 +13,7 @@ import { LuminaryService } from '../luminary/luminary.service';
 export class TimelineDataComponent implements OnInit {
     public colunms: number = 3;
     public pixelsPerYear: number = 24;
-    public startYear: number = 1920;
+    public startYear: number = 1921;
     public luminaries: Array<ILuminary> = this.luminaryService.getLuminaries();
     public timelineScale: Array<IScaleMarker> = this.getScale();
 
