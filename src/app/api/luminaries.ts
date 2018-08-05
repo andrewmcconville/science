@@ -16,6 +16,19 @@ export const luminaries: Array<ILuminary> = [
     //     'url': 'sally-ride'
     // },
     {
+        'name': 'Douglas Engelbart',
+        'displayName': 'Engelbart',
+        'branch': 'logical',
+        'professions': [
+            'computing',
+        ],
+        'location': 'Portland, Oregon, US',
+        'birthDate': '1925-01-30',
+        'deathDate': '2013-07-02',
+        'published': '2017-09-13T12:14:00+05:00',
+        'url': 'douglas-engelbart'
+    },
+    {
         'name': 'Rosalind Franklin',
         'displayName': 'Franklin',
         'branch': 'physical',
